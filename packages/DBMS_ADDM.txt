@@ -1,0 +1,127 @@
+PROCEDURE ANALYZE_DB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN/OUT
+ BEGIN_SNAPSHOT 		NUMBER			IN
+ END_SNAPSHOT			NUMBER			IN
+ DB_ID				NUMBER			IN     DEFAULT
+PROCEDURE ANALYZE_INST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN/OUT
+ BEGIN_SNAPSHOT 		NUMBER			IN
+ END_SNAPSHOT			NUMBER			IN
+ INSTANCE_NUMBER		NUMBER			IN     DEFAULT
+ DB_ID				NUMBER			IN     DEFAULT
+PROCEDURE ANALYZE_PARTIAL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN/OUT
+ INSTANCE_NUMBERS		VARCHAR2		IN
+ BEGIN_SNAPSHOT 		NUMBER			IN
+ END_SNAPSHOT			NUMBER			IN
+ DB_ID				NUMBER			IN     DEFAULT
+FUNCTION COMPARE_CAPTURE_REPLAY_REPORT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPLAY_ID			NUMBER			IN
+ REPORT_TYPE			VARCHAR2		IN     DEFAULT
+FUNCTION COMPARE_DATABASES RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BASE_DBID			NUMBER			IN     DEFAULT
+ BASE_BEGIN_SNAP_ID		NUMBER			IN
+ BASE_END_SNAP_ID		NUMBER			IN
+ COMP_DBID			NUMBER			IN     DEFAULT
+ COMP_BEGIN_SNAP_ID		NUMBER			IN
+ COMP_END_SNAP_ID		NUMBER			IN
+ REPORT_TYPE			VARCHAR2		IN     DEFAULT
+FUNCTION COMPARE_INSTANCES RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BASE_DBID			NUMBER			IN     DEFAULT
+ BASE_INSTANCE_ID		NUMBER			IN
+ BASE_BEGIN_SNAP_ID		NUMBER			IN
+ BASE_END_SNAP_ID		NUMBER			IN
+ COMP_DBID			NUMBER			IN     DEFAULT
+ COMP_INSTANCE_ID		NUMBER			IN
+ COMP_BEGIN_SNAP_ID		NUMBER			IN
+ COMP_END_SNAP_ID		NUMBER			IN
+ REPORT_TYPE			VARCHAR2		IN     DEFAULT
+FUNCTION COMPARE_REPLAY_REPLAY_REPORT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPLAY_ID1			NUMBER			IN
+ REPLAY_ID2			NUMBER			IN
+ REPORT_TYPE			VARCHAR2		IN     DEFAULT
+PROCEDURE DELETE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+PROCEDURE DELETE_FINDING_DIRECTIVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ DIR_NAME			VARCHAR2		IN
+PROCEDURE DELETE_PARAMETER_DIRECTIVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ DIR_NAME			VARCHAR2		IN
+PROCEDURE DELETE_SEGMENT_DIRECTIVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ DIR_NAME			VARCHAR2		IN
+PROCEDURE DELETE_SQL_DIRECTIVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ DIR_NAME			VARCHAR2		IN
+FUNCTION GET_ASH_QUERY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ FINDING_ID			NUMBER			IN
+FUNCTION GET_REPORT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+PROCEDURE INSERT_FINDING_DIRECTIVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ DIR_NAME			VARCHAR2		IN
+ FINDING_NAME			VARCHAR2		IN
+ MIN_ACTIVE_SESSIONS		NUMBER			IN     DEFAULT
+ MIN_PERC_IMPACT		NUMBER			IN     DEFAULT
+PROCEDURE INSERT_PARAMETER_DIRECTIVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ DIR_NAME			VARCHAR2		IN
+ PARAMETER_NAME 		VARCHAR2		IN
+PROCEDURE INSERT_SEGMENT_DIRECTIVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ DIR_NAME			VARCHAR2		IN
+ OWNER_NAME			VARCHAR2		IN
+ OBJECT_NAME			VARCHAR2		IN     DEFAULT
+ SUB_OBJECT_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE INSERT_SEGMENT_DIRECTIVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ DIR_NAME			VARCHAR2		IN
+ OBJECT_NUMBER			NUMBER			IN
+PROCEDURE INSERT_SQL_DIRECTIVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ DIR_NAME			VARCHAR2		IN
+ SQL_ID 			VARCHAR2		IN
+ MIN_ACTIVE_SESSIONS		NUMBER			IN     DEFAULT
+ MIN_RESPONSE_TIME		NUMBER			IN     DEFAULT
+FUNCTION REAL_TIME_ADDM_REPORT RETURNS CLOB
+

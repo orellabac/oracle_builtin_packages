@@ -1,0 +1,35 @@
+FUNCTION COMPATIBLE_10_1 RETURNS NUMBER(38)
+FUNCTION COMPATIBLE_10_2 RETURNS NUMBER(38)
+FUNCTION COMPATIBLE_11_1 RETURNS NUMBER(38)
+FUNCTION COMPATIBLE_11_2 RETURNS NUMBER(38)
+FUNCTION COMPATIBLE_12_1 RETURNS NUMBER(38)
+FUNCTION COMPATIBLE_9_2 RETURNS NUMBER(38)
+FUNCTION CONVERT_ANYDATA_TO_LCR_DDL RETURNS LCR$_DDL_RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCE 			ANYDATA 		IN
+FUNCTION CONVERT_ANYDATA_TO_LCR_ROW RETURNS LCR$_ROW_RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCE 			ANYDATA 		IN
+FUNCTION CONVERT_LCR_TO_XML RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ANYLCR 			ANYDATA 		IN
+FUNCTION CONVERT_XML_TO_LCR RETURNS ANYDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XMLDAT 			XMLTYPE 		IN
+FUNCTION GET_INFORMATION RETURNS ANYDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+FUNCTION GET_STREAMS_NAME RETURNS VARCHAR2
+FUNCTION GET_STREAMS_TYPE RETURNS VARCHAR2
+FUNCTION GET_TAG RETURNS RAW
+FUNCTION MAX_COMPATIBLE RETURNS NUMBER(38)
+PROCEDURE SET_TAG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TAG				RAW			IN     DEFAULT
+

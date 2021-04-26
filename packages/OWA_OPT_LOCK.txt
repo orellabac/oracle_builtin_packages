@@ -1,0 +1,25 @@
+FUNCTION CHECKSUM RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_BUFF 			VARCHAR2		IN
+FUNCTION CHECKSUM RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_OWNER			VARCHAR2		IN
+ P_TNAME			VARCHAR2		IN
+ P_ROWID			ROWID			IN
+FUNCTION GET_ROWID RETURNS ROWID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_OLD_VALUES			TABLE OF VARCHAR2(2000) IN
+PROCEDURE STORE_VALUES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_OWNER			VARCHAR2		IN
+ P_TNAME			VARCHAR2		IN
+ P_ROWID			ROWID			IN
+FUNCTION VERIFY_VALUES RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_OLD_VALUES			TABLE OF VARCHAR2(2000) IN
+

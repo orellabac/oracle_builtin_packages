@@ -1,0 +1,19 @@
+FUNCTION CONTAINS_HOST RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HOST				VARCHAR2		IN
+ DOMAIN 			VARCHAR2		IN
+FUNCTION DOMAINS RETURNS DOMAIN_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HOST				VARCHAR2		IN
+FUNCTION DOMAIN_LEVEL RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HOST				VARCHAR2		IN
+FUNCTION EQUALS_HOST RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HOST1				VARCHAR2		IN
+ HOST2				VARCHAR2		IN
+

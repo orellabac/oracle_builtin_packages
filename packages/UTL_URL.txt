@@ -1,0 +1,12 @@
+FUNCTION ESCAPE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ URL				VARCHAR2		IN
+ ESCAPE_RESERVED_CHARS		BOOLEAN 		IN     DEFAULT
+ URL_CHARSET			VARCHAR2		IN     DEFAULT
+FUNCTION UNESCAPE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ URL				VARCHAR2		IN
+ URL_CHARSET			VARCHAR2		IN     DEFAULT
+

@@ -1,0 +1,69 @@
+FUNCTION CREATE_PIPE RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PIPENAME			VARCHAR2		IN
+ MAXPIPESIZE			NUMBER(38)		IN     DEFAULT
+ PRIVATE			BOOLEAN 		IN     DEFAULT
+FUNCTION NEXT_ITEM_TYPE RETURNS NUMBER(38)
+PROCEDURE PACK_MESSAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ITEM				VARCHAR2		IN
+PROCEDURE PACK_MESSAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ITEM				NUMBER			IN
+PROCEDURE PACK_MESSAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ITEM				DATE			IN
+PROCEDURE PACK_MESSAGE_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ITEM				RAW			IN
+PROCEDURE PACK_MESSAGE_ROWID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ITEM				ROWID			IN
+PROCEDURE PURGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PIPENAME			VARCHAR2		IN
+FUNCTION RECEIVE_MESSAGE RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PIPENAME			VARCHAR2		IN
+ TIMEOUT			NUMBER(38)		IN     DEFAULT
+FUNCTION REMOVE_PIPE RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PIPENAME			VARCHAR2		IN
+PROCEDURE RESET_BUFFER
+FUNCTION SEND_MESSAGE RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PIPENAME			VARCHAR2		IN
+ TIMEOUT			NUMBER(38)		IN     DEFAULT
+ MAXPIPESIZE			NUMBER(38)		IN     DEFAULT
+FUNCTION UNIQUE_SESSION_NAME RETURNS VARCHAR2
+PROCEDURE UNPACK_MESSAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ITEM				VARCHAR2		OUT
+PROCEDURE UNPACK_MESSAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ITEM				NUMBER			OUT
+PROCEDURE UNPACK_MESSAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ITEM				DATE			OUT
+PROCEDURE UNPACK_MESSAGE_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ITEM				RAW			OUT
+PROCEDURE UNPACK_MESSAGE_ROWID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ITEM				ROWID			OUT
+

@@ -1,0 +1,68 @@
+FUNCTION ADD_APPLICATION_PRINCIPAL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ FLAGS				BINARY_INTEGER		IN     DEFAULT
+FUNCTION CHANGE_APPLICATION_MEMBERSHIP RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USER_NAME			VARCHAR2		IN
+ GROUP_NAME			VARCHAR2		IN
+ OP_MODE			BINARY_INTEGER		IN     DEFAULT
+ USER_FLAGS			NUMBER			IN     DEFAULT
+FUNCTION DELETE_APPLICATION_PRINCIPAL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ OP_MODE			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE DISABLE_HIERARCHY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN
+ OBJECT_NAME			VARCHAR2		IN
+ HIERARCHY_TYPE 		BINARY_INTEGER		IN     DEFAULT
+ DELETE_OLD_VERSIONS		BOOLEAN 		IN     DEFAULT
+PROCEDURE ENABLE_HIERARCHY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN
+ OBJECT_NAME			VARCHAR2		IN
+ HIERARCHY_TYPE 		BINARY_INTEGER		IN     DEFAULT
+ SCHEMAREG			BOOLEAN 		IN     DEFAULT
+FUNCTION GET_ACLOID RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACLPATH			VARCHAR2		IN
+ ACLOID 			RAW			OUT
+FUNCTION GET_USERID RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ USERID 			RAW			OUT
+ FORMAT 			BINARY_INTEGER		IN     DEFAULT
+FUNCTION IS_HIERARCHY_ENABLED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN
+ OBJECT_NAME			VARCHAR2		IN
+ HIERARCHY_TYPE 		BINARY_INTEGER		IN     DEFAULT
+FUNCTION PURGEAPPLICATIONCACHE RETURNS BOOLEAN
+FUNCTION PURGELDAPCACHE RETURNS BOOLEAN
+FUNCTION RESET_APPLICATION_PRINCIPAL RETURNS BOOLEAN
+FUNCTION SET_APPLICATION_PRINCIPAL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRINCIPAL_NAME 		VARCHAR2		IN     DEFAULT
+ ALLOW_REGISTRATION		BOOLEAN 		IN     DEFAULT
+ PRINCIPAL_GUID 		RAW			IN     DEFAULT
+ GROUP_MEMBERSHIP		RAW			IN     DEFAULT
+PROCEDURE VALIDATEACL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACLOID 			RAW			IN
+ SKIP_SCACL			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE VALIDATEFUSIONACL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACLOID 			RAW			IN
+

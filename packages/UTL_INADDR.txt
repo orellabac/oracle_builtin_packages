@@ -1,0 +1,9 @@
+FUNCTION GET_HOST_ADDRESS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HOST				VARCHAR2		IN     DEFAULT
+FUNCTION GET_HOST_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IP				VARCHAR2		IN     DEFAULT
+

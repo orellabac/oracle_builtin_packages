@@ -1,0 +1,377 @@
+PROCEDURE ADD_COLORED_SQL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_ID 			VARCHAR2		IN
+ DBID				NUMBER			IN     DEFAULT
+FUNCTION ASH_GLOBAL_REPORT_HTML RETURNS AWRRPT_HTML_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L_DBID 			NUMBER			IN
+ L_INST_NUM			VARCHAR2		IN
+ L_BTIME			DATE			IN
+ L_ETIME			DATE			IN
+ L_OPTIONS			NUMBER			IN     DEFAULT
+ L_SLOT_WIDTH			NUMBER			IN     DEFAULT
+ L_SID				NUMBER			IN     DEFAULT
+ L_SQL_ID			VARCHAR2		IN     DEFAULT
+ L_WAIT_CLASS			VARCHAR2		IN     DEFAULT
+ L_SERVICE_HASH 		NUMBER			IN     DEFAULT
+ L_MODULE			VARCHAR2		IN     DEFAULT
+ L_ACTION			VARCHAR2		IN     DEFAULT
+ L_CLIENT_ID			VARCHAR2		IN     DEFAULT
+ L_PLSQL_ENTRY			VARCHAR2		IN     DEFAULT
+ L_DATA_SRC			NUMBER			IN     DEFAULT
+ L_CONTAINER			VARCHAR2		IN     DEFAULT
+FUNCTION ASH_GLOBAL_REPORT_TEXT RETURNS AWRDRPT_TEXT_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L_DBID 			NUMBER			IN
+ L_INST_NUM			VARCHAR2		IN
+ L_BTIME			DATE			IN
+ L_ETIME			DATE			IN
+ L_OPTIONS			NUMBER			IN     DEFAULT
+ L_SLOT_WIDTH			NUMBER			IN     DEFAULT
+ L_SID				NUMBER			IN     DEFAULT
+ L_SQL_ID			VARCHAR2		IN     DEFAULT
+ L_WAIT_CLASS			VARCHAR2		IN     DEFAULT
+ L_SERVICE_HASH 		NUMBER			IN     DEFAULT
+ L_MODULE			VARCHAR2		IN     DEFAULT
+ L_ACTION			VARCHAR2		IN     DEFAULT
+ L_CLIENT_ID			VARCHAR2		IN     DEFAULT
+ L_PLSQL_ENTRY			VARCHAR2		IN     DEFAULT
+ L_DATA_SRC			NUMBER			IN     DEFAULT
+ L_CONTAINER			VARCHAR2		IN     DEFAULT
+FUNCTION ASH_REPORT_ANALYTICS RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBID				NUMBER			IN     DEFAULT
+ INST_ID			NUMBER			IN     DEFAULT
+ BEGIN_TIME			DATE			IN
+ END_TIME			DATE			IN
+ REPORT_LEVEL			VARCHAR2		IN     DEFAULT
+ FILTER_LIST			VARCHAR2		IN     DEFAULT
+FUNCTION ASH_REPORT_HTML RETURNS AWRRPT_HTML_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L_DBID 			NUMBER			IN
+ L_INST_NUM			NUMBER			IN
+ L_BTIME			DATE			IN
+ L_ETIME			DATE			IN
+ L_OPTIONS			NUMBER			IN     DEFAULT
+ L_SLOT_WIDTH			NUMBER			IN     DEFAULT
+ L_SID				NUMBER			IN     DEFAULT
+ L_SQL_ID			VARCHAR2		IN     DEFAULT
+ L_WAIT_CLASS			VARCHAR2		IN     DEFAULT
+ L_SERVICE_HASH 		NUMBER			IN     DEFAULT
+ L_MODULE			VARCHAR2		IN     DEFAULT
+ L_ACTION			VARCHAR2		IN     DEFAULT
+ L_CLIENT_ID			VARCHAR2		IN     DEFAULT
+ L_PLSQL_ENTRY			VARCHAR2		IN     DEFAULT
+ L_DATA_SRC			NUMBER			IN     DEFAULT
+ L_CONTAINER			VARCHAR2		IN     DEFAULT
+FUNCTION ASH_REPORT_TEXT RETURNS AWRRPT_TEXT_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L_DBID 			NUMBER			IN
+ L_INST_NUM			NUMBER			IN
+ L_BTIME			DATE			IN
+ L_ETIME			DATE			IN
+ L_OPTIONS			NUMBER			IN     DEFAULT
+ L_SLOT_WIDTH			NUMBER			IN     DEFAULT
+ L_SID				NUMBER			IN     DEFAULT
+ L_SQL_ID			VARCHAR2		IN     DEFAULT
+ L_WAIT_CLASS			VARCHAR2		IN     DEFAULT
+ L_SERVICE_HASH 		NUMBER			IN     DEFAULT
+ L_MODULE			VARCHAR2		IN     DEFAULT
+ L_ACTION			VARCHAR2		IN     DEFAULT
+ L_CLIENT_ID			VARCHAR2		IN     DEFAULT
+ L_PLSQL_ENTRY			VARCHAR2		IN     DEFAULT
+ L_DATA_SRC			NUMBER			IN     DEFAULT
+ L_CONTAINER			VARCHAR2		IN     DEFAULT
+FUNCTION AWR_DIFF_REPORT_HTML RETURNS AWRRPT_HTML_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBID1				NUMBER			IN
+ INST_NUM1			NUMBER			IN
+ BID1				NUMBER			IN
+ EID1				NUMBER			IN
+ DBID2				NUMBER			IN
+ INST_NUM2			NUMBER			IN
+ BID2				NUMBER			IN
+ EID2				NUMBER			IN
+FUNCTION AWR_DIFF_REPORT_TEXT RETURNS AWRDRPT_TEXT_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBID1				NUMBER			IN
+ INST_NUM1			NUMBER			IN
+ BID1				NUMBER			IN
+ EID1				NUMBER			IN
+ DBID2				NUMBER			IN
+ INST_NUM2			NUMBER			IN
+ BID2				NUMBER			IN
+ EID2				NUMBER			IN
+FUNCTION AWR_GLOBAL_DIFF_REPORT_HTML RETURNS AWRRPT_HTML_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBID1				NUMBER			IN
+ INST_NUM1			AWRRPT_INSTANCE_LIST_TYPE IN
+ BID1				NUMBER			IN
+ EID1				NUMBER			IN
+ DBID2				NUMBER			IN
+ INST_NUM2			AWRRPT_INSTANCE_LIST_TYPE IN
+ BID2				NUMBER			IN
+ EID2				NUMBER			IN
+FUNCTION AWR_GLOBAL_DIFF_REPORT_HTML RETURNS AWRRPT_HTML_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBID1				NUMBER			IN
+ INST_NUM1			VARCHAR2		IN
+ BID1				NUMBER			IN
+ EID1				NUMBER			IN
+ DBID2				NUMBER			IN
+ INST_NUM2			VARCHAR2		IN
+ BID2				NUMBER			IN
+ EID2				NUMBER			IN
+FUNCTION AWR_GLOBAL_DIFF_REPORT_TEXT RETURNS AWRDRPT_TEXT_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBID1				NUMBER			IN
+ INST_NUM1			AWRRPT_INSTANCE_LIST_TYPE IN
+ BID1				NUMBER			IN
+ EID1				NUMBER			IN
+ DBID2				NUMBER			IN
+ INST_NUM2			AWRRPT_INSTANCE_LIST_TYPE IN
+ BID2				NUMBER			IN
+ EID2				NUMBER			IN
+FUNCTION AWR_GLOBAL_DIFF_REPORT_TEXT RETURNS AWRDRPT_TEXT_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBID1				NUMBER			IN
+ INST_NUM1			VARCHAR2		IN
+ BID1				NUMBER			IN
+ EID1				NUMBER			IN
+ DBID2				NUMBER			IN
+ INST_NUM2			VARCHAR2		IN
+ BID2				NUMBER			IN
+ EID2				NUMBER			IN
+FUNCTION AWR_GLOBAL_REPORT_HTML RETURNS AWRRPT_HTML_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L_DBID 			NUMBER			IN
+ L_INST_NUM			AWRRPT_INSTANCE_LIST_TYPE IN
+ L_BID				NUMBER			IN
+ L_EID				NUMBER			IN
+ L_OPTIONS			NUMBER			IN     DEFAULT
+FUNCTION AWR_GLOBAL_REPORT_HTML RETURNS AWRRPT_HTML_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L_DBID 			NUMBER			IN
+ L_INST_NUM			VARCHAR2		IN
+ L_BID				NUMBER			IN
+ L_EID				NUMBER			IN
+ L_OPTIONS			NUMBER			IN     DEFAULT
+FUNCTION AWR_GLOBAL_REPORT_TEXT RETURNS AWRDRPT_TEXT_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L_DBID 			NUMBER			IN
+ L_INST_NUM			AWRRPT_INSTANCE_LIST_TYPE IN
+ L_BID				NUMBER			IN
+ L_EID				NUMBER			IN
+ L_OPTIONS			NUMBER			IN     DEFAULT
+FUNCTION AWR_GLOBAL_REPORT_TEXT RETURNS AWRDRPT_TEXT_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L_DBID 			NUMBER			IN
+ L_INST_NUM			VARCHAR2		IN
+ L_BID				NUMBER			IN
+ L_EID				NUMBER			IN
+ L_OPTIONS			NUMBER			IN     DEFAULT
+FUNCTION AWR_REPORT_HTML RETURNS AWRRPT_HTML_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L_DBID 			NUMBER			IN
+ L_INST_NUM			NUMBER			IN
+ L_BID				NUMBER			IN
+ L_EID				NUMBER			IN
+ L_OPTIONS			NUMBER			IN     DEFAULT
+FUNCTION AWR_REPORT_TEXT RETURNS AWRRPT_TEXT_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L_DBID 			NUMBER			IN
+ L_INST_NUM			NUMBER			IN
+ L_BID				NUMBER			IN
+ L_EID				NUMBER			IN
+ L_OPTIONS			NUMBER			IN     DEFAULT
+PROCEDURE AWR_SET_REPORT_THRESHOLDS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOP_N_EVENTS			NUMBER			IN     DEFAULT
+ TOP_N_FILES			NUMBER			IN     DEFAULT
+ TOP_N_SEGMENTS 		NUMBER			IN     DEFAULT
+ TOP_N_SERVICES 		NUMBER			IN     DEFAULT
+ TOP_N_SQL			NUMBER			IN     DEFAULT
+ TOP_N_SQL_MAX			NUMBER			IN     DEFAULT
+ TOP_SQL_PCT			NUMBER			IN     DEFAULT
+ SHMEM_THRESHOLD		NUMBER			IN     DEFAULT
+ VERSIONS_THRESHOLD		NUMBER			IN     DEFAULT
+ TOP_N_DISKS			NUMBER			IN     DEFAULT
+ OUTLIER_PCT			NUMBER			IN     DEFAULT
+ OUTLIER_CPU_PCT		NUMBER			IN     DEFAULT
+FUNCTION AWR_SQL_REPORT_HTML RETURNS AWRRPT_HTML_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L_DBID 			NUMBER			IN
+ L_INST_NUM			NUMBER			IN
+ L_BID				NUMBER			IN
+ L_EID				NUMBER			IN
+ L_SQLID			VARCHAR2		IN
+ L_OPTIONS			NUMBER			IN     DEFAULT
+FUNCTION AWR_SQL_REPORT_TEXT RETURNS AWRSQRPT_TEXT_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L_DBID 			NUMBER			IN
+ L_INST_NUM			NUMBER			IN
+ L_BID				NUMBER			IN
+ L_EID				NUMBER			IN
+ L_SQLID			VARCHAR2		IN
+ L_OPTIONS			NUMBER			IN     DEFAULT
+PROCEDURE CONTROL_RESTRICTED_SNAPSHOT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ALLOW				BOOLEAN 		IN
+PROCEDURE CREATE_BASELINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ START_SNAP_ID			NUMBER			IN
+ END_SNAP_ID			NUMBER			IN
+ BASELINE_NAME			VARCHAR2		IN
+ DBID				NUMBER			IN     DEFAULT
+ EXPIRATION			NUMBER			IN     DEFAULT
+FUNCTION CREATE_BASELINE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ START_SNAP_ID			NUMBER			IN
+ END_SNAP_ID			NUMBER			IN
+ BASELINE_NAME			VARCHAR2		IN
+ DBID				NUMBER			IN     DEFAULT
+ EXPIRATION			NUMBER			IN     DEFAULT
+PROCEDURE CREATE_BASELINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ START_TIME			DATE			IN
+ END_TIME			DATE			IN
+ BASELINE_NAME			VARCHAR2		IN
+ DBID				NUMBER			IN     DEFAULT
+ EXPIRATION			NUMBER			IN     DEFAULT
+FUNCTION CREATE_BASELINE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ START_TIME			DATE			IN
+ END_TIME			DATE			IN
+ BASELINE_NAME			VARCHAR2		IN
+ DBID				NUMBER			IN     DEFAULT
+ EXPIRATION			NUMBER			IN     DEFAULT
+PROCEDURE CREATE_BASELINE_TEMPLATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ START_TIME			DATE			IN
+ END_TIME			DATE			IN
+ BASELINE_NAME			VARCHAR2		IN
+ TEMPLATE_NAME			VARCHAR2		IN
+ EXPIRATION			NUMBER			IN     DEFAULT
+ DBID				NUMBER			IN     DEFAULT
+PROCEDURE CREATE_BASELINE_TEMPLATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DAY_OF_WEEK			VARCHAR2		IN
+ HOUR_IN_DAY			NUMBER			IN
+ DURATION			NUMBER			IN
+ START_TIME			DATE			IN
+ END_TIME			DATE			IN
+ BASELINE_NAME_PREFIX		VARCHAR2		IN
+ TEMPLATE_NAME			VARCHAR2		IN
+ EXPIRATION			NUMBER			IN     DEFAULT
+ DBID				NUMBER			IN     DEFAULT
+PROCEDURE CREATE_SNAPSHOT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FLUSH_LEVEL			VARCHAR2		IN     DEFAULT
+ DBID				NUMBER			IN     DEFAULT
+ SOURCE_NAME			VARCHAR2		IN     DEFAULT
+FUNCTION CREATE_SNAPSHOT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FLUSH_LEVEL			VARCHAR2		IN     DEFAULT
+ DBID				NUMBER			IN     DEFAULT
+ SOURCE_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_BASELINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BASELINE_NAME			VARCHAR2		IN
+ CASCADE			BOOLEAN 		IN     DEFAULT
+ DBID				NUMBER			IN     DEFAULT
+PROCEDURE DROP_BASELINE_TEMPLATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TEMPLATE_NAME			VARCHAR2		IN
+ DBID				NUMBER			IN     DEFAULT
+PROCEDURE DROP_SNAPSHOT_RANGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOW_SNAP_ID			NUMBER			IN
+ HIGH_SNAP_ID			NUMBER			IN
+ DBID				NUMBER			IN     DEFAULT
+PROCEDURE MODIFY_BASELINE_WINDOW_SIZE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WINDOW_SIZE			NUMBER			IN
+ DBID				NUMBER			IN     DEFAULT
+PROCEDURE MODIFY_SNAPSHOT_SETTINGS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RETENTION			NUMBER			IN     DEFAULT
+ INTERVAL			NUMBER			IN     DEFAULT
+ TOPNSQL			NUMBER			IN     DEFAULT
+ DBID				NUMBER			IN     DEFAULT
+PROCEDURE MODIFY_SNAPSHOT_SETTINGS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RETENTION			NUMBER			IN     DEFAULT
+ INTERVAL			NUMBER			IN     DEFAULT
+ TOPNSQL			VARCHAR2		IN
+ DBID				NUMBER			IN     DEFAULT
+PROCEDURE PURGE_SQL_DETAILS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUMROWS			NUMBER			IN     DEFAULT
+ DBID				NUMBER			IN     DEFAULT
+PROCEDURE REMOVE_COLORED_SQL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_ID 			VARCHAR2		IN
+ DBID				NUMBER			IN     DEFAULT
+PROCEDURE RENAME_BASELINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OLD_BASELINE_NAME		VARCHAR2		IN
+ NEW_BASELINE_NAME		VARCHAR2		IN
+ DBID				NUMBER			IN     DEFAULT
+FUNCTION SELECT_BASELINE_DETAILS RETURNS AWRBL_DETAILS_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L_BASELINE_ID			NUMBER			IN
+ L_BEG_SNAP			NUMBER			IN     DEFAULT
+ L_END_SNAP			NUMBER			IN     DEFAULT
+ L_DBID 			NUMBER			IN     DEFAULT
+FUNCTION SELECT_BASELINE_METRIC RETURNS AWRBL_METRIC_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L_BASELINE_NAME		VARCHAR2		IN
+ L_DBID 			NUMBER			IN     DEFAULT
+ L_INSTANCE_NUM 		NUMBER			IN     DEFAULT
+PROCEDURE UPDATE_DATAFILE_INFO
+PROCEDURE UPDATE_OBJECT_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MAXROWS			NUMBER			IN     DEFAULT
+

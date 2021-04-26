@@ -1,0 +1,9 @@
+FUNCTION GET_X RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				TABLE OF VARCHAR2(32767) IN
+FUNCTION GET_Y RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				TABLE OF VARCHAR2(32767) IN
+

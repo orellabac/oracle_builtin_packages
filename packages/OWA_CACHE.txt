@@ -1,0 +1,24 @@
+PROCEDURE DISABLE
+FUNCTION GET_ETAG RETURNS VARCHAR2
+FUNCTION GET_LEVEL RETURNS VARCHAR2
+PROCEDURE INIT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_HTBUF			TABLE OF VARCHAR2(256)	IN/OUT
+ P_ROWS_IN			NUMBER			IN/OUT
+PROCEDURE SET_CACHE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ETAG 			VARCHAR2		IN
+ P_LEVEL			VARCHAR2		IN
+PROCEDURE SET_EXPIRES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_EXPIRES			NUMBER			IN
+ P_LEVEL			VARCHAR2		IN
+PROCEDURE SET_NOT_MODIFIED
+PROCEDURE SET_SURROGATE_CONTROL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_VALUE			VARCHAR2		IN
+

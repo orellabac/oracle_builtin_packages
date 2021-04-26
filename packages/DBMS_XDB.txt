@@ -1,0 +1,382 @@
+FUNCTION ACLCHECKPRIVILEGES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACL_PATH			VARCHAR2		IN
+ OWNER				VARCHAR2		IN
+ PRIVS				XMLTYPE 		IN
+PROCEDURE ADDHTTPEXPIREMAPPING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATTERN			VARCHAR2		IN
+ EXPIRE 			VARCHAR2		IN
+PROCEDURE ADDMIMEMAPPING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXTENSION			VARCHAR2		IN
+ MIMETYPE			VARCHAR2		IN
+FUNCTION ADDRESOURCE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ DATA				VARCHAR2		IN
+PROCEDURE ADDSCHEMALOCMAPPING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAMESPACE			VARCHAR2		IN
+ ELEMENT			VARCHAR2		IN
+ SCHEMAURL			VARCHAR2		IN
+PROCEDURE ADDSERVLET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ LANGUAGE			VARCHAR2		IN
+ DISPNAME			VARCHAR2		IN
+ ICON				VARCHAR2		IN     DEFAULT
+ DESCRIPT			VARCHAR2		IN     DEFAULT
+ CLASS				VARCHAR2		IN     DEFAULT
+ JSPFILE			VARCHAR2		IN     DEFAULT
+ PLSQL				VARCHAR2		IN     DEFAULT
+ SCHEMA 			VARCHAR2		IN     DEFAULT
+PROCEDURE ADDSERVLETMAPPING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATTERN			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+PROCEDURE ADDSERVLETSECROLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SERVNAME			VARCHAR2		IN
+ ROLENAME			VARCHAR2		IN
+ ROLELINK			VARCHAR2		IN
+ DESCRIPT			VARCHAR2		IN     DEFAULT
+PROCEDURE ADDTOLOCKTOKENLIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOKEN				VARCHAR2		IN
+PROCEDURE ADDXMLEXTENSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXTENSION			VARCHAR2		IN
+PROCEDURE APPENDRESOURCEMETADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ DATA				XMLTYPE 		IN
+PROCEDURE APPENDRESOURCEMETADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ DATA				REF OF XMLTYPE		IN
+FUNCTION CFG_GET RETURNS XMLTYPE
+PROCEDURE CFG_REFRESH
+PROCEDURE CFG_UPDATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XDBCONFIG			XMLTYPE 		IN
+PROCEDURE CHANGEOWNER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ OWNER				VARCHAR2		IN
+ RECURSE			BOOLEAN 		IN     DEFAULT
+FUNCTION CHANGEPRIVILEGES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES_PATH			VARCHAR2		IN
+ ACE				XMLTYPE 		IN
+FUNCTION CHECKPRIVILEGES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES_PATH			VARCHAR2		IN
+ PRIVS				XMLTYPE 		IN
+FUNCTION CREATEFOLDER RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+FUNCTION CREATEOIDPATH RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OID				RAW			IN
+FUNCTION CREATERESOURCE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ DATA				VARCHAR2		IN
+ SCHEMAURL			VARCHAR2		IN     DEFAULT
+ ELEM				VARCHAR2		IN     DEFAULT
+FUNCTION CREATERESOURCE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ DATA				XMLTYPE 		IN
+ SCHEMAURL			VARCHAR2		IN     DEFAULT
+ ELEM				VARCHAR2		IN     DEFAULT
+FUNCTION CREATERESOURCE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ DATA				REF OF XMLTYPE		IN
+ STICKY 			BOOLEAN 		IN     DEFAULT
+ CALCSIZE			BOOLEAN 		IN     DEFAULT
+FUNCTION CREATERESOURCE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ DATA				CLOB			IN
+FUNCTION CREATERESOURCE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ DATA				BINARY FILE LOB 	IN
+ CSID				NUMBER			IN     DEFAULT
+FUNCTION CREATERESOURCE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ DATA				BLOB			IN
+ CSID				NUMBER			IN     DEFAULT
+FUNCTION DELETEFROMLOCKTOKENLIST RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOKEN				VARCHAR2		IN
+PROCEDURE DELETEHTTPEXPIREMAPPING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATTERN			VARCHAR2		IN
+PROCEDURE DELETEMIMEMAPPING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXTENSION			VARCHAR2		IN
+PROCEDURE DELETERESOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ DELETE_OPTION			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE DELETERESOURCEMETADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ METADATA			REF OF XMLTYPE		IN
+ DELETE_OPTION			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE DELETERESOURCEMETADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ METADATANS			VARCHAR2		IN
+ METADATANAME			VARCHAR2		IN
+ DELETE_OPTION			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE DELETESCHEMALOCMAPPING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMAURL			VARCHAR2		IN
+PROCEDURE DELETESERVLET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+PROCEDURE DELETESERVLETMAPPING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+PROCEDURE DELETESERVLETSECROLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SERVNAME			VARCHAR2		IN
+ ROLENAME			VARCHAR2		IN
+PROCEDURE DELETEXMLEXTENSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXTENSION			VARCHAR2		IN
+FUNCTION EXISTSRESOURCE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+FUNCTION GETACLDOCUMENT RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+FUNCTION GETCONTENTBLOB RETURNS BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ CSID				BINARY_INTEGER		OUT
+ LOCKSRC			BOOLEAN 		IN     DEFAULT
+FUNCTION GETCONTENTCLOB RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+FUNCTION GETCONTENTVARCHAR2 RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+FUNCTION GETCONTENTXMLREF RETURNS REF OF XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+FUNCTION GETCONTENTXMLTYPE RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+FUNCTION GETFTPPORT RETURNS NUMBER
+FUNCTION GETHTTPPORT RETURNS NUMBER
+FUNCTION GETHTTPREQUESTHEADER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HEADER_NAME			VARCHAR2		IN
+PROCEDURE GETLISTENERENDPOINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ENDPOINT			NUMBER			IN
+ HOST				VARCHAR2		OUT
+ PORT				NUMBER			OUT
+ PROTOCOL			NUMBER			OUT
+PROCEDURE GETLOCKTOKEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ LOCKTOKEN			VARCHAR2		OUT
+FUNCTION GETLOCKTOKENLIST RETURNS LOCKTOKENLISTTYPE
+FUNCTION GETPRIVILEGES RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES_PATH			VARCHAR2		IN
+FUNCTION GETRESOID RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+FUNCTION GETRESOURCE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ ABSPATH			VARCHAR2		IN
+FUNCTION GETXDB_TABLESPACE RETURNS VARCHAR2
+FUNCTION HASBLOBCONTENT RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+FUNCTION HASCHARCONTENT RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+FUNCTION HASXMLCONTENT RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+FUNCTION HASXMLREFERENCE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+FUNCTION ISFOLDER RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+PROCEDURE LINK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRCPATH			VARCHAR2		IN
+ LINKFOLDER			VARCHAR2		IN
+ LINKNAME			VARCHAR2		IN
+ LINKTYPE			BINARY_INTEGER		IN     DEFAULT
+FUNCTION LOCKDISCOVERY RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+FUNCTION LOCKRESOURCE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ DEPTHZERO			BOOLEAN 		IN
+ SHARED 			BOOLEAN 		IN
+FUNCTION LOCKRESOURCE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ DEPTHZERO			BOOLEAN 		IN
+ SHARED 			BOOLEAN 		IN
+ TOKEN				VARCHAR2		OUT
+ TIMEOUT			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE PROCESSLINKS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ RECURSE			BOOLEAN 		IN     DEFAULT
+PROCEDURE PURGERESOURCEMETADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+PROCEDURE REFRESHCONTENTSIZE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ RECURSE			BOOLEAN 		IN     DEFAULT
+PROCEDURE REFRESHLOCK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ TOKEN				VARCHAR2		IN
+ NEWTIMEOUT			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE RENAMERESOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRCPATH			VARCHAR2		IN
+ DESTFOLDER			VARCHAR2		IN
+ NEWNAME			VARCHAR2		IN
+PROCEDURE SETACL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES_PATH			VARCHAR2		IN
+ ACL_PATH			VARCHAR2		IN
+PROCEDURE SETFTPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NEW_PORT			NUMBER			IN
+PROCEDURE SETHTTPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NEW_PORT			NUMBER			IN
+PROCEDURE SETLISTENERENDPOINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ENDPOINT			NUMBER			IN
+ HOST				VARCHAR2		IN
+ PORT				NUMBER			IN
+ PROTOCOL			NUMBER			IN
+PROCEDURE SETLISTENERLOCALACCESS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L_ACCESS			BOOLEAN 		IN
+PROCEDURE TOUCHRESOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+FUNCTION UNLOCKRESOURCE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ DELTOKEN			VARCHAR2		IN     DEFAULT
+PROCEDURE UPDATERESOURCEMETADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ OLDMETADATA			REF OF XMLTYPE		IN
+ NEWMETADATA			REF OF XMLTYPE		IN
+PROCEDURE UPDATERESOURCEMETADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ OLDMETADATA			REF OF XMLTYPE		IN
+ NEWMETADATA			XMLTYPE 		IN
+PROCEDURE UPDATERESOURCEMETADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ OLDNS				VARCHAR2		IN
+ OLDNAME			VARCHAR2		IN
+ NEWMETADATA			XMLTYPE 		IN
+PROCEDURE UPDATERESOURCEMETADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ OLDNS				VARCHAR2		IN
+ OLDNAME			VARCHAR2		IN
+ NEWMETADATA			REF OF XMLTYPE		IN
+

@@ -1,0 +1,83 @@
+FUNCTION GET_ATR_EXPR_RC RETURNS ATREXPRLIST_T
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LVLLIST			REF CURSOR		IN
+				RECORD			IN
+     DIMOWNER			VARCHAR2(30)		IN
+     DIMNAME			VARCHAR2(30)		IN
+     LVLNAME			VARCHAR2(30)		IN
+FUNCTION GET_COLDISTINCTCOUNT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER				VARCHAR2		IN
+ TABNAME			VARCHAR2		IN
+ COLNAME			VARCHAR2		IN
+FUNCTION GET_DIMHIERJOIN_DISPOSITION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABOWNER			VARCHAR2		IN
+ TABNAME			VARCHAR2		IN
+ COLNAME			VARCHAR2		IN
+FUNCTION GET_DIMLVL_DISPOSITION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABOWNER			VARCHAR2		IN
+ TABNAME			VARCHAR2		IN
+ COLNAME			VARCHAR2		IN
+FUNCTION GET_DIM_DISPOSITION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIMOWNER			VARCHAR2		IN
+ DIMNAME			VARCHAR2		IN
+FUNCTION GET_FK_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABOWNER			VARCHAR2		IN
+ TABNAME			VARCHAR2		IN
+ COLNAME			VARCHAR2		IN
+FUNCTION GET_LVL_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER				VARCHAR2		IN
+ DIMNAME			VARCHAR2		IN
+ COLNAME			VARCHAR2		IN
+FUNCTION GET_MEAS_COL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MVOWNER			VARCHAR2		IN
+ MVNAME 			VARCHAR2		IN
+ COLALIAS			VARCHAR2		IN
+FUNCTION GET_PK_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABOWNER			VARCHAR2		IN
+ TABNAME			VARCHAR2		IN
+ COLNAME			VARCHAR2		IN
+FUNCTION IS_MD_CLASS RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MDCLASS			BINARY_INTEGER		IN
+ OWNER				VARCHAR2		IN
+ OBJNAME			VARCHAR2		IN
+ COLNAME			VARCHAR2		IN
+PROCEDURE LOG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MSGID				BINARY_INTEGER		IN     DEFAULT
+ MSGTXT 			VARCHAR2		IN     DEFAULT
+FUNCTION MV_CUBE_ADVICE RETURNS COAD_ADVICE_T
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER				VARCHAR2		IN     DEFAULT
+ OBJNAME			VARCHAR2		IN
+ REQTYPE			VARCHAR2		IN     DEFAULT
+ VALIDATE			NUMBER			IN     DEFAULT
+PROCEDURE SET_CNS_EXCEPTION_LOG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXCEPTLOGTAB			VARCHAR2		IN     DEFAULT
+PROCEDURE TRACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIAGLEVEL			BINARY_INTEGER		IN
+

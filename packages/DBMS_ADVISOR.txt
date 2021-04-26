@@ -1,0 +1,427 @@
+PROCEDURE ADD_SQLWKLD_REF
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ WORKLOAD_NAME			VARCHAR2		IN
+ IS_STS 			NUMBER			IN     DEFAULT
+PROCEDURE ADD_SQLWKLD_STATEMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+ MODULE 			VARCHAR2		IN     DEFAULT
+ ACTION 			VARCHAR2		IN     DEFAULT
+ CPU_TIME			NUMBER			IN     DEFAULT
+ ELAPSED_TIME			NUMBER			IN     DEFAULT
+ DISK_READS			NUMBER			IN     DEFAULT
+ BUFFER_GETS			NUMBER			IN     DEFAULT
+ ROWS_PROCESSED 		NUMBER			IN     DEFAULT
+ OPTIMIZER_COST 		NUMBER			IN     DEFAULT
+ EXECUTIONS			NUMBER			IN     DEFAULT
+ PRIORITY			NUMBER			IN     DEFAULT
+ LAST_EXECUTION_DATE		DATE			IN     DEFAULT
+ STAT_PERIOD			NUMBER			IN     DEFAULT
+ USERNAME			VARCHAR2		IN
+ SQL_TEXT			CLOB			IN
+PROCEDURE ADD_STS_REF
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ STS_OWNER			VARCHAR2		IN
+ WORKLOAD_NAME			VARCHAR2		IN
+PROCEDURE CANCEL_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+PROCEDURE CHECK_PRIVS
+PROCEDURE CHECK_READ_PRIVS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER_NAME			VARCHAR2		IN
+PROCEDURE COPY_SQLWKLD_TO_STS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+ STS_NAME			VARCHAR2		IN
+ IMPORT_MODE			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BUFFER 			CLOB			IN
+ LOCATION			VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+PROCEDURE CREATE_OBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ OBJECT_TYPE			VARCHAR2		IN
+ ATTR1				VARCHAR2		IN     DEFAULT
+ ATTR2				VARCHAR2		IN     DEFAULT
+ ATTR3				VARCHAR2		IN     DEFAULT
+ ATTR4				CLOB			IN     DEFAULT
+ OBJECT_ID			NUMBER			OUT
+PROCEDURE CREATE_OBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ OBJECT_TYPE			VARCHAR2		IN
+ ATTR1				VARCHAR2		IN     DEFAULT
+ ATTR2				VARCHAR2		IN     DEFAULT
+ ATTR3				VARCHAR2		IN     DEFAULT
+ ATTR4				CLOB			IN     DEFAULT
+ ATTR5				VARCHAR2		IN     DEFAULT
+ OBJECT_ID			NUMBER			OUT
+PROCEDURE CREATE_SQLWKLD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN/OUT
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ TEMPLATE			VARCHAR2		IN     DEFAULT
+ IS_TEMPLATE			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ADVISOR_NAME			VARCHAR2		IN
+ TASK_ID			NUMBER			OUT
+ TASK_NAME			VARCHAR2		IN/OUT
+ TASK_DESC			VARCHAR2		IN     DEFAULT
+ TEMPLATE			VARCHAR2		IN     DEFAULT
+ IS_TEMPLATE			VARCHAR2		IN     DEFAULT
+ HOW_CREATED			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ADVISOR_NAME			VARCHAR2		IN
+ TASK_NAME			VARCHAR2		IN
+ TASK_DESC			VARCHAR2		IN     DEFAULT
+ TEMPLATE			VARCHAR2		IN     DEFAULT
+ IS_TEMPLATE			VARCHAR2		IN     DEFAULT
+ HOW_CREATED			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARENT_TASK_NAME		VARCHAR2		IN
+ REC_ID 			NUMBER			IN
+ TASK_ID			NUMBER			OUT
+ TASK_NAME			VARCHAR2		IN/OUT
+ TASK_DESC			VARCHAR2		IN
+ TEMPLATE			VARCHAR2		IN
+PROCEDURE DELETE_DIRECTIVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRECTIVE_ID			NUMBER			IN
+ INSTANCE_NAME			VARCHAR2		IN
+ TASK_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE DELETE_SQLWKLD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+PROCEDURE DELETE_SQLWKLD_REF
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ WORKLOAD_NAME			VARCHAR2		IN
+ IS_STS 			NUMBER			IN     DEFAULT
+PROCEDURE DELETE_SQLWKLD_STATEMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+ SQL_ID 			NUMBER			IN
+PROCEDURE DELETE_SQLWKLD_STATEMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+ SEARCH 			VARCHAR2		IN
+ DELETED			NUMBER			OUT
+PROCEDURE DELETE_STS_REF
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ STS_OWNER			VARCHAR2		IN
+ WORKLOAD_NAME			VARCHAR2		IN
+PROCEDURE DELETE_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+FUNCTION EVALUATE_DIRECTIVE RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRECTIVE_ID			NUMBER			IN
+ INSTANCE_NAME			VARCHAR2		IN
+ TASK_NAME			VARCHAR2		IN     DEFAULT
+ P1				CLOB			IN     DEFAULT
+ P2				CLOB			IN     DEFAULT
+PROCEDURE EXECUTE_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+FUNCTION EXECUTE_TASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ EXECUTION_TYPE 		VARCHAR2		IN     DEFAULT
+ EXECUTION_NAME 		VARCHAR2		IN     DEFAULT
+ EXECUTION_DESC 		VARCHAR2		IN     DEFAULT
+ EXECUTION_PARAMS		ARGLIST 		IN     DEFAULT
+FUNCTION FORMAT_MESSAGE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MSG_ID 			VARCHAR2		IN
+FUNCTION FORMAT_MESSAGE_GROUP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_ID			NUMBER			IN
+ MSG_TYPE			NUMBER			IN     DEFAULT
+PROCEDURE GET_ACCESS_ADVISOR_DEFAULTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		OUT
+ TASK_ID_NUM			NUMBER			OUT
+ WORKLOAD_NAME			VARCHAR2		OUT
+ WORK_ID_NUM			NUMBER			OUT
+PROCEDURE GET_REC_ATTRIBUTES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ REC_ID 			NUMBER			IN
+ ACTION_ID			NUMBER			IN
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+ VALUE				VARCHAR2		OUT
+ OWNER_NAME			VARCHAR2		IN     DEFAULT
+FUNCTION GET_TASK_REPORT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ TYPE				VARCHAR2		IN     DEFAULT
+ LEVEL				VARCHAR2		IN     DEFAULT
+ SECTION			VARCHAR2		IN     DEFAULT
+ OWNER_NAME			VARCHAR2		IN     DEFAULT
+ EXECUTION_NAME 		VARCHAR2		IN     DEFAULT
+ OBJECT_ID			NUMBER			IN     DEFAULT
+FUNCTION GET_TASK_SCRIPT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ TYPE				VARCHAR2		IN     DEFAULT
+ REC_ID 			NUMBER			IN     DEFAULT
+ ACT_ID 			NUMBER			IN     DEFAULT
+ OWNER_NAME			VARCHAR2		IN     DEFAULT
+ EXECUTION_NAME 		VARCHAR2		IN     DEFAULT
+ OBJECT_ID			NUMBER			IN     DEFAULT
+PROCEDURE IMPLEMENT_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ REC_ID 			NUMBER			IN     DEFAULT
+ EXIT_ON_ERROR			BOOLEAN 		IN     DEFAULT
+PROCEDURE IMPORT_SQLWKLD_SCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+ IMPORT_MODE			VARCHAR2		IN     DEFAULT
+ PRIORITY			NUMBER			IN     DEFAULT
+ SAVED_ROWS			NUMBER			OUT
+ FAILED_ROWS			NUMBER			OUT
+PROCEDURE IMPORT_SQLWKLD_SQLCACHE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+ IMPORT_MODE			VARCHAR2		IN     DEFAULT
+ PRIORITY			NUMBER			IN     DEFAULT
+ SAVED_ROWS			NUMBER			OUT
+ FAILED_ROWS			NUMBER			OUT
+PROCEDURE IMPORT_SQLWKLD_STS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+ STS_OWNER			VARCHAR2		IN
+ STS_NAME			VARCHAR2		IN
+ IMPORT_MODE			VARCHAR2		IN     DEFAULT
+ PRIORITY			NUMBER			IN     DEFAULT
+ SAVED_ROWS			NUMBER			OUT
+ FAILED_ROWS			NUMBER			OUT
+PROCEDURE IMPORT_SQLWKLD_STS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+ STS_NAME			VARCHAR2		IN
+ IMPORT_MODE			VARCHAR2		IN     DEFAULT
+ PRIORITY			NUMBER			IN     DEFAULT
+ SAVED_ROWS			NUMBER			OUT
+ FAILED_ROWS			NUMBER			OUT
+PROCEDURE IMPORT_SQLWKLD_SUMADV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+ IMPORT_MODE			VARCHAR2		IN     DEFAULT
+ PRIORITY			NUMBER			IN     DEFAULT
+ SUMADV_ID			NUMBER			IN
+ SAVED_ROWS			NUMBER			OUT
+ FAILED_ROWS			NUMBER			OUT
+PROCEDURE IMPORT_SQLWKLD_USER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+ IMPORT_MODE			VARCHAR2		IN     DEFAULT
+ OWNER_NAME			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ SAVED_ROWS			NUMBER			OUT
+ FAILED_ROWS			NUMBER			OUT
+PROCEDURE INSERT_DIRECTIVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRECTIVE_ID			NUMBER			IN
+ INSTANCE_NAME			VARCHAR2		IN
+ TASK_NAME			VARCHAR2		IN
+ DOCUMENT			CLOB			IN
+PROCEDURE INTERRUPT_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+PROCEDURE MARK_RECOMMENDATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ ID				NUMBER			IN
+ ACTION 			VARCHAR2		IN
+PROCEDURE QUICK_TUNE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ADVISOR_NAME			VARCHAR2		IN
+ TASK_NAME			VARCHAR2		IN
+ ATTR1				CLOB			IN     DEFAULT
+ ATTR2				VARCHAR2		IN     DEFAULT
+ ATTR3				NUMBER			IN     DEFAULT
+ TEMPLATE			VARCHAR2		IN     DEFAULT
+ IMPLEMENT			BOOLEAN 		IN     DEFAULT
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+PROCEDURE RESET_SQLWKLD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+PROCEDURE RESET_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+PROCEDURE RESUME_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+PROCEDURE SETUP_REPOSITORY
+PROCEDURE SETUP_USER_ENVIRONMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ADVISOR_NAME			VARCHAR2		IN
+PROCEDURE SET_DEFAULT_SQLWKLD_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAMETER			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE SET_DEFAULT_SQLWKLD_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAMETER			VARCHAR2		IN
+ VALUE				NUMBER			IN
+PROCEDURE SET_DEFAULT_TASK_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ADVISOR_NAME			VARCHAR2		IN
+ PARAMETER			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE SET_DEFAULT_TASK_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ADVISOR_NAME			VARCHAR2		IN
+ PARAMETER			VARCHAR2		IN
+ VALUE				NUMBER			IN
+PROCEDURE SET_SQLWKLD_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+ PARAMETER			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE SET_SQLWKLD_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+ PARAMETER			VARCHAR2		IN
+ VALUE				NUMBER			IN
+PROCEDURE SET_TASK_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ PARAMETER			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE SET_TASK_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ PARAMETER			VARCHAR2		IN
+ VALUE				NUMBER			IN
+PROCEDURE TUNE_MVIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN/OUT
+ MV_CREATE_STMT 		CLOB			IN
+PROCEDURE UPDATE_DIRECTIVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRECTIVE_ID			NUMBER			IN
+ INSTANCE_NAME			VARCHAR2		IN
+ TASK_NAME			VARCHAR2		IN
+ DOCUMENT			CLOB			IN
+PROCEDURE UPDATE_OBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ OBJECT_ID			NUMBER			IN
+ ATTR1				VARCHAR2		IN     DEFAULT
+ ATTR2				VARCHAR2		IN     DEFAULT
+ ATTR3				VARCHAR2		IN     DEFAULT
+ ATTR4				CLOB			IN     DEFAULT
+ ATTR5				VARCHAR2		IN     DEFAULT
+PROCEDURE UPDATE_REC_ATTRIBUTES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ REC_ID 			NUMBER			IN
+ ACTION_ID			NUMBER			IN
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE UPDATE_SQLWKLD_ATTRIBUTES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+ NEW_NAME			VARCHAR2		IN     DEFAULT
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ READ_ONLY			VARCHAR2		IN     DEFAULT
+ IS_TEMPLATE			VARCHAR2		IN     DEFAULT
+ HOW_CREATED			VARCHAR2		IN     DEFAULT
+PROCEDURE UPDATE_SQLWKLD_STATEMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+ SQL_ID 			NUMBER			IN
+ APPLICATION			VARCHAR2		IN     DEFAULT
+ ACTION 			VARCHAR2		IN     DEFAULT
+ PRIORITY			NUMBER			IN     DEFAULT
+ USERNAME			VARCHAR2		IN     DEFAULT
+PROCEDURE UPDATE_SQLWKLD_STATEMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKLOAD_NAME			VARCHAR2		IN
+ SEARCH 			VARCHAR2		IN
+ UPDATED			NUMBER			OUT
+ APPLICATION			VARCHAR2		IN     DEFAULT
+ ACTION 			VARCHAR2		IN     DEFAULT
+ PRIORITY			NUMBER			IN     DEFAULT
+ USERNAME			VARCHAR2		IN     DEFAULT
+PROCEDURE UPDATE_TASK_ATTRIBUTES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ NEW_NAME			VARCHAR2		IN     DEFAULT
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ READ_ONLY			VARCHAR2		IN     DEFAULT
+ IS_TEMPLATE			VARCHAR2		IN     DEFAULT
+ HOW_CREATED			VARCHAR2		IN     DEFAULT
+

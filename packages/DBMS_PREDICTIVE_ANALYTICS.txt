@@ -1,0 +1,24 @@
+PROCEDURE EXPLAIN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA_TABLE_NAME		VARCHAR2		IN
+ EXPLAIN_COLUMN_NAME		VARCHAR2		IN
+ RESULT_TABLE_NAME		VARCHAR2		IN
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE PREDICT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACCURACY			NUMBER			OUT
+ DATA_TABLE_NAME		VARCHAR2		IN
+ CASE_ID_COLUMN_NAME		VARCHAR2		IN
+ TARGET_COLUMN_NAME		VARCHAR2		IN
+ RESULT_TABLE_NAME		VARCHAR2		IN
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE PROFILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA_TABLE_NAME		VARCHAR2		IN
+ TARGET_COLUMN_NAME		VARCHAR2		IN
+ RESULT_TABLE_NAME		VARCHAR2		IN
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+

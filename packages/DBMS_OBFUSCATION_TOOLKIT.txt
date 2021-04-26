@@ -1,0 +1,163 @@
+PROCEDURE DES3DECRYPT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT				RAW			IN
+ KEY				RAW			IN
+ DECRYPTED_DATA 		RAW			OUT
+ WHICH				BINARY_INTEGER		IN     DEFAULT
+ IV				RAW			IN     DEFAULT
+FUNCTION DES3DECRYPT RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT				RAW			IN
+ KEY				RAW			IN
+ WHICH				BINARY_INTEGER		IN     DEFAULT
+ IV				RAW			IN     DEFAULT
+PROCEDURE DES3DECRYPT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT_STRING			VARCHAR2		IN
+ KEY_STRING			VARCHAR2		IN
+ DECRYPTED_STRING		VARCHAR2		OUT
+ WHICH				BINARY_INTEGER		IN     DEFAULT
+ IV_STRING			VARCHAR2		IN     DEFAULT
+FUNCTION DES3DECRYPT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT_STRING			VARCHAR2		IN
+ KEY_STRING			VARCHAR2		IN
+ WHICH				BINARY_INTEGER		IN     DEFAULT
+ IV_STRING			VARCHAR2		IN     DEFAULT
+PROCEDURE DES3ENCRYPT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT				RAW			IN
+ KEY				RAW			IN
+ ENCRYPTED_DATA 		RAW			OUT
+ WHICH				BINARY_INTEGER		IN     DEFAULT
+ IV				RAW			IN     DEFAULT
+FUNCTION DES3ENCRYPT RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT				RAW			IN
+ KEY				RAW			IN
+ WHICH				BINARY_INTEGER		IN     DEFAULT
+ IV				RAW			IN     DEFAULT
+PROCEDURE DES3ENCRYPT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT_STRING			VARCHAR2		IN
+ KEY_STRING			VARCHAR2		IN
+ ENCRYPTED_STRING		VARCHAR2		OUT
+ WHICH				BINARY_INTEGER		IN     DEFAULT
+ IV_STRING			VARCHAR2		IN     DEFAULT
+FUNCTION DES3ENCRYPT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT_STRING			VARCHAR2		IN
+ KEY_STRING			VARCHAR2		IN
+ WHICH				BINARY_INTEGER		IN     DEFAULT
+ IV_STRING			VARCHAR2		IN     DEFAULT
+PROCEDURE DES3GETKEY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WHICH				BINARY_INTEGER		IN     DEFAULT
+ SEED				RAW			IN
+ KEY				RAW			OUT
+FUNCTION DES3GETKEY RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WHICH				BINARY_INTEGER		IN     DEFAULT
+ SEED				RAW			IN
+PROCEDURE DES3GETKEY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WHICH				BINARY_INTEGER		IN     DEFAULT
+ SEED_STRING			VARCHAR2		IN
+ KEY				VARCHAR2		OUT
+FUNCTION DES3GETKEY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WHICH				BINARY_INTEGER		IN     DEFAULT
+ SEED_STRING			VARCHAR2		IN
+PROCEDURE DESDECRYPT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT				RAW			IN
+ KEY				RAW			IN
+ DECRYPTED_DATA 		RAW			OUT
+FUNCTION DESDECRYPT RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT				RAW			IN
+ KEY				RAW			IN
+PROCEDURE DESDECRYPT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT_STRING			VARCHAR2		IN
+ KEY_STRING			VARCHAR2		IN
+ DECRYPTED_STRING		VARCHAR2		OUT
+FUNCTION DESDECRYPT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT_STRING			VARCHAR2		IN
+ KEY_STRING			VARCHAR2		IN
+PROCEDURE DESENCRYPT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT				RAW			IN
+ KEY				RAW			IN
+ ENCRYPTED_DATA 		RAW			OUT
+FUNCTION DESENCRYPT RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT				RAW			IN
+ KEY				RAW			IN
+PROCEDURE DESENCRYPT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT_STRING			VARCHAR2		IN
+ KEY_STRING			VARCHAR2		IN
+ ENCRYPTED_STRING		VARCHAR2		OUT
+FUNCTION DESENCRYPT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT_STRING			VARCHAR2		IN
+ KEY_STRING			VARCHAR2		IN
+PROCEDURE DESGETKEY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SEED				RAW			IN
+ KEY				RAW			OUT
+FUNCTION DESGETKEY RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SEED				RAW			IN
+PROCEDURE DESGETKEY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SEED_STRING			VARCHAR2		IN
+ KEY				VARCHAR2		OUT
+FUNCTION DESGETKEY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SEED_STRING			VARCHAR2		IN
+PROCEDURE MD5
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT				RAW			IN
+ CHECKSUM			RAW(16) 		OUT
+FUNCTION MD5 RETURNS RAW(16)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT				RAW			IN
+PROCEDURE MD5
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT_STRING			VARCHAR2		IN
+ CHECKSUM_STRING		VARCHAR2(16)		OUT
+FUNCTION MD5 RETURNS VARCHAR2(16)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT_STRING			VARCHAR2		IN
+

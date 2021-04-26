@@ -1,0 +1,157 @@
+FUNCTION BUILD_PLAN_XML RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN     DEFAULT
+ STATEMENT_ID			VARCHAR2		IN     DEFAULT
+ PLAN_ID			NUMBER			IN     DEFAULT
+ FORMAT 			VARCHAR2		IN     DEFAULT
+ FILTER_PREDS			VARCHAR2		IN     DEFAULT
+ PLAN_TAG			VARCHAR2		IN     DEFAULT
+ REPORT_REF			VARCHAR2		IN     DEFAULT
+FUNCTION DIFF_PLAN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_TEXT			CLOB			IN
+ OUTLINE			CLOB			IN
+ USER_NAME			VARCHAR2		IN     DEFAULT
+FUNCTION DIFF_PLAN_AWR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_ID 			VARCHAR2		IN
+ PLAN_HASH_VALUE1		NUMBER			IN
+ PLAN_HASH_VALUE2		NUMBER			IN
+FUNCTION DIFF_PLAN_CURSOR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_ID 			VARCHAR2		IN
+ CURSOR_CHILD_NUM1		NUMBER			IN
+ CURSOR_CHILD_NUM2		NUMBER			IN
+FUNCTION DIFF_PLAN_OUTLINE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_TEXT			CLOB			IN
+ OUTLINE1			CLOB			IN
+ OUTLINE2			CLOB			IN
+ USER_NAME			VARCHAR2		IN     DEFAULT
+FUNCTION DIFF_PLAN_SQL_BASELINE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BASELINE_PLAN_NAME1		VARCHAR2		IN
+ BASELINE_PLAN_NAME2		VARCHAR2		IN
+FUNCTION DISPLAY RETURNS DBMS_XPLAN_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN     DEFAULT
+ STATEMENT_ID			VARCHAR2		IN     DEFAULT
+ FORMAT 			VARCHAR2		IN     DEFAULT
+ FILTER_PREDS			VARCHAR2		IN     DEFAULT
+FUNCTION DISPLAY_AWR RETURNS DBMS_XPLAN_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_ID 			VARCHAR2		IN
+ PLAN_HASH_VALUE		NUMBER(38)		IN     DEFAULT
+ DB_ID				NUMBER(38)		IN     DEFAULT
+ FORMAT 			VARCHAR2		IN     DEFAULT
+ CON_ID 			NUMBER(38)		IN     DEFAULT
+FUNCTION DISPLAY_CURSOR RETURNS DBMS_XPLAN_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_ID 			VARCHAR2		IN     DEFAULT
+ CURSOR_CHILD_NO		NUMBER(38)		IN     DEFAULT
+ FORMAT 			VARCHAR2		IN     DEFAULT
+FUNCTION DISPLAY_PLAN RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN     DEFAULT
+ STATEMENT_ID			VARCHAR2		IN     DEFAULT
+ FORMAT 			VARCHAR2		IN     DEFAULT
+ FILTER_PREDS			VARCHAR2		IN     DEFAULT
+ TYPE				VARCHAR2		IN     DEFAULT
+FUNCTION DISPLAY_SQLSET RETURNS DBMS_XPLAN_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQLSET_NAME			VARCHAR2		IN
+ SQL_ID 			VARCHAR2		IN
+ PLAN_HASH_VALUE		NUMBER(38)		IN     DEFAULT
+ FORMAT 			VARCHAR2		IN     DEFAULT
+ SQLSET_OWNER			VARCHAR2		IN     DEFAULT
+FUNCTION DISPLAY_SQL_PATCH_PLAN RETURNS DBMS_XPLAN_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ FORMAT 			VARCHAR2		IN     DEFAULT
+FUNCTION DISPLAY_SQL_PLAN_BASELINE RETURNS DBMS_XPLAN_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_HANDLE			VARCHAR2		IN     DEFAULT
+ PLAN_NAME			VARCHAR2		IN     DEFAULT
+ FORMAT 			VARCHAR2		IN     DEFAULT
+FUNCTION DISPLAY_SQL_PROFILE_PLAN RETURNS DBMS_XPLAN_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ FORMAT 			VARCHAR2		IN     DEFAULT
+FUNCTION FORMAT_NUMBER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUM				NUMBER			IN
+FUNCTION FORMAT_NUMBER2 RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUM				NUMBER			IN
+FUNCTION FORMAT_SIZE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUM				NUMBER			IN
+FUNCTION FORMAT_SIZE2 RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUM				NUMBER			IN
+FUNCTION FORMAT_TIME_S RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUM				NUMBER			IN
+FUNCTION GET_CURSOR_ROWS RETURNS PLAN_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_ID 			VARCHAR2		IN     DEFAULT
+ CURSOR_CHILD_NO		NUMBER(38)		IN     DEFAULT
+ FORMAT 			VARCHAR2		IN     DEFAULT
+FUNCTION GET_PLANDIFF_REPORT_XML RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPORT_REF			VARCHAR2		IN     DEFAULT
+ TID				NUMBER			IN
+ METHOD 			VARCHAR2		IN
+FUNCTION GET_PLAN_ROWS RETURNS PLAN_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN     DEFAULT
+ STATEMENT_ID			VARCHAR2		IN     DEFAULT
+ PLAN_ID			VARCHAR2		IN     DEFAULT
+ FORMAT 			VARCHAR2		IN     DEFAULT
+ FILTER_PREDS			VARCHAR2		IN     DEFAULT
+ MASK_COST			NUMBER			IN     DEFAULT
+FUNCTION I_DISPLAY_SMB_PLAN RETURNS DBMS_XPLAN_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ FORMAT 			VARCHAR2		IN     DEFAULT
+ OBJ_TYPE			NUMBER			IN
+FUNCTION PREPARE_PLAN_XML_QUERY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PLAN_QUERY			VARCHAR2		IN
+FUNCTION PREPARE_RECORDS RETURNS DBMS_XPLAN_TYPE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PLAN_CUR			REF CURSOR		IN
+ I_FORMAT_FLAGS 		NUMBER			IN
+ DIAG_REPOS_CUR 		REF CURSOR		IN     DEFAULT
+FUNCTION VALIDATE_FORMAT RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HASPLANSTATS			BOOLEAN 		IN
+ FORMAT 			VARCHAR2		IN
+ FORMAT_FLAGS			NUMBER			OUT
+

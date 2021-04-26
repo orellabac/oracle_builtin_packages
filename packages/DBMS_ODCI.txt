@@ -1,0 +1,42 @@
+PROCEDURE CLEANUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IA				ODCIINDEXINFO		IN
+ GTN_CONTEXT			NUMBER			IN
+FUNCTION ESTIMATE_CPU_UNITS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELAPSED_TIME			NUMBER			IN
+PROCEDURE GETMETADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IA				ODCIINDEXINFO		IN
+ EXP_VERSION			VARCHAR2		IN
+ IDX_VERSION			NUMBER			IN     DEFAULT
+ STMT_STRING			VARCHAR2		OUT
+ NEW_BLOCK			NUMBER			OUT
+PROCEDURE GETTABLENAMES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IA				ODCIINDEXINFO		IN
+ READ_ONLY			NUMBER			IN
+ EXP_VERSION			VARCHAR2		IN
+ IDX_VERSION			NUMBER			IN
+ STMT_STRING			VARCHAR2		OUT
+ GTN_CONTEXT			NUMBER			OUT
+ STATUS 			NUMBER			OUT
+PROCEDURE RESTOREREFCURSOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RC				REF CURSOR		OUT
+ CURNUM 			NUMBER			IN
+PROCEDURE SAVEREFCURSOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RC				REF CURSOR		IN
+ CURNUM 			NUMBER			OUT
+PROCEDURE UPGRADE_SECOBJ
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJLIST			ODCISECOBJTABLE 	IN
+

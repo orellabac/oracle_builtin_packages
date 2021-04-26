@@ -1,0 +1,66 @@
+FUNCTION ROWID_BLOCK_NUMBER RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ROW_ID 			ROWID			IN
+ TS_TYPE_IN			VARCHAR2		IN     DEFAULT
+FUNCTION ROWID_CREATE RETURNS ROWID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ROWID_TYPE			NUMBER			IN
+ OBJECT_NUMBER			NUMBER			IN
+ RELATIVE_FNO			NUMBER			IN
+ BLOCK_NUMBER			NUMBER			IN
+ ROW_NUMBER			NUMBER			IN
+PROCEDURE ROWID_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ROWID_IN			ROWID			IN
+ ROWID_TYPE			NUMBER			OUT
+ OBJECT_NUMBER			NUMBER			OUT
+ RELATIVE_FNO			NUMBER			OUT
+ BLOCK_NUMBER			NUMBER			OUT
+ ROW_NUMBER			NUMBER			OUT
+ TS_TYPE_IN			VARCHAR2		IN     DEFAULT
+FUNCTION ROWID_OBJECT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ROW_ID 			ROWID			IN
+FUNCTION ROWID_RELATIVE_FNO RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ROW_ID 			ROWID			IN
+ TS_TYPE_IN			VARCHAR2		IN     DEFAULT
+FUNCTION ROWID_ROW_NUMBER RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ROW_ID 			ROWID			IN
+FUNCTION ROWID_TO_ABSOLUTE_FNO RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ROW_ID 			ROWID			IN
+ SCHEMA_NAME			VARCHAR2		IN
+ OBJECT_NAME			VARCHAR2		IN
+FUNCTION ROWID_TO_EXTENDED RETURNS ROWID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OLD_ROWID			ROWID			IN
+ SCHEMA_NAME			VARCHAR2		IN
+ OBJECT_NAME			VARCHAR2		IN
+ CONVERSION_TYPE		NUMBER(38)		IN
+FUNCTION ROWID_TO_RESTRICTED RETURNS ROWID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OLD_ROWID			ROWID			IN
+ CONVERSION_TYPE		NUMBER(38)		IN
+FUNCTION ROWID_TYPE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ROW_ID 			ROWID			IN
+FUNCTION ROWID_VERIFY RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ROWID_IN			ROWID			IN
+ SCHEMA_NAME			VARCHAR2		IN
+ OBJECT_NAME			VARCHAR2		IN
+ CONVERSION_TYPE		NUMBER(38)		IN
+

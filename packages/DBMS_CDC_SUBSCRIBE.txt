@@ -1,0 +1,88 @@
+PROCEDURE ACTIVATE_SUBSCRIPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_NAME		VARCHAR2		IN
+PROCEDURE ACTIVATE_SUBSCRIPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_HANDLE		NUMBER			IN
+PROCEDURE CREATE_SUBSCRIPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHANGE_SET_NAME		VARCHAR2		IN
+ DESCRIPTION			VARCHAR2		IN
+ SUBSCRIPTION_NAME		VARCHAR2		IN
+PROCEDURE DROP_SUBSCRIBER_VIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_HANDLE		NUMBER			IN
+ SOURCE_SCHEMA			VARCHAR2		IN
+ SOURCE_TABLE			VARCHAR2		IN
+PROCEDURE DROP_SUBSCRIPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_NAME		VARCHAR2		IN
+PROCEDURE DROP_SUBSCRIPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_HANDLE		NUMBER			IN
+PROCEDURE EXTEND_WINDOW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_NAME		VARCHAR2		IN
+ UPPER_BOUND			DATE			IN     DEFAULT
+PROCEDURE EXTEND_WINDOW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_HANDLE		NUMBER			IN
+PROCEDURE GET_SUBSCRIPTION_HANDLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHANGE_SET			VARCHAR2		IN
+ DESCRIPTION			VARCHAR2		IN
+ SUBSCRIPTION_HANDLE		NUMBER			OUT
+PROCEDURE PREPARE_SUBSCRIBER_VIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_HANDLE		NUMBER			IN
+ SOURCE_SCHEMA			VARCHAR2		IN
+ SOURCE_TABLE			VARCHAR2		IN
+ VIEW_NAME			VARCHAR2		OUT
+PROCEDURE PURGE_WINDOW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_NAME		VARCHAR2		IN
+ LOWER_BOUND			DATE			IN     DEFAULT
+PROCEDURE PURGE_WINDOW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_HANDLE		NUMBER			IN
+PROCEDURE SUBSCRIBE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_NAME		VARCHAR2		IN
+ SOURCE_SCHEMA			VARCHAR2		IN
+ SOURCE_TABLE			VARCHAR2		IN
+ COLUMN_LIST			VARCHAR2		IN
+ SUBSCRIBER_VIEW		VARCHAR2		IN
+PROCEDURE SUBSCRIBE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_NAME		VARCHAR2		IN
+ PUBLICATION_ID 		NUMBER			IN
+ COLUMN_LIST			VARCHAR2		IN
+ SUBSCRIBER_VIEW		VARCHAR2		IN
+PROCEDURE SUBSCRIBE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_HANDLE		NUMBER			IN
+ SOURCE_SCHEMA			VARCHAR2		IN
+ SOURCE_TABLE			VARCHAR2		IN
+ COLUMN_LIST			VARCHAR2		IN
+PROCEDURE SUBSCRIBE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_HANDLE		NUMBER			IN
+ PUBLICATION_ID 		NUMBER			IN
+ COLUMN_LIST			VARCHAR2		IN
+

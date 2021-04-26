@@ -1,0 +1,24 @@
+PROCEDURE CLEAR_PLSQL_TRACE
+PROCEDURE COMMENT_PLSQL_TRACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COMMENT			VARCHAR2		IN
+FUNCTION GET_PLSQL_TRACE_LEVEL RETURNS BINARY_INTEGER
+FUNCTION GET_PLSQL_TRACE_RUNNUMBER RETURNS BINARY_INTEGER
+FUNCTION INTERNAL_VERSION_CHECK RETURNS BINARY_INTEGER
+PROCEDURE LIMIT_PLSQL_TRACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LIMIT				BINARY_INTEGER		IN     DEFAULT
+PROCEDURE PAUSE_PLSQL_TRACE
+PROCEDURE PLSQL_TRACE_VERSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MAJOR				BINARY_INTEGER		OUT
+ MINOR				BINARY_INTEGER		OUT
+PROCEDURE RESUME_PLSQL_TRACE
+PROCEDURE SET_PLSQL_TRACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRACE_LEVEL			BINARY_INTEGER		IN
+

@@ -1,0 +1,51 @@
+PROCEDURE ADD2MULTI
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STREAM 			VARCHAR2		IN
+ MLINE				RECORD			IN/OUT
+   ROWS 			TABLE OF VARCHAR2(32767) IN/OUT
+   NUM_ROWS			NUMBER(38)		IN/OUT
+   PARTIAL_ROW			BOOLEAN 		IN/OUT
+ CONTINUE			BOOLEAN 		IN     DEFAULT
+FUNCTION NEW_MULTI RETURNS RECORD
+   ROWS 			TABLE OF VARCHAR2(32767) OUT
+   NUM_ROWS			NUMBER(38)		OUT
+   PARTIAL_ROW			BOOLEAN 		OUT
+PROCEDURE NEW_MULTI
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MLINE				RECORD			OUT
+   ROWS 			TABLE OF VARCHAR2(32767) OUT
+   NUM_ROWS			NUMBER(38)		OUT
+   PARTIAL_ROW			BOOLEAN 		OUT
+FUNCTION NEW_ROW_LIST RETURNS RECORD
+   ROWS 			TABLE OF NUMBER(38)	OUT
+   NUM_ROWS			NUMBER(38)		OUT
+PROCEDURE NEW_ROW_LIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RLIST				RECORD			OUT
+   ROWS 			TABLE OF NUMBER(38)	OUT
+   NUM_ROWS			NUMBER(38)		OUT
+PROCEDURE PRINT_MULTI
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MLINE				RECORD			IN
+   ROWS 			TABLE OF VARCHAR2(32767) IN
+   NUM_ROWS			NUMBER(38)		IN
+   PARTIAL_ROW			BOOLEAN 		IN
+PROCEDURE PRINT_ROW_LIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RLIST				RECORD			IN
+   ROWS 			TABLE OF NUMBER(38)	IN
+   NUM_ROWS			NUMBER(38)		IN
+PROCEDURE STREAM2MULTI
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STREAM 			VARCHAR2		IN
+ MLINE				RECORD			OUT
+   ROWS 			TABLE OF VARCHAR2(32767) OUT
+   NUM_ROWS			NUMBER(38)		OUT
+   PARTIAL_ROW			BOOLEAN 		OUT
+

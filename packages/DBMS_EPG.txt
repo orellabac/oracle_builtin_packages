@@ -1,0 +1,79 @@
+PROCEDURE AUTHORIZE_DAD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DAD_NAME			VARCHAR2		IN
+ USER				VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_DAD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DAD_NAME			VARCHAR2		IN
+ PATH				VARCHAR2		IN     DEFAULT
+PROCEDURE DEAUTHORIZE_DAD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DAD_NAME			VARCHAR2		IN
+ USER				VARCHAR2		IN     DEFAULT
+PROCEDURE DELETE_DAD_ATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DAD_NAME			VARCHAR2		IN
+ ATTR_NAME			VARCHAR2		IN
+PROCEDURE DELETE_GLOBAL_ATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ATTR_NAME			VARCHAR2		IN
+PROCEDURE DROP_DAD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DAD_NAME			VARCHAR2		IN
+PROCEDURE GET_ALL_DAD_ATTRIBUTES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DAD_NAME			VARCHAR2		IN
+ ATTR_NAMES			TABLE OF VARCHAR2(4000) OUT
+ ATTR_VALUES			TABLE OF VARCHAR2(4000) OUT
+PROCEDURE GET_ALL_DAD_MAPPINGS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DAD_NAME			VARCHAR2		IN
+ PATHS				TABLE OF VARCHAR2(4000) OUT
+PROCEDURE GET_ALL_GLOBAL_ATTRIBUTES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ATTR_NAMES			TABLE OF VARCHAR2(4000) OUT
+ ATTR_VALUES			TABLE OF VARCHAR2(4000) OUT
+FUNCTION GET_DAD_ATTRIBUTE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DAD_NAME			VARCHAR2		IN
+ ATTR_NAME			VARCHAR2		IN
+PROCEDURE GET_DAD_LIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DAD_NAMES			TABLE OF VARCHAR2(4000) OUT
+FUNCTION GET_GLOBAL_ATTRIBUTE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ATTR_NAME			VARCHAR2		IN
+PROCEDURE MAP_DAD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DAD_NAME			VARCHAR2		IN
+ PATH				VARCHAR2		IN
+PROCEDURE SET_DAD_ATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DAD_NAME			VARCHAR2		IN
+ ATTR_NAME			VARCHAR2		IN
+ ATTR_VALUE			VARCHAR2		IN
+PROCEDURE SET_GLOBAL_ATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ATTR_NAME			VARCHAR2		IN
+ ATTR_VALUE			VARCHAR2		IN
+PROCEDURE UNMAP_DAD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DAD_NAME			VARCHAR2		IN
+ PATH				VARCHAR2		IN     DEFAULT
+

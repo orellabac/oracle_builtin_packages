@@ -1,0 +1,78 @@
+PROCEDURE EXPONENTIAL_DIST_FIT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNERNAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+ COLUMNNAME			VARCHAR2		IN
+ TEST_TYPE			VARCHAR2		IN     DEFAULT
+ LAMBDA 			NUMBER			IN/OUT
+ MU				NUMBER			IN/OUT
+ SIG				NUMBER			OUT
+PROCEDURE NORMAL_DIST_FIT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNERNAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+ COLUMNNAME			VARCHAR2		IN
+ TEST_TYPE			VARCHAR2		IN     DEFAULT
+ MEAN				NUMBER			IN/OUT
+ STDEV				NUMBER			IN/OUT
+ SIG				NUMBER			OUT
+PROCEDURE POISSON_DIST_FIT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNERNAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+ COLUMNNAME			VARCHAR2		IN
+ TEST_TYPE			VARCHAR2		IN     DEFAULT
+ LAMBDA 			NUMBER			IN/OUT
+ SIG				NUMBER			OUT
+PROCEDURE SUMMARY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_OWNERNAME			VARCHAR2		IN
+ P_TABLENAME			VARCHAR2		IN
+ P_COLUMNNAME			VARCHAR2		IN
+ P_SIGMA_VALUE			NUMBER			IN     DEFAULT
+ S				RECORD			OUT
+   COUNT			NUMBER			OUT
+   MIN				NUMBER			OUT
+   MAX				NUMBER			OUT
+   RANGE			NUMBER			OUT
+   MEAN 			NUMBER			OUT
+   CMODE			NUM_TABLE		OUT
+   VARIANCE			NUMBER			OUT
+   STDDEV			NUMBER			OUT
+   QUANTILE_5			NUMBER			OUT
+   QUANTILE_25			NUMBER			OUT
+   MEDIAN			NUMBER			OUT
+   QUANTILE_75			NUMBER			OUT
+   QUANTILE_95			NUMBER			OUT
+   PLUS_X_SIGMA 		NUMBER			OUT
+   MINUS_X_SIGMA		NUMBER			OUT
+   EXTREME_VALUES		NUM_TABLE		OUT
+   TOP_5_VALUES 		N_ARR			OUT
+   BOTTOM_5_VALUES		N_ARR			OUT
+PROCEDURE UNIFORM_DIST_FIT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNERNAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+ COLUMNNAME			VARCHAR2		IN
+ VAR_TYPE			VARCHAR2		IN     DEFAULT
+ TEST_TYPE			VARCHAR2		IN     DEFAULT
+ PARAMA 			NUMBER			IN/OUT
+ PARAMB 			NUMBER			IN/OUT
+ SIG				NUMBER			OUT
+PROCEDURE WEIBULL_DIST_FIT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNERNAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+ COLUMNNAME			VARCHAR2		IN
+ TEST_TYPE			VARCHAR2		IN     DEFAULT
+ ALPHA				NUMBER			IN/OUT
+ MU				NUMBER			IN/OUT
+ BETA				NUMBER			IN/OUT
+ SIG				NUMBER			OUT
+

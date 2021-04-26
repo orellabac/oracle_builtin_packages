@@ -1,0 +1,83 @@
+FUNCTION ISOPEN RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			BINARY_INTEGER		IN
+FUNCTION LZ_COMPRESS RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				RAW			IN
+ QUALITY			BINARY_INTEGER		IN     DEFAULT
+FUNCTION LZ_COMPRESS RETURNS BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BLOB			IN
+ QUALITY			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE LZ_COMPRESS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BLOB			IN
+ DST				BLOB			IN/OUT
+ QUALITY			BINARY_INTEGER		IN     DEFAULT
+FUNCTION LZ_COMPRESS RETURNS BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BINARY FILE LOB 	IN
+ QUALITY			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE LZ_COMPRESS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BINARY FILE LOB 	IN
+ DST				BLOB			IN/OUT
+ QUALITY			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE LZ_COMPRESS_ADD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			BINARY_INTEGER		IN
+ DST				BLOB			IN/OUT
+ SRC				RAW			IN
+PROCEDURE LZ_COMPRESS_CLOSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			BINARY_INTEGER		IN
+ DST				BLOB			IN/OUT
+FUNCTION LZ_COMPRESS_OPEN RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DST				BLOB			IN/OUT
+ QUALITY			BINARY_INTEGER		IN     DEFAULT
+FUNCTION LZ_UNCOMPRESS RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				RAW			IN
+FUNCTION LZ_UNCOMPRESS RETURNS BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BLOB			IN
+PROCEDURE LZ_UNCOMPRESS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BLOB			IN
+ DST				BLOB			IN/OUT
+FUNCTION LZ_UNCOMPRESS RETURNS BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BINARY FILE LOB 	IN
+PROCEDURE LZ_UNCOMPRESS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BINARY FILE LOB 	IN
+ DST				BLOB			IN/OUT
+PROCEDURE LZ_UNCOMPRESS_CLOSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			BINARY_INTEGER		IN
+PROCEDURE LZ_UNCOMPRESS_EXTRACT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			BINARY_INTEGER		IN
+ DST				RAW			OUT
+FUNCTION LZ_UNCOMPRESS_OPEN RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BLOB			IN
+

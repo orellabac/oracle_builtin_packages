@@ -1,0 +1,97 @@
+PROCEDURE APPLY_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INNAME 			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE APPLY_UNSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INNAME 			VARCHAR2		IN
+PROCEDURE BUILD
+FUNCTION DB_IS_LOGSTDBY RETURNS BINARY_INTEGER
+PROCEDURE EDS_ADD_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_OWNER			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ P_DBLINK			VARCHAR2		IN     DEFAULT
+PROCEDURE EDS_EVOLVE_AUTOMATIC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPTIONS			VARCHAR2		IN
+PROCEDURE EDS_EVOLVE_MANUAL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPTIONS			VARCHAR2		IN
+ TABLE_OWNER			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+PROCEDURE EDS_REMOVE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_OWNER			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+PROCEDURE INSTANTIATE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA_NAME			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ DBLINK 			VARCHAR2		IN
+FUNCTION IS_APPLY_SERVER RETURNS BOOLEAN
+FUNCTION MAP_PRIMARY_SCN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIMARY_SCN			NUMBER			IN
+PROCEDURE PREPARE_FOR_NEW_PRIMARY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FORMER_STANDBY_TYPE		VARCHAR2		IN
+ DBLINK 			VARCHAR2		IN
+PROCEDURE PURGE_SESSION
+PROCEDURE REBUILD
+PROCEDURE SET_TABLESPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NEW_TABLESPACE 		VARCHAR2		IN
+PROCEDURE SKIP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STMT				VARCHAR2		IN
+ SCHEMA_NAME			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN     DEFAULT
+ PROC_NAME			VARCHAR2		IN     DEFAULT
+ USE_LIKE			BOOLEAN 		IN     DEFAULT
+ ESC				CHAR(1) 		IN     DEFAULT
+PROCEDURE SKIP_ERROR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STMT				VARCHAR2		IN
+ SCHEMA_NAME			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN     DEFAULT
+ PROC_NAME			VARCHAR2		IN     DEFAULT
+ USE_LIKE			BOOLEAN 		IN     DEFAULT
+ ESC				CHAR(1) 		IN     DEFAULT
+PROCEDURE SKIP_TRANSACTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XIDUSN_P			NUMBER			IN
+ XIDSLT_P			NUMBER			IN
+ XIDSQN_P			NUMBER			IN
+PROCEDURE UNSKIP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STMT				VARCHAR2		IN
+ SCHEMA_NAME			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE UNSKIP_ERROR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STMT				VARCHAR2		IN
+ SCHEMA_NAME			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE UNSKIP_TRANSACTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XIDUSN_P			NUMBER			IN
+ XIDSLT_P			NUMBER			IN
+ XIDSQN_P			NUMBER			IN
+

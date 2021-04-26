@@ -1,0 +1,202 @@
+FUNCTION BUILD_GENERIC_TAG RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TAG_NAME			VARCHAR2		IN
+ TAG_INPUTS			UNDEFINED		IN
+FUNCTION BUILD_REPORT_REFERENCE_STRUCT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COMPONENT_NAME 		VARCHAR2		IN
+ REPORT_NAME			VARCHAR2		IN
+ ID_PARAM_VAL			TABLE OF VARCHAR2(32767) IN
+FUNCTION BUILD_REPORT_REFERENCE_VARG RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COMPONENT_NAME 		VARCHAR2		IN
+ REPORT_NAME			VARCHAR2		IN
+ ID_PARAM_VAL			UNDEFINED		IN
+PROCEDURE CLEAR_FRAMEWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COMPONENT_NAME 		VARCHAR2		IN     DEFAULT
+FUNCTION FORMAT_MESSAGE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MESSAGE_NUMBER 		BINARY_INTEGER		IN
+ MESSAGE_FACILITY		VARCHAR2		IN     DEFAULT
+ LANGUAGE			VARCHAR2		IN     DEFAULT
+ ARG1				VARCHAR2		IN     DEFAULT
+ ARG2				VARCHAR2		IN     DEFAULT
+ ARG3				VARCHAR2		IN     DEFAULT
+ ARG4				VARCHAR2		IN     DEFAULT
+ ARG5				VARCHAR2		IN     DEFAULT
+ ARG6				VARCHAR2		IN     DEFAULT
+ ARG7				VARCHAR2		IN     DEFAULT
+ ARG8				VARCHAR2		IN     DEFAULT
+ ARG9				VARCHAR2		IN     DEFAULT
+ ARG10				VARCHAR2		IN     DEFAULT
+ ARG11				VARCHAR2		IN     DEFAULT
+ ARG12				VARCHAR2		IN     DEFAULT
+FUNCTION FORMAT_REPORT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPORT 			XMLTYPE 		IN
+ FORMAT_NAME			VARCHAR2		IN
+ COMPRESS_XML			BINARY_INTEGER		IN     DEFAULT
+FUNCTION FORMAT_REPORT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPORT 			XMLTYPE 		IN
+ FORMAT_NAME			VARCHAR2		IN
+ FORMAT_CONTENT_TYPE		NUMBER			OUT
+ COMPRESS_XML			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE GET_AWR_CONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_START_TIME			DATE			IN
+ P_END_TIME			DATE			IN
+ P_DBID 			NUMBER			IN/OUT
+ P_BEGIN_SNAP			NUMBER			IN/OUT
+ P_END_SNAP			NUMBER			IN/OUT
+PROCEDURE GET_IMPORTED_REPORT_ATTRS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_DBID 			NUMBER			IN
+ P_INST_COUNT			NUMBER			OUT
+ P_CPU_CORES			NUMBER			OUT
+ P_HYPERTHREADED		NUMBER			OUT
+ P_CON_ID			NUMBER			OUT
+ P_CON_NAME			VARCHAR2		OUT
+ P_IS_EXA			NUMBER			OUT
+ P_TIMEZONE_OFFSET		NUMBER			OUT
+ P_PACKS			NUMBER			OUT
+FUNCTION GET_PARAM RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAM_VAL			TABLE OF VARCHAR2(32767) IN
+ PARAM_NAME			VARCHAR2		IN
+ MANDATORY			BOOLEAN 		IN     DEFAULT
+ DEFAULT_VALUE			CLOB			IN     DEFAULT
+ NULLABLE			BOOLEAN 		IN     DEFAULT
+FUNCTION GET_REPORT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPORT_REFERENCE		VARCHAR2		IN
+ COMPRESS_XML			BINARY_INTEGER		IN     DEFAULT
+FUNCTION GET_REPORT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPORT_REFERENCE		VARCHAR2		IN
+ CONTENT_TYPE			NUMBER			OUT
+ COMPRESS_XML			BINARY_INTEGER		IN     DEFAULT
+FUNCTION GET_REPORT_WITH_SUMMARY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPORT_REFERENCE		VARCHAR2		IN
+FUNCTION GET_SNAP_ID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_TIME 			DATE			IN
+ P_DBID 			NUMBER			IN
+PROCEDURE GET_TIMING_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHASE				BINARY_INTEGER		IN
+ ELAPSED			NUMBER			IN/OUT
+ CPU				NUMBER			IN/OUT
+FUNCTION GZIP_REPORT_XML RETURNS BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPORT 			CLOB			IN
+FUNCTION LOOKUP_COMPONENT_ID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COMPONENT_NAME 		VARCHAR2		IN
+FUNCTION LOOKUP_REPORT_ID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COMPONENT_NAME 		VARCHAR2		IN
+ REPORT_NAME			VARCHAR2		IN
+PROCEDURE PARSE_REPORT_REFERENCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPORT_REFERENCE		VARCHAR2		IN
+ COMPONENT_NAME 		VARCHAR2		OUT
+ REPORT_NAME			VARCHAR2		OUT
+ ID_PARAM_VAL			TABLE OF VARCHAR2(32767) OUT
+PROCEDURE REGISTER_COMPONENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COMPONENT_NAME 		VARCHAR2		IN
+ COMPONENT_DESC 		VARCHAR2		IN
+ COMPONENT_OBJECT		WRI$_REPT_ABSTRACT_T	IN
+PROCEDURE REGISTER_CUSTOM_FORMAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COMPONENT_NAME 		VARCHAR2		IN
+ REPORT_NAME			VARCHAR2		IN
+ FORMAT_NAME			VARCHAR2		IN
+ FORMAT_DESC			VARCHAR2		IN
+ FORMAT_CONTENT_TYPE		NUMBER			IN
+PROCEDURE REGISTER_REPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COMPONENT_NAME 		VARCHAR2		IN
+ REPORT_NAME			VARCHAR2		IN
+ REPORT_DESC			VARCHAR2		IN
+ SCHEMA_ID			NUMBER			IN
+PROCEDURE REGISTER_SWF
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COMPONENT_NAME 		VARCHAR2		IN
+ REPORT_NAME			VARCHAR2		IN
+ SWF_ID 			NUMBER			IN
+PROCEDURE REGISTER_TEXT_FORMAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COMPONENT_NAME 		VARCHAR2		IN
+ REPORT_NAME			VARCHAR2		IN
+ FORMAT_NAME			VARCHAR2		IN
+ FORMAT_DESC			VARCHAR2		IN
+ HTML_STYLESHEET_ID		NUMBER			IN
+ TEXT_MAX_LINESIZE		NUMBER			IN     DEFAULT
+PROCEDURE REGISTER_XSLT_FORMAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COMPONENT_NAME 		VARCHAR2		IN
+ REPORT_NAME			VARCHAR2		IN
+ FORMAT_NAME			VARCHAR2		IN
+ FORMAT_DESC			VARCHAR2		IN
+ FORMAT_CONTENT_TYPE		NUMBER			IN     DEFAULT
+ STYLESHEET_ID			NUMBER			IN
+PROCEDURE RESTORE_REPORT_ENV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ORIG_ENV			FORMAT_PARAM_VALUES	IN
+FUNCTION SETUP_REPORT_ENV RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ORIG_ENV			FORMAT_PARAM_VALUES	IN/OUT
+FUNCTION TRANSFORM_HTML_TO_TEXT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOCUMENT			XMLTYPE 		IN
+ MAX_LINESIZE			BINARY_INTEGER		IN
+FUNCTION TRANSFORM_REPORT_XML RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPORT_XML			XMLTYPE 		IN
+ ZLIB2BASE64			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE VALIDATE_REPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPORT 			XMLTYPE 		IN
+FUNCTION ZLIB2BASE64_CLOB RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPORT 			CLOB			IN
+FUNCTION ZLIB2BASE64_REPORT_XML RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPORT_XML			XMLTYPE 		IN
+

@@ -1,0 +1,4 @@
+ERROR:
+ORA-04043: object DBMS_ADVANCED_REWRITE does not exist
+
+

@@ -1,0 +1,47 @@
+PROCEDURE ADVISE_COMMIT
+PROCEDURE ADVISE_NOTHING
+PROCEDURE ADVISE_ROLLBACK
+PROCEDURE BEGIN_DISCRETE_TRANSACTION
+PROCEDURE COMMIT
+PROCEDURE COMMIT_COMMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CMNT				VARCHAR2		IN
+PROCEDURE COMMIT_FORCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XID				VARCHAR2		IN
+ SCN				VARCHAR2		IN     DEFAULT
+FUNCTION LOCAL_TRANSACTION_ID RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CREATE_TRANSACTION		BOOLEAN 		IN     DEFAULT
+PROCEDURE PURGE_LOST_DB_ENTRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XID				VARCHAR2		IN
+PROCEDURE PURGE_MIXED
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XID				VARCHAR2		IN
+PROCEDURE READ_ONLY
+PROCEDURE READ_WRITE
+PROCEDURE ROLLBACK
+PROCEDURE ROLLBACK_FORCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XID				VARCHAR2		IN
+PROCEDURE ROLLBACK_SAVEPOINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SAVEPT 			VARCHAR2		IN
+PROCEDURE SAVEPOINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SAVEPT 			VARCHAR2		IN
+FUNCTION STEP_ID RETURNS NUMBER
+PROCEDURE USE_ROLLBACK_SEGMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RB_NAME			VARCHAR2		IN
+

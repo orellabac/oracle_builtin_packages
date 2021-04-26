@@ -1,0 +1,51 @@
+PROCEDURE ALLOCATE_UNIQUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOCKNAME			VARCHAR2		IN
+ LOCKHANDLE			VARCHAR2		OUT
+ EXPIRATION_SECS		NUMBER(38)		IN     DEFAULT
+PROCEDURE ALLOCATE_UNIQUE_AUTONOMOUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOCKNAME			VARCHAR2		IN
+ LOCKHANDLE			VARCHAR2		OUT
+ EXPIRATION_SECS		NUMBER(38)		IN     DEFAULT
+FUNCTION CONVERT RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				NUMBER(38)		IN
+ LOCKMODE			NUMBER(38)		IN
+ TIMEOUT			NUMBER			IN     DEFAULT
+FUNCTION CONVERT RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOCKHANDLE			VARCHAR2		IN
+ LOCKMODE			NUMBER(38)		IN
+ TIMEOUT			NUMBER			IN     DEFAULT
+FUNCTION RELEASE RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				NUMBER(38)		IN
+FUNCTION RELEASE RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOCKHANDLE			VARCHAR2		IN
+FUNCTION REQUEST RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				NUMBER(38)		IN
+ LOCKMODE			NUMBER(38)		IN     DEFAULT
+ TIMEOUT			NUMBER(38)		IN     DEFAULT
+ RELEASE_ON_COMMIT		BOOLEAN 		IN     DEFAULT
+FUNCTION REQUEST RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOCKHANDLE			VARCHAR2		IN
+ LOCKMODE			NUMBER(38)		IN     DEFAULT
+ TIMEOUT			NUMBER(38)		IN     DEFAULT
+ RELEASE_ON_COMMIT		BOOLEAN 		IN     DEFAULT
+PROCEDURE SLEEP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SECONDS			NUMBER			IN
+

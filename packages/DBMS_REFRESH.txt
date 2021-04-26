@@ -1,0 +1,104 @@
+PROCEDURE ADD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ LIST				VARCHAR2		IN
+ LAX				BOOLEAN 		IN     DEFAULT
+ SITEID 			BINARY_INTEGER		IN     DEFAULT
+ EXPORT_DB			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ TAB				TABLE OF VARCHAR2(227)	IN
+ LAX				BOOLEAN 		IN     DEFAULT
+ SITEID 			BINARY_INTEGER		IN     DEFAULT
+ EXPORT_DB			VARCHAR2		IN     DEFAULT
+PROCEDURE CHANGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ NEXT_DATE			DATE			IN     DEFAULT
+ INTERVAL			VARCHAR2		IN     DEFAULT
+ IMPLICIT_DESTROY		BOOLEAN 		IN     DEFAULT
+ ROLLBACK_SEG			VARCHAR2		IN     DEFAULT
+ PUSH_DEFERRED_RPC		BOOLEAN 		IN     DEFAULT
+ REFRESH_AFTER_ERRORS		BOOLEAN 		IN     DEFAULT
+ PURGE_OPTION			BINARY_INTEGER		IN     DEFAULT
+ PARALLELISM			BINARY_INTEGER		IN     DEFAULT
+ HEAP_SIZE			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE DESTROY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+PROCEDURE MAKE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ LIST				VARCHAR2		IN
+ NEXT_DATE			DATE			IN
+ INTERVAL			VARCHAR2		IN
+ IMPLICIT_DESTROY		BOOLEAN 		IN     DEFAULT
+ LAX				BOOLEAN 		IN     DEFAULT
+ JOB				BINARY_INTEGER		IN     DEFAULT
+ ROLLBACK_SEG			VARCHAR2		IN     DEFAULT
+ PUSH_DEFERRED_RPC		BOOLEAN 		IN     DEFAULT
+ REFRESH_AFTER_ERRORS		BOOLEAN 		IN     DEFAULT
+ PURGE_OPTION			BINARY_INTEGER		IN     DEFAULT
+ PARALLELISM			BINARY_INTEGER		IN     DEFAULT
+ HEAP_SIZE			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE MAKE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ TAB				TABLE OF VARCHAR2(227)	IN
+ NEXT_DATE			DATE			IN
+ INTERVAL			VARCHAR2		IN
+ IMPLICIT_DESTROY		BOOLEAN 		IN     DEFAULT
+ LAX				BOOLEAN 		IN     DEFAULT
+ JOB				BINARY_INTEGER		IN     DEFAULT
+ ROLLBACK_SEG			VARCHAR2		IN     DEFAULT
+ PUSH_DEFERRED_RPC		BOOLEAN 		IN     DEFAULT
+ REFRESH_AFTER_ERRORS		BOOLEAN 		IN     DEFAULT
+ PURGE_OPTION			BINARY_INTEGER		IN     DEFAULT
+ PARALLELISM			BINARY_INTEGER		IN     DEFAULT
+ HEAP_SIZE			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE MAKE_REPAPI
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REFGROUP			BINARY_INTEGER		IN
+ NAME				VARCHAR2		IN
+ SITEID 			BINARY_INTEGER		IN
+ REFRESH_SEQ			BINARY_INTEGER		IN
+ EXPORT_DB			VARCHAR2		IN
+ FLAG				BINARY_INTEGER		IN     DEFAULT
+PROCEDURE REFRESH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+PROCEDURE SUBTRACT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ LIST				VARCHAR2		IN
+ LAX				BOOLEAN 		IN     DEFAULT
+PROCEDURE SUBTRACT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ TAB				TABLE OF VARCHAR2(227)	IN
+ LAX				BOOLEAN 		IN     DEFAULT
+PROCEDURE USER_EXPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RG#				BINARY_INTEGER		IN
+ MYCALL 			VARCHAR2		IN/OUT
+PROCEDURE USER_EXPORT_CHILD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MYOWNER			VARCHAR2		IN
+ MYNAME 			VARCHAR2		IN
+ MYTYPE 			VARCHAR2		IN
+ MYCALL 			VARCHAR2		IN/OUT
+ MYSITE 			BINARY_INTEGER		IN     DEFAULT
+

@@ -1,0 +1,501 @@
+FUNCTION COMPILE_CLASS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLASSNAME			VARCHAR2		IN
+FUNCTION COMPILE_METHOD RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLASSNAME			VARCHAR2		IN
+ METHODNAME			VARCHAR2		IN
+ METHODSIG			VARCHAR2		IN
+PROCEDURE DBMS_FEATURE_OJVM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OJVM_BOOLEAN			NUMBER			OUT
+ AUX_COUNT			NUMBER			OUT
+ OJVM_INFO			CLOB			OUT
+PROCEDURE DBMS_FEATURE_SYSTEM_OJVM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OJVM_BOOLEAN			NUMBER			OUT
+ AUX_COUNT			NUMBER			OUT
+ OJVM_INFO			CLOB			OUT
+FUNCTION DECODE_NATIVE_COMPILER_OPTION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPTIONNAME			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE DELETE_PERMISSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ KEY				NUMBER			IN
+FUNCTION DERIVEDFROM RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ OWNER				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+FUNCTION DISABLE_OUTPUT_TO_FILE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+FUNCTION DISABLE_OUTPUT_TO_JAVA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+FUNCTION DISABLE_OUTPUT_TO_SQL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+PROCEDURE DISABLE_OUTPUT_TO_TRC
+PROCEDURE DISABLE_PERMISSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ KEY				NUMBER			IN
+PROCEDURE DROPJAVA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPTIONS			VARCHAR2		IN
+PROCEDURE DUMP_NATIVE_MACHINE_CODE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLASSNAME			VARCHAR2		IN
+ METHODNAME			VARCHAR2		IN
+ METHODSIG			VARCHAR2		IN
+FUNCTION ENABLE_OUTPUT_TO_FILE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+FUNCTION ENABLE_OUTPUT_TO_JAVA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+FUNCTION ENABLE_OUTPUT_TO_SQL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+PROCEDURE ENABLE_OUTPUT_TO_TRC
+PROCEDURE ENABLE_PERMISSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ KEY				NUMBER			IN
+FUNCTION ENDSESSION RETURNS VARCHAR2
+FUNCTION ENDSESSION_AND_RELATED_STATE RETURNS VARCHAR2
+FUNCTION END_EXPORT RETURNS NUMBER
+FUNCTION END_IMPORT RETURNS NUMBER
+PROCEDURE EXPORT_CLASS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN
+ CLZ				BLOB			IN
+PROCEDURE EXPORT_CLASS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ CLZ				BLOB			IN
+FUNCTION EXPORT_RAW_CHUNK RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHUNK				RAW			OUT
+ LENGTH 			NUMBER			OUT
+PROCEDURE EXPORT_RESOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN
+ RES				BLOB			IN
+PROCEDURE EXPORT_RESOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ RES				BLOB			IN
+PROCEDURE EXPORT_RESOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN
+ RES				CLOB			IN
+PROCEDURE EXPORT_RESOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ RES				CLOB			IN
+PROCEDURE EXPORT_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN
+ SRC				BLOB			IN
+PROCEDURE EXPORT_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ SRC				BLOB			IN
+PROCEDURE EXPORT_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN
+ SRC				CLOB			IN
+PROCEDURE EXPORT_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ SRC				CLOB			IN
+FUNCTION EXPORT_TEXT_CHUNK RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHUNK				VARCHAR2		OUT
+ LENGTH 			NUMBER			OUT
+PROCEDURE FINALIZE_OUTPUT_TO_FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+FUNCTION FIXED_IN_INSTANCE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ OWNER				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+FUNCTION FULL_NCOMP_ENABLED RETURNS VARCHAR2
+FUNCTION GETVERSION RETURNS VARCHAR2
+FUNCTION GET_COMPILER_OPTION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WHAT				VARCHAR2		IN
+ OPTIONNAME			VARCHAR2		IN
+FUNCTION GET_JDK_VERSION RETURNS VARCHAR2
+FUNCTION GET_OJVM_PROPERTY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PROPSTRING			VARCHAR2		IN
+FUNCTION GET_PROPERTY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+FUNCTION GET_REPLY RETURNS LONG RAW
+PROCEDURE GRANT_PERMISSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GRANTEE			VARCHAR2		IN
+ PERMISSION_TYPE		VARCHAR2		IN
+ PERMISSION_NAME		VARCHAR2		IN
+ PERMISSION_ACTION		VARCHAR2		IN
+ KEY				NUMBER			OUT
+PROCEDURE GRANT_PERMISSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GRANTEE			VARCHAR2		IN
+ PERMISSION_TYPE		VARCHAR2		IN
+ PERMISSION_NAME		VARCHAR2		IN
+ PERMISSION_ACTION		VARCHAR2		IN
+PROCEDURE GRANT_POLICY_PERMISSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GRANTEE			VARCHAR2		IN
+ PERMISSION_SCHEMA		VARCHAR2		IN
+ PERMISSION_TYPE		VARCHAR2		IN
+ PERMISSION_NAME		VARCHAR2		IN
+ KEY				NUMBER			OUT
+PROCEDURE GRANT_POLICY_PERMISSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GRANTEE			VARCHAR2		IN
+ PERMISSION_SCHEMA		VARCHAR2		IN
+ PERMISSION_TYPE		VARCHAR2		IN
+ PERMISSION_NAME		VARCHAR2		IN
+FUNCTION IMPORT_RAW_CHUNK RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHUNK				RAW			IN
+ LENGTH 			NUMBER			IN
+FUNCTION IMPORT_TEXT_CHUNK RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHUNK				VARCHAR2		IN
+ LENGTH 			NUMBER			IN
+PROCEDURE INITIALIZE_OUTPUT_TO_FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+ PATH				VARCHAR2		IN
+FUNCTION INIT_BTL RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILES_PREFIX			VARCHAR2		IN
+ TYPE				NUMBER			IN
+ SAMPLE_LIMIT			NUMBER			IN
+ EXCLUDE_JAVA			NUMBER			IN
+PROCEDURE LOADJAVA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPTIONS			VARCHAR2		IN
+PROCEDURE LOADJAVA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPTIONS			VARCHAR2		IN
+ RESOLVER			VARCHAR2		IN
+PROCEDURE LOADJAVA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPTIONS			VARCHAR2		IN
+ RESOLVER			VARCHAR2		IN
+ STATUS 			NUMBER			OUT
+FUNCTION LONGNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SHORTNAME			VARCHAR2		IN
+FUNCTION NATIVE_COMPILER_OPTIONS RETURNS COMPILER_OPTION_TYPE_TABLE
+FUNCTION NCOMP_STATUS_MSG RETURNS VARCHAR2
+FUNCTION OPTION_CONTROLLER RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPT				NUMBER			IN
+ ACTION 			NUMBER			IN
+FUNCTION QUERY_OUTPUT_TO_FILE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+FUNCTION QUERY_OUTPUT_TO_JAVA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+FUNCTION QUERY_OUTPUT_TO_SQL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+FUNCTION QUERY_OUTPUT_TO_TRC RETURNS VARCHAR2
+FUNCTION REMOVE_OUTPUT_TO_FILE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+FUNCTION REMOVE_OUTPUT_TO_JAVA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+FUNCTION REMOVE_OUTPUT_TO_SQL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+FUNCTION REMOVE_PROPERTY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+PROCEDURE RESET_COMPILER_OPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WHAT				VARCHAR2		IN
+ OPTIONNAME			VARCHAR2		IN
+PROCEDURE RESET_PROPERTY_DEFS_TABLE_FLAG
+FUNCTION RESOLVER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ OWNER				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+PROCEDURE RESTRICT_PERMISSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GRANTEE			VARCHAR2		IN
+ PERMISSION_TYPE		VARCHAR2		IN
+ PERMISSION_NAME		VARCHAR2		IN
+ PERMISSION_ACTION		VARCHAR2		IN
+ KEY				NUMBER			OUT
+PROCEDURE RESTRICT_PERMISSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GRANTEE			VARCHAR2		IN
+ PERMISSION_TYPE		VARCHAR2		IN
+ PERMISSION_NAME		VARCHAR2		IN
+ PERMISSION_ACTION		VARCHAR2		IN
+PROCEDURE REVOKE_PERMISSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GRANTEE			VARCHAR2		IN
+ PERMISSION_TYPE		VARCHAR2		IN
+ PERMISSION_NAME		VARCHAR2		IN
+ PERMISSION_ACTION		VARCHAR2		IN
+FUNCTION RUNJAVA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CMDLINE			VARCHAR2		IN
+FUNCTION RUNJAVA_IN_CURRENT_SESSION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CMDLINE			VARCHAR2		IN
+PROCEDURE SEND_COMMAND
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHUNK				LONG RAW		IN
+PROCEDURE SET_COMPILER_OPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WHAT				VARCHAR2		IN
+ OPTIONNAME			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE SET_EXECUTE_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_NAME			VARCHAR2		IN
+ OBJECT_SCHEMA			VARCHAR2		IN
+ OBJECT_TYPE			VARCHAR2		IN
+ GRANTEE_NAME			VARCHAR2		IN
+ GRANT_IF_NONZERO		NUMBER			IN
+PROCEDURE SET_FIXED_IN_INSTANCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ OWNER				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+ VALUE				NUMBER			IN
+PROCEDURE SET_NATIVE_COMPILER_OPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPTIONNAME			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE SET_OUTPUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BUFFERSIZE			NUMBER			IN
+FUNCTION SET_OUTPUT_TO_FILE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+ FILE_PATH			VARCHAR2		IN
+ ALLOW_REPLACE			NUMBER			IN     DEFAULT
+ FROM_STDOUT			NUMBER			IN     DEFAULT
+ FROM_STDERR			NUMBER			IN     DEFAULT
+FUNCTION SET_OUTPUT_TO_JAVA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+ CLASS_NAME			VARCHAR2		IN
+ CLASS_SCHEMA			VARCHAR2		IN
+ METHOD 			VARCHAR2		IN
+ BINDINGS			VARCHAR2		IN
+ NO_NEWLINE_METHOD		VARCHAR2		IN     DEFAULT
+ NO_NEWLINE_BINDINGS		VARCHAR2		IN     DEFAULT
+ NEWLINE_ONLY_METHOD		VARCHAR2		IN     DEFAULT
+ NEWLINE_ONLY_BINDINGS		VARCHAR2		IN     DEFAULT
+ MAXIMUM_LINE_SEGMENT_LENGTH	NUMBER			IN     DEFAULT
+ ALLOW_REPLACE			NUMBER			IN     DEFAULT
+ FROM_STDOUT			NUMBER			IN     DEFAULT
+ FROM_STDERR			NUMBER			IN     DEFAULT
+ INCLUDE_NEWLINES		NUMBER			IN     DEFAULT
+ EAGER				NUMBER			IN     DEFAULT
+ INITIALIZATION_STATEMENT	VARCHAR2		IN     DEFAULT
+ FINALIZATION_STATEMENT 	VARCHAR2		IN     DEFAULT
+FUNCTION SET_OUTPUT_TO_SQL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				VARCHAR2		IN
+ STMT				VARCHAR2		IN
+ BINDINGS			VARCHAR2		IN
+ NO_NEWLINE_STMT		VARCHAR2		IN     DEFAULT
+ NO_NEWLINE_BINDINGS		VARCHAR2		IN     DEFAULT
+ NEWLINE_ONLY_STMT		VARCHAR2		IN     DEFAULT
+ NEWLINE_ONLY_BINDINGS		VARCHAR2		IN     DEFAULT
+ MAXIMUM_LINE_SEGMENT_LENGTH	NUMBER			IN     DEFAULT
+ ALLOW_REPLACE			NUMBER			IN     DEFAULT
+ FROM_STDOUT			NUMBER			IN     DEFAULT
+ FROM_STDERR			NUMBER			IN     DEFAULT
+ INCLUDE_NEWLINES		NUMBER			IN     DEFAULT
+ EAGER				NUMBER			IN     DEFAULT
+PROCEDURE SET_PERMISSION_DEBUG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LEVEL				NUMBER			IN
+PROCEDURE SET_PREFERENCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USER				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+ ABSPATH			VARCHAR2		IN
+ KEY				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+FUNCTION SET_PROPERTY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE SET_RUNTIME_EXEC_CREDENTIALS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBUSER 			VARCHAR2		IN
+ OSUSER 			VARCHAR2		IN
+ OSPASS 			VARCHAR2		IN
+PROCEDURE SET_RUNTIME_EXEC_CREDENTIALS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OSUSER 			VARCHAR2		IN
+ OSPASS 			VARCHAR2		IN
+PROCEDURE SET_SYSTEM_CLASS_LOADING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FLAG				NUMBER			IN
+PROCEDURE SET_VERIFIER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FLAG				NUMBER			IN
+FUNCTION SHAREDPRIVATECLASSNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+FUNCTION SHORTNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LONGNAME			VARCHAR2		IN
+FUNCTION SHOW_PROPERTY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+PROCEDURE START_BTL
+FUNCTION START_EXPORT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SHORT_NAME			VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN
+ FLAGS				NUMBER			IN
+ TYPE				NUMBER			IN
+ PROPERTIES			NUMBER			OUT
+ RAW_CHUNK_COUNT		NUMBER			OUT
+ TOTAL_RAW_BYTE_COUNT		NUMBER			OUT
+ TEXT_CHUNK_COUNT		NUMBER			OUT
+ TOTAL_TEXT_BYTE_COUNT		NUMBER			OUT
+FUNCTION START_IMPORT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LONG_NAME			VARCHAR2		IN
+ FLAGS				NUMBER			IN
+ TYPE				NUMBER			IN
+ PROPERTIES			NUMBER			IN
+ RAW_CHUNK_COUNT		NUMBER			IN
+ TOTAL_RAW_BYTE_COUNT		NUMBER			IN
+ TEXT_CHUNK_COUNT		NUMBER			IN
+PROCEDURE START_JMX_AGENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PORT				VARCHAR2		IN     DEFAULT
+ SSL				VARCHAR2		IN     DEFAULT
+ AUTH				VARCHAR2		IN     DEFAULT
+PROCEDURE STOP_BTL
+PROCEDURE TERMINATE_BTL
+FUNCTION UNCOMPILE_CLASS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLASSNAME			VARCHAR2		IN
+ PERMANENTP			NUMBER			IN     DEFAULT
+FUNCTION UNCOMPILE_METHOD RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLASSNAME			VARCHAR2		IN
+ METHODNAME			VARCHAR2		IN
+ METHODSIG			VARCHAR2		IN
+ PERMANENTP			NUMBER			IN     DEFAULT
+PROCEDURE UNSET_NATIVE_COMPILER_OPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPTIONNAME			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+

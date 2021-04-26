@@ -1,0 +1,35 @@
+PROCEDURE DIST_TXN_SYNC
+FUNCTION XA_COMMIT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XID				DBMS_XA_XID		IN
+ ONEPHASE			BOOLEAN 		IN
+FUNCTION XA_END RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XID				DBMS_XA_XID		IN
+ FLAG				BINARY_INTEGER		IN
+FUNCTION XA_FORGET RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XID				DBMS_XA_XID		IN
+FUNCTION XA_GETLASTOER RETURNS BINARY_INTEGER
+FUNCTION XA_PREPARE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XID				DBMS_XA_XID		IN
+FUNCTION XA_RECOVER RETURNS DBMS_XA_XID_ARRAY
+FUNCTION XA_ROLLBACK RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XID				DBMS_XA_XID		IN
+FUNCTION XA_SETTIMEOUT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SECONDS			BINARY_INTEGER		IN
+FUNCTION XA_START RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XID				DBMS_XA_XID		IN
+ FLAG				BINARY_INTEGER		IN
+

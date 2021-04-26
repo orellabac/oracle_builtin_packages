@@ -1,0 +1,554 @@
+FUNCTION ADDRESS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CVALUE 			VARCHAR2		IN
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION ANCHOR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CURL				VARCHAR2		IN
+ CTEXT				VARCHAR2		IN
+ CNAME				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION ANCHOR2 RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CURL				VARCHAR2		IN
+ CTEXT				VARCHAR2		IN
+ CNAME				VARCHAR2		IN     DEFAULT
+ CTARGET			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION APPLETOPEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCODE				VARCHAR2		IN
+ CWIDTH 			NUMBER(38)		IN
+ CHEIGHT			NUMBER(38)		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION AREA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCOORDS			VARCHAR2		IN
+ CSHAPE 			VARCHAR2		IN     DEFAULT
+ CHREF				VARCHAR2		IN     DEFAULT
+ CNOHREF			VARCHAR2		IN     DEFAULT
+ CTARGET			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION BASE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTARGET			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION BASEFONT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NSIZE				NUMBER(38)		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION BGSOUND RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CSRC				VARCHAR2		IN
+ CLOOP				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION BIG RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION BLOCKQUOTEOPEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION BODYOPEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CBACKGROUND			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION BOLD RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION BR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION CENTER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+FUNCTION CITE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION CODE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION COMMENT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+FUNCTION DFN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION DIV RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION DLISTDEF RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION DLISTOPEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION DLISTTERM RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION EM RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION EMPHASIS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION ESCAPE_SC RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+FUNCTION ESCAPE_URL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_URL				VARCHAR2		IN
+FUNCTION FONTOPEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCOLOR 			VARCHAR2		IN     DEFAULT
+ CFACE				VARCHAR2		IN     DEFAULT
+ CSIZE				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMAT_CELL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COLUMNVALUE			VARCHAR2		IN
+ FORMAT_NUMBERS 		VARCHAR2		IN     DEFAULT
+FUNCTION FORMCHECKBOX RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CCHECKED			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMFILE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CACCEPT			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMHIDDEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMIMAGE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CSRC				VARCHAR2		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMOPEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CURL				VARCHAR2		IN
+ CMETHOD			VARCHAR2		IN     DEFAULT
+ CTARGET			VARCHAR2		IN     DEFAULT
+ CENCTYPE			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMPASSWORD RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CSIZE				VARCHAR2		IN     DEFAULT
+ CMAXLENGTH			VARCHAR2		IN     DEFAULT
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMRADIO RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CVALUE 			VARCHAR2		IN
+ CCHECKED			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMRESET RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMSELECTOPEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CPROMPT			VARCHAR2		IN     DEFAULT
+ NSIZE				NUMBER(38)		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMSELECTOPTION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CVALUE 			VARCHAR2		IN
+ CSELECTED			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMSUBMIT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN     DEFAULT
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMTEXT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CSIZE				VARCHAR2		IN     DEFAULT
+ CMAXLENGTH			VARCHAR2		IN     DEFAULT
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMTEXTAREA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ NROWS				NUMBER(38)		IN
+ NCOLUMNS			NUMBER(38)		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMTEXTAREA2 RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ NROWS				NUMBER(38)		IN
+ NCOLUMNS			NUMBER(38)		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CWRAP				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMTEXTAREAOPEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ NROWS				NUMBER(38)		IN
+ NCOLUMNS			NUMBER(38)		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FORMTEXTAREAOPEN2 RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ NROWS				NUMBER(38)		IN
+ NCOLUMNS			NUMBER(38)		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CWRAP				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FRAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CSRC				VARCHAR2		IN
+ CNAME				VARCHAR2		IN     DEFAULT
+ CMARGINWIDTH			VARCHAR2		IN     DEFAULT
+ CMARGINHEIGHT			VARCHAR2		IN     DEFAULT
+ CSCROLLING			VARCHAR2		IN     DEFAULT
+ CNORESIZE			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION FRAMESETOPEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CROWS				VARCHAR2		IN     DEFAULT
+ CCOLS				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION HEADER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NSIZE				NUMBER(38)		IN
+ CHEADER			VARCHAR2		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION HR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CSRC				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION HTITLE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTITLE 			VARCHAR2		IN
+ NSIZE				NUMBER(38)		IN     DEFAULT
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION IMG RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CURL				VARCHAR2		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CALT				VARCHAR2		IN     DEFAULT
+ CISMAP 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION IMG2 RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CURL				VARCHAR2		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CALT				VARCHAR2		IN     DEFAULT
+ CISMAP 			VARCHAR2		IN     DEFAULT
+ CUSEMAP			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION ISINDEX RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CPROMPT			VARCHAR2		IN     DEFAULT
+ CURL				VARCHAR2		IN     DEFAULT
+FUNCTION ITALIC RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION KBD RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION KEYBOARD RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION LINE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CSRC				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION LINKREL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CREL				VARCHAR2		IN
+ CURL				VARCHAR2		IN
+ CTITLE 			VARCHAR2		IN     DEFAULT
+FUNCTION LINKREV RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CREV				VARCHAR2		IN
+ CURL				VARCHAR2		IN
+ CTITLE 			VARCHAR2		IN     DEFAULT
+FUNCTION LISTHEADER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION LISTITEM RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CDINGBAT			VARCHAR2		IN     DEFAULT
+ CSRC				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION MAILTO RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CADDRESS			VARCHAR2		IN
+ CTEXT				VARCHAR2		IN
+ CNAME				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION MAPOPEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION META RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHTTP_EQUIV			VARCHAR2		IN
+ CNAME				VARCHAR2		IN
+ CCONTENT			VARCHAR2		IN
+FUNCTION NEXTID RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CIDENTIFIER			VARCHAR2		IN
+FUNCTION NL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION NOBR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+FUNCTION OLISTOPEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CWRAP				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION PARAGRAPH RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION PARAM RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CVALUE 			VARCHAR2		IN
+FUNCTION PLAINTEXT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION PREOPEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CWIDTH 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION S RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION SAMPLE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION SCRIPT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CSCRIPT			VARCHAR2		IN
+ CLANGUAGE			VARCHAR2		IN     DEFAULT
+FUNCTION SMALL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION STRIKE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION STRONG RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION STYLE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CSTYLE 			VARCHAR2		IN
+FUNCTION SUB RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION SUP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION TABLECAPTION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCAPTION			VARCHAR2		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION TABLEDATA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CDP				VARCHAR2		IN     DEFAULT
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CROWSPAN			VARCHAR2		IN     DEFAULT
+ CCOLSPAN			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION TABLEHEADER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CDP				VARCHAR2		IN     DEFAULT
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CROWSPAN			VARCHAR2		IN     DEFAULT
+ CCOLSPAN			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION TABLEOPEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CBORDER			VARCHAR2		IN     DEFAULT
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION TABLEROWOPEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CVALIGN			VARCHAR2		IN     DEFAULT
+ CDP				VARCHAR2		IN     DEFAULT
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION TELETYPE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION TITLE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTITLE 			VARCHAR2		IN
+FUNCTION ULISTOPEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CWRAP				VARCHAR2		IN     DEFAULT
+ CDINGBAT			VARCHAR2		IN     DEFAULT
+ CSRC				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION UNDERLINE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+FUNCTION VARIABLE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+

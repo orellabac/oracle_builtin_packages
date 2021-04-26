@@ -1,0 +1,9 @@
+PROCEDURE BUILD_PART_INDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBS_PER_BATCH 		NUMBER			IN     DEFAULT
+ PROCS_PER_JOB			NUMBER			IN     DEFAULT
+ TAB_NAME			VARCHAR2		IN     DEFAULT
+ IDX_NAME			VARCHAR2		IN     DEFAULT
+ FORCE_OPT			BOOLEAN 		IN     DEFAULT
+

@@ -1,0 +1,124 @@
+PROCEDURE ABORT_GLOBAL_INSTANTIATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CONTAINER			VARCHAR2		IN     DEFAULT
+PROCEDURE ABORT_SCHEMA_INSTANTIATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA_NAME			VARCHAR2		IN
+ CONTAINER			VARCHAR2		IN     DEFAULT
+PROCEDURE ABORT_SYNC_INSTANTIATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAMES			VARCHAR2		IN
+PROCEDURE ABORT_SYNC_INSTANTIATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAMES			TABLE OF VARCHAR2(227)	IN
+PROCEDURE ABORT_TABLE_INSTANTIATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ CONTAINER			VARCHAR2		IN     DEFAULT
+PROCEDURE ALTER_CAPTURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_NAME			VARCHAR2		IN
+ RULE_SET_NAME			VARCHAR2		IN     DEFAULT
+ REMOVE_RULE_SET		BOOLEAN 		IN     DEFAULT
+ START_SCN			NUMBER			IN     DEFAULT
+ USE_DATABASE_LINK		BOOLEAN 		IN     DEFAULT
+ FIRST_SCN			NUMBER			IN     DEFAULT
+ NEGATIVE_RULE_SET_NAME 	VARCHAR2		IN     DEFAULT
+ REMOVE_NEGATIVE_RULE_SET	BOOLEAN 		IN     DEFAULT
+ CAPTURE_USER			VARCHAR2		IN     DEFAULT
+ CHECKPOINT_RETENTION_TIME	NUMBER			IN     DEFAULT
+ START_TIME			TIMESTAMP		IN     DEFAULT
+PROCEDURE ALTER_SYNC_CAPTURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_NAME			VARCHAR2		IN
+ RULE_SET_NAME			VARCHAR2		IN     DEFAULT
+ CAPTURE_USER			VARCHAR2		IN     DEFAULT
+PROCEDURE BUILD
+PROCEDURE BUILD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FIRST_SCN			NUMBER			OUT
+PROCEDURE CREATE_CAPTURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ CAPTURE_NAME			VARCHAR2		IN
+ RULE_SET_NAME			VARCHAR2		IN     DEFAULT
+ START_SCN			NUMBER			IN     DEFAULT
+ SOURCE_DATABASE		VARCHAR2		IN     DEFAULT
+ USE_DATABASE_LINK		BOOLEAN 		IN     DEFAULT
+ FIRST_SCN			NUMBER			IN     DEFAULT
+ LOGFILE_ASSIGNMENT		VARCHAR2		IN     DEFAULT
+ NEGATIVE_RULE_SET_NAME 	VARCHAR2		IN     DEFAULT
+ CAPTURE_USER			VARCHAR2		IN     DEFAULT
+ CHECKPOINT_RETENTION_TIME	NUMBER			IN     DEFAULT
+ START_TIME			TIMESTAMP		IN     DEFAULT
+ SOURCE_ROOT_NAME		VARCHAR2		IN     DEFAULT
+ SOURCE_CONTAINER_NAME		VARCHAR2		IN     DEFAULT
+ CAPTURE_CLASS			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_SYNC_CAPTURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ CAPTURE_NAME			VARCHAR2		IN
+ RULE_SET_NAME			VARCHAR2		IN
+ CAPTURE_USER			VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_CAPTURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_NAME			VARCHAR2		IN
+ DROP_UNUSED_RULE_SETS		BOOLEAN 		IN     DEFAULT
+PROCEDURE INCLUDE_EXTRA_ATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_NAME			VARCHAR2		IN
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+ INCLUDE			BOOLEAN 		IN     DEFAULT
+PROCEDURE PREPARE_GLOBAL_INSTANTIATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUPPLEMENTAL_LOGGING		VARCHAR2		IN     DEFAULT
+ CONTAINER			VARCHAR2		IN     DEFAULT
+PROCEDURE PREPARE_SCHEMA_INSTANTIATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA_NAME			VARCHAR2		IN
+ SUPPLEMENTAL_LOGGING		VARCHAR2		IN     DEFAULT
+ CONTAINER			VARCHAR2		IN     DEFAULT
+FUNCTION PREPARE_SYNC_INSTANTIATION RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAMES			VARCHAR2		IN
+FUNCTION PREPARE_SYNC_INSTANTIATION RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAMES			TABLE OF VARCHAR2(227)	IN
+PROCEDURE PREPARE_TABLE_INSTANTIATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ SUPPLEMENTAL_LOGGING		VARCHAR2		IN     DEFAULT
+ CONTAINER			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_NAME			VARCHAR2		IN
+ PARAMETER			VARCHAR2		IN
+ VALUE				VARCHAR2		IN     DEFAULT
+PROCEDURE START_CAPTURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_NAME			VARCHAR2		IN
+PROCEDURE STOP_CAPTURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_NAME			VARCHAR2		IN
+ FORCE				BOOLEAN 		IN     DEFAULT
+

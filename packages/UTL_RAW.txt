@@ -1,0 +1,142 @@
+FUNCTION BIT_AND RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R1				RAW			IN
+ R2				RAW			IN
+FUNCTION BIT_COMPLEMENT RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+FUNCTION BIT_OR RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R1				RAW			IN
+ R2				RAW			IN
+FUNCTION BIT_XOR RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R1				RAW			IN
+ R2				RAW			IN
+FUNCTION CAST_FROM_BINARY_DOUBLE RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_DOUBLE		IN
+ ENDIANESS			BINARY_INTEGER		IN     DEFAULT
+FUNCTION CAST_FROM_BINARY_FLOAT RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_FLOAT		IN
+ ENDIANESS			BINARY_INTEGER		IN     DEFAULT
+FUNCTION CAST_FROM_BINARY_INTEGER RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ ENDIANESS			BINARY_INTEGER		IN     DEFAULT
+FUNCTION CAST_FROM_NUMBER RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				NUMBER			IN
+FUNCTION CAST_TO_BINARY_DOUBLE RETURNS BINARY_DOUBLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+ ENDIANESS			BINARY_INTEGER		IN     DEFAULT
+FUNCTION CAST_TO_BINARY_FLOAT RETURNS BINARY_FLOAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+ ENDIANESS			BINARY_INTEGER		IN     DEFAULT
+FUNCTION CAST_TO_BINARY_INTEGER RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+ ENDIANESS			BINARY_INTEGER		IN     DEFAULT
+FUNCTION CAST_TO_NUMBER RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+FUNCTION CAST_TO_NVARCHAR2 RETURNS NVARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+FUNCTION CAST_TO_RAW RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				VARCHAR2		IN
+FUNCTION CAST_TO_VARCHAR2 RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+FUNCTION COMPARE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R1				RAW			IN
+ R2				RAW			IN
+ PAD				RAW			IN     DEFAULT
+FUNCTION CONCAT RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R1				RAW			IN     DEFAULT
+ R2				RAW			IN     DEFAULT
+ R3				RAW			IN     DEFAULT
+ R4				RAW			IN     DEFAULT
+ R5				RAW			IN     DEFAULT
+ R6				RAW			IN     DEFAULT
+ R7				RAW			IN     DEFAULT
+ R8				RAW			IN     DEFAULT
+ R9				RAW			IN     DEFAULT
+ R10				RAW			IN     DEFAULT
+ R11				RAW			IN     DEFAULT
+ R12				RAW			IN     DEFAULT
+FUNCTION CONVERT RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+ TO_CHARSET			VARCHAR2		IN
+ FROM_CHARSET			VARCHAR2		IN
+FUNCTION COPIES RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+ N				NUMBER			IN
+FUNCTION LENGTH RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+FUNCTION OVERLAY RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OVERLAY_STR			RAW			IN
+ TARGET 			RAW			IN
+ POS				BINARY_INTEGER		IN     DEFAULT
+ LEN				BINARY_INTEGER		IN     DEFAULT
+ PAD				RAW			IN     DEFAULT
+FUNCTION REVERSE RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+FUNCTION SUBSTR RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+ POS				BINARY_INTEGER		IN
+ LEN				BINARY_INTEGER		IN     DEFAULT
+FUNCTION TRANSLATE RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+ FROM_SET			RAW			IN
+ TO_SET 			RAW			IN
+FUNCTION TRANSLITERATE RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+ TO_SET 			RAW			IN     DEFAULT
+ FROM_SET			RAW			IN     DEFAULT
+ PAD				RAW			IN     DEFAULT
+FUNCTION XRANGE RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ START_BYTE			RAW			IN     DEFAULT
+ END_BYTE			RAW			IN     DEFAULT
+

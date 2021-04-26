@@ -1,0 +1,263 @@
+PROCEDURE BEGIN_TABLE_REORGANIZATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABOWNER			VARCHAR2		IN
+ TABNAME			VARCHAR2		IN
+PROCEDURE DROP_SNAPSHOT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MOWNER 			VARCHAR2		IN
+ MASTER 			VARCHAR2		IN
+ SNAPSHOT			DATE			IN
+PROCEDURE END_TABLE_REORGANIZATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABOWNER			VARCHAR2		IN
+ TABNAME			VARCHAR2		IN
+PROCEDURE ESTIMATE_MVIEW_SIZE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STMT_ID			VARCHAR2		IN
+ SELECT_CLAUSE			VARCHAR2		IN
+ NUM_ROWS			NUMBER			OUT
+ NUM_BYTES			NUMBER			OUT
+PROCEDURE EXPLAIN_MVIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MV				VARCHAR2		IN
+ STMT_ID			VARCHAR2		IN     DEFAULT
+PROCEDURE EXPLAIN_MVIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MV				CLOB			IN
+ STMT_ID			VARCHAR2		IN     DEFAULT
+PROCEDURE EXPLAIN_MVIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MV				VARCHAR2		IN
+ MSG_ARRAY			EXPLAINMVARRAYTYPE	IN/OUT
+PROCEDURE EXPLAIN_MVIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MV				CLOB			IN
+ MSG_ARRAY			EXPLAINMVARRAYTYPE	IN/OUT
+PROCEDURE EXPLAIN_REWRITE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUERY				VARCHAR2		IN
+ MV				VARCHAR2		IN     DEFAULT
+ STATEMENT_ID			VARCHAR2		IN     DEFAULT
+PROCEDURE EXPLAIN_REWRITE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUERY				CLOB			IN
+ MV				VARCHAR2		IN     DEFAULT
+ STATEMENT_ID			VARCHAR2		IN     DEFAULT
+PROCEDURE EXPLAIN_REWRITE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUERY				VARCHAR2		IN
+ MV				VARCHAR2		IN     DEFAULT
+ MSG_ARRAY			REWRITEARRAYTYPE	IN/OUT
+PROCEDURE EXPLAIN_REWRITE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUERY				CLOB			IN
+ MV				VARCHAR2		IN     DEFAULT
+ MSG_ARRAY			REWRITEARRAYTYPE	IN/OUT
+PROCEDURE EXPLAIN_REWRITE_SQLID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUERY				VARCHAR2		IN
+ MV				VARCHAR2		IN     DEFAULT
+ STATEMENT_ID			VARCHAR2		IN     DEFAULT
+ SQLID				VARCHAR2		IN     DEFAULT
+PROCEDURE GET_LOG_AGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OLDEST 			DATE			IN/OUT
+ MOW				VARCHAR2		IN
+ MAS				VARCHAR2		IN
+PROCEDURE GET_MV_DEPENDENCIES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LIST				VARCHAR2		IN
+ DEPLIST			VARCHAR2		OUT
+FUNCTION I_AM_A_REFRESH RETURNS BOOLEAN
+FUNCTION PMARKER RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RID				ROWID			IN
+PROCEDURE PURGE_DIRECT_LOAD_LOG
+PROCEDURE PURGE_LOG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MASTER 			VARCHAR2		IN
+ NUM				BINARY_INTEGER		IN     DEFAULT
+ FLAG				VARCHAR2		IN     DEFAULT
+PROCEDURE PURGE_MVIEW_FROM_LOG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MVIEW_ID			BINARY_INTEGER		IN
+PROCEDURE PURGE_MVIEW_FROM_LOG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MVIEWOWNER			VARCHAR2		IN
+ MVIEWNAME			VARCHAR2		IN
+ MVIEWSITE			VARCHAR2		IN
+PROCEDURE PURGE_SNAPSHOT_FROM_LOG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAPSHOT_ID			BINARY_INTEGER		IN
+PROCEDURE PURGE_SNAPSHOT_FROM_LOG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAPOWNER			VARCHAR2		IN
+ SNAPNAME			VARCHAR2		IN
+ SNAPSITE			VARCHAR2		IN
+PROCEDURE REFRESH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LIST				VARCHAR2		IN
+ METHOD 			VARCHAR2		IN     DEFAULT
+ ROLLBACK_SEG			VARCHAR2		IN     DEFAULT
+ PUSH_DEFERRED_RPC		BOOLEAN 		IN     DEFAULT
+ REFRESH_AFTER_ERRORS		BOOLEAN 		IN     DEFAULT
+ PURGE_OPTION			BINARY_INTEGER		IN     DEFAULT
+ PARALLELISM			BINARY_INTEGER		IN     DEFAULT
+ HEAP_SIZE			BINARY_INTEGER		IN     DEFAULT
+ ATOMIC_REFRESH 		BOOLEAN 		IN     DEFAULT
+ NESTED 			BOOLEAN 		IN     DEFAULT
+ OUT_OF_PLACE			BOOLEAN 		IN     DEFAULT
+PROCEDURE REFRESH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TAB				TABLE OF VARCHAR2(227)	IN/OUT
+ METHOD 			VARCHAR2		IN     DEFAULT
+ ROLLBACK_SEG			VARCHAR2		IN     DEFAULT
+ PUSH_DEFERRED_RPC		BOOLEAN 		IN     DEFAULT
+ REFRESH_AFTER_ERRORS		BOOLEAN 		IN     DEFAULT
+ PURGE_OPTION			BINARY_INTEGER		IN     DEFAULT
+ PARALLELISM			BINARY_INTEGER		IN     DEFAULT
+ HEAP_SIZE			BINARY_INTEGER		IN     DEFAULT
+ ATOMIC_REFRESH 		BOOLEAN 		IN     DEFAULT
+ NESTED 			BOOLEAN 		IN     DEFAULT
+ OUT_OF_PLACE			BOOLEAN 		IN     DEFAULT
+PROCEDURE REFRESH_ALL
+PROCEDURE REFRESH_ALL_MVIEWS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUMBER_OF_FAILURES		BINARY_INTEGER		OUT
+ METHOD 			VARCHAR2		IN     DEFAULT
+ ROLLBACK_SEG			VARCHAR2		IN     DEFAULT
+ REFRESH_AFTER_ERRORS		BOOLEAN 		IN     DEFAULT
+ ATOMIC_REFRESH 		BOOLEAN 		IN     DEFAULT
+ OUT_OF_PLACE			BOOLEAN 		IN     DEFAULT
+PROCEDURE REFRESH_DEPENDENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUMBER_OF_FAILURES		BINARY_INTEGER		OUT
+ LIST				VARCHAR2		IN
+ METHOD 			VARCHAR2		IN     DEFAULT
+ ROLLBACK_SEG			VARCHAR2		IN     DEFAULT
+ REFRESH_AFTER_ERRORS		BOOLEAN 		IN     DEFAULT
+ ATOMIC_REFRESH 		BOOLEAN 		IN     DEFAULT
+ NESTED 			BOOLEAN 		IN     DEFAULT
+ OUT_OF_PLACE			BOOLEAN 		IN     DEFAULT
+PROCEDURE REFRESH_DEPENDENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUMBER_OF_FAILURES		BINARY_INTEGER		OUT
+ TAB				TABLE OF VARCHAR2(227)	IN
+ METHOD 			VARCHAR2		IN     DEFAULT
+ ROLLBACK_SEG			VARCHAR2		IN     DEFAULT
+ REFRESH_AFTER_ERRORS		BOOLEAN 		IN     DEFAULT
+ ATOMIC_REFRESH 		BOOLEAN 		IN     DEFAULT
+ NESTED 			BOOLEAN 		IN     DEFAULT
+ OUT_OF_PLACE			BOOLEAN 		IN     DEFAULT
+PROCEDURE REFRESH_MV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PIPENAME			VARCHAR2		IN
+ MV_INDEX			BINARY_INTEGER		IN
+ OWNER				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ METHOD 			VARCHAR2		IN
+ ROLLSEG			VARCHAR2		IN
+ ATOMIC_REFRESH 		BINARY_INTEGER		IN
+ OUT_OF_PLACE			BINARY_INTEGER		IN
+ ENV				BINARY_INTEGER		IN
+ RESOURCES			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE REGISTER_MVIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MVIEWOWNER			VARCHAR2		IN
+ MVIEWNAME			VARCHAR2		IN
+ MVIEWSITE			VARCHAR2		IN
+ MVIEW_ID			DATE			IN
+ FLAG				BINARY_INTEGER		IN
+ QRY_TXT			VARCHAR2		IN
+ REP_TYPE			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE REGISTER_MVIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MVIEWOWNER			VARCHAR2		IN
+ MVIEWNAME			VARCHAR2		IN
+ MVIEWSITE			VARCHAR2		IN
+ MVIEW_ID			BINARY_INTEGER		IN
+ FLAG				BINARY_INTEGER		IN
+ QRY_TXT			VARCHAR2		IN
+ REP_TYPE			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE REGISTER_SNAPSHOT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAPOWNER			VARCHAR2		IN
+ SNAPNAME			VARCHAR2		IN
+ SNAPSITE			VARCHAR2		IN
+ SNAPSHOT_ID			DATE			IN
+ FLAG				BINARY_INTEGER		IN
+ QRY_TXT			VARCHAR2		IN
+ REP_TYPE			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE REGISTER_SNAPSHOT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAPOWNER			VARCHAR2		IN
+ SNAPNAME			VARCHAR2		IN
+ SNAPSITE			VARCHAR2		IN
+ SNAPSHOT_ID			BINARY_INTEGER		IN
+ FLAG				BINARY_INTEGER		IN
+ QRY_TXT			VARCHAR2		IN
+ REP_TYPE			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE SET_I_AM_A_REFRESH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				BOOLEAN 		IN
+PROCEDURE SET_UP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MOWNER 			VARCHAR2		IN
+ MASTER 			VARCHAR2		IN
+ LOG				VARCHAR2		IN/OUT
+ SNAPSHOT			DATE			IN/OUT
+ SNAPTIME			DATE			IN/OUT
+PROCEDURE TESTING
+PROCEDURE UNREGISTER_MVIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MVIEWOWNER			VARCHAR2		IN
+ MVIEWNAME			VARCHAR2		IN
+ MVIEWSITE			VARCHAR2		IN
+PROCEDURE UNREGISTER_SNAPSHOT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAPOWNER			VARCHAR2		IN
+ SNAPNAME			VARCHAR2		IN
+ SNAPSITE			VARCHAR2		IN
+PROCEDURE WRAP_UP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MOWNER 			VARCHAR2		IN
+ MASTER 			VARCHAR2		IN
+ SSHOT				DATE			IN
+ STIME				DATE			IN
+

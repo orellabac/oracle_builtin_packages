@@ -1,0 +1,11 @@
+PROCEDURE ALLOW_ALL
+PROCEDURE ALLOW_SERVER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SERVER 			VARCHAR2		IN
+PROCEDURE DENY_ALL
+PROCEDURE DENY_SERVER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SERVER 			VARCHAR2		IN
+

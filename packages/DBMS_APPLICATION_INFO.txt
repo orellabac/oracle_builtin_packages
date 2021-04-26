@@ -1,0 +1,35 @@
+PROCEDURE READ_CLIENT_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_INFO			VARCHAR2		OUT
+PROCEDURE READ_MODULE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODULE_NAME			VARCHAR2		OUT
+ ACTION_NAME			VARCHAR2		OUT
+PROCEDURE SET_ACTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACTION_NAME			VARCHAR2		IN
+PROCEDURE SET_CLIENT_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_INFO			VARCHAR2		IN
+PROCEDURE SET_MODULE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODULE_NAME			VARCHAR2		IN
+ ACTION_NAME			VARCHAR2		IN
+PROCEDURE SET_SESSION_LONGOPS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RINDEX 			BINARY_INTEGER		IN/OUT
+ SLNO				BINARY_INTEGER		IN/OUT
+ OP_NAME			VARCHAR2		IN     DEFAULT
+ TARGET 			BINARY_INTEGER		IN     DEFAULT
+ CONTEXT			BINARY_INTEGER		IN     DEFAULT
+ SOFAR				NUMBER			IN     DEFAULT
+ TOTALWORK			NUMBER			IN     DEFAULT
+ TARGET_DESC			VARCHAR2		IN     DEFAULT
+ UNITS				VARCHAR2		IN     DEFAULT
+

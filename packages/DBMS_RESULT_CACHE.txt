@@ -1,0 +1,75 @@
+PROCEDURE BYPASS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BYPASS_MODE			BOOLEAN 		IN
+ SESSION			BOOLEAN 		IN     DEFAULT
+FUNCTION DELETE_DEPENDENCY RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+PROCEDURE DELETE_DEPENDENCY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+FUNCTION DELETE_DEPENDENCY RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_ID			BINARY_INTEGER		IN
+PROCEDURE DELETE_DEPENDENCY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_ID			BINARY_INTEGER		IN
+FUNCTION FLUSH RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RETAINMEM			BOOLEAN 		IN     DEFAULT
+ RETAINSTA			BOOLEAN 		IN     DEFAULT
+ GLOBAL 			BOOLEAN 		IN     DEFAULT
+PROCEDURE FLUSH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RETAINMEM			BOOLEAN 		IN     DEFAULT
+ RETAINSTA			BOOLEAN 		IN     DEFAULT
+ GLOBAL 			BOOLEAN 		IN     DEFAULT
+FUNCTION INVALIDATE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+PROCEDURE INVALIDATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+FUNCTION INVALIDATE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_ID			BINARY_INTEGER		IN
+PROCEDURE INVALIDATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_ID			BINARY_INTEGER		IN
+FUNCTION INVALIDATE_OBJECT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				BINARY_INTEGER		IN
+PROCEDURE INVALIDATE_OBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				BINARY_INTEGER		IN
+FUNCTION INVALIDATE_OBJECT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CACHE_ID			VARCHAR2		IN
+PROCEDURE INVALIDATE_OBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CACHE_ID			VARCHAR2		IN
+PROCEDURE MEMORY_REPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DETAILED			BOOLEAN 		IN     DEFAULT
+FUNCTION STATUS RETURNS VARCHAR2
+

@@ -1,0 +1,59 @@
+PROCEDURE CREATE_SERVICE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SERVICE_NAME			VARCHAR2		IN
+ NETWORK_NAME			VARCHAR2		IN
+ PARAMETER_ARRAY		TABLE OF VARCHAR2(100)	IN
+PROCEDURE CREATE_SERVICE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SERVICE_NAME			VARCHAR2		IN
+ NETWORK_NAME			VARCHAR2		IN
+ GOAL				NUMBER			IN     DEFAULT
+ DTP				BOOLEAN 		IN     DEFAULT
+ AQ_HA_NOTIFICATIONS		BOOLEAN 		IN     DEFAULT
+ FAILOVER_METHOD		VARCHAR2		IN     DEFAULT
+ FAILOVER_TYPE			VARCHAR2		IN     DEFAULT
+ FAILOVER_RETRIES		NUMBER			IN     DEFAULT
+ FAILOVER_DELAY 		NUMBER			IN     DEFAULT
+ CLB_GOAL			NUMBER			IN     DEFAULT
+ EDITION			VARCHAR2		IN     DEFAULT
+PROCEDURE DELETE_SERVICE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SERVICE_NAME			VARCHAR2		IN
+PROCEDURE DISCONNECT_SESSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SERVICE_NAME			VARCHAR2		IN
+ DISCONNECT_OPTION		NUMBER			IN     DEFAULT
+PROCEDURE MODIFY_SERVICE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SERVICE_NAME			VARCHAR2		IN
+ PARAMETER_ARRAY		TABLE OF VARCHAR2(100)	IN
+PROCEDURE MODIFY_SERVICE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SERVICE_NAME			VARCHAR2		IN
+ GOAL				NUMBER			IN     DEFAULT
+ DTP				BOOLEAN 		IN     DEFAULT
+ AQ_HA_NOTIFICATIONS		BOOLEAN 		IN     DEFAULT
+ FAILOVER_METHOD		VARCHAR2		IN     DEFAULT
+ FAILOVER_TYPE			VARCHAR2		IN     DEFAULT
+ FAILOVER_RETRIES		NUMBER			IN     DEFAULT
+ FAILOVER_DELAY 		NUMBER			IN     DEFAULT
+ CLB_GOAL			NUMBER			IN     DEFAULT
+ EDITION			VARCHAR2		IN     DEFAULT
+ MODIFY_EDITION 		BOOLEAN 		IN     DEFAULT
+PROCEDURE START_SERVICE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SERVICE_NAME			VARCHAR2		IN
+ INSTANCE_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE STOP_SERVICE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SERVICE_NAME			VARCHAR2		IN
+ INSTANCE_NAME			VARCHAR2		IN     DEFAULT
+

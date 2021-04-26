@@ -1,0 +1,29 @@
+PROCEDURE DELETE_OBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REF				REF OF STANDARD 	IN
+PROCEDURE LOCK_OBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REF				REF OF STANDARD 	IN
+PROCEDURE LOCK_OBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REF				REF OF STANDARD 	IN
+ OBJECT 			<ADT_1> 		OUT
+PROCEDURE SELECT_OBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REF				REF OF STANDARD 	IN
+ OBJECT 			<ADT_1> 		OUT
+PROCEDURE SELECT_OBJECT_WITH_CR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REF				REF OF STANDARD 	IN
+ OBJECT 			<ADT_1> 		OUT
+PROCEDURE UPDATE_OBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REF				REF OF STANDARD 	IN
+ OBJECT 			<ADT_1> 		IN
+

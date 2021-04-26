@@ -1,0 +1,127 @@
+FUNCTION AGGREGATES_FOR_GEOMETRY RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEME_NAME			VARCHAR2		IN
+ THEME_COLNAME			VARCHAR2		IN
+ AGGR_TYPE_STRING		VARCHAR2		IN
+ AGGR_COL_STRING		VARCHAR2		IN
+ GEOM				SDO_GEOMETRY		IN
+ DST_SPEC			VARCHAR2		IN     DEFAULT
+ DST_OFFSET			NUMBER			IN     DEFAULT
+FUNCTION AGGREGATES_FOR_LAYER RETURNS SDO_REGAGGRSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEME_NAME			VARCHAR2		IN
+ THEME_COLNAME			VARCHAR2		IN
+ AGGR_TYPE_STRING		VARCHAR2		IN
+ AGGR_COL_STRING		VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+ COLNAME			VARCHAR2		IN
+ DST_SPEC			VARCHAR2		IN     DEFAULT
+ DST_OFFSET			NUMBER			IN     DEFAULT
+ ZERO_AGG_ROWS			NUMBER			IN     DEFAULT
+FUNCTION BIN_GEOMETRY RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ BIN_TABLENAME			VARCHAR2		IN
+ BIN_COLNAME			VARCHAR2		IN
+FUNCTION BIN_GEOMETRY RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ BIN_TABLENAME			VARCHAR2		IN
+ BIN_COLNAME			VARCHAR2		IN
+PROCEDURE BIN_LAYER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLENAME			VARCHAR2		IN
+ COLNAME			VARCHAR2		IN
+ BIN_TABLENAME			VARCHAR2		IN
+ BIN_COLNAME			VARCHAR2		IN
+ BIN_ID_COLNAME 		VARCHAR2		IN
+ COMMIT_INTERVAL		NUMBER			IN     DEFAULT
+PROCEDURE COLOCATED_REFERENCE_FEATURES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEME_TABLENAME		VARCHAR2		IN
+ THEME_COLNAME			VARCHAR2		IN
+ THEME_PREDICATE		VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+ COLNAME			VARCHAR2		IN
+ REF_PREDICATE			VARCHAR2		IN
+ DST_SPEC			VARCHAR2		IN
+ RESULT_TABLENAME		VARCHAR2		IN
+ COMMIT_INTERVAL		NUMBER			IN     DEFAULT
+FUNCTION INTERSECTION_RATIO RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOCATION			SDO_GEOMETRY		IN
+ THEMATIC_BOUNDARY		SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ DIST				NUMBER			IN     DEFAULT
+ UNITS				VARCHAR2		IN     DEFAULT
+FUNCTION PREDICATED_JOIN RETURNS SDO_ROWIDSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME1			VARCHAR2		IN
+ COLUMN_NAME1			VARCHAR2		IN
+ TABLE_NAME2			VARCHAR2		IN
+ COLUMN_NAME2			VARCHAR2		IN
+ TAB1_PREDICATE 		VARCHAR2		IN
+ TAB2_PREDICATE 		VARCHAR2		IN
+ DST_SPEC			VARCHAR2		IN
+FUNCTION SIMPLIFY_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ PCT_AREA_CHANGE_LIMIT		NUMBER			IN     DEFAULT
+FUNCTION SIMPLIFY_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ PCT_AREA_CHANGE_LIMIT		NUMBER			IN     DEFAULT
+PROCEDURE SIMPLIFY_LAYER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEME_TABLENAME		VARCHAR2		IN
+ THEME_COLNAME			VARCHAR2		IN
+ SMPL_GEOM_COLNAME		VARCHAR2		IN
+ COMMIT_INTERVAL		NUMBER			IN     DEFAULT
+ PCT_AREA_CHANGE_LIMIT		NUMBER			IN     DEFAULT
+FUNCTION SPATIAL_CLUSTERS RETURNS SDO_REGIONSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLENAME			VARCHAR2		IN
+ COLNAME			VARCHAR2		IN
+ MAX_CLUSTERS			NUMBER			IN
+ ALLOW_OUTLIERS 		VARCHAR2		IN     DEFAULT
+ TABLEPARTITION 		VARCHAR2		IN     DEFAULT
+FUNCTION TILED_AGGREGATES RETURNS SDO_REGAGGRSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEME_NAME			VARCHAR2		IN
+ THEME_COLNAME			VARCHAR2		IN
+ AGGR_TYPE_STRING		VARCHAR2		IN
+ AGGR_COL_STRING		VARCHAR2		IN
+ TILING_LEVEL			NUMBER			IN     DEFAULT
+ TILING_DOMAIN			SDO_DIM_ARRAY		IN     DEFAULT
+ ZERO_AGG_TILES 		NUMBER			IN     DEFAULT
+ XDIVS				NUMBER			IN     DEFAULT
+ YDIVS				NUMBER			IN     DEFAULT
+FUNCTION TILED_BINS RETURNS SDO_REGIONSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L1				NUMBER			IN
+ U1				NUMBER			IN
+ L2				NUMBER			IN
+ U2				NUMBER			IN
+ TILING_LEVEL			NUMBER			IN     DEFAULT
+ SRID				NUMBER			IN     DEFAULT
+ XDIVS				NUMBER			IN     DEFAULT
+ YDIVS				NUMBER			IN     DEFAULT
+

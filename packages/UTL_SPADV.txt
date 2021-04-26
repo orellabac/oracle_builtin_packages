@@ -1,0 +1,4 @@
+ERROR:
+ORA-04043: object UTL_SPADV does not exist
+
+

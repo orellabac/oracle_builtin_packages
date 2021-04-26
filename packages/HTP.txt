@@ -1,0 +1,680 @@
+PROCEDURE ADDDEFAULTHTMLHDR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BADDHTMLHDR			BOOLEAN 		IN
+PROCEDURE ADDRESS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CVALUE 			VARCHAR2		IN
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE ANCHOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CURL				VARCHAR2		IN
+ CTEXT				VARCHAR2		IN
+ CNAME				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE ANCHOR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CURL				VARCHAR2		IN
+ CTEXT				VARCHAR2		IN
+ CNAME				VARCHAR2		IN     DEFAULT
+ CTARGET			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE APPLETCLOSE
+PROCEDURE APPLETOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCODE				VARCHAR2		IN
+ CWIDTH 			NUMBER(38)		IN
+ CHEIGHT			NUMBER(38)		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE AREA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCOORDS			VARCHAR2		IN
+ CSHAPE 			VARCHAR2		IN     DEFAULT
+ CHREF				VARCHAR2		IN     DEFAULT
+ CNOHREF			VARCHAR2		IN     DEFAULT
+ CTARGET			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE BASE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTARGET			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE BASEFONT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NSIZE				NUMBER(38)		IN
+PROCEDURE BGSOUND
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CSRC				VARCHAR2		IN
+ CLOOP				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE BIG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE BLOCKQUOTECLOSE
+PROCEDURE BLOCKQUOTEOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE BODYCLOSE
+PROCEDURE BODYOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CBACKGROUND			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE BOLD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE BR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE CENTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+PROCEDURE CENTERCLOSE
+PROCEDURE CENTEROPEN
+PROCEDURE CITE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE CODE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE COMMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+PROCEDURE DFN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE DIRLISTCLOSE
+PROCEDURE DIRLISTOPEN
+PROCEDURE DIV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE DLISTCLOSE
+PROCEDURE DLISTDEF
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE DLISTOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE DLISTTERM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE DOWNLOAD_FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SFILENAME			VARCHAR2		IN
+ BCOMPRESS			BOOLEAN 		IN     DEFAULT
+PROCEDURE EM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE EMPHASIS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE ESCAPE_SC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+PROCEDURE FLUSH
+PROCEDURE FLUSH_CHARSET_CONVERT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHARSET			VARCHAR2		IN
+PROCEDURE FONTCLOSE
+PROCEDURE FONTOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCOLOR 			VARCHAR2		IN     DEFAULT
+ CFACE				VARCHAR2		IN     DEFAULT
+ CSIZE				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMCHECKBOX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CCHECKED			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMCLOSE
+PROCEDURE FORMFILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CACCEPT			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMHIDDEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMIMAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CSRC				VARCHAR2		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CURL				VARCHAR2		IN
+ CMETHOD			VARCHAR2		IN     DEFAULT
+ CTARGET			VARCHAR2		IN     DEFAULT
+ CENCTYPE			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMPASSWORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CSIZE				VARCHAR2		IN     DEFAULT
+ CMAXLENGTH			VARCHAR2		IN     DEFAULT
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMRADIO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CVALUE 			VARCHAR2		IN
+ CCHECKED			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMRESET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMSELECTCLOSE
+PROCEDURE FORMSELECTOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CPROMPT			VARCHAR2		IN     DEFAULT
+ NSIZE				NUMBER(38)		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMSELECTOPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CVALUE 			VARCHAR2		IN
+ CSELECTED			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMSUBMIT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN     DEFAULT
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CSIZE				VARCHAR2		IN     DEFAULT
+ CMAXLENGTH			VARCHAR2		IN     DEFAULT
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMTEXTAREA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ NROWS				NUMBER(38)		IN
+ NCOLUMNS			NUMBER(38)		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMTEXTAREA2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ NROWS				NUMBER(38)		IN
+ NCOLUMNS			NUMBER(38)		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CWRAP				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMTEXTAREACLOSE
+PROCEDURE FORMTEXTAREAOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ NROWS				NUMBER(38)		IN
+ NCOLUMNS			NUMBER(38)		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FORMTEXTAREAOPEN2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ NROWS				NUMBER(38)		IN
+ NCOLUMNS			NUMBER(38)		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CWRAP				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FRAME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CSRC				VARCHAR2		IN
+ CNAME				VARCHAR2		IN     DEFAULT
+ CMARGINWIDTH			VARCHAR2		IN     DEFAULT
+ CMARGINHEIGHT			VARCHAR2		IN     DEFAULT
+ CSCROLLING			VARCHAR2		IN     DEFAULT
+ CNORESIZE			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE FRAMESETCLOSE
+PROCEDURE FRAMESETOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CROWS				VARCHAR2		IN     DEFAULT
+ CCOLS				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE GET_DOWNLOAD_FILES_LIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SFILESLIST			VARCHAR2		OUT
+ NCOMPRESS			BINARY_INTEGER		OUT
+FUNCTION GET_LINE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IROWS				NUMBER(38)		OUT
+PROCEDURE GET_PAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEPAGE			TABLE OF VARCHAR2(256)	OUT
+ IROWS				NUMBER(38)		IN/OUT
+PROCEDURE GET_PAGE_CHARSET_CONVERT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEPAGE			TABLE OF VARCHAR2(256)	OUT
+ IROWS				NUMBER(38)		IN/OUT
+ CHARSET			VARCHAR2		IN
+PROCEDURE GET_PAGE_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEPAGE			TABLE OF RAW(256)	OUT
+ IROWS				NUMBER(38)		IN/OUT
+PROCEDURE HEADCLOSE
+PROCEDURE HEADER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NSIZE				NUMBER(38)		IN
+ CHEADER			VARCHAR2		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE HEADOPEN
+PROCEDURE HR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CSRC				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE HTITLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTITLE 			VARCHAR2		IN
+ NSIZE				NUMBER(38)		IN     DEFAULT
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE HTMLCLOSE
+PROCEDURE HTMLOPEN
+PROCEDURE IMG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CURL				VARCHAR2		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CALT				VARCHAR2		IN     DEFAULT
+ CISMAP 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE IMG2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CURL				VARCHAR2		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CALT				VARCHAR2		IN     DEFAULT
+ CISMAP 			VARCHAR2		IN     DEFAULT
+ CUSEMAP			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE INIT
+PROCEDURE ISINDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CPROMPT			VARCHAR2		IN     DEFAULT
+ CURL				VARCHAR2		IN     DEFAULT
+PROCEDURE ITALIC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE KBD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE KEYBOARD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE LINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CSRC				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE LINKREL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CREL				VARCHAR2		IN
+ CURL				VARCHAR2		IN
+ CTITLE 			VARCHAR2		IN     DEFAULT
+PROCEDURE LINKREV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CREV				VARCHAR2		IN
+ CURL				VARCHAR2		IN
+ CTITLE 			VARCHAR2		IN     DEFAULT
+PROCEDURE LISTHEADER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE LISTINGCLOSE
+PROCEDURE LISTINGOPEN
+PROCEDURE LISTITEM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CDINGBAT			VARCHAR2		IN     DEFAULT
+ CSRC				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE MAILTO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CADDRESS			VARCHAR2		IN
+ CTEXT				VARCHAR2		IN
+ CNAME				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE MAPCLOSE
+PROCEDURE MAPOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE MENULISTCLOSE
+PROCEDURE MENULISTOPEN
+PROCEDURE META
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHTTP_EQUIV			VARCHAR2		IN
+ CNAME				VARCHAR2		IN
+ CCONTENT			VARCHAR2		IN
+PROCEDURE NEXTID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CIDENTIFIER			VARCHAR2		IN
+PROCEDURE NL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE NOBR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+PROCEDURE NOFRAMESCLOSE
+PROCEDURE NOFRAMESOPEN
+PROCEDURE OLISTCLOSE
+PROCEDURE OLISTOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CWRAP				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE P
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CBUF				VARCHAR2		IN     DEFAULT
+PROCEDURE P
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBUF				DATE			IN
+PROCEDURE P
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NBUF				NUMBER			IN
+PROCEDURE PARA
+PROCEDURE PARAGRAPH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE PARAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ CVALUE 			VARCHAR2		IN
+PROCEDURE PLAINTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE PRECLOSE
+PROCEDURE PREOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CWIDTH 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE PRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CBUF				VARCHAR2		IN     DEFAULT
+PROCEDURE PRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBUF				DATE			IN
+PROCEDURE PRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NBUF				NUMBER			IN
+PROCEDURE PRINTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+PROCEDURE PRINT_HEADER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CBUF				VARCHAR2		IN
+ NLINE				NUMBER			IN
+PROCEDURE PRN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CBUF				VARCHAR2		IN     DEFAULT
+PROCEDURE PRN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBUF				DATE			IN
+PROCEDURE PRN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NBUF				NUMBER			IN
+PROCEDURE PS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+PROCEDURE PUTRAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BBUF				RAW			IN
+ BUFLEN 			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE RESET_GET_PAGE
+PROCEDURE S
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE SAMPLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE SCRIPT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CSCRIPT			VARCHAR2		IN
+ CLANGUAGE			VARCHAR2		IN     DEFAULT
+PROCEDURE SETHTTPCHARSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IANA_CHARSET			VARCHAR2		IN
+ ORA_CHARSET			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_TRANSFER_MODE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TMODE				VARCHAR2		IN
+PROCEDURE SHOWPAGE
+PROCEDURE SMALL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE STRIKE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE STRONG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE STYLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CSTYLE 			VARCHAR2		IN
+PROCEDURE SUB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE SUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE TABLECAPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCAPTION			VARCHAR2		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE TABLECLOSE
+PROCEDURE TABLEDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CDP				VARCHAR2		IN     DEFAULT
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CROWSPAN			VARCHAR2		IN     DEFAULT
+ CCOLSPAN			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE TABLEHEADER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CVALUE 			VARCHAR2		IN     DEFAULT
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CDP				VARCHAR2		IN     DEFAULT
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CROWSPAN			VARCHAR2		IN     DEFAULT
+ CCOLSPAN			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE TABLEOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CBORDER			VARCHAR2		IN     DEFAULT
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE TABLEROWCLOSE
+PROCEDURE TABLEROWOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CVALIGN			VARCHAR2		IN     DEFAULT
+ CDP				VARCHAR2		IN     DEFAULT
+ CNOWRAP			VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE TELETYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE TITLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTITLE 			VARCHAR2		IN
+PROCEDURE ULISTCLOSE
+PROCEDURE ULISTOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCLEAR 			VARCHAR2		IN     DEFAULT
+ CWRAP				VARCHAR2		IN     DEFAULT
+ CDINGBAT			VARCHAR2		IN     DEFAULT
+ CSRC				VARCHAR2		IN     DEFAULT
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE UNDERLINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTEXT				VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+PROCEDURE WBR
+

@@ -1,0 +1,250 @@
+FUNCTION AUTHENTICATE_USER RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ USER_HANDLE			RAW(32) 		IN
+ AUTH_TYPE			BINARY_INTEGER		IN
+ CREDENTIALS			VARCHAR2		IN
+ BINARY_CREDENTIALS		RAW			IN
+FUNCTION AUTHENTICATE_USER_EXT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ USER_HANDLE			RAW(32) 		IN
+ AUTH_TYPE			BINARY_INTEGER		IN
+ PASSWORD_ATTR			VARCHAR2		IN
+ PASSWORD			VARCHAR2		IN
+FUNCTION CHECK_GROUP_MEMBERSHIP RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ USER_HANDLE			RAW(32) 		IN
+ GROUP_HANDLE			RAW(32) 		IN
+ NESTED 			BINARY_INTEGER		IN
+FUNCTION CHECK_INTERFACE_VERSION RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INTERFACE_VERSION		VARCHAR2		IN
+FUNCTION CHECK_USER_SUBSCRIPTION RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ USER_HANDLE			RAW(32) 		IN
+ SERVICE_HANDLE 		RAW(32) 		IN
+FUNCTION CREATE_GROUP_HANDLE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_HD			RAW(32) 		OUT
+ GROUP_TYPE			BINARY_INTEGER		IN
+ GROUP_ID			VARCHAR2		IN
+FUNCTION CREATE_MOD_PROPERTYSET RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PSET_TYPE			BINARY_INTEGER		IN
+ PSET_NAME			VARCHAR2		IN
+ MOD_PSET			RAW(32) 		OUT
+FUNCTION CREATE_SERVICE_HANDLE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SERVICE_HANDLE 		RAW(32) 		OUT
+ SERVICE_TYPE			BINARY_INTEGER		IN
+ SERVICE_ID			VARCHAR2		IN
+FUNCTION CREATE_SUBSCRIBER_HANDLE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIBER_HD			RAW(32) 		OUT
+ SUBSCRIBER_TYPE		BINARY_INTEGER		IN
+ SUBSCRIBER_ID			VARCHAR2		IN
+FUNCTION CREATE_USER_HANDLE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USER_HD			RAW(32) 		OUT
+ USER_TYPE			BINARY_INTEGER		IN
+ USER_ID			VARCHAR2		IN
+PROCEDURE FREE_HANDLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW(32) 		IN/OUT
+PROCEDURE FREE_MOD_PROPERTYSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MOD_PSET			RAW(32) 		IN/OUT
+PROCEDURE FREE_PROPERTYSET_COLLECTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PSET_COLLECTION		TABLE OF RAW(32)	IN/OUT
+FUNCTION GET_AVAILABLE_SERVICES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ SUBSCRIBER_HANDLE		RAW(32) 		IN
+ SERVICES			TABLE OF VARCHAR2(32767) OUT
+FUNCTION GET_GROUP_DN RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ GROUP_HANDLE			RAW(32) 		IN
+ DN				VARCHAR2		OUT
+FUNCTION GET_GROUP_MEMBERSHIP RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ USER_HANDLE			RAW(32) 		IN
+ NESTED 			BINARY_INTEGER		IN
+ ATTR_LIST			TABLE OF VARCHAR2(32767) IN
+ RET_GROUPS			TABLE OF RAW(32)	OUT
+FUNCTION GET_GROUP_PROPERTIES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ GROUP_HANDLE			RAW(32) 		IN
+ ATTRS				TABLE OF VARCHAR2(32767) IN
+ PTYPE				BINARY_INTEGER		IN
+ RET_PSET_COLL			TABLE OF RAW(32)	OUT
+FUNCTION GET_PROPERTY_NAMES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PSET				RAW(32) 		IN
+ PROPERTY_NAMES 		TABLE OF VARCHAR2(32767) OUT
+FUNCTION GET_PROPERTY_VALUES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PSET				RAW(32) 		IN
+ PROPERTY_NAME			VARCHAR2		IN
+ PROPERTY_VALUES		TABLE OF VARCHAR2(32767) OUT
+FUNCTION GET_PROPERTY_VALUES_BLOB RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PSET				RAW(32) 		IN
+ PROPERTY_NAME			VARCHAR2		IN
+ PROPERTY_VALUES		TABLE OF BLOB		OUT
+FUNCTION GET_PROPERTY_VALUES_LEN RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PSET				RAW(32) 		IN
+ PROPERTY_NAME			VARCHAR2		IN
+ PROPERTY_VALUES		TABLE OF RAW(32767)	OUT
+FUNCTION GET_SUBSCRIBED_SERVICES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ USER_HANDLE			RAW(32) 		IN
+ SERVICES			TABLE OF VARCHAR2(32767) OUT
+FUNCTION GET_SUBSCRIBED_USERS RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ SERVICE_HANDLE 		RAW(32) 		IN
+ USERS				TABLE OF VARCHAR2(32767) OUT
+FUNCTION GET_SUBSCRIBER_DN RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ SUBSCRIBER_HANDLE		RAW(32) 		IN
+ DN				VARCHAR2		OUT
+FUNCTION GET_SUBSCRIBER_EXT_PROPERTIES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ SUBSCRIBER_HANDLE		RAW(32) 		IN
+ ATTRS				TABLE OF VARCHAR2(32767) IN
+ PTYPE				BINARY_INTEGER		IN
+ FILTER 			VARCHAR2		IN
+ RET_PSET_COLL			TABLE OF RAW(32)	OUT
+FUNCTION GET_SUBSCRIBER_PROPERTIES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ SUBSCRIBER_HANDLE		RAW(32) 		IN
+ ATTRS				TABLE OF VARCHAR2(32767) IN
+ PTYPE				BINARY_INTEGER		IN
+ RET_PSET_COLL			TABLE OF RAW(32)	OUT
+FUNCTION GET_USER_DN RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ USER_HANDLE			RAW(32) 		IN
+ DN				VARCHAR2		OUT
+FUNCTION GET_USER_EXTENDED_PROPERTIES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ USER_HANDLE			RAW(32) 		IN
+ ATTRS				TABLE OF VARCHAR2(32767) IN
+ PTYPE				BINARY_INTEGER		IN
+ FILTER 			VARCHAR2		IN
+ RET_PSET_COLL			TABLE OF RAW(32)	OUT
+FUNCTION GET_USER_PROPERTIES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ USER_HANDLE			RAW(32) 		IN
+ ATTRS				TABLE OF VARCHAR2(32767) IN
+ PTYPE				BINARY_INTEGER		IN
+ RET_PSET_COLL			TABLE OF RAW(32)	OUT
+FUNCTION GET_USER_PROPS_AND_AUTH RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ USER_HANDLE			RAW(32) 		IN
+ AUTH_TYPE			BINARY_INTEGER		IN
+ ATTRS				TABLE OF VARCHAR2(32767) IN
+ CREDENTIALS			VARCHAR2		IN
+ BINARY_CREDENTIALS		RAW			IN
+ RET_PSET_COLL			TABLE OF RAW(32)	OUT
+FUNCTION LOCATE_SUBSCRIBER_FOR_USER RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ USER_HANDLE			RAW(32) 		IN
+ SUBSCRIBER_HANDLE		RAW(32) 		OUT
+FUNCTION NORMALIZE_DN_WITH_CASE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DN				VARCHAR2		IN
+ LOWER_CASE			BINARY_INTEGER		IN
+ NORM_DN			VARCHAR2		OUT
+FUNCTION POPULATE_MOD_PROPERTYSET RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MOD_PSET			RAW(32) 		IN
+ PROPERTY_MOD_OP		BINARY_INTEGER		IN
+ PROPERTY_NAME			VARCHAR2		IN
+ PROPERTY_VALUES		TABLE OF VARCHAR2(32767) IN
+PROCEDURE PROPERTY_VALUE_FREE_BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALS				TABLE OF BLOB		IN/OUT
+FUNCTION SET_GROUP_HANDLE_PROPERTIES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_HD			RAW(32) 		IN
+ PROPERTY_TYPE			BINARY_INTEGER		IN
+ PROPERTY			RAW(32) 		IN
+FUNCTION SET_USER_HANDLE_PROPERTIES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USER_HD			RAW(32) 		IN
+ PROPERTY_TYPE			BINARY_INTEGER		IN
+ PROPERTY			RAW(32) 		IN
+FUNCTION SET_USER_PROPERTIES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ USER_HANDLE			RAW(32) 		IN
+ PSET_TYPE			BINARY_INTEGER		IN
+ MOD_PSET			RAW(32) 		IN
+ MOD_OP 			BINARY_INTEGER		IN
+FUNCTION SUBSCRIBE_USER RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ USER_HANDLE			RAW(32) 		IN
+ SERVICE_HANDLE 		RAW(32) 		IN
+FUNCTION UNSUBSCRIBE_USER RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ USER_HANDLE			RAW(32) 		IN
+ SERVICE_HANDLE 		RAW(32) 		IN
+

@@ -1,0 +1,41 @@
+PROCEDURE CLUSTERING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ DOCID				VARCHAR2		IN
+ DOCTAB_NAME			VARCHAR2		IN
+ CLSTAB_NAME			VARCHAR2		IN
+ PREF_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE CLUSTERING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ DOCID				VARCHAR2		IN
+ DIDS				TABLE OF NUMBER 	IN
+ DOCTAB_NAME			TABLE OF RECORD 	IN/OUT
+ CLSTAB_NAME			TABLE OF RECORD 	IN/OUT
+ PREF_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE TRAIN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ DOCID				VARCHAR2		IN
+ CATTAB 			VARCHAR2		IN
+ CATDOCID			VARCHAR2		IN
+ CATID				VARCHAR2		IN
+ RESTAB 			VARCHAR2		IN
+ RESCATID			VARCHAR2		IN
+ RESQUERY			VARCHAR2		IN
+ RESCONFID			VARCHAR2		IN
+ PREF_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE TRAIN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ DOCID				VARCHAR2		IN
+ CATTAB 			VARCHAR2		IN
+ CATDOCID			VARCHAR2		IN
+ CATID				VARCHAR2		IN
+ RESTAB 			VARCHAR2		IN
+ PREF_NAME			VARCHAR2		IN
+

@@ -1,0 +1,4 @@
+ERROR:
+ORA-04043: object "SYS"."DBMS_SPACE_ADMIN" does not exist
+
+

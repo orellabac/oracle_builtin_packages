@@ -1,0 +1,252 @@
+PROCEDURE ADD_COST_MATRIX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+ COST_MATRIX_TABLE_NAME 	VARCHAR2		IN
+ COST_MATRIX_SCHEMA_NAME	VARCHAR2		IN     DEFAULT
+PROCEDURE ALTER_REVERSE_EXPRESSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+ EXPRESSION			CLOB			IN
+ ATTRIBUTE_NAME 		VARCHAR2		IN     DEFAULT
+ ATTRIBUTE_SUBNAME		VARCHAR2		IN     DEFAULT
+PROCEDURE APPLY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ CASE_ID_COLUMN_NAME		VARCHAR2		IN
+ RESULT_TABLE_NAME		VARCHAR2		IN
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE COMPUTE_CONFUSION_MATRIX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACCURACY			NUMBER			OUT
+ APPLY_RESULT_TABLE_NAME	VARCHAR2		IN
+ TARGET_TABLE_NAME		VARCHAR2		IN
+ CASE_ID_COLUMN_NAME		VARCHAR2		IN
+ TARGET_COLUMN_NAME		VARCHAR2		IN
+ CONFUSION_MATRIX_TABLE_NAME	VARCHAR2		IN
+ SCORE_COLUMN_NAME		VARCHAR2		IN     DEFAULT
+ SCORE_CRITERION_COLUMN_NAME	VARCHAR2		IN     DEFAULT
+ COST_MATRIX_TABLE_NAME 	VARCHAR2		IN     DEFAULT
+ APPLY_RESULT_SCHEMA_NAME	VARCHAR2		IN     DEFAULT
+ TARGET_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ COST_MATRIX_SCHEMA_NAME	VARCHAR2		IN     DEFAULT
+ SCORE_CRITERION_TYPE		VARCHAR2		IN     DEFAULT
+PROCEDURE COMPUTE_LIFT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ APPLY_RESULT_TABLE_NAME	VARCHAR2		IN
+ TARGET_TABLE_NAME		VARCHAR2		IN
+ CASE_ID_COLUMN_NAME		VARCHAR2		IN
+ TARGET_COLUMN_NAME		VARCHAR2		IN
+ LIFT_TABLE_NAME		VARCHAR2		IN
+ POSITIVE_TARGET_VALUE		VARCHAR2		IN
+ SCORE_COLUMN_NAME		VARCHAR2		IN     DEFAULT
+ SCORE_CRITERION_COLUMN_NAME	VARCHAR2		IN     DEFAULT
+ NUM_QUANTILES			NUMBER			IN     DEFAULT
+ COST_MATRIX_TABLE_NAME 	VARCHAR2		IN     DEFAULT
+ APPLY_RESULT_SCHEMA_NAME	VARCHAR2		IN     DEFAULT
+ TARGET_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ COST_MATRIX_SCHEMA_NAME	VARCHAR2		IN     DEFAULT
+ SCORE_CRITERION_TYPE		VARCHAR2		IN     DEFAULT
+PROCEDURE COMPUTE_ROC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ROC_AREA_UNDER_CURVE		NUMBER			OUT
+ APPLY_RESULT_TABLE_NAME	VARCHAR2		IN
+ TARGET_TABLE_NAME		VARCHAR2		IN
+ CASE_ID_COLUMN_NAME		VARCHAR2		IN
+ TARGET_COLUMN_NAME		VARCHAR2		IN
+ ROC_TABLE_NAME 		VARCHAR2		IN
+ POSITIVE_TARGET_VALUE		VARCHAR2		IN
+ SCORE_COLUMN_NAME		VARCHAR2		IN     DEFAULT
+ SCORE_CRITERION_COLUMN_NAME	VARCHAR2		IN     DEFAULT
+ APPLY_RESULT_SCHEMA_NAME	VARCHAR2		IN     DEFAULT
+ TARGET_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_MODEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+ MINING_FUNCTION		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ CASE_ID_COLUMN_NAME		VARCHAR2		IN
+ TARGET_COLUMN_NAME		VARCHAR2		IN     DEFAULT
+ SETTINGS_TABLE_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ SETTINGS_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ XFORM_LIST			TRANSFORM_LIST		IN     DEFAULT
+PROCEDURE DROP_MODEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+ FORCE				BOOLEAN 		IN     DEFAULT
+PROCEDURE EXPORT_MODEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILENAME			VARCHAR2		IN
+ DIRECTORY			VARCHAR2		IN
+ MODEL_FILTER			VARCHAR2		IN     DEFAULT
+ FILESIZE			VARCHAR2		IN     DEFAULT
+ OPERATION			VARCHAR2		IN     DEFAULT
+ REMOTE_LINK			VARCHAR2		IN     DEFAULT
+ JOBNAME			VARCHAR2		IN     DEFAULT
+FUNCTION GET_ASSOCIATION_RULES RETURNS DM_RULES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+ TOPN				NUMBER			IN     DEFAULT
+ RULE_ID			NUMBER(38)		IN     DEFAULT
+ MIN_CONFIDENCE 		NUMBER			IN     DEFAULT
+ MIN_SUPPORT			NUMBER			IN     DEFAULT
+ MAX_RULE_LENGTH		NUMBER(38)		IN     DEFAULT
+ MIN_RULE_LENGTH		NUMBER(38)		IN     DEFAULT
+ SORT_ORDER			ORA_MINING_VARCHAR2_NT	IN     DEFAULT
+ ANTECEDENT_ITEMS		DM_ITEMS		IN     DEFAULT
+ CONSEQUENT_ITEMS		DM_ITEMS		IN     DEFAULT
+ MIN_LIFT			NUMBER			IN     DEFAULT
+FUNCTION GET_DEFAULT_SETTINGS RETURNS DM_MODEL_SETTINGS
+FUNCTION GET_FREQUENT_ITEMSETS RETURNS DM_ITEMSETS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+ TOPN				NUMBER			IN     DEFAULT
+ MAX_ITEMSET_LENGTH		NUMBER			IN     DEFAULT
+FUNCTION GET_MODEL_COST_MATRIX RETURNS DM_COST_MATRIX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+ MATRIX_TYPE			VARCHAR2		IN     DEFAULT
+FUNCTION GET_MODEL_DETAILS_AI RETURNS DM_RANKED_ATTRIBUTES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+FUNCTION GET_MODEL_DETAILS_EM RETURNS DM_CLUSTERS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+ CLUSTER_ID			NUMBER			IN     DEFAULT
+ ATTRIBUTE			VARCHAR2		IN     DEFAULT
+ CENTROID			NUMBER			IN     DEFAULT
+ HISTOGRAM			NUMBER			IN     DEFAULT
+ RULES				NUMBER			IN     DEFAULT
+ ATTRIBUTE_SUBNAME		VARCHAR2		IN     DEFAULT
+ TOPN_ATTRIBUTES		NUMBER			IN     DEFAULT
+FUNCTION GET_MODEL_DETAILS_EM_COMP RETURNS DM_EM_COMPONENT_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+FUNCTION GET_MODEL_DETAILS_EM_PROJ RETURNS DM_EM_PROJECTION_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+FUNCTION GET_MODEL_DETAILS_GLM RETURNS DM_GLM_COEFF_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+FUNCTION GET_MODEL_DETAILS_GLOBAL RETURNS DM_MODEL_GLOBAL_DETAILS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+FUNCTION GET_MODEL_DETAILS_KM RETURNS DM_CLUSTERS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+ CLUSTER_ID			NUMBER			IN     DEFAULT
+ ATTRIBUTE			VARCHAR2		IN     DEFAULT
+ CENTROID			NUMBER			IN     DEFAULT
+ HISTOGRAM			NUMBER			IN     DEFAULT
+ RULES				NUMBER			IN     DEFAULT
+ ATTRIBUTE_SUBNAME		VARCHAR2		IN     DEFAULT
+ TOPN_ATTRIBUTES		NUMBER			IN     DEFAULT
+FUNCTION GET_MODEL_DETAILS_NB RETURNS DM_NB_DETAILS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+FUNCTION GET_MODEL_DETAILS_NMF RETURNS DM_NMF_FEATURE_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+FUNCTION GET_MODEL_DETAILS_OC RETURNS DM_CLUSTERS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+ CLUSTER_ID			NUMBER			IN     DEFAULT
+ ATTRIBUTE			VARCHAR2		IN     DEFAULT
+ CENTROID			NUMBER			IN     DEFAULT
+ HISTOGRAM			NUMBER			IN     DEFAULT
+ RULES				NUMBER			IN     DEFAULT
+ TOPN_ATTRIBUTES		NUMBER			IN     DEFAULT
+FUNCTION GET_MODEL_DETAILS_SVD RETURNS DM_SVD_MATRIX_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+ MATRIX_TYPE			VARCHAR2		IN     DEFAULT
+FUNCTION GET_MODEL_DETAILS_SVM RETURNS DM_SVM_LINEAR_COEFF_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+ REVERSE_COEF			NUMBER			IN     DEFAULT
+FUNCTION GET_MODEL_DETAILS_XML RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+FUNCTION GET_MODEL_SETTINGS RETURNS DM_MODEL_SETTINGS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+FUNCTION GET_MODEL_SIGNATURE RETURNS DM_MODEL_SIGNATURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+FUNCTION GET_MODEL_TRANSFORMATIONS RETURNS DM_TRANSFORMS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+PROCEDURE GET_TRANSFORM_LIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XFORM_LIST			TRANSFORM_LIST		OUT
+ MODEL_XFORMS			DM_TRANSFORMS		IN
+PROCEDURE IMPORT_MODEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILENAME			VARCHAR2		IN
+ DIRECTORY			VARCHAR2		IN
+ MODEL_FILTER			VARCHAR2		IN     DEFAULT
+ OPERATION			VARCHAR2		IN     DEFAULT
+ REMOTE_LINK			VARCHAR2		IN     DEFAULT
+ JOBNAME			VARCHAR2		IN     DEFAULT
+ SCHEMA_REMAP			VARCHAR2		IN     DEFAULT
+ TABLESPACE_REMAP		VARCHAR2		IN     DEFAULT
+PROCEDURE IMPORT_MODEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+ PMMLDOC			XMLTYPE 		IN
+ STRICT_CHECK			BOOLEAN 		IN     DEFAULT
+PROCEDURE RANK_APPLY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ APPLY_RESULT_TABLE_NAME	VARCHAR2		IN
+ CASE_ID_COLUMN_NAME		VARCHAR2		IN
+ SCORE_COLUMN_NAME		VARCHAR2		IN
+ SCORE_CRITERION_COLUMN_NAME	VARCHAR2		IN
+ RANKED_APPLY_TABLE_NAME	VARCHAR2		IN
+ TOP_N				NUMBER(38)		IN     DEFAULT
+ COST_MATRIX_TABLE_NAME 	VARCHAR2		IN     DEFAULT
+ APPLY_RESULT_SCHEMA_NAME	VARCHAR2		IN     DEFAULT
+ COST_MATRIX_SCHEMA_NAME	VARCHAR2		IN     DEFAULT
+PROCEDURE REMOVE_COST_MATRIX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+PROCEDURE RENAME_MODEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODEL_NAME			VARCHAR2		IN
+ NEW_MODEL_NAME 		VARCHAR2		IN
+ VERSIONED_MODEL_NAME		VARCHAR2		IN     DEFAULT
+

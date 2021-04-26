@@ -1,0 +1,324 @@
+FUNCTION ABORT RETURNS BINARY_INTEGER
+PROCEDURE ATTACH_SESSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DEBUG_SESSION_ID		VARCHAR2		IN
+ DIAGNOSTICS			BINARY_INTEGER		IN     DEFAULT
+FUNCTION CONTINUE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RUN_INFO			RECORD			IN/OUT
+   LINE#			BINARY_INTEGER		IN/OUT
+   TERMINATED			BINARY_INTEGER		IN/OUT
+   BREAKPOINT			BINARY_INTEGER		IN/OUT
+   STACKDEPTH			BINARY_INTEGER		IN/OUT
+   INTERPRETERDEPTH		BINARY_INTEGER		IN/OUT
+   REASON			BINARY_INTEGER		IN/OUT
+   PROGRAM			RECORD			IN/OUT
+     NAMESPACE			BINARY_INTEGER		IN/OUT
+     NAME			VARCHAR2(30)		IN/OUT
+     OWNER			VARCHAR2(30)		IN/OUT
+     DBLINK			VARCHAR2(30)		IN/OUT
+     LINE#			BINARY_INTEGER		IN/OUT
+     LIBUNITTYPE		BINARY_INTEGER		IN/OUT
+     ENTRYPOINTNAME		VARCHAR2(512)		IN/OUT
+   OER				BINARY_INTEGER		IN/OUT
+ BREAKFLAGS			BINARY_INTEGER		IN
+ INFO_REQUESTED 		BINARY_INTEGER		IN     DEFAULT
+PROCEDURE DEBUG_OFF
+PROCEDURE DEBUG_ON
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NO_CLIENT_SIDE_PLSQL_ENGINE	BOOLEAN 		IN     DEFAULT
+ IMMEDIATE			BOOLEAN 		IN     DEFAULT
+FUNCTION DELETE_BREAKPOINT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BREAKPOINT			BINARY_INTEGER		IN
+FUNCTION DELETE_OER_BREAKPOINT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OER				BINARY_INTEGER		IN
+PROCEDURE DETACH_SESSION
+FUNCTION DISABLE_BREAKPOINT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BREAKPOINT			BINARY_INTEGER		IN
+FUNCTION ENABLE_BREAKPOINT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BREAKPOINT			BINARY_INTEGER		IN
+PROCEDURE EXECUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WHAT				VARCHAR2		IN
+ FRAME# 			BINARY_INTEGER		IN
+ BIND_RESULTS			BINARY_INTEGER		IN
+ RESULTS			DBMS_DEBUG_VC2COLL	IN/OUT
+ ERRM				VARCHAR2		IN/OUT
+PROCEDURE GET_ENCODED_PKGVARS_FOR_CLIENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RECORD			IN
+   NAMESPACE			BINARY_INTEGER		IN
+   NAME 			VARCHAR2(30)		IN
+   OWNER			VARCHAR2(30)		IN
+   DBLINK			VARCHAR2(30)		IN
+   LINE#			BINARY_INTEGER		IN
+   LIBUNITTYPE			BINARY_INTEGER		IN
+   ENTRYPOINTNAME		VARCHAR2(512)		IN
+ FLAGS				BINARY_INTEGER		IN
+ PBRUN_VERSION			BINARY_INTEGER		IN
+ STATUS 			BINARY_INTEGER		IN/OUT
+ TIDL_VERSION			BINARY_INTEGER		OUT
+ TIDL_BUF			RAW			IN/OUT
+PROCEDURE GET_ENCODED_PKGVARS_FOR_CLIENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RECORD			IN
+   NAMESPACE			BINARY_INTEGER		IN
+   NAME 			VARCHAR2(30)		IN
+   OWNER			VARCHAR2(30)		IN
+   DBLINK			VARCHAR2(30)		IN
+   LINE#			BINARY_INTEGER		IN
+   LIBUNITTYPE			BINARY_INTEGER		IN
+   ENTRYPOINTNAME		VARCHAR2(512)		IN
+ FLAGS				BINARY_INTEGER		IN
+ PBRUN_VERSION			BINARY_INTEGER		IN
+ STATUS 			BINARY_INTEGER		IN/OUT
+ TIDL_BUF			VARCHAR2		IN/OUT
+ TIDL_VERSION			BINARY_INTEGER		OUT
+PROCEDURE GET_ENCODED_STACK_FOR_CLIENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ START_FRAME			BINARY_INTEGER		IN
+ FRAME_COUNT			BINARY_INTEGER		IN
+ FLAGS				BINARY_INTEGER		IN
+ MAX_STRING_LENGTH		BINARY_INTEGER		IN
+ MAX_INDEX_VALUES		BINARY_INTEGER		IN
+ PBRUN_VERSION			BINARY_INTEGER		IN
+ TIDL_VERSION			BINARY_INTEGER		OUT
+ TIDL_BUF			RAW			IN/OUT
+PROCEDURE GET_ENCODED_STACK_FOR_CLIENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ START_FRAME			BINARY_INTEGER		IN
+ FRAME_COUNT			BINARY_INTEGER		IN
+ FLAGS				BINARY_INTEGER		IN
+ MAX_STRING_LENGTH		BINARY_INTEGER		IN
+ MAX_INDEX_VALUES		BINARY_INTEGER		IN
+ PBRUN_VERSION			BINARY_INTEGER		IN
+ TIDL_BUF			VARCHAR2		IN/OUT
+ TIDL_VERSION			BINARY_INTEGER		OUT
+FUNCTION GET_INDEXES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VARNAME			VARCHAR2		IN
+ FRAME# 			BINARY_INTEGER		IN
+ HANDLE 			RECORD			IN
+   NAMESPACE			BINARY_INTEGER		IN
+   NAME 			VARCHAR2(30)		IN
+   OWNER			VARCHAR2(30)		IN
+   DBLINK			VARCHAR2(30)		IN
+   LINE#			BINARY_INTEGER		IN
+   LIBUNITTYPE			BINARY_INTEGER		IN
+   ENTRYPOINTNAME		VARCHAR2(512)		IN
+ ENTRIES			TABLE OF BINARY_INTEGER OUT
+FUNCTION GET_LINE_MAP RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PROGRAM			RECORD			IN
+   NAMESPACE			BINARY_INTEGER		IN
+   NAME 			VARCHAR2(30)		IN
+   OWNER			VARCHAR2(30)		IN
+   DBLINK			VARCHAR2(30)		IN
+   LINE#			BINARY_INTEGER		IN
+   LIBUNITTYPE			BINARY_INTEGER		IN
+   ENTRYPOINTNAME		VARCHAR2(512)		IN
+ MAXLINE			BINARY_INTEGER		OUT
+ NUMBER_OF_ENTRY_POINTS 	BINARY_INTEGER		OUT
+ LINEMAP			RAW			OUT
+PROCEDURE GET_MORE_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BUFFER 			VARCHAR2		IN/OUT
+ BUFLEN 			BINARY_INTEGER		IN
+ PIECE# 			BINARY_INTEGER		IN
+FUNCTION GET_RUNTIME_INFO RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INFO_REQUESTED 		BINARY_INTEGER		IN
+ RUN_INFO			RECORD			OUT
+   LINE#			BINARY_INTEGER		OUT
+   TERMINATED			BINARY_INTEGER		OUT
+   BREAKPOINT			BINARY_INTEGER		OUT
+   STACKDEPTH			BINARY_INTEGER		OUT
+   INTERPRETERDEPTH		BINARY_INTEGER		OUT
+   REASON			BINARY_INTEGER		OUT
+   PROGRAM			RECORD			OUT
+     NAMESPACE			BINARY_INTEGER		OUT
+     NAME			VARCHAR2(30)		OUT
+     OWNER			VARCHAR2(30)		OUT
+     DBLINK			VARCHAR2(30)		OUT
+     LINE#			BINARY_INTEGER		OUT
+     LIBUNITTYPE		BINARY_INTEGER		OUT
+     ENTRYPOINTNAME		VARCHAR2(512)		OUT
+   OER				BINARY_INTEGER		OUT
+FUNCTION GET_TIMEOUT_BEHAVIOUR RETURNS BINARY_INTEGER
+FUNCTION GET_VALUE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VARIABLE_NAME			VARCHAR2		IN
+ FRAME# 			BINARY_INTEGER		IN
+ SCALAR_VALUE			VARCHAR2		OUT
+ FORMAT 			VARCHAR2		IN     DEFAULT
+FUNCTION GET_VALUE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VARIABLE_NAME			VARCHAR2		IN
+ HANDLE 			RECORD			IN
+   NAMESPACE			BINARY_INTEGER		IN
+   NAME 			VARCHAR2(30)		IN
+   OWNER			VARCHAR2(30)		IN
+   DBLINK			VARCHAR2(30)		IN
+   LINE#			BINARY_INTEGER		IN
+   LIBUNITTYPE			BINARY_INTEGER		IN
+   ENTRYPOINTNAME		VARCHAR2(512)		IN
+ SCALAR_VALUE			VARCHAR2		OUT
+ FORMAT 			VARCHAR2		IN     DEFAULT
+FUNCTION INITIALIZE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DEBUG_SESSION_ID		VARCHAR2		IN     DEFAULT
+ DIAGNOSTICS			BINARY_INTEGER		IN     DEFAULT
+ DEBUG_ROLE			VARCHAR2		IN     DEFAULT
+ DEBUG_ROLE_PWD 		VARCHAR2		IN     DEFAULT
+PROCEDURE PING
+PROCEDURE PRINT_BACKTRACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LISTING			VARCHAR2		IN/OUT
+PROCEDURE PRINT_BACKTRACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BACKTRACE			TABLE OF RECORD 	OUT
+PROCEDURE PRINT_INSTANTIATIONS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PKGS				TABLE OF RECORD 	IN/OUT
+ FLAGS				BINARY_INTEGER		IN
+PROCEDURE PROBE_VERSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MAJOR				BINARY_INTEGER		OUT
+ MINOR				BINARY_INTEGER		OUT
+PROCEDURE SELF_CHECK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TIMEOUT			BINARY_INTEGER		IN     DEFAULT
+FUNCTION SET_BREAKPOINT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PROGRAM			RECORD			IN
+   NAMESPACE			BINARY_INTEGER		IN
+   NAME 			VARCHAR2(30)		IN
+   OWNER			VARCHAR2(30)		IN
+   DBLINK			VARCHAR2(30)		IN
+   LINE#			BINARY_INTEGER		IN
+   LIBUNITTYPE			BINARY_INTEGER		IN
+   ENTRYPOINTNAME		VARCHAR2(512)		IN
+ LINE#				BINARY_INTEGER		IN
+ BREAKPOINT#			BINARY_INTEGER		OUT
+ FUZZY				BINARY_INTEGER		IN     DEFAULT
+ ITERATIONS			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE SET_DIAGNOSTIC_LEVEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DLEVEL 			BINARY_INTEGER		IN
+FUNCTION SET_OER_BREAKPOINT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OER				BINARY_INTEGER		IN
+FUNCTION SET_TIMEOUT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TIMEOUT			BINARY_INTEGER		IN
+PROCEDURE SET_TIMEOUT_BEHAVIOUR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BEHAVIOUR			BINARY_INTEGER		IN
+FUNCTION SET_VALUE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FRAME# 			BINARY_INTEGER		IN
+ ASSIGNMENT_STATEMENT		VARCHAR2		IN
+FUNCTION SET_VALUE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RECORD			IN
+   NAMESPACE			BINARY_INTEGER		IN
+   NAME 			VARCHAR2(30)		IN
+   OWNER			VARCHAR2(30)		IN
+   DBLINK			VARCHAR2(30)		IN
+   LINE#			BINARY_INTEGER		IN
+   LIBUNITTYPE			BINARY_INTEGER		IN
+   ENTRYPOINTNAME		VARCHAR2(512)		IN
+ ASSIGNMENT_STATEMENT		VARCHAR2		IN
+PROCEDURE SHOW_BREAKPOINTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LISTING			VARCHAR2		IN/OUT
+PROCEDURE SHOW_BREAKPOINTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LISTING			TABLE OF RECORD 	OUT
+PROCEDURE SHOW_BREAKPOINTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CODE_BREAKPOINTS		TABLE OF RECORD 	OUT
+ OER_BREAKPOINTS		TABLE OF BINARY_INTEGER OUT
+PROCEDURE SHOW_FRAME_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FIRST_LINE			BINARY_INTEGER		IN
+ LAST_LINE			BINARY_INTEGER		IN
+ SOURCE 			TABLE OF VARCHAR2(90)	IN/OUT
+ FRAME_NUM			BINARY_INTEGER		IN
+PROCEDURE SHOW_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FIRST_LINE			BINARY_INTEGER		IN
+ LAST_LINE			BINARY_INTEGER		IN
+ SOURCE 			TABLE OF VARCHAR2(90)	IN/OUT
+PROCEDURE SHOW_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FIRST_LINE			BINARY_INTEGER		IN
+ LAST_LINE			BINARY_INTEGER		IN
+ WINDOW 			BINARY_INTEGER		IN
+ PRINT_ARROW			BINARY_INTEGER		IN
+ BUFFER 			VARCHAR2		IN/OUT
+ BUFLEN 			BINARY_INTEGER		IN
+ PIECES 			BINARY_INTEGER		OUT
+FUNCTION SYNCHRONIZE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RUN_INFO			RECORD			OUT
+   LINE#			BINARY_INTEGER		OUT
+   TERMINATED			BINARY_INTEGER		OUT
+   BREAKPOINT			BINARY_INTEGER		OUT
+   STACKDEPTH			BINARY_INTEGER		OUT
+   INTERPRETERDEPTH		BINARY_INTEGER		OUT
+   REASON			BINARY_INTEGER		OUT
+   PROGRAM			RECORD			OUT
+     NAMESPACE			BINARY_INTEGER		OUT
+     NAME			VARCHAR2(30)		OUT
+     OWNER			VARCHAR2(30)		OUT
+     DBLINK			VARCHAR2(30)		OUT
+     LINE#			BINARY_INTEGER		OUT
+     LIBUNITTYPE		BINARY_INTEGER		OUT
+     ENTRYPOINTNAME		VARCHAR2(512)		OUT
+   OER				BINARY_INTEGER		OUT
+ INFO_REQUESTED 		BINARY_INTEGER		IN     DEFAULT
+FUNCTION TARGET_PROGRAM_RUNNING RETURNS BOOLEAN
+

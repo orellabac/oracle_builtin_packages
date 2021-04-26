@@ -1,0 +1,281 @@
+PROCEDURE CLEARBINDVALUES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+PROCEDURE CLOSECONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+FUNCTION GETDTD RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ WITHVER			BOOLEAN 		IN     DEFAULT
+PROCEDURE GETDTD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ XDOC				CLOB			IN
+ WITHVER			BOOLEAN 		IN     DEFAULT
+PROCEDURE GETEXCEPTIONCONTENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ ERRNO				NUMBER			OUT
+ ERRMSG 			VARCHAR2		OUT
+FUNCTION GETNUMROWSPROCESSED RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+PROCEDURE GETVERSION
+FUNCTION GETXML RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ METATYPE			NUMBER			IN     DEFAULT
+PROCEDURE GETXML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ XDOC				CLOB			IN
+ METATYPE			NUMBER			IN     DEFAULT
+FUNCTION GETXML RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQLQUERY			VARCHAR2		IN
+ METATYPE			NUMBER			IN     DEFAULT
+FUNCTION GETXML RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQLQUERY			CLOB			IN
+ METATYPE			NUMBER			IN     DEFAULT
+FUNCTION NEWCONTEXT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQLQUERY			VARCHAR2		IN
+FUNCTION NEWCONTEXT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQLQUERY			CLOB			IN
+PROCEDURE PROPAGATEORIGINALEXCEPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ FLAG				BOOLEAN 		IN     DEFAULT
+PROCEDURE P_GETDTD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ XDOC				CLOB			IN
+ WITHVER			NUMBER			IN
+PROCEDURE P_GETXML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ XDOC				CLOB			IN
+ METATYPE			NUMBER			IN
+PROCEDURE P_PROPORIGEXC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ FLAG				NUMBER			IN
+PROCEDURE P_SETDATAHEADER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ HEADER 			CLOB			IN
+ TAG				VARCHAR2		IN
+PROCEDURE P_SETENCODINGTAG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ ENC				VARCHAR2		IN
+PROCEDURE P_SETMETAHEADER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ HEADER 			CLOB			IN
+PROCEDURE P_SETRAISEEXCEPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ FLAG				NUMBER			IN
+PROCEDURE P_SETRAISENOROWSEXC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ FLAG				NUMBER			IN
+PROCEDURE P_SETSQLTOXMLNAMEESC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ FLAG				NUMBER			IN
+PROCEDURE P_SETSTRICTLEGALXMLCHARCHECK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ FLAG				NUMBER			IN
+PROCEDURE P_SETSTYLESHEETHEADER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ URI				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+PROCEDURE P_SETXSLT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ URI				VARCHAR2		IN
+ REF				VARCHAR2		IN
+PROCEDURE P_SETXSLT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ STYLESHEET			CLOB			IN
+ REF				VARCHAR2		IN
+PROCEDURE P_USENULLATTRIND
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ FLAG				NUMBER			IN
+PROCEDURE P_USETYPEFORCOLLELEMTAG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ FLAG				NUMBER			IN
+PROCEDURE REMOVEXSLTPARAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ NAME				VARCHAR2		IN
+PROCEDURE RESETRESULTSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+PROCEDURE SETBINDVALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ BINDNAME			VARCHAR2		IN
+ BINDVALUE			VARCHAR2		IN
+PROCEDURE SETCOLLIDATTRNAME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ ATTRNAME			VARCHAR2		IN
+PROCEDURE SETDATAHEADER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ HEADER 			CLOB			IN     DEFAULT
+ TAG				VARCHAR2		IN     DEFAULT
+PROCEDURE SETDATEFORMAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ MASK				VARCHAR2		IN
+PROCEDURE SETENCODINGTAG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ ENC				VARCHAR2		IN     DEFAULT
+PROCEDURE SETERRORTAG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ TAG				VARCHAR2		IN
+PROCEDURE SETMAXROWS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ ROWS				NUMBER			IN
+PROCEDURE SETMETAHEADER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ HEADER 			CLOB			IN     DEFAULT
+PROCEDURE SETRAISEEXCEPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ FLAG				BOOLEAN 		IN     DEFAULT
+PROCEDURE SETRAISENOROWSEXCEPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ FLAG				BOOLEAN 		IN     DEFAULT
+PROCEDURE SETROWIDATTRNAME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ ATTRNAME			VARCHAR2		IN
+PROCEDURE SETROWIDATTRVALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ COLNAME			VARCHAR2		IN
+PROCEDURE SETROWSETTAG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ TAG				VARCHAR2		IN
+PROCEDURE SETROWTAG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ TAG				VARCHAR2		IN
+PROCEDURE SETSKIPROWS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ ROWS				NUMBER			IN
+PROCEDURE SETSQLTOXMLNAMEESCAPING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ FLAG				BOOLEAN 		IN     DEFAULT
+PROCEDURE SETSTRICTLEGALXMLCHARCHECK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ FLAG				BOOLEAN 		IN     DEFAULT
+PROCEDURE SETSTYLESHEETHEADER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ URI				VARCHAR2		IN
+ TYPE				VARCHAR2		IN     DEFAULT
+PROCEDURE SETTAGCASE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ TCASE				NUMBER			IN
+PROCEDURE SETXSLT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ URI				VARCHAR2		IN
+ REF				VARCHAR2		IN     DEFAULT
+PROCEDURE SETXSLT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ STYLESHEET			CLOB			IN
+ REF				VARCHAR2		IN     DEFAULT
+PROCEDURE SETXSLTPARAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE USENULLATTRIBUTEINDICATOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ FLAG				BOOLEAN 		IN     DEFAULT
+PROCEDURE USETYPEFORCOLLELEMTAG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ FLAG				BOOLEAN 		IN     DEFAULT
+

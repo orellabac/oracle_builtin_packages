@@ -1,0 +1,1487 @@
+FUNCTION ADOPTNODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ ADOPTEDNODE			RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION APPENDCHILD RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ NEWCHILD			RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE APPENDDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CD				RECORD			IN
+   ID				RAW(13) 		IN
+ ARG				VARCHAR2		IN
+FUNCTION BINARYINPUTSTREAMAVAILABLE RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+FUNCTION CHARACTERINPUTSTREAMAVAILABLE RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+FUNCTION CLONENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ DEEP				BOOLEAN 		IN
+PROCEDURE CLOSEBINARYINPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+PROCEDURE CLOSEBINARYOUTPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+PROCEDURE CLOSECHARACTERINPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+PROCEDURE CLOSECHARACTEROUTPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+FUNCTION CREATEATTRIBUTE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+FUNCTION CREATEATTRIBUTE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+ NS				VARCHAR2		IN
+FUNCTION CREATECDATASECTION RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ DATA				VARCHAR2		IN
+FUNCTION CREATECOMMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ DATA				VARCHAR2		IN
+FUNCTION CREATEDOCUMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ NAMESPACEURI			VARCHAR2		IN
+ QUALIFIEDNAME			VARCHAR2		IN
+ DOCTYPE			RAW(13) 		IN     DEFAULT
+FUNCTION CREATEDOCUMENTFRAGMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION CREATEELEMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ TAGNAME			VARCHAR2		IN
+FUNCTION CREATEELEMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ TAGNAME			VARCHAR2		IN
+ NS				VARCHAR2		IN
+FUNCTION CREATEENTITYREFERENCE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+FUNCTION CREATEPROCESSINGINSTRUCTION RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ TARGET 			VARCHAR2		IN
+ DATA				VARCHAR2		IN
+FUNCTION CREATETEXTNODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ DATA				VARCHAR2		IN
+FUNCTION CREATEXMLBINARYINPUTSTREAM RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RAW			IN
+FUNCTION CREATEXMLBINARYOUTPUTSTREAM RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RAW			IN
+FUNCTION CREATEXMLCHARACTERINPUTSTREAM RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RAW			IN
+FUNCTION CREATEXMLCHARACTEROUTPUTSTREAM RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RAW			IN
+PROCEDURE DELETEDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CD				RECORD			IN
+   ID				RAW(13) 		IN
+ OFFSET 			BINARY_INTEGER		IN
+ CNT				BINARY_INTEGER		IN
+FUNCTION FINDENTITY RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DT				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+ PAR				BOOLEAN 		IN
+FUNCTION FINDNOTATION RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DT				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+PROCEDURE FLUSHBINARYOUTPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+PROCEDURE FLUSHCHARACTEROUTPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+PROCEDURE FREEDOCFRAG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DF				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE FREEDOCTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DT				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE FREEDOCUMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE FREEELEMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE FREENODE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE FREENODELIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NL				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETATTRIBUTE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+FUNCTION GETATTRIBUTE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+ NS				VARCHAR2		IN
+FUNCTION GETATTRIBUTENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+FUNCTION GETATTRIBUTENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+ NS				VARCHAR2		IN
+FUNCTION GETATTRIBUTES RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETCHARSET RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETCHILDNODES RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETCHILDRENBYTAGNAME RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+FUNCTION GETCHILDRENBYTAGNAME RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+ NS				VARCHAR2		IN
+FUNCTION GETDATA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CD				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETDATA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PI				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETDOCTYPE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETDOCUMENTELEMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETELEMENTSBYTAGNAME RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+FUNCTION GETELEMENTSBYTAGNAME RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+ NS				VARCHAR2		IN
+FUNCTION GETELEMENTSBYTAGNAME RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ TAGNAME			VARCHAR2		IN
+FUNCTION GETENTITIES RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DT				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE GETEXPANDEDNAME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ DATA				VARCHAR2		OUT
+FUNCTION GETEXPANDEDNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ A				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETEXPANDEDNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETFIRSTCHILD RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETIMPLEMENTATION RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETLASTCHILD RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETLENGTH RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NL				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETLENGTH RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NNM				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETLENGTH RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CD				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE GETLOCALNAME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ DATA				VARCHAR2		OUT
+FUNCTION GETLOCALNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ A				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETLOCALNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ A				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DT				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETNAMEDITEM RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ NNM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+FUNCTION GETNAMEDITEM RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ NNM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+ NS				VARCHAR2		IN
+PROCEDURE GETNAMESPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ DATA				VARCHAR2		IN/OUT
+FUNCTION GETNAMESPACE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ A				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETNAMESPACE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETNEXTSIBLING RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETNODEFROMFRAGMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ FRAGMENT			XMLTYPE 		IN
+FUNCTION GETNODENAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETNODETYPE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETNODEVALUE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETNODEVALUEASBINARYSTREAM RETURNS UTL_BINARYINPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE GETNODEVALUEASBINARYSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ PUSHVALUE			UTL_BINARYOUTPUTSTREAM	IN/OUT
+FUNCTION GETNODEVALUEASCHARACTERSTREAM RETURNS UTL_CHARACTERINPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE GETNODEVALUEASCHARACTERSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ PUSHVALUE			UTL_CHARACTEROUTPUTSTREAM IN/OUT
+FUNCTION GETNOTATIONNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ENT				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETNOTATIONS RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DT				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETOWNERDOCUMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETOWNERELEMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ A				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETPARENTNODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETPREFIX RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETPREVIOUSSIBLING RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETPUBLICID RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DT				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETPUBLICID RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETPUBLICID RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ENT				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETQUALIFIEDNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ A				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETQUALIFIEDNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETSCHEMANODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETSPECIFIED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ A				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETSTANDALONE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETSYSTEMID RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DT				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETSYSTEMID RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETSYSTEMID RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ENT				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETTAGNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETTARGET RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PI				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETVALUE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ A				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETVERSION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETXMLTYPE RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASATTRIBUTE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+FUNCTION HASATTRIBUTE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+ NS				VARCHAR2		IN
+FUNCTION HASATTRIBUTES RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASCHILDNODES RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASFEATURE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DI				RECORD			IN
+   ID				RAW(13) 		IN
+ FEATURE			VARCHAR2		IN
+ VERSION			VARCHAR2		IN
+FUNCTION IMPORTNODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ IMPORTEDNODE			RECORD			IN
+   ID				RAW(13) 		IN
+ DEEP				BOOLEAN 		IN
+FUNCTION INSERTBEFORE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ NEWCHILD			RECORD			IN
+   ID				RAW(13) 		IN
+ REFCHILD			RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE INSERTDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CD				RECORD			IN
+   ID				RAW(13) 		IN
+ OFFSET 			BINARY_INTEGER		IN
+ ARG				VARCHAR2		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DI				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NL				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NNM				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CD				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ A				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ T				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COM				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CDS				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DT				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ENT				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EREF				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PI				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DF				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ITEM RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ NL				RECORD			IN
+   ID				RAW(13) 		IN
+ IDX				BINARY_INTEGER		IN
+FUNCTION ITEM RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ NNM				RECORD			IN
+   ID				RAW(13) 		IN
+ IDX				BINARY_INTEGER		IN
+FUNCTION MAKEATTR RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKECDATASECTION RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKECHARACTERDATA RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKECOMMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKEDOCUMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKEDOCUMENTFRAGMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKEDOCUMENTTYPE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKEELEMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKEENTITY RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKEENTITYREFERENCE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ CD				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ A				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ T				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ COM				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ CDS				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DT				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ ENT				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ EREF				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ PI				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DF				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKENOTATION RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKEPROCESSINGINSTRUCTION RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKETEXT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION NEWDOMDOCUMENT RETURNS RECORD
+   ID				RAW(13) 		OUT
+FUNCTION NEWDOMDOCUMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ XMLDOC 			XMLTYPE 		IN
+FUNCTION NEWDOMDOCUMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ CL				CLOB			IN
+PROCEDURE NORMALIZE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION READBINARYINPUTSTREAM RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+ NUMBYTES			NUMBER(38)		IN
+PROCEDURE READBINARYINPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+ BYTES				RAW			IN/OUT
+ NUMBYTES			NUMBER(38)		IN/OUT
+PROCEDURE READBINARYINPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+ BYTES				RAW			IN/OUT
+ OFFSET 			NUMBER(38)		IN
+ NUMBYTES			NUMBER(38)		IN/OUT
+PROCEDURE READBYTESFROMBIS1
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+ BYTES				RAW			IN/OUT
+FUNCTION READCHARACTERINPUTSTREAM RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+ NUMCHARS			NUMBER(38)		IN
+ LINEFEED			BOOLEAN 		IN
+PROCEDURE READCHARACTERINPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+ CHARS				VARCHAR2		IN/OUT
+ NUMCHARS			NUMBER(38)		IN/OUT
+ LINEFEED			BOOLEAN 		IN
+PROCEDURE READCHARACTERINPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+ CHARS				VARCHAR2		IN/OUT
+ OFFSET 			NUMBER(38)		IN
+ NUMCHARS			NUMBER(38)		IN/OUT
+ LINEFEED			BOOLEAN 		IN
+PROCEDURE REMOVEATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+PROCEDURE REMOVEATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+ NS				VARCHAR2		IN
+FUNCTION REMOVEATTRIBUTENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ OLDATTR			RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION REMOVECHILD RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ OLDCHILD			RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION REMOVENAMEDITEM RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ NNM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+FUNCTION REMOVENAMEDITEM RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ NNM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+ NS				VARCHAR2		IN
+FUNCTION REPLACECHILD RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ NEWCHILD			RECORD			IN
+   ID				RAW(13) 		IN
+ OLDCHILD			RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE REPLACEDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CD				RECORD			IN
+   ID				RAW(13) 		IN
+ OFFSET 			BINARY_INTEGER		IN
+ CNT				BINARY_INTEGER		IN
+ ARG				VARCHAR2		IN
+PROCEDURE RESOLVENAMESPACEPREFIX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ PREFIX 			VARCHAR2		IN
+ DATA				VARCHAR2		OUT
+FUNCTION RESOLVENAMESPACEPREFIX RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ PREFIX 			VARCHAR2		IN
+PROCEDURE SETATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+ NEWVALUE			VARCHAR2		IN
+PROCEDURE SETATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+ NEWVALUE			VARCHAR2		IN
+ NS				VARCHAR2		IN
+FUNCTION SETATTRIBUTENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NEWATTR			RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION SETATTRIBUTENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ ELEM				RECORD			IN
+   ID				RAW(13) 		IN
+ NEWATTR			RECORD			IN
+   ID				RAW(13) 		IN
+ NS				VARCHAR2		IN
+PROCEDURE SETCHARSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ CHARSET			VARCHAR2		IN
+PROCEDURE SETDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CD				RECORD			IN
+   ID				RAW(13) 		IN
+ DATA				VARCHAR2		IN
+PROCEDURE SETDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PI				RECORD			IN
+   ID				RAW(13) 		IN
+ DATA				VARCHAR2		IN
+PROCEDURE SETDOCTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+ SYSID				VARCHAR2		IN
+ PUBID				VARCHAR2		IN
+FUNCTION SETNAMEDITEM RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ NNM				RECORD			IN
+   ID				RAW(13) 		IN
+ ARG				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION SETNAMEDITEM RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ NNM				RECORD			IN
+   ID				RAW(13) 		IN
+ ARG				RECORD			IN
+   ID				RAW(13) 		IN
+ NS				VARCHAR2		IN
+PROCEDURE SETNODEVALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ NODEVALUE			VARCHAR2		IN
+PROCEDURE SETNODEVALUEASBINARYSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ NODEVALUE			UTL_BINARYINPUTSTREAM	IN/OUT
+FUNCTION SETNODEVALUEASBINARYSTREAM RETURNS UTL_BINARYOUTPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE SETNODEVALUEASCHARACTERSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ NODEVALUE			UTL_CHARACTERINPUTSTREAM IN/OUT
+FUNCTION SETNODEVALUEASCHARACTERSTREAM RETURNS UTL_CHARACTEROUTPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE SETNODEVALUEASDEFERREDBFILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ VALUE				BINARY FILE LOB 	IN
+PROCEDURE SETNODEVALUEASDEFERREDBLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ VALUE				BLOB			IN
+PROCEDURE SETNODEVALUEASDEFERREDCLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ VALUE				CLOB			IN
+PROCEDURE SETPREFIX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ PREFIX 			VARCHAR2		IN
+PROCEDURE SETSTANDALONE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ NEWVALUE			VARCHAR2		IN
+PROCEDURE SETVALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ A				RECORD			IN
+   ID				RAW(13) 		IN
+ NEWVALUE			VARCHAR2		IN
+PROCEDURE SETVERSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ VERSION			VARCHAR2		IN
+FUNCTION SPLITTEXT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ T				RECORD			IN
+   ID				RAW(13) 		IN
+ OFFSET 			BINARY_INTEGER		IN
+FUNCTION STREAMISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+FUNCTION SUBSTRINGDATA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CD				RECORD			IN
+   ID				RAW(13) 		IN
+ OFFSET 			BINARY_INTEGER		IN
+ CNT				BINARY_INTEGER		IN
+FUNCTION USEBINARYSTREAM RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION WRITEBINARYOUTPUTSTREAM RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+ BYTES				RAW			IN/OUT
+ NUMBYTES			NUMBER(38)		IN
+PROCEDURE WRITEBINARYOUTPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+ BYTES				RAW			IN/OUT
+ NUMBYTES			NUMBER(38)		IN/OUT
+PROCEDURE WRITEBINARYOUTPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+ BYTES				RAW			IN/OUT
+ OFFSET 			NUMBER(38)		IN
+ NUMBYTES			NUMBER(38)		IN/OUT
+FUNCTION WRITECHARACTEROUTPUTSTREAM RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+ CHARS				VARCHAR2		IN/OUT
+ NUMCHARS			NUMBER(38)		IN
+ LINEFEED			BOOLEAN 		IN
+PROCEDURE WRITECHARACTEROUTPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+ CHARS				VARCHAR2		IN/OUT
+ NUMCHARS			NUMBER(38)		IN/OUT
+ LINEFEED			BOOLEAN 		IN
+PROCEDURE WRITECHARACTEROUTPUTSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			RAW			IN
+ CHARS				VARCHAR2		IN/OUT
+ OFFSET 			NUMBER(38)		IN
+ NUMCHARS			NUMBER(38)		IN/OUT
+ LINEFEED			BOOLEAN 		IN
+PROCEDURE WRITEEXTERNALDTDTOBUFFER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ BUFFER 			VARCHAR2		IN/OUT
+PROCEDURE WRITEEXTERNALDTDTOBUFFER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ BUFFER 			VARCHAR2		IN/OUT
+ CHARSET			VARCHAR2		IN
+PROCEDURE WRITEEXTERNALDTDTOCLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ CL				CLOB			IN/OUT
+PROCEDURE WRITEEXTERNALDTDTOCLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ CL				CLOB			IN/OUT
+ CHARSET			VARCHAR2		IN
+PROCEDURE WRITEEXTERNALDTDTOFILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ FILENAME			VARCHAR2		IN
+PROCEDURE WRITEEXTERNALDTDTOFILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ FILENAME			VARCHAR2		IN
+ CHARSET			VARCHAR2		IN
+PROCEDURE WRITETOBUFFER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ BUFFER 			VARCHAR2		IN/OUT
+PROCEDURE WRITETOBUFFER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ BUFFER 			VARCHAR2		IN/OUT
+ PFLAG				NUMBER			IN
+ INDENT 			NUMBER			IN
+PROCEDURE WRITETOBUFFER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ BUFFER 			VARCHAR2		IN/OUT
+ CHARSET			VARCHAR2		IN
+PROCEDURE WRITETOBUFFER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ BUFFER 			VARCHAR2		IN/OUT
+ CHARSET			VARCHAR2		IN
+ PFLAG				NUMBER			IN
+ INDENT 			NUMBER			IN
+PROCEDURE WRITETOBUFFER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DF				RECORD			IN
+   ID				RAW(13) 		IN
+ BUFFER 			VARCHAR2		IN/OUT
+PROCEDURE WRITETOBUFFER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DF				RECORD			IN
+   ID				RAW(13) 		IN
+ BUFFER 			VARCHAR2		IN/OUT
+ PFLAG				NUMBER			IN
+ INDENT 			NUMBER			IN
+PROCEDURE WRITETOBUFFER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ BUFFER 			VARCHAR2		IN/OUT
+PROCEDURE WRITETOBUFFER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ BUFFER 			VARCHAR2		IN/OUT
+ PFLAG				NUMBER			IN
+ INDENT 			NUMBER			IN
+PROCEDURE WRITETOBUFFER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ BUFFER 			VARCHAR2		IN/OUT
+ CHARSET			VARCHAR2		IN
+PROCEDURE WRITETOBUFFER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ BUFFER 			VARCHAR2		IN/OUT
+ CHARSET			VARCHAR2		IN
+ PFLAG				NUMBER			IN
+ INDENT 			NUMBER			IN
+PROCEDURE WRITETOCLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ CL				CLOB			IN/OUT
+PROCEDURE WRITETOCLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ CL				CLOB			IN/OUT
+ PFLAG				NUMBER			IN
+ INDENT 			NUMBER			IN
+PROCEDURE WRITETOCLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ CL				CLOB			IN/OUT
+ CHARSET			VARCHAR2		IN
+PROCEDURE WRITETOCLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ CL				CLOB			IN/OUT
+ CHARSET			VARCHAR2		IN
+ PFLAG				NUMBER			IN
+ INDENT 			NUMBER			IN
+PROCEDURE WRITETOCLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ CL				CLOB			IN/OUT
+PROCEDURE WRITETOCLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ CL				CLOB			IN/OUT
+ PFLAG				NUMBER			IN
+ INDENT 			NUMBER			IN
+PROCEDURE WRITETOCLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ CL				CLOB			IN/OUT
+ CHARSET			VARCHAR2		IN
+PROCEDURE WRITETOCLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ CL				CLOB			IN/OUT
+ CHARSET			VARCHAR2		IN
+ PFLAG				NUMBER			IN
+ INDENT 			NUMBER			IN
+PROCEDURE WRITETOFILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ FILENAME			VARCHAR2		IN
+PROCEDURE WRITETOFILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ FILENAME			VARCHAR2		IN
+ PFLAG				NUMBER			IN
+ INDENT 			NUMBER			IN
+PROCEDURE WRITETOFILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ FILENAME			VARCHAR2		IN
+ CHARSET			VARCHAR2		IN
+PROCEDURE WRITETOFILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ FILENAME			VARCHAR2		IN
+ CHARSET			VARCHAR2		IN
+ PFLAG				NUMBER			IN
+ INDENT 			NUMBER			IN
+PROCEDURE WRITETOFILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ FILENAME			VARCHAR2		IN
+PROCEDURE WRITETOFILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ FILENAME			VARCHAR2		IN
+ PFLAG				NUMBER			IN
+ INDENT 			NUMBER			IN
+PROCEDURE WRITETOFILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ FILENAME			VARCHAR2		IN
+ CHARSET			VARCHAR2		IN
+PROCEDURE WRITETOFILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				RECORD			IN
+   ID				RAW(13) 		IN
+ FILENAME			VARCHAR2		IN
+ CHARSET			VARCHAR2		IN
+ PFLAG				NUMBER			IN
+ INDENT 			NUMBER			IN
+FUNCTION XMLD_USEBINSTREAM RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RAW			IN
+

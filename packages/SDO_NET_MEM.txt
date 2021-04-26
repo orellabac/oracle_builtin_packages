@@ -1,0 +1,5 @@
+PROCEDURE SET_MAX_MEMORY_SIZE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BYTES				NUMBER			IN
+

@@ -1,0 +1,23 @@
+PROCEDURE GRANT_SWITCH_CONSUMER_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GRANTEE_NAME			VARCHAR2		IN
+ CONSUMER_GROUP 		VARCHAR2		IN
+ GRANT_OPTION			BOOLEAN 		IN
+PROCEDURE GRANT_SYSTEM_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GRANTEE_NAME			VARCHAR2		IN
+ PRIVILEGE_NAME 		VARCHAR2		IN     DEFAULT
+ ADMIN_OPTION			BOOLEAN 		IN
+PROCEDURE REVOKE_SWITCH_CONSUMER_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REVOKEE_NAME			VARCHAR2		IN
+ CONSUMER_GROUP 		VARCHAR2		IN
+PROCEDURE REVOKE_SYSTEM_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REVOKEE_NAME			VARCHAR2		IN
+ PRIVILEGE_NAME 		VARCHAR2		IN     DEFAULT
+

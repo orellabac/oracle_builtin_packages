@@ -1,0 +1,35 @@
+PROCEDURE ALTER_PROPAGATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PROPAGATION_NAME		VARCHAR2		IN
+ RULE_SET_NAME			VARCHAR2		IN     DEFAULT
+ REMOVE_RULE_SET		BOOLEAN 		IN     DEFAULT
+ NEGATIVE_RULE_SET_NAME 	VARCHAR2		IN     DEFAULT
+ REMOVE_NEGATIVE_RULE_SET	BOOLEAN 		IN     DEFAULT
+PROCEDURE CREATE_PROPAGATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PROPAGATION_NAME		VARCHAR2		IN
+ SOURCE_QUEUE			VARCHAR2		IN
+ DESTINATION_QUEUE		VARCHAR2		IN
+ DESTINATION_DBLINK		VARCHAR2		IN     DEFAULT
+ RULE_SET_NAME			VARCHAR2		IN     DEFAULT
+ NEGATIVE_RULE_SET_NAME 	VARCHAR2		IN     DEFAULT
+ QUEUE_TO_QUEUE 		BOOLEAN 		IN     DEFAULT
+ ORIGINAL_PROPAGATION_NAME	VARCHAR2		IN     DEFAULT
+ AUTO_MERGE_THRESHOLD		NUMBER			IN     DEFAULT
+PROCEDURE DROP_PROPAGATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PROPAGATION_NAME		VARCHAR2		IN
+ DROP_UNUSED_RULE_SETS		BOOLEAN 		IN     DEFAULT
+PROCEDURE START_PROPAGATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PROPAGATION_NAME		VARCHAR2		IN
+PROCEDURE STOP_PROPAGATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PROPAGATION_NAME		VARCHAR2		IN
+ FORCE				BOOLEAN 		IN     DEFAULT
+

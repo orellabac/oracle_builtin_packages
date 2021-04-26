@@ -1,0 +1,182 @@
+PROCEDURE CREATEDICOMIMAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BLOB			IN
+ METADATA			XMLTYPE 		IN
+ DEST				BLOB			IN/OUT
+PROCEDURE CREATEDICOMIMAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BINARY FILE LOB 	IN
+ METADATA			XMLTYPE 		IN
+ DEST				BLOB			IN/OUT
+PROCEDURE CREATEDICOMIMAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				ORDIMAGE		IN
+ METADATA			XMLTYPE 		IN
+ DEST				BLOB			IN/OUT
+PROCEDURE EXPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BLOB			IN
+ DEST_TYPE			VARCHAR2		IN
+ DEST_LOCATION			VARCHAR2		IN
+ DEST_NAME			VARCHAR2		IN
+FUNCTION EXTRACTMETADATA RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA				BLOB			IN
+ EXTRACTOPTION			VARCHAR2		IN     DEFAULT
+ DOCNAME			VARCHAR2		IN     DEFAULT
+FUNCTION EXTRACTMETADATA RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA				BINARY FILE LOB 	IN
+ EXTRACTOPTION			VARCHAR2		IN     DEFAULT
+ DOCNAME			VARCHAR2		IN     DEFAULT
+FUNCTION EXTRACTMETADATA RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA				ORDIMAGE		IN
+ EXTRACTOPTION			VARCHAR2		IN     DEFAULT
+ DOCNAME			VARCHAR2		IN     DEFAULT
+FUNCTION GETDICTIONARYTAG RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ATTRIBUTENAME			VARCHAR2		IN
+ DEFINERNAME			VARCHAR2		IN     DEFAULT
+FUNCTION GETMAPPINGXPATH RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TAG				VARCHAR2		IN
+ DOCNAME			VARCHAR2		IN     DEFAULT
+ DEFINERNAME			VARCHAR2		IN     DEFAULT
+PROCEDURE IMPORTFROM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DEST				BLOB			IN/OUT
+ SOURCE_TYPE			VARCHAR2		IN
+ SOURCE_LOCATION		VARCHAR2		IN
+ SOURCE_NAME			VARCHAR2		IN
+FUNCTION ISANONYMOUS RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BLOB			IN
+ ANONYMITYDOCNAME		VARCHAR2		IN     DEFAULT
+FUNCTION ISANONYMOUS RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BINARY FILE LOB 	IN
+ ANONYMITYDOCNAME		VARCHAR2		IN     DEFAULT
+FUNCTION ISANONYMOUS RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				ORDIMAGE		IN
+ ANONYMITYDOCNAME		VARCHAR2		IN     DEFAULT
+FUNCTION ISCONFORMANCEVALID RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BLOB			IN
+ CONSTRAINTNAME 		VARCHAR2		IN
+FUNCTION ISCONFORMANCEVALID RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BINARY FILE LOB 	IN
+ CONSTRAINTNAME 		VARCHAR2		IN
+FUNCTION ISCONFORMANCEVALID RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				ORDIMAGE		IN
+ CONSTRAINTNAME 		VARCHAR2		IN
+PROCEDURE MAKEANONYMOUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BLOB			IN
+ DEST_SOP_INSTANCE_UID		VARCHAR2		IN
+ DEST				BLOB			IN/OUT
+ ANONYMITYDOCNAME		VARCHAR2		IN     DEFAULT
+PROCEDURE MAKEANONYMOUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BINARY FILE LOB 	IN
+ DEST_SOP_INSTANCE_UID		VARCHAR2		IN
+ DEST				BLOB			IN/OUT
+ ANONYMITYDOCNAME		VARCHAR2		IN     DEFAULT
+PROCEDURE MAKEANONYMOUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				ORDIMAGE		IN
+ DEST_SOP_INSTANCE_UID		VARCHAR2		IN
+ DEST				BLOB			IN/OUT
+ ANONYMITYDOCNAME		VARCHAR2		IN     DEFAULT
+PROCEDURE PROCESSCOPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BLOB			IN
+ COMMAND			VARCHAR2		IN
+ DEST				BLOB			IN/OUT
+PROCEDURE PROCESSCOPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BINARY FILE LOB 	IN
+ COMMAND			VARCHAR2		IN
+ DEST				BLOB			IN/OUT
+PROCEDURE PROCESSCOPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				ORDIMAGE		IN
+ COMMAND			VARCHAR2		IN
+ DEST				BLOB			IN/OUT
+PROCEDURE PROCESSCOPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BLOB			IN
+ COMMAND			VARCHAR2		IN
+ DEST_SOP_INSTANCE_UID		VARCHAR2		IN
+ DEST				BLOB			IN/OUT
+ METADATA			XMLTYPE 		IN     DEFAULT
+PROCEDURE PROCESSCOPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BINARY FILE LOB 	IN
+ COMMAND			VARCHAR2		IN
+ DEST_SOP_INSTANCE_UID		VARCHAR2		IN
+ DEST				BLOB			IN/OUT
+ METADATA			XMLTYPE 		IN     DEFAULT
+PROCEDURE PROCESSCOPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				ORDIMAGE		IN
+ COMMAND			VARCHAR2		IN
+ DEST_SOP_INSTANCE_UID		VARCHAR2		IN
+ DEST				BLOB			IN/OUT
+ METADATA			XMLTYPE 		IN     DEFAULT
+PROCEDURE SETDATAMODEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODELNAME			VARCHAR2		IN     DEFAULT
+PROCEDURE SETDATAMODEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODELNAME			VARCHAR2		IN     DEFAULT
+ FORCE				NUMBER			IN
+PROCEDURE WRITEMETADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BLOB			IN
+ METADATA			XMLTYPE 		IN
+ DEST				BLOB			IN/OUT
+PROCEDURE WRITEMETADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				BINARY FILE LOB 	IN
+ METADATA			XMLTYPE 		IN
+ DEST				BLOB			IN/OUT
+PROCEDURE WRITEMETADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				ORDIMAGE		IN
+ METADATA			XMLTYPE 		IN
+ DEST				BLOB			IN/OUT
+

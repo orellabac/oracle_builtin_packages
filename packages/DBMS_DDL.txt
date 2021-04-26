@@ -1,0 +1,86 @@
+PROCEDURE ALTER_COMPILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TYPE				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ REUSE_SETTINGS 		BOOLEAN 		IN     DEFAULT
+PROCEDURE ALTER_TABLE_NOT_REFERENCEABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ TABLE_SCHEMA			VARCHAR2		IN     DEFAULT
+ AFFECTED_SCHEMA		VARCHAR2		IN     DEFAULT
+PROCEDURE ALTER_TABLE_REFERENCEABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ TABLE_SCHEMA			VARCHAR2		IN     DEFAULT
+ AFFECTED_SCHEMA		VARCHAR2		IN     DEFAULT
+PROCEDURE ANALYZE_OBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TYPE				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ METHOD 			VARCHAR2		IN
+ ESTIMATE_ROWS			NUMBER			IN     DEFAULT
+ ESTIMATE_PERCENT		NUMBER			IN     DEFAULT
+ METHOD_OPT			VARCHAR2		IN     DEFAULT
+ PARTNAME			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_WRAPPED
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DDL				VARCHAR2		IN
+PROCEDURE CREATE_WRAPPED
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DDL				TABLE OF VARCHAR2(256)	IN
+ LB				BINARY_INTEGER		IN
+ UB				BINARY_INTEGER		IN
+PROCEDURE CREATE_WRAPPED
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DDL				TABLE OF VARCHAR2(32767) IN
+ LB				BINARY_INTEGER		IN
+ UB				BINARY_INTEGER		IN
+FUNCTION IS_TRIGGER_FIRE_ONCE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRIG_OWNER			VARCHAR2		IN
+ TRIG_NAME			VARCHAR2		IN
+FUNCTION IS_TRIGGER_FIRE_ONCE_INTERNAL RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRIG_OWNER			VARCHAR2		IN
+ TRIG_NAME			VARCHAR2		IN
+PROCEDURE SET_TRIGGER_FIRING_PROPERTY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRIG_OWNER			VARCHAR2		IN
+ TRIG_NAME			VARCHAR2		IN
+ FIRE_ONCE			BOOLEAN 		IN
+PROCEDURE SET_TRIGGER_FIRING_PROPERTY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRIG_OWNER			VARCHAR2		IN
+ TRIG_NAME			VARCHAR2		IN
+ PROPERTY			BINARY_INTEGER		IN
+ SETTING			BOOLEAN 		IN
+FUNCTION WRAP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DDL				VARCHAR2		IN
+FUNCTION WRAP RETURNS TABLE OF VARCHAR2(256)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DDL				TABLE OF VARCHAR2(256)	IN
+ LB				BINARY_INTEGER		IN
+ UB				BINARY_INTEGER		IN
+FUNCTION WRAP RETURNS TABLE OF VARCHAR2(32767)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DDL				TABLE OF VARCHAR2(32767) IN
+ LB				BINARY_INTEGER		IN
+ UB				BINARY_INTEGER		IN
+

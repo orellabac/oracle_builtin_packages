@@ -1,0 +1,82 @@
+PROCEDURE CLEARKEYCOLUMNLIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+PROCEDURE CLEARUPDATECOLUMNLIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+PROCEDURE CLOSECONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+FUNCTION DELETEXML RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ XDOC				VARCHAR2		IN
+FUNCTION DELETEXML RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ XDOC				CLOB			IN
+FUNCTION DELETEXML RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ XDOC				XMLTYPE 		IN
+FUNCTION INSERTXML RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ XDOC				VARCHAR2		IN
+FUNCTION INSERTXML RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ XDOC				CLOB			IN
+FUNCTION INSERTXML RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ XDOC				XMLTYPE 		IN
+FUNCTION NEWCONTEXT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TARGETTABLE			VARCHAR2		IN
+PROCEDURE SETKEYCOLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ COLNAME			VARCHAR2		IN
+PROCEDURE SETPRESERVEWHITESPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ FLAG				BOOLEAN 		IN
+PROCEDURE SETROWTAG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ ROWTAGNAME			VARCHAR2		IN
+PROCEDURE SETUPDATECOLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ COLNAME			VARCHAR2		IN
+FUNCTION UPDATEXML RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ XDOC				VARCHAR2		IN
+FUNCTION UPDATEXML RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ XDOC				CLOB			IN
+FUNCTION UPDATEXML RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTXHDL 			NUMBER			IN
+ XDOC				XMLTYPE 		IN
+

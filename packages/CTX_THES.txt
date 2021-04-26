@@ -1,0 +1,279 @@
+PROCEDURE ALTER_PHRASE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TNAME				VARCHAR2		IN
+ PHRASE 			VARCHAR2		IN
+ OP				VARCHAR2		IN
+ OPERAND			VARCHAR2		IN     DEFAULT
+PROCEDURE ALTER_THESAURUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TNAME				VARCHAR2		IN
+ OP				VARCHAR2		IN
+ OPERAND			VARCHAR2		IN     DEFAULT
+FUNCTION BT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE BT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESTAB 			TABLE OF RECORD 	IN/OUT
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+FUNCTION BTG RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE BTG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESTAB 			TABLE OF RECORD 	IN/OUT
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+FUNCTION BTI RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE BTI
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESTAB 			TABLE OF RECORD 	IN/OUT
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+FUNCTION BTP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE BTP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESTAB 			TABLE OF RECORD 	IN/OUT
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_PHRASE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TNAME				VARCHAR2		IN
+ PHRASE 			VARCHAR2		IN
+ REL				VARCHAR2		IN     DEFAULT
+ RELNAME			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_RELATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TNAME				VARCHAR2		IN
+ PHRASE 			VARCHAR2		IN
+ REL				VARCHAR2		IN
+ RELPHRASE			VARCHAR2		IN
+PROCEDURE CREATE_THESAURUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ CASESENS			BOOLEAN 		IN     DEFAULT
+PROCEDURE CREATE_TRANSLATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TNAME				VARCHAR2		IN
+ PHRASE 			VARCHAR2		IN
+ LANGUAGE			VARCHAR2		IN
+ TRANSLATION			VARCHAR2		IN
+PROCEDURE DROP_PHRASE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TNAME				VARCHAR2		IN
+ PHRASE 			VARCHAR2		IN
+PROCEDURE DROP_RELATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TNAME				VARCHAR2		IN
+ PHRASE 			VARCHAR2		IN
+ REL				VARCHAR2		IN
+ RELPHRASE			VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_THESAURUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+PROCEDURE DROP_TRANSLATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TNAME				VARCHAR2		IN
+ PHRASE 			VARCHAR2		IN
+ LANGUAGE			VARCHAR2		IN     DEFAULT
+ TRANSLATION			VARCHAR2		IN     DEFAULT
+PROCEDURE EXPORT_THESAURUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ THESDUMP			CLOB			IN/OUT
+FUNCTION HAS_RELATION RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ REL				VARCHAR2		IN
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE IMPORT_THESAURUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ DATA				CLOB			IN
+ CASESENS			VARCHAR2		IN     DEFAULT
+FUNCTION NT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE NT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESTAB 			TABLE OF RECORD 	IN/OUT
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+FUNCTION NTG RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE NTG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESTAB 			TABLE OF RECORD 	IN/OUT
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+FUNCTION NTI RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE NTI
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESTAB 			TABLE OF RECORD 	IN/OUT
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+FUNCTION NTP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE NTP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESTAB 			TABLE OF RECORD 	IN/OUT
+ PHRASE 			VARCHAR2		IN
+ LVL				NUMBER			IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE OUTPUT_STYLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SHOWLEVEL			BOOLEAN 		IN     DEFAULT
+ SHOWQUALIFY			BOOLEAN 		IN     DEFAULT
+ SHOWPT 			BOOLEAN 		IN     DEFAULT
+ SHOWID 			BOOLEAN 		IN     DEFAULT
+FUNCTION PT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE PT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESTAB 			TABLE OF RECORD 	IN/OUT
+ PHRASE 			VARCHAR2		IN
+ TNAME				VARCHAR2		IN     DEFAULT
+FUNCTION RT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE RT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESTAB 			TABLE OF RECORD 	IN/OUT
+ PHRASE 			VARCHAR2		IN
+ TNAME				VARCHAR2		IN     DEFAULT
+FUNCTION SN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ TNAME				VARCHAR2		IN     DEFAULT
+FUNCTION SYN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE SYN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESTAB 			TABLE OF RECORD 	IN/OUT
+ PHRASE 			VARCHAR2		IN
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE THES_TT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESTAB 			TABLE OF RECORD 	IN/OUT
+ TNAME				VARCHAR2		IN     DEFAULT
+FUNCTION TR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ LANG				VARCHAR2		IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE TR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESTAB 			TABLE OF RECORD 	IN/OUT
+ PHRASE 			VARCHAR2		IN
+ LANG				VARCHAR2		IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+FUNCTION TRSYN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ LANG				VARCHAR2		IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE TRSYN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESTAB 			TABLE OF RECORD 	IN/OUT
+ PHRASE 			VARCHAR2		IN
+ LANG				VARCHAR2		IN     DEFAULT
+ TNAME				VARCHAR2		IN     DEFAULT
+FUNCTION TT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PHRASE 			VARCHAR2		IN
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE TT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESTAB 			TABLE OF RECORD 	IN/OUT
+ PHRASE 			VARCHAR2		IN
+ TNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE UPDATE_TRANSLATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TNAME				VARCHAR2		IN
+ PHRASE 			VARCHAR2		IN
+ LANGUAGE			VARCHAR2		IN
+ TRANSLATION			VARCHAR2		IN
+ NEW_TRANSLATION		VARCHAR2		IN
+

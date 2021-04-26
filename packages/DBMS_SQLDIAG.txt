@@ -1,0 +1,286 @@
+FUNCTION ACCEPT_SQL_PATCH RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ OBJECT_ID			NUMBER			IN     DEFAULT
+ NAME				VARCHAR2		IN     DEFAULT
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ CATEGORY			VARCHAR2		IN     DEFAULT
+ TASK_OWNER			VARCHAR2		IN     DEFAULT
+ REPLACE			BOOLEAN 		IN     DEFAULT
+ FORCE_MATCH			BOOLEAN 		IN     DEFAULT
+PROCEDURE ACCEPT_SQL_PATCH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ OBJECT_ID			NUMBER			IN     DEFAULT
+ NAME				VARCHAR2		IN     DEFAULT
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ CATEGORY			VARCHAR2		IN     DEFAULT
+ TASK_OWNER			VARCHAR2		IN     DEFAULT
+ REPLACE			BOOLEAN 		IN     DEFAULT
+ FORCE_MATCH			BOOLEAN 		IN     DEFAULT
+PROCEDURE ALTER_SQL_PATCH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE CANCEL_DIAGNOSIS_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+FUNCTION CREATE_DIAGNOSIS_TASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_TEXT			CLOB			IN
+ BIND_LIST			SQL_BINDS		IN     DEFAULT
+ USER_NAME			VARCHAR2		IN     DEFAULT
+ SCOPE				VARCHAR2		IN     DEFAULT
+ TIME_LIMIT			NUMBER			IN     DEFAULT
+ TASK_NAME			VARCHAR2		IN     DEFAULT
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ PROBLEM_TYPE			NUMBER			IN     DEFAULT
+FUNCTION CREATE_DIAGNOSIS_TASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_ID 			VARCHAR2		IN
+ PLAN_HASH_VALUE		NUMBER			IN     DEFAULT
+ SCOPE				VARCHAR2		IN     DEFAULT
+ TIME_LIMIT			NUMBER			IN     DEFAULT
+ TASK_NAME			VARCHAR2		IN     DEFAULT
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ PROBLEM_TYPE			NUMBER			IN     DEFAULT
+FUNCTION CREATE_DIAGNOSIS_TASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQLSET_NAME			VARCHAR2		IN
+ BASIC_FILTER			VARCHAR2		IN     DEFAULT
+ OBJECT_FILTER			VARCHAR2		IN     DEFAULT
+ RANK1				VARCHAR2		IN     DEFAULT
+ RANK2				VARCHAR2		IN     DEFAULT
+ RANK3				VARCHAR2		IN     DEFAULT
+ RESULT_PERCENTAGE		NUMBER			IN     DEFAULT
+ RESULT_LIMIT			NUMBER			IN     DEFAULT
+ SCOPE				VARCHAR2		IN     DEFAULT
+ TIME_LIMIT			NUMBER			IN     DEFAULT
+ TASK_NAME			VARCHAR2		IN     DEFAULT
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ PLAN_FILTER			VARCHAR2		IN     DEFAULT
+ SQLSET_OWNER			VARCHAR2		IN     DEFAULT
+ PROBLEM_TYPE			NUMBER			IN     DEFAULT
+PROCEDURE CREATE_STGTAB_SQLPATCH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ SCHEMA_NAME			VARCHAR2		IN     DEFAULT
+ TABLESPACE_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_DIAGNOSIS_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+PROCEDURE DROP_SQL_PATCH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ IGNORE 			BOOLEAN 		IN     DEFAULT
+PROCEDURE DUMP_TRACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_SQL_ID			VARCHAR2		IN
+ P_CHILD_NUMBER 		NUMBER			IN     DEFAULT
+ P_COMPONENT			VARCHAR2		IN     DEFAULT
+ P_FILE_ID			VARCHAR2		IN     DEFAULT
+PROCEDURE EXECUTE_DIAGNOSIS_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+FUNCTION EXPLAIN_SQL_TESTCASE RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQLTESTCASE			CLOB			IN
+PROCEDURE EXPORT_SQL_TESTCASE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRECTORY			VARCHAR2		IN
+ SQL_TEXT			CLOB			IN
+ USER_NAME			VARCHAR2		IN     DEFAULT
+ BIND_LIST			SQL_BINDS		IN     DEFAULT
+ EXPORTENVIRONMENT		BOOLEAN 		IN     DEFAULT
+ EXPORTMETADATA 		BOOLEAN 		IN     DEFAULT
+ EXPORTDATA			BOOLEAN 		IN     DEFAULT
+ EXPORTPKGBODY			BOOLEAN 		IN     DEFAULT
+ SAMPLINGPERCENT		NUMBER			IN     DEFAULT
+ CTRLOPTIONS			VARCHAR2		IN     DEFAULT
+ TIMELIMIT			NUMBER			IN     DEFAULT
+ TESTCASE_NAME			VARCHAR2		IN     DEFAULT
+ TESTCASE			CLOB			IN/OUT
+ PRESERVESCHEMAMAPPING		BOOLEAN 		IN     DEFAULT
+ VERSION			VARCHAR2		IN     DEFAULT
+PROCEDURE EXPORT_SQL_TESTCASE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRECTORY			VARCHAR2		IN
+ INCIDENT_ID			VARCHAR2		IN
+ EXPORTENVIRONMENT		BOOLEAN 		IN     DEFAULT
+ EXPORTMETADATA 		BOOLEAN 		IN     DEFAULT
+ EXPORTDATA			BOOLEAN 		IN     DEFAULT
+ EXPORTPKGBODY			BOOLEAN 		IN     DEFAULT
+ SAMPLINGPERCENT		NUMBER			IN     DEFAULT
+ CTRLOPTIONS			VARCHAR2		IN     DEFAULT
+ TIMELIMIT			NUMBER			IN     DEFAULT
+ TESTCASE_NAME			VARCHAR2		IN     DEFAULT
+ TESTCASE			CLOB			IN/OUT
+ PRESERVESCHEMAMAPPING		BOOLEAN 		IN     DEFAULT
+ VERSION			VARCHAR2		IN     DEFAULT
+PROCEDURE EXPORT_SQL_TESTCASE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRECTORY			VARCHAR2		IN
+ SQL_ID 			VARCHAR2		IN
+ PLAN_HASH_VALUE		NUMBER			IN     DEFAULT
+ EXPORTENVIRONMENT		BOOLEAN 		IN     DEFAULT
+ EXPORTMETADATA 		BOOLEAN 		IN     DEFAULT
+ EXPORTDATA			BOOLEAN 		IN     DEFAULT
+ EXPORTPKGBODY			BOOLEAN 		IN     DEFAULT
+ SAMPLINGPERCENT		NUMBER			IN     DEFAULT
+ CTRLOPTIONS			VARCHAR2		IN     DEFAULT
+ TIMELIMIT			NUMBER			IN     DEFAULT
+ TESTCASE_NAME			VARCHAR2		IN     DEFAULT
+ TESTCASE			CLOB			IN/OUT
+ PRESERVESCHEMAMAPPING		BOOLEAN 		IN     DEFAULT
+ VERSION			VARCHAR2		IN     DEFAULT
+FUNCTION EXPORT_SQL_TESTCASE_DIR_BY_INC RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INCIDENT_ID			NUMBER			IN
+ DIRECTORY			VARCHAR2		IN
+ SAMPLINGPERCENT		NUMBER			IN     DEFAULT
+ EXPORTENVIRONMENT		BOOLEAN 		IN     DEFAULT
+ EXPORTMETADATA 		BOOLEAN 		IN     DEFAULT
+ EXPORTPKGBODY			BOOLEAN 		IN     DEFAULT
+ PRESERVESCHEMAMAPPING		BOOLEAN 		IN     DEFAULT
+ VERSION			VARCHAR2		IN     DEFAULT
+FUNCTION EXPORT_SQL_TESTCASE_DIR_BY_TXT RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INCIDENT_ID			NUMBER			IN
+ DIRECTORY			VARCHAR2		IN
+ SQL_TEXT			CLOB			IN
+ USER_NAME			VARCHAR2		IN     DEFAULT
+ SAMPLINGPERCENT		NUMBER			IN     DEFAULT
+ EXPORTENVIRONMENT		BOOLEAN 		IN     DEFAULT
+ EXPORTMETADATA 		BOOLEAN 		IN     DEFAULT
+ EXPORTPKGBODY			BOOLEAN 		IN     DEFAULT
+ PRESERVESCHEMAMAPPING		BOOLEAN 		IN     DEFAULT
+ VERSION			VARCHAR2		IN     DEFAULT
+FUNCTION GETSQL RETURNS SQLSET_ROW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INCIDENT_ID			VARCHAR2		IN
+FUNCTION GET_FIX_CONTROL RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BUG_NUMBER			NUMBER			IN
+PROCEDURE IMPORT_SQL_TESTCASE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRECTORY			VARCHAR2		IN
+ SQLTESTCASE			CLOB			IN
+ IMPORTENVIRONMENT		BOOLEAN 		IN     DEFAULT
+ IMPORTMETADATA 		BOOLEAN 		IN     DEFAULT
+ IMPORTDATA			BOOLEAN 		IN     DEFAULT
+ IMPORTPKGBODY			BOOLEAN 		IN     DEFAULT
+ IMPORTDIAGNOSIS		BOOLEAN 		IN     DEFAULT
+ IGNORESTORAGE			BOOLEAN 		IN     DEFAULT
+ CTRLOPTIONS			VARCHAR2		IN     DEFAULT
+ PRESERVESCHEMAMAPPING		BOOLEAN 		IN     DEFAULT
+PROCEDURE IMPORT_SQL_TESTCASE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRECTORY			VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+ IMPORTENVIRONMENT		BOOLEAN 		IN     DEFAULT
+ IMPORTMETADATA 		BOOLEAN 		IN     DEFAULT
+ IMPORTDATA			BOOLEAN 		IN     DEFAULT
+ IMPORTPKGBODY			BOOLEAN 		IN     DEFAULT
+ IMPORTDIAGNOSIS		BOOLEAN 		IN     DEFAULT
+ IGNORESTORAGE			BOOLEAN 		IN     DEFAULT
+ CTRLOPTIONS			VARCHAR2		IN     DEFAULT
+ PRESERVESCHEMAMAPPING		BOOLEAN 		IN     DEFAULT
+PROCEDURE INCIDENTID_2_SQL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INCIDENT_ID			VARCHAR2		IN
+ SQL_STMT			SQLSET_ROW		OUT
+ PROBLEM_TYPE			NUMBER			OUT
+ ERR_CODE			BINARY_INTEGER		OUT
+ ERR_MESG			VARCHAR2		OUT
+PROCEDURE INTERRUPT_DIAGNOSIS_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+FUNCTION LOAD_SQLSET_FROM_TCB RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRECTORY			VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+ SQLSET_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE PACK_STGTAB_SQLPATCH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATCH_NAME			VARCHAR2		IN     DEFAULT
+ PATCH_CATEGORY 		VARCHAR2		IN     DEFAULT
+ STAGING_TABLE_NAME		VARCHAR2		IN
+ STAGING_SCHEMA_OWNER		VARCHAR2		IN     DEFAULT
+FUNCTION REPLAY_SQL_TESTCASE RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRECTORY			VARCHAR2		IN
+ SQLTESTCASE			CLOB			IN
+ CTRLOPTIONS			VARCHAR2		IN     DEFAULT
+ FORMAT 			VARCHAR2		IN     DEFAULT
+FUNCTION REPLAY_SQL_TESTCASE RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRECTORY			VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+ CTRLOPTIONS			VARCHAR2		IN     DEFAULT
+ FORMAT 			VARCHAR2		IN     DEFAULT
+FUNCTION REPORT_DIAGNOSIS_TASK RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ TYPE				VARCHAR2		IN     DEFAULT
+ LEVEL				VARCHAR2		IN     DEFAULT
+ SECTION			VARCHAR2		IN     DEFAULT
+ OBJECT_ID			NUMBER			IN     DEFAULT
+ RESULT_LIMIT			NUMBER			IN     DEFAULT
+ OWNER_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE RESET_DIAGNOSIS_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+PROCEDURE RESUME_DIAGNOSIS_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+PROCEDURE SET_DIAGNOSIS_TASK_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ PARAMETER			VARCHAR2		IN
+ VALUE				NUMBER			IN
+PROCEDURE SET_TCB_TRACING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STATUS 			BOOLEAN 		IN     DEFAULT
+PROCEDURE UNPACK_STGTAB_SQLPATCH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATCH_NAME			VARCHAR2		IN     DEFAULT
+ PATCH_CATEGORY 		VARCHAR2		IN     DEFAULT
+ REPLACE			BOOLEAN 		IN
+ STAGING_TABLE_NAME		VARCHAR2		IN
+ STAGING_SCHEMA_OWNER		VARCHAR2		IN     DEFAULT
+

@@ -1,0 +1,1109 @@
+FUNCTION CHECK_BOUNDS RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLENAME			VARCHAR2		IN
+ GID				NUMBER			IN
+ ESEQ				NUMBER(38)		IN
+ SEQ				NUMBER(38)		IN
+ COORDWIDTH			NUMBER			IN
+ DIM1LB 			NUMBER			IN
+ DIM1UB 			NUMBER			IN
+ DIM2LB 			NUMBER			IN
+ DIM2UB 			NUMBER			IN
+PROCEDURE G3D_PARAMETERS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			IN
+ SM_MJR_AXIS			NUMBER			OUT
+ INV_FLTN			NUMBER			OUT
+ G3D_GEOG_CRS_UOM_FACTOR	NUMBER			OUT
+FUNCTION GET_DIM_ARRAY RETURNS SDO_DIM_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+PROCEDURE GET_ORDS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLENAME			VARCHAR2		IN
+ GID				NUMBER			IN
+ ESEQ				NUMBER(38)		IN
+ SEQ				NUMBER(38)		IN
+ COLUMNINDEX			NUMBER(38)		IN
+ XRTN				NUMBER			OUT
+ YRTN				NUMBER			OUT
+FUNCTION INIT_ELEMENT RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER				VARCHAR2		IN
+ GID				NUMBER			IN
+FUNCTION INTERACT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER				VARCHAR2		IN
+ GID1				NUMBER			IN
+ GID2				NUMBER			IN
+FUNCTION INTERACT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER1 			VARCHAR2		IN
+ GID1				NUMBER			IN
+ LAYER2 			VARCHAR2		IN
+ GID2				NUMBER			IN
+FUNCTION INTERACT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER1 			VARCHAR2		IN
+ GID1				NUMBER			IN
+ X_TOLERANCE			NUMBER			IN
+ Y_TOLERANCE			NUMBER			IN
+ V000				NUMBER			IN     DEFAULT
+ V001				NUMBER			IN     DEFAULT
+ V002				NUMBER			IN     DEFAULT
+ V003				NUMBER			IN     DEFAULT
+ V004				NUMBER			IN     DEFAULT
+ V005				NUMBER			IN     DEFAULT
+ V006				NUMBER			IN     DEFAULT
+ V007				NUMBER			IN     DEFAULT
+ V008				NUMBER			IN     DEFAULT
+ V009				NUMBER			IN     DEFAULT
+ V010				NUMBER			IN     DEFAULT
+ V011				NUMBER			IN     DEFAULT
+ V012				NUMBER			IN     DEFAULT
+ V013				NUMBER			IN     DEFAULT
+ V014				NUMBER			IN     DEFAULT
+ V015				NUMBER			IN     DEFAULT
+ V016				NUMBER			IN     DEFAULT
+ V017				NUMBER			IN     DEFAULT
+ V018				NUMBER			IN     DEFAULT
+ V019				NUMBER			IN     DEFAULT
+ V020				NUMBER			IN     DEFAULT
+ V021				NUMBER			IN     DEFAULT
+ V022				NUMBER			IN     DEFAULT
+ V023				NUMBER			IN     DEFAULT
+ V024				NUMBER			IN     DEFAULT
+ V025				NUMBER			IN     DEFAULT
+ V026				NUMBER			IN     DEFAULT
+ V027				NUMBER			IN     DEFAULT
+ V028				NUMBER			IN     DEFAULT
+ V029				NUMBER			IN     DEFAULT
+ V030				NUMBER			IN     DEFAULT
+ V031				NUMBER			IN     DEFAULT
+ V032				NUMBER			IN     DEFAULT
+ V033				NUMBER			IN     DEFAULT
+ V034				NUMBER			IN     DEFAULT
+ V035				NUMBER			IN     DEFAULT
+ V036				NUMBER			IN     DEFAULT
+ V037				NUMBER			IN     DEFAULT
+ V038				NUMBER			IN     DEFAULT
+ V039				NUMBER			IN     DEFAULT
+ V040				NUMBER			IN     DEFAULT
+ V041				NUMBER			IN     DEFAULT
+ V042				NUMBER			IN     DEFAULT
+ V043				NUMBER			IN     DEFAULT
+ V044				NUMBER			IN     DEFAULT
+ V045				NUMBER			IN     DEFAULT
+ V046				NUMBER			IN     DEFAULT
+ V047				NUMBER			IN     DEFAULT
+ V048				NUMBER			IN     DEFAULT
+ V049				NUMBER			IN     DEFAULT
+ V050				NUMBER			IN     DEFAULT
+ V051				NUMBER			IN     DEFAULT
+ V052				NUMBER			IN     DEFAULT
+ V053				NUMBER			IN     DEFAULT
+ V054				NUMBER			IN     DEFAULT
+ V055				NUMBER			IN     DEFAULT
+ V056				NUMBER			IN     DEFAULT
+ V057				NUMBER			IN     DEFAULT
+ V058				NUMBER			IN     DEFAULT
+ V059				NUMBER			IN     DEFAULT
+ V060				NUMBER			IN     DEFAULT
+ V061				NUMBER			IN     DEFAULT
+ V062				NUMBER			IN     DEFAULT
+ V063				NUMBER			IN     DEFAULT
+ V064				NUMBER			IN     DEFAULT
+ V065				NUMBER			IN     DEFAULT
+ V066				NUMBER			IN     DEFAULT
+ V067				NUMBER			IN     DEFAULT
+ V068				NUMBER			IN     DEFAULT
+ V069				NUMBER			IN     DEFAULT
+ V070				NUMBER			IN     DEFAULT
+ V071				NUMBER			IN     DEFAULT
+ V072				NUMBER			IN     DEFAULT
+ V073				NUMBER			IN     DEFAULT
+ V074				NUMBER			IN     DEFAULT
+ V075				NUMBER			IN     DEFAULT
+ V076				NUMBER			IN     DEFAULT
+ V077				NUMBER			IN     DEFAULT
+ V078				NUMBER			IN     DEFAULT
+ V079				NUMBER			IN     DEFAULT
+ V080				NUMBER			IN     DEFAULT
+ V081				NUMBER			IN     DEFAULT
+ V082				NUMBER			IN     DEFAULT
+ V083				NUMBER			IN     DEFAULT
+ V084				NUMBER			IN     DEFAULT
+ V085				NUMBER			IN     DEFAULT
+ V086				NUMBER			IN     DEFAULT
+ V087				NUMBER			IN     DEFAULT
+ V088				NUMBER			IN     DEFAULT
+ V089				NUMBER			IN     DEFAULT
+ V090				NUMBER			IN     DEFAULT
+ V091				NUMBER			IN     DEFAULT
+ V092				NUMBER			IN     DEFAULT
+ V093				NUMBER			IN     DEFAULT
+ V094				NUMBER			IN     DEFAULT
+ V095				NUMBER			IN     DEFAULT
+ V096				NUMBER			IN     DEFAULT
+ V097				NUMBER			IN     DEFAULT
+ V098				NUMBER			IN     DEFAULT
+ V099				NUMBER			IN     DEFAULT
+ V100				NUMBER			IN     DEFAULT
+ V101				NUMBER			IN     DEFAULT
+ V102				NUMBER			IN     DEFAULT
+ V103				NUMBER			IN     DEFAULT
+ V104				NUMBER			IN     DEFAULT
+ V105				NUMBER			IN     DEFAULT
+ V106				NUMBER			IN     DEFAULT
+ V107				NUMBER			IN     DEFAULT
+ V108				NUMBER			IN     DEFAULT
+ V109				NUMBER			IN     DEFAULT
+ V110				NUMBER			IN     DEFAULT
+ V111				NUMBER			IN     DEFAULT
+ V112				NUMBER			IN     DEFAULT
+ V113				NUMBER			IN     DEFAULT
+ V114				NUMBER			IN     DEFAULT
+ V115				NUMBER			IN     DEFAULT
+ V116				NUMBER			IN     DEFAULT
+ V117				NUMBER			IN     DEFAULT
+ V118				NUMBER			IN     DEFAULT
+ V119				NUMBER			IN     DEFAULT
+ V120				NUMBER			IN     DEFAULT
+ V121				NUMBER			IN     DEFAULT
+ V122				NUMBER			IN     DEFAULT
+ V123				NUMBER			IN     DEFAULT
+ V124				NUMBER			IN     DEFAULT
+ V125				NUMBER			IN     DEFAULT
+ V126				NUMBER			IN     DEFAULT
+ V127				NUMBER			IN     DEFAULT
+ V128				NUMBER			IN     DEFAULT
+ V129				NUMBER			IN     DEFAULT
+ V130				NUMBER			IN     DEFAULT
+ V131				NUMBER			IN     DEFAULT
+ V132				NUMBER			IN     DEFAULT
+ V133				NUMBER			IN     DEFAULT
+ V134				NUMBER			IN     DEFAULT
+ V135				NUMBER			IN     DEFAULT
+ V136				NUMBER			IN     DEFAULT
+ V137				NUMBER			IN     DEFAULT
+ V138				NUMBER			IN     DEFAULT
+ V139				NUMBER			IN     DEFAULT
+ V140				NUMBER			IN     DEFAULT
+ V141				NUMBER			IN     DEFAULT
+ V142				NUMBER			IN     DEFAULT
+ V143				NUMBER			IN     DEFAULT
+ V144				NUMBER			IN     DEFAULT
+ V145				NUMBER			IN     DEFAULT
+ V146				NUMBER			IN     DEFAULT
+ V147				NUMBER			IN     DEFAULT
+ V148				NUMBER			IN     DEFAULT
+ V149				NUMBER			IN     DEFAULT
+ V150				NUMBER			IN     DEFAULT
+ V151				NUMBER			IN     DEFAULT
+ V152				NUMBER			IN     DEFAULT
+ V153				NUMBER			IN     DEFAULT
+ V154				NUMBER			IN     DEFAULT
+ V155				NUMBER			IN     DEFAULT
+ V156				NUMBER			IN     DEFAULT
+ V157				NUMBER			IN     DEFAULT
+ V158				NUMBER			IN     DEFAULT
+ V159				NUMBER			IN     DEFAULT
+ V160				NUMBER			IN     DEFAULT
+ V161				NUMBER			IN     DEFAULT
+ V162				NUMBER			IN     DEFAULT
+ V163				NUMBER			IN     DEFAULT
+ V164				NUMBER			IN     DEFAULT
+ V165				NUMBER			IN     DEFAULT
+ V166				NUMBER			IN     DEFAULT
+ V167				NUMBER			IN     DEFAULT
+ V168				NUMBER			IN     DEFAULT
+ V169				NUMBER			IN     DEFAULT
+ V170				NUMBER			IN     DEFAULT
+ V171				NUMBER			IN     DEFAULT
+ V172				NUMBER			IN     DEFAULT
+ V173				NUMBER			IN     DEFAULT
+ V174				NUMBER			IN     DEFAULT
+ V175				NUMBER			IN     DEFAULT
+ V176				NUMBER			IN     DEFAULT
+ V177				NUMBER			IN     DEFAULT
+ V178				NUMBER			IN     DEFAULT
+ V179				NUMBER			IN     DEFAULT
+ V180				NUMBER			IN     DEFAULT
+ V181				NUMBER			IN     DEFAULT
+ V182				NUMBER			IN     DEFAULT
+ V183				NUMBER			IN     DEFAULT
+ V184				NUMBER			IN     DEFAULT
+ V185				NUMBER			IN     DEFAULT
+ V186				NUMBER			IN     DEFAULT
+ V187				NUMBER			IN     DEFAULT
+ V188				NUMBER			IN     DEFAULT
+ V189				NUMBER			IN     DEFAULT
+ V190				NUMBER			IN     DEFAULT
+ V191				NUMBER			IN     DEFAULT
+ V192				NUMBER			IN     DEFAULT
+ V193				NUMBER			IN     DEFAULT
+ V194				NUMBER			IN     DEFAULT
+ V195				NUMBER			IN     DEFAULT
+ V196				NUMBER			IN     DEFAULT
+ V197				NUMBER			IN     DEFAULT
+ V198				NUMBER			IN     DEFAULT
+ V199				NUMBER			IN     DEFAULT
+ V200				NUMBER			IN     DEFAULT
+ V201				NUMBER			IN     DEFAULT
+ V202				NUMBER			IN     DEFAULT
+ V203				NUMBER			IN     DEFAULT
+ V204				NUMBER			IN     DEFAULT
+ V205				NUMBER			IN     DEFAULT
+ V206				NUMBER			IN     DEFAULT
+ V207				NUMBER			IN     DEFAULT
+ V208				NUMBER			IN     DEFAULT
+ V209				NUMBER			IN     DEFAULT
+ V210				NUMBER			IN     DEFAULT
+ V211				NUMBER			IN     DEFAULT
+ V212				NUMBER			IN     DEFAULT
+ V213				NUMBER			IN     DEFAULT
+ V214				NUMBER			IN     DEFAULT
+ V215				NUMBER			IN     DEFAULT
+ V216				NUMBER			IN     DEFAULT
+ V217				NUMBER			IN     DEFAULT
+ V218				NUMBER			IN     DEFAULT
+ V219				NUMBER			IN     DEFAULT
+ V220				NUMBER			IN     DEFAULT
+ V221				NUMBER			IN     DEFAULT
+ V222				NUMBER			IN     DEFAULT
+ V223				NUMBER			IN     DEFAULT
+ V224				NUMBER			IN     DEFAULT
+ V225				NUMBER			IN     DEFAULT
+ V226				NUMBER			IN     DEFAULT
+ V227				NUMBER			IN     DEFAULT
+ V228				NUMBER			IN     DEFAULT
+ V229				NUMBER			IN     DEFAULT
+ V230				NUMBER			IN     DEFAULT
+ V231				NUMBER			IN     DEFAULT
+ V232				NUMBER			IN     DEFAULT
+ V233				NUMBER			IN     DEFAULT
+ V234				NUMBER			IN     DEFAULT
+ V235				NUMBER			IN     DEFAULT
+ V236				NUMBER			IN     DEFAULT
+ V237				NUMBER			IN     DEFAULT
+ V238				NUMBER			IN     DEFAULT
+ V239				NUMBER			IN     DEFAULT
+ V240				NUMBER			IN     DEFAULT
+ V241				NUMBER			IN     DEFAULT
+ V242				NUMBER			IN     DEFAULT
+ V243				NUMBER			IN     DEFAULT
+ V244				NUMBER			IN     DEFAULT
+ V245				NUMBER			IN     DEFAULT
+ V246				NUMBER			IN     DEFAULT
+ V247				NUMBER			IN     DEFAULT
+ V248				NUMBER			IN     DEFAULT
+ V249				NUMBER			IN     DEFAULT
+FUNCTION RELATE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER				VARCHAR2		IN
+ GID1				NUMBER			IN
+ MASK				VARCHAR2		IN
+ GID2				NUMBER			IN
+FUNCTION RELATE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER1 			VARCHAR2		IN
+ GID1				NUMBER			IN
+ MASK				VARCHAR2		IN
+ LAYER2 			VARCHAR2		IN
+ GID2				NUMBER			IN
+FUNCTION RELATE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER1 			VARCHAR2		IN
+ GID1				NUMBER			IN
+ NORD1				NUMBER			IN
+ MASK				VARCHAR2		IN
+ LAYER2 			VARCHAR2		IN
+ GID2				NUMBER			IN
+ NORD2				NUMBER			IN
+ TOLERANCE1			NUMBER			IN
+ TOLERANCE2			NUMBER			IN
+FUNCTION RELATE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER1 			VARCHAR2		IN
+ GID1				NUMBER			IN
+ MASK				VARCHAR2		IN
+ X_TOLERANCE			NUMBER			IN
+ Y_TOLERANCE			NUMBER			IN
+ V000				NUMBER			IN     DEFAULT
+ V001				NUMBER			IN     DEFAULT
+ V002				NUMBER			IN     DEFAULT
+ V003				NUMBER			IN     DEFAULT
+ V004				NUMBER			IN     DEFAULT
+ V005				NUMBER			IN     DEFAULT
+ V006				NUMBER			IN     DEFAULT
+ V007				NUMBER			IN     DEFAULT
+ V008				NUMBER			IN     DEFAULT
+ V009				NUMBER			IN     DEFAULT
+ V010				NUMBER			IN     DEFAULT
+ V011				NUMBER			IN     DEFAULT
+ V012				NUMBER			IN     DEFAULT
+ V013				NUMBER			IN     DEFAULT
+ V014				NUMBER			IN     DEFAULT
+ V015				NUMBER			IN     DEFAULT
+ V016				NUMBER			IN     DEFAULT
+ V017				NUMBER			IN     DEFAULT
+ V018				NUMBER			IN     DEFAULT
+ V019				NUMBER			IN     DEFAULT
+ V020				NUMBER			IN     DEFAULT
+ V021				NUMBER			IN     DEFAULT
+ V022				NUMBER			IN     DEFAULT
+ V023				NUMBER			IN     DEFAULT
+ V024				NUMBER			IN     DEFAULT
+ V025				NUMBER			IN     DEFAULT
+ V026				NUMBER			IN     DEFAULT
+ V027				NUMBER			IN     DEFAULT
+ V028				NUMBER			IN     DEFAULT
+ V029				NUMBER			IN     DEFAULT
+ V030				NUMBER			IN     DEFAULT
+ V031				NUMBER			IN     DEFAULT
+ V032				NUMBER			IN     DEFAULT
+ V033				NUMBER			IN     DEFAULT
+ V034				NUMBER			IN     DEFAULT
+ V035				NUMBER			IN     DEFAULT
+ V036				NUMBER			IN     DEFAULT
+ V037				NUMBER			IN     DEFAULT
+ V038				NUMBER			IN     DEFAULT
+ V039				NUMBER			IN     DEFAULT
+ V040				NUMBER			IN     DEFAULT
+ V041				NUMBER			IN     DEFAULT
+ V042				NUMBER			IN     DEFAULT
+ V043				NUMBER			IN     DEFAULT
+ V044				NUMBER			IN     DEFAULT
+ V045				NUMBER			IN     DEFAULT
+ V046				NUMBER			IN     DEFAULT
+ V047				NUMBER			IN     DEFAULT
+ V048				NUMBER			IN     DEFAULT
+ V049				NUMBER			IN     DEFAULT
+ V050				NUMBER			IN     DEFAULT
+ V051				NUMBER			IN     DEFAULT
+ V052				NUMBER			IN     DEFAULT
+ V053				NUMBER			IN     DEFAULT
+ V054				NUMBER			IN     DEFAULT
+ V055				NUMBER			IN     DEFAULT
+ V056				NUMBER			IN     DEFAULT
+ V057				NUMBER			IN     DEFAULT
+ V058				NUMBER			IN     DEFAULT
+ V059				NUMBER			IN     DEFAULT
+ V060				NUMBER			IN     DEFAULT
+ V061				NUMBER			IN     DEFAULT
+ V062				NUMBER			IN     DEFAULT
+ V063				NUMBER			IN     DEFAULT
+ V064				NUMBER			IN     DEFAULT
+ V065				NUMBER			IN     DEFAULT
+ V066				NUMBER			IN     DEFAULT
+ V067				NUMBER			IN     DEFAULT
+ V068				NUMBER			IN     DEFAULT
+ V069				NUMBER			IN     DEFAULT
+ V070				NUMBER			IN     DEFAULT
+ V071				NUMBER			IN     DEFAULT
+ V072				NUMBER			IN     DEFAULT
+ V073				NUMBER			IN     DEFAULT
+ V074				NUMBER			IN     DEFAULT
+ V075				NUMBER			IN     DEFAULT
+ V076				NUMBER			IN     DEFAULT
+ V077				NUMBER			IN     DEFAULT
+ V078				NUMBER			IN     DEFAULT
+ V079				NUMBER			IN     DEFAULT
+ V080				NUMBER			IN     DEFAULT
+ V081				NUMBER			IN     DEFAULT
+ V082				NUMBER			IN     DEFAULT
+ V083				NUMBER			IN     DEFAULT
+ V084				NUMBER			IN     DEFAULT
+ V085				NUMBER			IN     DEFAULT
+ V086				NUMBER			IN     DEFAULT
+ V087				NUMBER			IN     DEFAULT
+ V088				NUMBER			IN     DEFAULT
+ V089				NUMBER			IN     DEFAULT
+ V090				NUMBER			IN     DEFAULT
+ V091				NUMBER			IN     DEFAULT
+ V092				NUMBER			IN     DEFAULT
+ V093				NUMBER			IN     DEFAULT
+ V094				NUMBER			IN     DEFAULT
+ V095				NUMBER			IN     DEFAULT
+ V096				NUMBER			IN     DEFAULT
+ V097				NUMBER			IN     DEFAULT
+ V098				NUMBER			IN     DEFAULT
+ V099				NUMBER			IN     DEFAULT
+ V100				NUMBER			IN     DEFAULT
+ V101				NUMBER			IN     DEFAULT
+ V102				NUMBER			IN     DEFAULT
+ V103				NUMBER			IN     DEFAULT
+ V104				NUMBER			IN     DEFAULT
+ V105				NUMBER			IN     DEFAULT
+ V106				NUMBER			IN     DEFAULT
+ V107				NUMBER			IN     DEFAULT
+ V108				NUMBER			IN     DEFAULT
+ V109				NUMBER			IN     DEFAULT
+ V110				NUMBER			IN     DEFAULT
+ V111				NUMBER			IN     DEFAULT
+ V112				NUMBER			IN     DEFAULT
+ V113				NUMBER			IN     DEFAULT
+ V114				NUMBER			IN     DEFAULT
+ V115				NUMBER			IN     DEFAULT
+ V116				NUMBER			IN     DEFAULT
+ V117				NUMBER			IN     DEFAULT
+ V118				NUMBER			IN     DEFAULT
+ V119				NUMBER			IN     DEFAULT
+ V120				NUMBER			IN     DEFAULT
+ V121				NUMBER			IN     DEFAULT
+ V122				NUMBER			IN     DEFAULT
+ V123				NUMBER			IN     DEFAULT
+ V124				NUMBER			IN     DEFAULT
+ V125				NUMBER			IN     DEFAULT
+ V126				NUMBER			IN     DEFAULT
+ V127				NUMBER			IN     DEFAULT
+ V128				NUMBER			IN     DEFAULT
+ V129				NUMBER			IN     DEFAULT
+ V130				NUMBER			IN     DEFAULT
+ V131				NUMBER			IN     DEFAULT
+ V132				NUMBER			IN     DEFAULT
+ V133				NUMBER			IN     DEFAULT
+ V134				NUMBER			IN     DEFAULT
+ V135				NUMBER			IN     DEFAULT
+ V136				NUMBER			IN     DEFAULT
+ V137				NUMBER			IN     DEFAULT
+ V138				NUMBER			IN     DEFAULT
+ V139				NUMBER			IN     DEFAULT
+ V140				NUMBER			IN     DEFAULT
+ V141				NUMBER			IN     DEFAULT
+ V142				NUMBER			IN     DEFAULT
+ V143				NUMBER			IN     DEFAULT
+ V144				NUMBER			IN     DEFAULT
+ V145				NUMBER			IN     DEFAULT
+ V146				NUMBER			IN     DEFAULT
+ V147				NUMBER			IN     DEFAULT
+ V148				NUMBER			IN     DEFAULT
+ V149				NUMBER			IN     DEFAULT
+ V150				NUMBER			IN     DEFAULT
+ V151				NUMBER			IN     DEFAULT
+ V152				NUMBER			IN     DEFAULT
+ V153				NUMBER			IN     DEFAULT
+ V154				NUMBER			IN     DEFAULT
+ V155				NUMBER			IN     DEFAULT
+ V156				NUMBER			IN     DEFAULT
+ V157				NUMBER			IN     DEFAULT
+ V158				NUMBER			IN     DEFAULT
+ V159				NUMBER			IN     DEFAULT
+ V160				NUMBER			IN     DEFAULT
+ V161				NUMBER			IN     DEFAULT
+ V162				NUMBER			IN     DEFAULT
+ V163				NUMBER			IN     DEFAULT
+ V164				NUMBER			IN     DEFAULT
+ V165				NUMBER			IN     DEFAULT
+ V166				NUMBER			IN     DEFAULT
+ V167				NUMBER			IN     DEFAULT
+ V168				NUMBER			IN     DEFAULT
+ V169				NUMBER			IN     DEFAULT
+ V170				NUMBER			IN     DEFAULT
+ V171				NUMBER			IN     DEFAULT
+ V172				NUMBER			IN     DEFAULT
+ V173				NUMBER			IN     DEFAULT
+ V174				NUMBER			IN     DEFAULT
+ V175				NUMBER			IN     DEFAULT
+ V176				NUMBER			IN     DEFAULT
+ V177				NUMBER			IN     DEFAULT
+ V178				NUMBER			IN     DEFAULT
+ V179				NUMBER			IN     DEFAULT
+ V180				NUMBER			IN     DEFAULT
+ V181				NUMBER			IN     DEFAULT
+ V182				NUMBER			IN     DEFAULT
+ V183				NUMBER			IN     DEFAULT
+ V184				NUMBER			IN     DEFAULT
+ V185				NUMBER			IN     DEFAULT
+ V186				NUMBER			IN     DEFAULT
+ V187				NUMBER			IN     DEFAULT
+ V188				NUMBER			IN     DEFAULT
+ V189				NUMBER			IN     DEFAULT
+ V190				NUMBER			IN     DEFAULT
+ V191				NUMBER			IN     DEFAULT
+ V192				NUMBER			IN     DEFAULT
+ V193				NUMBER			IN     DEFAULT
+ V194				NUMBER			IN     DEFAULT
+ V195				NUMBER			IN     DEFAULT
+ V196				NUMBER			IN     DEFAULT
+ V197				NUMBER			IN     DEFAULT
+ V198				NUMBER			IN     DEFAULT
+ V199				NUMBER			IN     DEFAULT
+ V200				NUMBER			IN     DEFAULT
+ V201				NUMBER			IN     DEFAULT
+ V202				NUMBER			IN     DEFAULT
+ V203				NUMBER			IN     DEFAULT
+ V204				NUMBER			IN     DEFAULT
+ V205				NUMBER			IN     DEFAULT
+ V206				NUMBER			IN     DEFAULT
+ V207				NUMBER			IN     DEFAULT
+ V208				NUMBER			IN     DEFAULT
+ V209				NUMBER			IN     DEFAULT
+ V210				NUMBER			IN     DEFAULT
+ V211				NUMBER			IN     DEFAULT
+ V212				NUMBER			IN     DEFAULT
+ V213				NUMBER			IN     DEFAULT
+ V214				NUMBER			IN     DEFAULT
+ V215				NUMBER			IN     DEFAULT
+ V216				NUMBER			IN     DEFAULT
+ V217				NUMBER			IN     DEFAULT
+ V218				NUMBER			IN     DEFAULT
+ V219				NUMBER			IN     DEFAULT
+ V220				NUMBER			IN     DEFAULT
+ V221				NUMBER			IN     DEFAULT
+ V222				NUMBER			IN     DEFAULT
+ V223				NUMBER			IN     DEFAULT
+ V224				NUMBER			IN     DEFAULT
+ V225				NUMBER			IN     DEFAULT
+ V226				NUMBER			IN     DEFAULT
+ V227				NUMBER			IN     DEFAULT
+ V228				NUMBER			IN     DEFAULT
+ V229				NUMBER			IN     DEFAULT
+ V230				NUMBER			IN     DEFAULT
+ V231				NUMBER			IN     DEFAULT
+ V232				NUMBER			IN     DEFAULT
+ V233				NUMBER			IN     DEFAULT
+ V234				NUMBER			IN     DEFAULT
+ V235				NUMBER			IN     DEFAULT
+ V236				NUMBER			IN     DEFAULT
+ V237				NUMBER			IN     DEFAULT
+ V238				NUMBER			IN     DEFAULT
+ V239				NUMBER			IN     DEFAULT
+ V240				NUMBER			IN     DEFAULT
+ V241				NUMBER			IN     DEFAULT
+ V242				NUMBER			IN     DEFAULT
+ V243				NUMBER			IN     DEFAULT
+ V244				NUMBER			IN     DEFAULT
+ V245				NUMBER			IN     DEFAULT
+ V246				NUMBER			IN     DEFAULT
+ V247				NUMBER			IN     DEFAULT
+ V248				NUMBER			IN     DEFAULT
+ V249				NUMBER			IN     DEFAULT
+FUNCTION RELATE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+ MASK				VARCHAR2		IN
+ GEOM2				SDO_GEOMETRY		IN
+ DIM2				SDO_DIM_ARRAY		IN
+FUNCTION RELATE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ MASK				VARCHAR2		IN
+ GEOM2				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+FUNCTION SDO_ALPHA_SHAPE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ RADIUS 			NUMBER			IN     DEFAULT
+ FLAG				BINARY_INTEGER		IN     DEFAULT
+FUNCTION SDO_ARC_DENSIFY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ PARAMS 			VARCHAR2		IN
+FUNCTION SDO_ARC_DENSIFY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ PARAMS 			VARCHAR2		IN
+FUNCTION SDO_AREA RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ UNIT				VARCHAR2		IN     DEFAULT
+FUNCTION SDO_AREA RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ UNIT				VARCHAR2		IN     DEFAULT
+FUNCTION SDO_BUFFER RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ DIST				NUMBER			IN
+FUNCTION SDO_BUFFER RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIST				NUMBER			IN
+ TOL				NUMBER			IN
+FUNCTION SDO_BUFFER RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ DIST				NUMBER			IN
+ PARAMS 			VARCHAR2		IN
+FUNCTION SDO_BUFFER RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIST				NUMBER			IN
+ TOL				NUMBER			IN
+ PARAMS 			VARCHAR2		IN
+FUNCTION SDO_CENTROID RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+FUNCTION SDO_CENTROID RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+PROCEDURE SDO_CLOSEST_POINTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+ UNIT				VARCHAR2		IN
+ DIST				NUMBER			OUT
+ GEOMA				SDO_GEOMETRY		OUT
+ GEOMB				SDO_GEOMETRY		OUT
+FUNCTION SDO_CONCAVEHULL RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ RADIUS 			NUMBER			OUT
+FUNCTION SDO_CONCAVEHULL RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+FUNCTION SDO_CONCAVEHULL_BOUNDARY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ LENGTH 			NUMBER			IN     DEFAULT
+FUNCTION SDO_CONVEXHULL RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+FUNCTION SDO_CONVEXHULL RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+FUNCTION SDO_DIAMETER RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ UNIT				VARCHAR2		IN     DEFAULT
+FUNCTION SDO_DIAMETER RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ UNIT				VARCHAR2		IN     DEFAULT
+FUNCTION SDO_DIAMETER_LINE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+FUNCTION SDO_DIAMETER_LINE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+FUNCTION SDO_DIFFERENCE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ DIM2				SDO_DIM_ARRAY		IN
+FUNCTION SDO_DIFFERENCE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+FUNCTION SDO_DISTANCE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ DIM2				SDO_DIM_ARRAY		IN
+ UNIT				VARCHAR2		IN     DEFAULT
+FUNCTION SDO_DISTANCE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ UNIT				VARCHAR2		IN     DEFAULT
+FUNCTION SDO_G3DCONV RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+FUNCTION SDO_G3DCONV RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+FUNCTION SDO_INSERT_LOG_FILTER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IND_SCHEMA			VARCHAR2		IN
+ IND_NAME			VARCHAR2		IN
+ INDPART_NAME			VARCHAR2		IN
+ MIN_X				NUMBER			IN
+ MAX_X				NUMBER			IN
+ MIN_Y				NUMBER			IN
+ MAX_Y				NUMBER			IN
+ MIN_Z				NUMBER			IN
+ MAX_Z				NUMBER			IN
+FUNCTION SDO_INTERSECTION RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ DIM2				SDO_DIM_ARRAY		IN
+FUNCTION SDO_INTERSECTION RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+FUNCTION SDO_IS_NURBSCURVE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+FUNCTION SDO_LENGTH RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ UNIT				VARCHAR2		IN     DEFAULT
+ COUNT_SHARED_EDGES		NUMBER			IN     DEFAULT
+FUNCTION SDO_LENGTH RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ UNIT				VARCHAR2		IN     DEFAULT
+ COUNT_SHARED_EDGES		NUMBER			IN     DEFAULT
+FUNCTION SDO_MAXDISTANCE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ DIM2				SDO_DIM_ARRAY		IN
+ UNIT				VARCHAR2		IN     DEFAULT
+FUNCTION SDO_MAXDISTANCE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ UNIT				VARCHAR2		IN     DEFAULT
+FUNCTION SDO_MAXDISTANCE_LINE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ DIM2				SDO_DIM_ARRAY		IN
+FUNCTION SDO_MAXDISTANCE_LINE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+FUNCTION SDO_MAX_MBR_ORDINATE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ ORDINATE_POS			NUMBER			IN
+FUNCTION SDO_MAX_MBR_ORDINATE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ ORDINATE_POS			NUMBER			IN
+FUNCTION SDO_MBC RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ ARC_TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION SDO_MBC RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ ARC_TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION SDO_MBC_CENTER RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+FUNCTION SDO_MBC_CENTER RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+FUNCTION SDO_MBC_RADIUS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ UNIT				VARCHAR2		IN     DEFAULT
+FUNCTION SDO_MBC_RADIUS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ UNIT				VARCHAR2		IN     DEFAULT
+FUNCTION SDO_MBR RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+FUNCTION SDO_MBR RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+FUNCTION SDO_MIN_MBR_ORDINATE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ ORDINATE_POS			NUMBER			IN
+FUNCTION SDO_MIN_MBR_ORDINATE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ ORDINATE_POS			NUMBER			IN
+FUNCTION SDO_POINTONSURFACE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+FUNCTION SDO_POINTONSURFACE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+FUNCTION SDO_POLY_DIFFERENCE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ DIM2				SDO_DIM_ARRAY		IN
+FUNCTION SDO_POLY_INTERSECTION RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ DIM2				SDO_DIM_ARRAY		IN
+FUNCTION SDO_POLY_UNION RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ DIM2				SDO_DIM_ARRAY		IN
+FUNCTION SDO_POLY_XOR RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ DIM2				SDO_DIM_ARRAY		IN
+FUNCTION SDO_SELF_UNION RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+FUNCTION SDO_SELF_UNION RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+FUNCTION SDO_TRIANGULATE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+FUNCTION SDO_UNION RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ DIM2				SDO_DIM_ARRAY		IN
+FUNCTION SDO_UNION RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+FUNCTION SDO_VOLUME RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ UNIT				VARCHAR2		IN     DEFAULT
+FUNCTION SDO_WIDTH RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ UNIT				VARCHAR2		IN     DEFAULT
+FUNCTION SDO_WIDTH RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ UNIT				VARCHAR2		IN     DEFAULT
+FUNCTION SDO_WIDTH_LINE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+FUNCTION SDO_WIDTH_LINE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+FUNCTION SDO_XOR RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ DIM2				SDO_DIM_ARRAY		IN
+FUNCTION SDO_XOR RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+FUNCTION VALIDATE_GEOMETRY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER				VARCHAR2		IN
+ GID				NUMBER			IN
+FUNCTION VALIDATE_GEOMETRY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEGEOMETRY			SDO_GEOMETRY		IN
+ THEDIMINFO			SDO_DIM_ARRAY		IN
+FUNCTION VALIDATE_GEOMETRY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEGEOMETRY			SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+FUNCTION VALIDATE_GEOMETRY_WITH_CONTEXT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEGEOMETRY			SDO_GEOMETRY		IN
+ THEDIMINFO			SDO_DIM_ARRAY		IN
+ CONDITIONAL			VARCHAR2		IN     DEFAULT
+ FLAG10G			VARCHAR2		IN     DEFAULT
+FUNCTION VALIDATE_GEOMETRY_WITH_CONTEXT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEGEOMETRY			SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+ CONDITIONAL			VARCHAR2		IN     DEFAULT
+ FLAG10G			VARCHAR2		IN     DEFAULT
+FUNCTION VALIDATE_GEOMETRY_WITH_SRID RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEGEOMETRY			SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+ CONDITIONAL			VARCHAR2		IN     DEFAULT
+ FLAG10G			VARCHAR2		IN     DEFAULT
+ EXPECTED_SRID			NUMBER			IN     DEFAULT
+FUNCTION VALIDATE_GEOMETRY_WITH_SRID RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEGEOMETRY			SDO_GEOMETRY		IN
+ THEDIMINFO			SDO_DIM_ARRAY		IN
+ CONDITIONAL			VARCHAR2		IN     DEFAULT
+ FLAG10G			VARCHAR2		IN     DEFAULT
+ EXPECTED_SRID			NUMBER			IN     DEFAULT
+PROCEDURE VALIDATE_LAYER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER				VARCHAR2		IN
+ RESULT_TABLE			VARCHAR2		IN
+PROCEDURE VALIDATE_LAYER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_TABLE			VARCHAR2		IN
+ GEOM_COLUMN			VARCHAR2		IN
+ PKEY_COLUMN			VARCHAR2		IN
+ RESULT_TABLE			VARCHAR2		IN
+ COMMIT_INTERVAL		NUMBER			IN     DEFAULT
+PROCEDURE VALIDATE_LAYER_WITH_CONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_TABLE			VARCHAR2		IN
+ GEOM_COLUMN			VARCHAR2		IN
+ RESULT_TABLE			VARCHAR2		IN
+ COMMIT_INTERVAL		NUMBER			IN     DEFAULT
+ CONDITIONAL			VARCHAR2		IN     DEFAULT
+ FLAG10G			VARCHAR2		IN     DEFAULT
+ GEOM_SCHEMA			VARCHAR2		IN     DEFAULT
+PROCEDURE VALLAYER_WITH_CONTEXT_LRS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_TABLE			VARCHAR2		IN
+ GEOM_COLUMN			VARCHAR2		IN
+ PKEY_ROWID_COLUMN		VARCHAR2		IN
+ RESULT_TABLE			VARCHAR2		IN
+ COMMIT_INTERVAL		NUMBER			IN     DEFAULT
+FUNCTION WITHIN_DISTANCE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIM1				SDO_DIM_ARRAY		IN
+ DIST				NUMBER			IN
+ GEOM2				SDO_GEOMETRY		IN
+ DIM2				SDO_DIM_ARRAY		IN
+ UNITS				VARCHAR2		IN     DEFAULT
+FUNCTION WITHIN_DISTANCE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ DIST				NUMBER			IN
+ GEOM2				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ UNITS				VARCHAR2		IN     DEFAULT
+

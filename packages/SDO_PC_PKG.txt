@@ -1,0 +1,158 @@
+PROCEDURE ADD_TO_PC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INP				SDO_PC			IN
+ INPTABLE			VARCHAR2		IN
+FUNCTION CLIP_PC RETURNS SDO_PC_BLK_TYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INP				SDO_PC			IN
+ IND_DIM_QRY			SDO_GEOMETRY		IN
+ OTHER_DIM_QRY			SDO_MBR 		IN
+ QRY_MIN_RES			NUMBER			IN
+ QRY_MAX_RES			NUMBER			IN
+ BLKNO				NUMBER			IN     DEFAULT
+ INCLUDE_CUSTOM_DIMS		NUMBER			IN     DEFAULT
+FUNCTION CLIP_PC_FLAT RETURNS REF CURSOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ TABLE_NAME			VARCHAR2		IN
+ TOLERANCE			NUMBER			IN
+ OTHER_DIM_QRY			SDO_MBR 		IN     DEFAULT
+ MASK				VARCHAR2		IN     DEFAULT
+FUNCTION CLIP_PC_FLAT_STRING RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ TABLE_NAME			VARCHAR2		IN
+ TOLERANCE			NUMBER			IN
+ OTHER_DIM_QRY			SDO_MBR 		IN     DEFAULT
+ MASK				VARCHAR2		IN     DEFAULT
+ DOP				NUMBER(38)		IN     DEFAULT
+ SDO_LEVEL			NUMBER			IN     DEFAULT
+ SDO_NTILES			NUMBER			IN     DEFAULT
+FUNCTION CLIP_PC_INTO_TIN RETURNS SDO_TIN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PC_INP 			SDO_PC			IN
+ PC_IND_DIM_QRY 		SDO_GEOMETRY		IN
+ PC_OTHER_DIM_QRY		SDO_MBR 		IN
+ PC_QRY_MIN_RES 		NUMBER			IN
+ PC_QRY_MAX_RES 		NUMBER			IN
+ TIN_BASETABLE			VARCHAR2		IN
+ TIN_BASECOL			VARCHAR2		IN
+ TIN_BLKTABLE			VARCHAR2		IN
+ TIN_PTN_PARAMS 		VARCHAR2		IN     DEFAULT
+ TIN_BREAK_LINES		SDO_GEOMETRY		IN     DEFAULT
+ TIN_STOP_LINES 		SDO_GEOMETRY		IN     DEFAULT
+ TIN_VOID_RGNS			SDO_GEOMETRY		IN     DEFAULT
+ TIN_CLSTPCDATATBL		VARCHAR2		IN     DEFAULT
+ PC_BLKNO			NUMBER			IN     DEFAULT
+FUNCTION CREATE_CONTOUR_GEOMETRIES RETURNS SDO_GEOMETRY_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PC				SDO_PC			IN
+ SAMPLING_RESOLUTION		NUMBER			IN
+ ELEVATIONS			SDO_ORDINATE_ARRAY	IN
+ REGION 			SDO_GEOMETRY		IN
+FUNCTION CREATE_CONTOUR_GEOMETRIES RETURNS SDO_GEOMETRY_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PC_FLAT_TABLE			VARCHAR2		IN
+ SRID				NUMBER			IN
+ SAMPLING_RESOLUTION		NUMBER			IN
+ ELEVATIONS			SDO_ORDINATE_ARRAY	IN
+ REGION 			SDO_GEOMETRY		IN
+PROCEDURE CREATE_LIBLAS_PYRAMID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PC				SDO_PC			IN
+ KEEPLEVEL1INTACT		NUMBER			IN
+PROCEDURE CREATE_PC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INP				SDO_PC			IN
+ INPTABLE			VARCHAR2		IN
+ CLSTPCDATATBL			VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_DEPENDENCIES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BASETABLE			VARCHAR2		IN
+ COL				VARCHAR2		IN
+FUNCTION GETNTHHILBERTVALUE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ N				NUMBER			IN
+FUNCTION GET_BLOCKING_METHOD RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INP				SDO_PC			IN
+FUNCTION GET_PT_IDS RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PTS				BLOB			IN
+ NUM_PTS			NUMBER			IN
+ PC_TOT_DIM			NUMBER			IN
+ BLK_DOMAIN			SDO_ORGSCL_TYPE 	IN     DEFAULT
+PROCEDURE GET_TILE_SQL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ SQL_INTERIOR			VARCHAR2		OUT
+ SQL_BOUNDARY			VARCHAR2		OUT
+ TOLERANCE			NUMBER			IN     DEFAULT
+ SDO_LEVEL			NUMBER			IN     DEFAULT
+ SDO_NTILES			NUMBER			IN     DEFAULT
+FUNCTION HAS_PYRAMID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INP				SDO_PC			IN
+FUNCTION HILBERT_XY2D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				NUMBER			IN
+ X				NUMBER			IN
+ Y				NUMBER			IN
+PROCEDURE IMPORT_LAS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCE_LAS_FILE		VARCHAR2		IN
+ SOURCE_LAS_FILE_ID		VARCHAR2		IN
+ TARGET_TABLE			VARCHAR2		IN
+ ADD_COLUMNS			NUMBER			IN
+FUNCTION INIT RETURNS SDO_PC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BASETABLE			VARCHAR2		IN
+ BASECOL			VARCHAR2		IN
+ BLKTABLE			VARCHAR2		IN
+ PTN_PARAMS			VARCHAR2		IN
+ PC_EXTENT			SDO_GEOMETRY		IN     DEFAULT
+ PC_TOL 			NUMBER			IN     DEFAULT
+ PC_TOT_DIMENSIONS		NUMBER			IN     DEFAULT
+ PC_DOMAIN			SDO_ORGSCL_TYPE 	IN     DEFAULT
+ PC_VAL_ATTR_TABLES		SDO_STRING_ARRAY	IN     DEFAULT
+ PC_OTHER_ATTRS 		XMLTYPE 		IN     DEFAULT
+FUNCTION PRESERVES_LEVEL1 RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INP				SDO_PC			IN
+FUNCTION TIN_TO_PC RETURNS SDO_PC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TIN				SDO_TIN 		IN
+ BASETABLE			VARCHAR2		IN
+ BASECOL			VARCHAR2		IN
+ BLKTABLE			VARCHAR2		IN
+FUNCTION TO_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PTS				BLOB			IN
+ NUM_PTS			NUMBER			IN
+ PC_TOT_DIM			NUMBER			IN
+ SRID				NUMBER			IN     DEFAULT
+ BLK_DOMAIN			SDO_ORGSCL_TYPE 	IN     DEFAULT
+ GET_IDS			NUMBER			IN     DEFAULT
+

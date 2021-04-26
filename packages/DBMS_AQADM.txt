@@ -1,0 +1,415 @@
+PROCEDURE ADD_ALIAS_TO_LDAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ALIAS				VARCHAR2		IN
+ OBJ_LOCATION			VARCHAR2		IN
+PROCEDURE ADD_CONNECTION_TO_LDAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CONNECTION			VARCHAR2		IN
+ HOST				VARCHAR2		IN
+ PORT				BINARY_INTEGER		IN
+ SID				VARCHAR2		IN
+ DRIVER 			VARCHAR2		IN     DEFAULT
+ TYPE				BINARY_INTEGER		IN     DEFAULT
+PROCEDURE ADD_CONNECTION_TO_LDAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CONNECTION			VARCHAR2		IN
+ JDBC_STRING			VARCHAR2		IN
+ USERNAME			VARCHAR2		IN     DEFAULT
+ PASSWORD			VARCHAR2		IN     DEFAULT
+ TYPE				BINARY_INTEGER		IN     DEFAULT
+PROCEDURE ADD_SUBSCRIBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ SUBSCRIBER			AQ$_AGENT		IN
+ RULE				VARCHAR2		IN     DEFAULT
+ TRANSFORMATION 		VARCHAR2		IN     DEFAULT
+ QUEUE_TO_QUEUE 		BOOLEAN 		IN     DEFAULT
+ DELIVERY_MODE			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE ALTER_AQ_AGENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ AGENT_NAME			VARCHAR2		IN
+ CERTIFICATE_LOCATION		VARCHAR2		IN     DEFAULT
+ ENABLE_HTTP			BOOLEAN 		IN     DEFAULT
+ ENABLE_SMTP			BOOLEAN 		IN     DEFAULT
+ ENABLE_ANYP			BOOLEAN 		IN     DEFAULT
+PROCEDURE ALTER_PROPAGATION_SCHEDULE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ DESTINATION			VARCHAR2		IN     DEFAULT
+ DURATION			NUMBER			IN     DEFAULT
+ NEXT_TIME			VARCHAR2		IN     DEFAULT
+ LATENCY			NUMBER			IN     DEFAULT
+ DESTINATION_QUEUE		VARCHAR2		IN     DEFAULT
+PROCEDURE ALTER_QUEUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ MAX_RETRIES			NUMBER			IN     DEFAULT
+ RETRY_DELAY			NUMBER			IN     DEFAULT
+ RETENTION_TIME 		NUMBER			IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE ALTER_QUEUE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_TABLE			VARCHAR2		IN
+ COMMENT			VARCHAR2		IN     DEFAULT
+ PRIMARY_INSTANCE		BINARY_INTEGER		IN     DEFAULT
+ SECONDARY_INSTANCE		BINARY_INTEGER		IN     DEFAULT
+PROCEDURE ALTER_SUBSCRIBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ SUBSCRIBER			AQ$_AGENT		IN
+ RULE				VARCHAR2		IN
+PROCEDURE ALTER_SUBSCRIBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ SUBSCRIBER			AQ$_AGENT		IN
+ RULE				VARCHAR2		IN
+ TRANSFORMATION 		VARCHAR2		IN
+FUNCTION AQ$_PROPAQ RETURNS DATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOB				NUMBER			IN
+FUNCTION AQ$_PROPAQ RETURNS DATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOB				NUMBER			IN
+ NEXT_DATE			DATE			IN
+ QNAME				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN
+ DESTINATION			VARCHAR2		IN     DEFAULT
+ TOID_CHAR			VARCHAR2		IN     DEFAULT
+ VERSION_CHAR			VARCHAR2		IN     DEFAULT
+ START_TIME			VARCHAR2		IN
+ DURATION			VARCHAR2		IN     DEFAULT
+ NEXT_TIME			VARCHAR2		IN     DEFAULT
+ LATENCY			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_AQ_AGENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ AGENT_NAME			VARCHAR2		IN
+ CERTIFICATE_LOCATION		VARCHAR2		IN     DEFAULT
+ ENABLE_HTTP			BOOLEAN 		IN     DEFAULT
+ ENABLE_SMTP			BOOLEAN 		IN     DEFAULT
+ ENABLE_ANYP			BOOLEAN 		IN     DEFAULT
+PROCEDURE CREATE_NP_QUEUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ MULTIPLE_CONSUMERS		BOOLEAN 		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_QUEUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ QUEUE_TABLE			VARCHAR2		IN
+ QUEUE_TYPE			BINARY_INTEGER		IN     DEFAULT
+ MAX_RETRIES			NUMBER			IN     DEFAULT
+ RETRY_DELAY			NUMBER			IN     DEFAULT
+ RETENTION_TIME 		NUMBER			IN     DEFAULT
+ DEPENDENCY_TRACKING		BOOLEAN 		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE CREATE_QUEUE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_TABLE			VARCHAR2		IN
+ QUEUE_PAYLOAD_TYPE		VARCHAR2		IN
+ STORAGE_CLAUSE 		VARCHAR2		IN     DEFAULT
+ SORT_LIST			VARCHAR2		IN     DEFAULT
+ MULTIPLE_CONSUMERS		BOOLEAN 		IN     DEFAULT
+ MESSAGE_GROUPING		BINARY_INTEGER		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+ PRIMARY_INSTANCE		BINARY_INTEGER		IN     DEFAULT
+ SECONDARY_INSTANCE		BINARY_INTEGER		IN     DEFAULT
+ COMPATIBLE			VARCHAR2		IN     DEFAULT
+ NON_REPUDIATION		BINARY_INTEGER		IN     DEFAULT
+ SECURE 			BOOLEAN 		IN     DEFAULT
+PROCEDURE CREATE_SHARDED_QUEUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ STORAGE_CLAUSE 		VARCHAR2		IN     DEFAULT
+ MULTIPLE_CONSUMERS		BOOLEAN 		IN     DEFAULT
+ MAX_RETRIES			NUMBER			IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE DEL_ALIAS_FROM_LDAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ALIAS				VARCHAR2		IN
+PROCEDURE DEL_CONNECTION_FROM_LDAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CONNECTION			VARCHAR2		IN
+PROCEDURE DISABLE_DB_ACCESS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ AGENT_NAME			VARCHAR2		IN
+ DB_USERNAME			VARCHAR2		IN
+PROCEDURE DISABLE_PROPAGATION_SCHEDULE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ DESTINATION			VARCHAR2		IN     DEFAULT
+ DESTINATION_QUEUE		VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_AQ_AGENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ AGENT_NAME			VARCHAR2		IN
+PROCEDURE DROP_QUEUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_QUEUE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_TABLE			VARCHAR2		IN
+ FORCE				BOOLEAN 		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_SHARDED_QUEUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ FORCE				BOOLEAN 		IN     DEFAULT
+PROCEDURE ENABLE_DB_ACCESS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ AGENT_NAME			VARCHAR2		IN
+ DB_USERNAME			VARCHAR2		IN
+PROCEDURE ENABLE_JMS_TYPES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_TABLE			VARCHAR2		IN
+PROCEDURE ENABLE_PROPAGATION_SCHEDULE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ DESTINATION			VARCHAR2		IN     DEFAULT
+ DESTINATION_QUEUE		VARCHAR2		IN     DEFAULT
+PROCEDURE GET_MAX_STREAMS_POOL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				NUMBER			OUT
+PROCEDURE GET_MIN_STREAMS_POOL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				NUMBER			OUT
+PROCEDURE GET_PROP_SEQNO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QID				NUMBER			IN
+ DQNAME 			VARCHAR2		IN
+ DBNAME 			VARCHAR2		IN
+ SEQ				BINARY_INTEGER		OUT
+PROCEDURE GET_REPLAY_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ SENDER_AGENT			AQ$_AGENT		IN
+ REPLAY_ATTRIBUTE		BINARY_INTEGER		IN
+ CORRELATION			VARCHAR2		OUT
+PROCEDURE GET_TYPE_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ QNAME				VARCHAR2		IN
+ GETTDS 			BOOLEAN 		IN
+ RC				BINARY_INTEGER		OUT
+ TOID				RAW			OUT
+ VERSION			NUMBER			OUT
+ TDS				LONG RAW		OUT
+ QUEUE_STYLE			VARCHAR2		OUT
+ NETWORK_NAME			VARCHAR2		OUT
+PROCEDURE GET_TYPE_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ QNAME				VARCHAR2		IN
+ GETTDS 			BOOLEAN 		IN
+ RC				BINARY_INTEGER		OUT
+ TOID				RAW			OUT
+ VERSION			NUMBER			OUT
+ TDS				LONG RAW		OUT
+PROCEDURE GET_WATERMARK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WMVALUE			NUMBER			OUT
+PROCEDURE GRANT_QUEUE_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIVILEGE			VARCHAR2		IN
+ QUEUE_NAME			VARCHAR2		IN
+ GRANTEE			VARCHAR2		IN
+ GRANT_OPTION			BOOLEAN 		IN     DEFAULT
+PROCEDURE GRANT_SYSTEM_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIVILEGE			VARCHAR2		IN
+ GRANTEE			VARCHAR2		IN
+ ADMIN_OPTION			BOOLEAN 		IN     DEFAULT
+PROCEDURE GRANT_TYPE_ACCESS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USER_NAME			VARCHAR2		IN
+PROCEDURE MIGRATE_QUEUE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_TABLE			VARCHAR2		IN
+ COMPATIBLE			VARCHAR2		IN
+PROCEDURE NONREPUDIATE_RECEIVER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ MSGID				RAW			IN
+ RCVER_INFO			AQ$_AGENT		IN
+ SIGNATURE			AQ$_SIG_PROP		OUT
+ PAYLOAD			<ADT_1> 		OUT
+PROCEDURE NONREPUDIATE_RECEIVER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ MSGID				RAW			IN
+ RCVER_INFO			AQ$_AGENT		IN
+ SIGNATURE			AQ$_SIG_PROP		OUT
+ PAYLOAD			RAW			OUT
+PROCEDURE NONREPUDIATE_SENDER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ MSGID				RAW			IN
+ SENDER_INFO			AQ$_AGENT		IN
+ SIGNATURE			AQ$_SIG_PROP		OUT
+ PAYLOAD			<ADT_1> 		OUT
+PROCEDURE NONREPUDIATE_SENDER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ MSGID				RAW			IN
+ SENDER_INFO			AQ$_AGENT		IN
+ SIGNATURE			AQ$_SIG_PROP		OUT
+ PAYLOAD			RAW			OUT
+PROCEDURE PURGE_QUEUE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_TABLE			VARCHAR2		IN
+ PURGE_CONDITION		VARCHAR2		IN
+ PURGE_OPTIONS			RECORD			IN
+   BLOCK			BOOLEAN 		IN
+   DELIVERY_MODE		BINARY_INTEGER		IN
+FUNCTION QUEUE_SUBSCRIBERS RETURNS TABLE OF AQ$_AGENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+PROCEDURE RECOVER_PROPAGATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ QUEUE_NAME			VARCHAR2		IN
+ DESTINATION			VARCHAR2		IN
+ PROTOCOL			BINARY_INTEGER		IN     DEFAULT
+ URL				VARCHAR2		IN     DEFAULT
+ USERNAME			VARCHAR2		IN     DEFAULT
+ PASSWD 			VARCHAR2		IN     DEFAULT
+ TRACE				BINARY_INTEGER		IN     DEFAULT
+ DESTQ				BINARY_INTEGER		IN     DEFAULT
+PROCEDURE REMOVE_SUBSCRIBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ SUBSCRIBER			AQ$_AGENT		IN
+PROCEDURE RESET_REPLAY_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ SENDER_AGENT			AQ$_AGENT		IN
+ REPLAY_ATTRIBUTE		BINARY_INTEGER		IN
+PROCEDURE REVOKE_QUEUE_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIVILEGE			VARCHAR2		IN
+ QUEUE_NAME			VARCHAR2		IN
+ GRANTEE			VARCHAR2		IN
+PROCEDURE REVOKE_SYSTEM_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIVILEGE			VARCHAR2		IN
+ GRANTEE			VARCHAR2		IN
+PROCEDURE SCHEDULE_PROPAGATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ DESTINATION			VARCHAR2		IN     DEFAULT
+ START_TIME			TIMESTAMP WITH TIME ZONE IN	DEFAULT
+ DURATION			NUMBER			IN     DEFAULT
+ NEXT_TIME			VARCHAR2		IN     DEFAULT
+ LATENCY			NUMBER			IN     DEFAULT
+ DESTINATION_QUEUE		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_MAX_STREAMS_POOL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				NUMBER			IN
+PROCEDURE SET_MIN_STREAMS_POOL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				NUMBER			IN
+PROCEDURE SET_WATERMARK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WMVALUE			NUMBER			IN
+PROCEDURE START_QUEUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ ENQUEUE			BOOLEAN 		IN     DEFAULT
+ DEQUEUE			BOOLEAN 		IN     DEFAULT
+PROCEDURE START_TIME_MANAGER
+PROCEDURE STOP_QUEUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ ENQUEUE			BOOLEAN 		IN     DEFAULT
+ DEQUEUE			BOOLEAN 		IN     DEFAULT
+ WAIT				BOOLEAN 		IN     DEFAULT
+PROCEDURE STOP_TIME_MANAGER
+PROCEDURE UNSCHEDULE_PROPAGATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ DESTINATION			VARCHAR2		IN     DEFAULT
+ DESTINATION_QUEUE		VARCHAR2		IN     DEFAULT
+PROCEDURE VERIFY_QUEUE_TYPES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC_QUEUE_NAME 		VARCHAR2		IN
+ DEST_QUEUE_NAME		VARCHAR2		IN
+ DESTINATION			VARCHAR2		IN     DEFAULT
+ RC				BINARY_INTEGER		OUT
+ TRANSFORMATION 		VARCHAR2		IN     DEFAULT
+PROCEDURE VERIFY_QUEUE_TYPES_GET_NRP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC_QUEUE_NAME 		VARCHAR2		IN
+ DEST_QUEUE_NAME		VARCHAR2		IN
+ DESTINATION			VARCHAR2		IN     DEFAULT
+ RC				BINARY_INTEGER		OUT
+ TRANSFORMATION 		VARCHAR2		IN     DEFAULT
+PROCEDURE VERIFY_QUEUE_TYPES_NO_QUEUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC_QUEUE_NAME 		VARCHAR2		IN
+ DEST_QUEUE_NAME		VARCHAR2		IN
+ DESTINATION			VARCHAR2		IN     DEFAULT
+ RC				BINARY_INTEGER		OUT
+ TRANSFORMATION 		VARCHAR2		IN     DEFAULT
+

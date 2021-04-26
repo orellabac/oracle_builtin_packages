@@ -1,0 +1,165 @@
+PROCEDURE COMPILESCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMAURL			VARCHAR2		IN
+FUNCTION CONVERTTODATE RETURNS DATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STRVAL 			VARCHAR2		IN
+ XMLTYPENAME			VARCHAR2		IN
+FUNCTION CONVERTTOTS RETURNS TIMESTAMP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STRVAL 			VARCHAR2		IN
+ XMLTYPENAME			VARCHAR2		IN
+FUNCTION CONVERTTOTSWITHTZ RETURNS TIMESTAMP WITH TIME ZONE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STRVAL 			VARCHAR2		IN
+ XMLTYPENAME			VARCHAR2		IN
+PROCEDURE COPYEVOLVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMAURLS			XDB$STRING_LIST_T	IN
+ NEWSCHEMAS			XMLSEQUENCETYPE 	IN
+ TRANSFORMS			XMLSEQUENCETYPE 	IN     DEFAULT
+ PRESERVEOLDDOCS		BOOLEAN 		IN     DEFAULT
+ MAPTABNAME			VARCHAR2		IN     DEFAULT
+ GENERATETABLES 		BOOLEAN 		IN     DEFAULT
+ FORCE				BOOLEAN 		IN     DEFAULT
+ SCHEMAOWNERS			XDB$STRING_LIST_T	IN     DEFAULT
+ PARALLELDEGREE 		BINARY_INTEGER		IN     DEFAULT
+ OPTIONS			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE DELETESCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMAURL			VARCHAR2		IN
+ DELETE_OPTION			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE GENERATEBEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMAURL			VARCHAR2		IN
+FUNCTION GENERATESCHEMA RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMANAME			VARCHAR2		IN
+ TYPENAME			VARCHAR2		IN
+ ELEMENTNAME			VARCHAR2		IN     DEFAULT
+ RECURSE			BOOLEAN 		IN     DEFAULT
+ ANNOTATE			BOOLEAN 		IN     DEFAULT
+ EMBEDCOLL			BOOLEAN 		IN     DEFAULT
+FUNCTION GENERATESCHEMAS RETURNS XMLSEQUENCETYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMANAME			VARCHAR2		IN
+ TYPENAME			VARCHAR2		IN
+ ELEMENTNAME			VARCHAR2		IN     DEFAULT
+ SCHEMAURL			VARCHAR2		IN     DEFAULT
+ ANNOTATE			BOOLEAN 		IN     DEFAULT
+ EMBEDCOLL			BOOLEAN 		IN     DEFAULT
+PROCEDURE INPLACEEVOLVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMAURL			VARCHAR2		IN
+ DIFFXML			XMLTYPE 		IN
+ FLAGS				NUMBER			IN     DEFAULT
+PROCEDURE PURGESCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA_ID			RAW			IN
+PROCEDURE REGISTERSCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMAURL			VARCHAR2		IN
+ SCHEMADOC			VARCHAR2		IN
+ LOCAL				BOOLEAN 		IN     DEFAULT
+ GENTYPES			BOOLEAN 		IN     DEFAULT
+ GENBEAN			BOOLEAN 		IN     DEFAULT
+ GENTABLES			BOOLEAN 		IN     DEFAULT
+ FORCE				BOOLEAN 		IN     DEFAULT
+ OWNER				VARCHAR2		IN     DEFAULT
+ ENABLEHIERARCHY		BINARY_INTEGER		IN     DEFAULT
+ OPTIONS			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE REGISTERSCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMAURL			VARCHAR2		IN
+ SCHEMADOC			CLOB			IN
+ LOCAL				BOOLEAN 		IN     DEFAULT
+ GENTYPES			BOOLEAN 		IN     DEFAULT
+ GENBEAN			BOOLEAN 		IN     DEFAULT
+ GENTABLES			BOOLEAN 		IN     DEFAULT
+ FORCE				BOOLEAN 		IN     DEFAULT
+ OWNER				VARCHAR2		IN     DEFAULT
+ ENABLEHIERARCHY		BINARY_INTEGER		IN     DEFAULT
+ OPTIONS			BINARY_INTEGER		IN     DEFAULT
+ SCHEMAOID			RAW			IN     DEFAULT
+ IMPORT_OPTIONS 		BINARY_INTEGER		IN     DEFAULT
+PROCEDURE REGISTERSCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMAURL			VARCHAR2		IN
+ SCHEMADOC			BLOB			IN
+ LOCAL				BOOLEAN 		IN     DEFAULT
+ GENTYPES			BOOLEAN 		IN     DEFAULT
+ GENBEAN			BOOLEAN 		IN     DEFAULT
+ GENTABLES			BOOLEAN 		IN     DEFAULT
+ FORCE				BOOLEAN 		IN     DEFAULT
+ OWNER				VARCHAR2		IN     DEFAULT
+ CSID				NUMBER			IN     DEFAULT
+ ENABLEHIERARCHY		BINARY_INTEGER		IN     DEFAULT
+ OPTIONS			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE REGISTERSCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMAURL			VARCHAR2		IN
+ SCHEMADOC			BINARY FILE LOB 	IN
+ LOCAL				BOOLEAN 		IN     DEFAULT
+ GENTYPES			BOOLEAN 		IN     DEFAULT
+ GENBEAN			BOOLEAN 		IN     DEFAULT
+ GENTABLES			BOOLEAN 		IN     DEFAULT
+ FORCE				BOOLEAN 		IN     DEFAULT
+ OWNER				VARCHAR2		IN     DEFAULT
+ CSID				NUMBER			IN     DEFAULT
+ ENABLEHIERARCHY		BINARY_INTEGER		IN     DEFAULT
+ OPTIONS			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE REGISTERSCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMAURL			VARCHAR2		IN
+ SCHEMADOC			XMLTYPE 		IN
+ LOCAL				BOOLEAN 		IN     DEFAULT
+ GENTYPES			BOOLEAN 		IN     DEFAULT
+ GENBEAN			BOOLEAN 		IN     DEFAULT
+ GENTABLES			BOOLEAN 		IN     DEFAULT
+ FORCE				BOOLEAN 		IN     DEFAULT
+ OWNER				VARCHAR2		IN     DEFAULT
+ ENABLEHIERARCHY		BINARY_INTEGER		IN     DEFAULT
+ OPTIONS			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE REGISTERSCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMAURL			VARCHAR2		IN
+ SCHEMADOC			URITYPE 		IN
+ LOCAL				BOOLEAN 		IN     DEFAULT
+ GENTYPES			BOOLEAN 		IN     DEFAULT
+ GENBEAN			BOOLEAN 		IN     DEFAULT
+ GENTABLES			BOOLEAN 		IN     DEFAULT
+ FORCE				BOOLEAN 		IN     DEFAULT
+ OWNER				VARCHAR2		IN     DEFAULT
+ ENABLEHIERARCHY		BINARY_INTEGER		IN     DEFAULT
+ OPTIONS			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE REGISTERURI
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMAURL			VARCHAR2		IN
+ SCHEMADOCURI			VARCHAR2		IN
+ LOCAL				BOOLEAN 		IN     DEFAULT
+ GENTYPES			BOOLEAN 		IN     DEFAULT
+ GENBEAN			BOOLEAN 		IN     DEFAULT
+ GENTABLES			BOOLEAN 		IN     DEFAULT
+ FORCE				BOOLEAN 		IN     DEFAULT
+ OWNER				VARCHAR2		IN     DEFAULT
+ ENABLEHIERARCHY		BINARY_INTEGER		IN     DEFAULT
+ OPTIONS			BINARY_INTEGER		IN     DEFAULT
+

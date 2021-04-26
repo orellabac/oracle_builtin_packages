@@ -1,0 +1,34 @@
+FUNCTION ENQUOTE_LITERAL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STR				VARCHAR2		IN
+FUNCTION ENQUOTE_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STR				VARCHAR2		IN
+ CAPITALIZE			BOOLEAN 		IN     DEFAULT
+FUNCTION NOOP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STR				VARCHAR2		IN
+FUNCTION NOOP RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STR				CLOB			IN
+FUNCTION QUALIFIED_SQL_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STR				VARCHAR2		IN
+FUNCTION SCHEMA_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STR				VARCHAR2		IN
+FUNCTION SIMPLE_SQL_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STR				VARCHAR2		IN
+FUNCTION SQL_OBJECT_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STR				VARCHAR2		IN
+

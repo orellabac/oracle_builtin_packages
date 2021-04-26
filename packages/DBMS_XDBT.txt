@@ -1,0 +1,38 @@
+PROCEDURE AUTOSYNCJOBBYCOUNT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MYINDEXNAME			VARCHAR2		IN
+ MYMAXPENDINGCOUNT		NUMBER			IN
+ MYINDEXMEMORY			VARCHAR2		IN
+PROCEDURE AUTOSYNCJOBBYTIME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MYINDEXNAME			VARCHAR2		IN
+ MYINDEXMEMORY			VARCHAR2		IN
+PROCEDURE CONFIGUREAUTOSYNC
+PROCEDURE CREATEDATASTOREPREF
+PROCEDURE CREATEFILTERPREF
+PROCEDURE CREATEINDEX
+PROCEDURE CREATELEXERPREF
+PROCEDURE CREATEPREFERENCES
+PROCEDURE CREATESECTIONGROUPPREF
+PROCEDURE CREATESTOPLISTPREF
+PROCEDURE CREATESTORAGEPREF
+PROCEDURE CREATEWORDLISTPREF
+PROCEDURE DROPPREFERENCES
+PROCEDURE OPTIMIZEINDEX
+PROCEDURE SETSYNCTIMEOUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TIMEOUT			NUMBER(38)		IN     DEFAULT
+PROCEDURE SYNCINDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MYINDEXNAME			VARCHAR2		IN     DEFAULT
+ MYINDEXMEMORY			VARCHAR2		IN     DEFAULT
+PROCEDURE XDB_DATASTORE_PROC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RID				ROWID			IN
+ OUTLOB 			CLOB			IN/OUT
+

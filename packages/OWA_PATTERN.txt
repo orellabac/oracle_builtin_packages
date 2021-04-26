@@ -1,0 +1,120 @@
+FUNCTION AMATCH RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINE				VARCHAR2		IN
+ FROM_LOC			NUMBER(38)		IN
+ PAT				VARCHAR2		IN
+ FLAGS				VARCHAR2		IN     DEFAULT
+FUNCTION AMATCH RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINE				VARCHAR2		IN
+ FROM_LOC			NUMBER(38)		IN
+ PAT				TABLE OF VARCHAR2(4)	IN/OUT
+ FLAGS				VARCHAR2		IN     DEFAULT
+FUNCTION AMATCH RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINE				VARCHAR2		IN
+ FROM_LOC			NUMBER(38)		IN
+ PAT				VARCHAR2		IN
+ BACKREFS			TABLE OF VARCHAR2(32767) OUT
+ FLAGS				VARCHAR2		IN     DEFAULT
+FUNCTION AMATCH RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINE				VARCHAR2		IN
+ FROM_LOC			NUMBER(38)		IN
+ PAT				TABLE OF VARCHAR2(4)	IN/OUT
+ BACKREFS			TABLE OF VARCHAR2(32767) OUT
+ FLAGS				VARCHAR2		IN     DEFAULT
+FUNCTION CHANGE RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINE				VARCHAR2		IN/OUT
+ FROM_STR			VARCHAR2		IN
+ TO_STR 			VARCHAR2		IN
+ FLAGS				VARCHAR2		IN     DEFAULT
+PROCEDURE CHANGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINE				VARCHAR2		IN/OUT
+ FROM_STR			VARCHAR2		IN
+ TO_STR 			VARCHAR2		IN
+ FLAGS				VARCHAR2		IN     DEFAULT
+FUNCTION CHANGE RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MLINE				RECORD			IN/OUT
+   ROWS 			TABLE OF VARCHAR2(32767) IN/OUT
+   NUM_ROWS			NUMBER(38)		IN/OUT
+   PARTIAL_ROW			BOOLEAN 		IN/OUT
+ FROM_STR			VARCHAR2		IN
+ TO_STR 			VARCHAR2		IN
+ FLAGS				VARCHAR2		IN     DEFAULT
+PROCEDURE CHANGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MLINE				RECORD			IN/OUT
+   ROWS 			TABLE OF VARCHAR2(32767) IN/OUT
+   NUM_ROWS			NUMBER(38)		IN/OUT
+   PARTIAL_ROW			BOOLEAN 		IN/OUT
+ FROM_STR			VARCHAR2		IN
+ TO_STR 			VARCHAR2		IN
+ FLAGS				VARCHAR2		IN     DEFAULT
+PROCEDURE GETPAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				VARCHAR2		IN
+ PAT				TABLE OF VARCHAR2(4)	IN/OUT
+FUNCTION MATCH RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINE				VARCHAR2		IN
+ PAT				VARCHAR2		IN
+ FLAGS				VARCHAR2		IN     DEFAULT
+FUNCTION MATCH RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINE				VARCHAR2		IN
+ PAT				TABLE OF VARCHAR2(4)	IN/OUT
+ FLAGS				VARCHAR2		IN     DEFAULT
+FUNCTION MATCH RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINE				VARCHAR2		IN
+ PAT				VARCHAR2		IN
+ BACKREFS			TABLE OF VARCHAR2(32767) OUT
+ FLAGS				VARCHAR2		IN     DEFAULT
+FUNCTION MATCH RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINE				VARCHAR2		IN
+ PAT				TABLE OF VARCHAR2(4)	IN/OUT
+ BACKREFS			TABLE OF VARCHAR2(32767) OUT
+ FLAGS				VARCHAR2		IN     DEFAULT
+FUNCTION MATCH RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MLINE				RECORD			IN
+   ROWS 			TABLE OF VARCHAR2(32767) IN
+   NUM_ROWS			NUMBER(38)		IN
+   PARTIAL_ROW			BOOLEAN 		IN
+ PAT				VARCHAR2		IN
+ RLIST				RECORD			OUT
+   ROWS 			TABLE OF NUMBER(38)	OUT
+   NUM_ROWS			NUMBER(38)		OUT
+ FLAGS				VARCHAR2		IN     DEFAULT
+FUNCTION MATCH RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MLINE				RECORD			IN
+   ROWS 			TABLE OF VARCHAR2(32767) IN
+   NUM_ROWS			NUMBER(38)		IN
+   PARTIAL_ROW			BOOLEAN 		IN
+ PAT				TABLE OF VARCHAR2(4)	IN/OUT
+ RLIST				RECORD			OUT
+   ROWS 			TABLE OF NUMBER(38)	OUT
+   NUM_ROWS			NUMBER(38)		OUT
+ FLAGS				VARCHAR2		IN     DEFAULT
+

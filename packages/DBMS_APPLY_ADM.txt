@@ -1,0 +1,261 @@
+PROCEDURE ADD_STMT_HANDLER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_NAME			VARCHAR2		IN
+ OPERATION_NAME 		VARCHAR2		IN
+ HANDLER_NAME			VARCHAR2		IN
+ STATEMENT			CLOB			IN
+ APPLY_NAME			VARCHAR2		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_STMT_HANDLER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_NAME			VARCHAR2		IN
+ OPERATION_NAME 		VARCHAR2		IN
+ HANDLER_NAME			VARCHAR2		IN
+ APPLY_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE ALTER_APPLY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ APPLY_NAME			VARCHAR2		IN
+ RULE_SET_NAME			VARCHAR2		IN     DEFAULT
+ REMOVE_RULE_SET		BOOLEAN 		IN     DEFAULT
+ MESSAGE_HANDLER		VARCHAR2		IN     DEFAULT
+ REMOVE_MESSAGE_HANDLER 	BOOLEAN 		IN     DEFAULT
+ DDL_HANDLER			VARCHAR2		IN     DEFAULT
+ REMOVE_DDL_HANDLER		BOOLEAN 		IN     DEFAULT
+ APPLY_USER			VARCHAR2		IN     DEFAULT
+ APPLY_TAG			RAW			IN     DEFAULT
+ REMOVE_APPLY_TAG		BOOLEAN 		IN     DEFAULT
+ PRECOMMIT_HANDLER		VARCHAR2		IN     DEFAULT
+ REMOVE_PRECOMMIT_HANDLER	BOOLEAN 		IN     DEFAULT
+ NEGATIVE_RULE_SET_NAME 	VARCHAR2		IN     DEFAULT
+ REMOVE_NEGATIVE_RULE_SET	BOOLEAN 		IN     DEFAULT
+PROCEDURE COMPARE_OLD_VALUES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_NAME			VARCHAR2		IN
+ COLUMN_LIST			VARCHAR2		IN
+ OPERATION			VARCHAR2		IN     DEFAULT
+ COMPARE			BOOLEAN 		IN     DEFAULT
+ APPLY_DATABASE_LINK		VARCHAR2		IN     DEFAULT
+PROCEDURE COMPARE_OLD_VALUES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_NAME			VARCHAR2		IN
+ COLUMN_TABLE			TABLE OF VARCHAR2(4000) IN
+ OPERATION			VARCHAR2		IN     DEFAULT
+ COMPARE			BOOLEAN 		IN     DEFAULT
+ APPLY_DATABASE_LINK		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_APPLY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ APPLY_NAME			VARCHAR2		IN
+ RULE_SET_NAME			VARCHAR2		IN     DEFAULT
+ MESSAGE_HANDLER		VARCHAR2		IN     DEFAULT
+ DDL_HANDLER			VARCHAR2		IN     DEFAULT
+ APPLY_USER			VARCHAR2		IN     DEFAULT
+ APPLY_DATABASE_LINK		VARCHAR2		IN     DEFAULT
+ APPLY_TAG			RAW			IN     DEFAULT
+ APPLY_CAPTURED 		BOOLEAN 		IN     DEFAULT
+ PRECOMMIT_HANDLER		VARCHAR2		IN     DEFAULT
+ NEGATIVE_RULE_SET_NAME 	VARCHAR2		IN     DEFAULT
+ SOURCE_DATABASE		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_OBJECT_DEPENDENCY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_NAME			VARCHAR2		IN
+ PARENT_OBJECT_NAME		VARCHAR2		IN
+PROCEDURE DELETE_ALL_ERRORS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ APPLY_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE DELETE_ERROR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOCAL_TRANSACTION_ID		VARCHAR2		IN
+PROCEDURE DROP_APPLY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ APPLY_NAME			VARCHAR2		IN
+ DROP_UNUSED_RULE_SETS		BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_OBJECT_DEPENDENCY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_NAME			VARCHAR2		IN
+ PARENT_OBJECT_NAME		VARCHAR2		IN
+PROCEDURE EXECUTE_ALL_ERRORS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ APPLY_NAME			VARCHAR2		IN     DEFAULT
+ EXECUTE_AS_USER		BOOLEAN 		IN     DEFAULT
+PROCEDURE EXECUTE_ERROR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOCAL_TRANSACTION_ID		VARCHAR2		IN
+ EXECUTE_AS_USER		BOOLEAN 		IN     DEFAULT
+ USER_PROCEDURE 		VARCHAR2		IN     DEFAULT
+FUNCTION GET_ERROR_MESSAGE RETURNS ANYDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MESSAGE_NUMBER 		NUMBER			IN
+ LOCAL_TRANSACTION_ID		VARCHAR2		IN
+FUNCTION GET_ERROR_MESSAGE RETURNS ANYDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MESSAGE_NUMBER 		NUMBER			IN
+ LOCAL_TRANSACTION_ID		VARCHAR2		IN
+ DESTINATION_QUEUE_NAME 	VARCHAR2		OUT
+ EXECUTE			BOOLEAN 		OUT
+PROCEDURE HANDLE_COLLISIONS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ APPLY_NAME			VARCHAR2		IN
+ ENABLE 			BOOLEAN 		IN
+ OBJECT 			VARCHAR2		IN
+ SOURCE_OBJECT			VARCHAR2		IN     DEFAULT
+PROCEDURE REMOVE_STMT_HANDLER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_NAME			VARCHAR2		IN
+ OPERATION_NAME 		VARCHAR2		IN
+ HANDLER_NAME			VARCHAR2		IN
+ APPLY_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_CHANGE_HANDLER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHANGE_TABLE_NAME		VARCHAR2		IN
+ SOURCE_TABLE_NAME		VARCHAR2		IN
+ CAPTURE_VALUES 		VARCHAR2		IN
+ APPLY_NAME			VARCHAR2		IN
+ OPERATION_NAME 		VARCHAR2		IN
+ CHANGE_HANDLER_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_DML_CONFLICT_HANDLER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ APPLY_NAME			VARCHAR2		IN
+ CONFLICT_HANDLER_NAME		VARCHAR2		IN
+ OBJECT 			VARCHAR2		IN     DEFAULT
+ OPERATION_NAME 		VARCHAR2		IN     DEFAULT
+ CONFLICT_TYPE			VARCHAR2		IN     DEFAULT
+ METHOD_NAME			VARCHAR2		IN     DEFAULT
+ COLUMN_LIST			VARCHAR2		IN     DEFAULT
+ RESOLUTION_COLUMN		VARCHAR2		IN     DEFAULT
+ SOURCE_OBJECT			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_DML_CONFLICT_HANDLER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ APPLY_NAME			VARCHAR2		IN
+ CONFLICT_HANDLER_NAME		VARCHAR2		IN
+ OBJECT 			VARCHAR2		IN     DEFAULT
+ OPERATION_NAME 		VARCHAR2		IN     DEFAULT
+ CONFLICT_TYPE			VARCHAR2		IN     DEFAULT
+ METHOD_NAME			VARCHAR2		IN     DEFAULT
+ COLUMN_TABLE			TABLE OF VARCHAR2(4000) IN
+ RESOLUTION_COLUMN		VARCHAR2		IN     DEFAULT
+ SOURCE_OBJECT			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_DML_HANDLER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_NAME			VARCHAR2		IN
+ OBJECT_TYPE			VARCHAR2		IN
+ OPERATION_NAME 		VARCHAR2		IN
+ ERROR_HANDLER			BOOLEAN 		IN     DEFAULT
+ USER_PROCEDURE 		VARCHAR2		IN
+ APPLY_DATABASE_LINK		VARCHAR2		IN     DEFAULT
+ APPLY_NAME			VARCHAR2		IN     DEFAULT
+ ASSEMBLE_LOBS			BOOLEAN 		IN     DEFAULT
+PROCEDURE SET_ENQUEUE_DESTINATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_NAME			VARCHAR2		IN
+ DESTINATION_QUEUE_NAME 	VARCHAR2		IN
+PROCEDURE SET_EXECUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_NAME			VARCHAR2		IN
+ EXECUTE			BOOLEAN 		IN
+PROCEDURE SET_GLOBAL_INSTANTIATION_SCN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCE_DATABASE_NAME		VARCHAR2		IN
+ INSTANTIATION_SCN		NUMBER			IN
+ APPLY_DATABASE_LINK		VARCHAR2		IN     DEFAULT
+ RECURSIVE			BOOLEAN 		IN     DEFAULT
+ SOURCE_ROOT_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_KEY_COLUMNS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_NAME			VARCHAR2		IN
+ COLUMN_LIST			VARCHAR2		IN
+ APPLY_DATABASE_LINK		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_KEY_COLUMNS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_NAME			VARCHAR2		IN
+ COLUMN_TABLE			TABLE OF VARCHAR2(30)	IN
+ APPLY_DATABASE_LINK		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ APPLY_NAME			VARCHAR2		IN
+ PARAMETER			VARCHAR2		IN
+ VALUE				VARCHAR2		IN     DEFAULT
+PROCEDURE SET_REPERROR_HANDLER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ APPLY_NAME			VARCHAR2		IN
+ OBJECT 			VARCHAR2		IN
+ ERROR_NUMBER			NUMBER			IN
+ METHOD 			VARCHAR2		IN
+ SOURCE_OBJECT			VARCHAR2		IN     DEFAULT
+ MAX_RETRIES			NUMBER			IN     DEFAULT
+ DELAY_CSECS			NUMBER			IN     DEFAULT
+PROCEDURE SET_SCHEMA_INSTANTIATION_SCN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCE_SCHEMA_NAME		VARCHAR2		IN
+ SOURCE_DATABASE_NAME		VARCHAR2		IN
+ INSTANTIATION_SCN		NUMBER			IN
+ APPLY_DATABASE_LINK		VARCHAR2		IN     DEFAULT
+ RECURSIVE			BOOLEAN 		IN     DEFAULT
+ SOURCE_ROOT_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_TABLE_INSTANTIATION_SCN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCE_OBJECT_NAME		VARCHAR2		IN
+ SOURCE_DATABASE_NAME		VARCHAR2		IN
+ INSTANTIATION_SCN		NUMBER			IN
+ APPLY_DATABASE_LINK		VARCHAR2		IN     DEFAULT
+ SOURCE_ROOT_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_UPDATE_CONFLICT_HANDLER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_NAME			VARCHAR2		IN
+ METHOD_NAME			VARCHAR2		IN
+ RESOLUTION_COLUMN		VARCHAR2		IN
+ COLUMN_LIST			TABLE OF VARCHAR2(30)	IN
+ APPLY_DATABASE_LINK		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_VALUE_DEPENDENCY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DEPENDENCY_NAME		VARCHAR2		IN
+ OBJECT_NAME			VARCHAR2		IN
+ ATTRIBUTE_TABLE		TABLE OF VARCHAR2(30)	IN
+PROCEDURE SET_VALUE_DEPENDENCY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DEPENDENCY_NAME		VARCHAR2		IN
+ OBJECT_NAME			VARCHAR2		IN
+ ATTRIBUTE_LIST 		VARCHAR2		IN
+PROCEDURE START_APPLY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ APPLY_NAME			VARCHAR2		IN
+PROCEDURE STOP_APPLY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ APPLY_NAME			VARCHAR2		IN
+ FORCE				BOOLEAN 		IN     DEFAULT
+

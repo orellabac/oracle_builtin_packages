@@ -1,0 +1,46 @@
+FUNCTION FLUSH_DATA RETURNS BINARY_INTEGER
+PROCEDURE FLUSH_DATA
+PROCEDURE GET_VERSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MAJOR				BINARY_INTEGER		OUT
+ MINOR				BINARY_INTEGER		OUT
+FUNCTION INTERNAL_VERSION_CHECK RETURNS BINARY_INTEGER
+FUNCTION PAUSE_PROFILER RETURNS BINARY_INTEGER
+PROCEDURE PAUSE_PROFILER
+FUNCTION RESUME_PROFILER RETURNS BINARY_INTEGER
+PROCEDURE RESUME_PROFILER
+PROCEDURE ROLLUP_RUN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RUN_NUMBER			NUMBER			IN
+PROCEDURE ROLLUP_UNIT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RUN_NUMBER			NUMBER			IN
+ UNIT				NUMBER			IN
+FUNCTION START_PROFILER RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RUN_COMMENT			VARCHAR2		IN     DEFAULT
+ RUN_COMMENT1			VARCHAR2		IN     DEFAULT
+ RUN_NUMBER			BINARY_INTEGER		OUT
+PROCEDURE START_PROFILER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RUN_COMMENT			VARCHAR2		IN     DEFAULT
+ RUN_COMMENT1			VARCHAR2		IN     DEFAULT
+ RUN_NUMBER			BINARY_INTEGER		OUT
+FUNCTION START_PROFILER RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RUN_COMMENT			VARCHAR2		IN     DEFAULT
+ RUN_COMMENT1			VARCHAR2		IN     DEFAULT
+PROCEDURE START_PROFILER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RUN_COMMENT			VARCHAR2		IN     DEFAULT
+ RUN_COMMENT1			VARCHAR2		IN     DEFAULT
+FUNCTION STOP_PROFILER RETURNS BINARY_INTEGER
+PROCEDURE STOP_PROFILER
+

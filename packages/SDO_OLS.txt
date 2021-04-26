@@ -1,0 +1,82 @@
+FUNCTION DETERMINE_CLASSIFICATION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPENLS 			XMLTYPE 		IN
+ CLASSIFICATION_CRITERION	VARCHAR2		IN
+ OPENLS_VERSION 		VARCHAR2		IN
+FUNCTION EXTRACT RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XML				XMLTYPE 		IN
+ XPATH				VARCHAR2		IN
+ NS				VARCHAR2		IN
+FUNCTION EXTRACTVALUE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XML				XMLTYPE 		IN
+ XPATH				VARCHAR2		IN
+ NS				VARCHAR2		IN
+FUNCTION GENERATE_ERROR RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPENLS_VERSION 		VARCHAR2		IN
+ MESSAGE			VARCHAR2		IN
+ REQUESTID			VARCHAR2		IN
+FUNCTION GENERATE_ERROR RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPENLS_VERSION 		VARCHAR2		IN
+ REQUESTID			VARCHAR2		IN
+FUNCTION GETBASISXML RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NODE_NAME			VARCHAR2		IN
+ OPENLS_VERSION 		VARCHAR2		IN
+FUNCTION GETNS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NSSHORTCUT			VARCHAR2		IN
+ OPENLSVERSION			VARCHAR2		IN
+FUNCTION GETNS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPENLSVERSION			VARCHAR2		IN
+PROCEDURE HANDLE_OPENLS_ERROR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SPECIFIC_ERROR_MESSAGE 	VARCHAR2		IN
+ SPECIFIC_ERROR_CODE		NUMBER			IN
+ DEFAULT_ERROR_MESSAGE		VARCHAR2		IN
+FUNCTION MAKEOPENLS10REQUEST RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REQUEST			XMLTYPE 		IN
+FUNCTION MAKEOPENLSCLOBREQUEST RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REQUEST			CLOB			IN
+FUNCTION MAKEOPENLSREQUEST RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REQUEST			XMLTYPE 		IN
+FUNCTION MAKEOPENLSSOAPREQUEST RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REQUEST			XMLTYPE 		IN
+PROCEDURE PARSE_COORD_PAIR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COORDS 			VARCHAR2		IN
+ X				NUMBER			OUT
+ Y				NUMBER			OUT
+FUNCTION POSTCLOB RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ URL				VARCHAR2		IN
+ PAYLOAD			CLOB			IN
+FUNCTION POSTXML RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ URL				VARCHAR2		IN
+ PAYLOAD			XMLTYPE 		IN
+

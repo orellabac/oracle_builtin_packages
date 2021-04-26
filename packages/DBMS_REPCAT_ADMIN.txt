@@ -1,0 +1,122 @@
+FUNCTION BIC RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FLAG				NUMBER			IN
+ BIT_OFFSET			NUMBER			IN
+FUNCTION BIS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FLAG				NUMBER			IN
+ BIT_OFFSET			NUMBER			IN
+PROCEDURE CHECK_REPCAT_PRIVS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPUSER			VARCHAR2		IN
+PROCEDURE DO_SQL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STATEMENT			VARCHAR2		IN
+ RESIGNAL			BOOLEAN 		IN
+PROCEDURE GRANT_ADMIN_ANY_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERID 			VARCHAR2		IN
+PROCEDURE GRANT_ADMIN_ANY_REPSCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERID 			VARCHAR2		IN
+PROCEDURE GRANT_ADMIN_ANY_SCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+PROCEDURE GRANT_ADMIN_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERID 			VARCHAR2		IN
+PROCEDURE GRANT_ADMIN_REPSCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERID 			VARCHAR2		IN
+PROCEDURE GRANT_ADMIN_SCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+PROCEDURE GRANT_PROXY_SNAPADMIN_PRIVS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CANON_GNAME			VARCHAR2		IN
+ CANON_SNAME			VARCHAR2		IN
+ CANON_ONAME			VARCHAR2		IN
+PROCEDURE GRANT_SNAPADMIN_PROXY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+PROCEDURE REGISTER_REPCAT_PRIVS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ GRANTS 			BOOLEAN 		IN
+ PRIV_TYPE			NUMBER			IN
+PROCEDURE REGISTER_USER_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ PRIVILEGE_TYPE 		VARCHAR2		IN
+ LIST_OF_GNAMES 		VARCHAR2		IN
+PROCEDURE REGISTER_USER_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ PRIVILEGE_TYPE 		VARCHAR2		IN
+ TABLE_OF_GNAMES		TABLE OF VARCHAR2(30)	IN
+FUNCTION REPCAT_ISDBA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA_NAME			VARCHAR2		IN
+ OBJECT_NAME			VARCHAR2		IN
+FUNCTION REPGROUP_PRIVS_FUN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA_NAME			VARCHAR2		IN
+ OBJECT_NAME			VARCHAR2		IN
+PROCEDURE REVOKE_ADMIN_ANY_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERID 			VARCHAR2		IN
+PROCEDURE REVOKE_ADMIN_ANY_REPSCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERID 			VARCHAR2		IN
+PROCEDURE REVOKE_ADMIN_ANY_SCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+PROCEDURE REVOKE_ADMIN_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERID 			VARCHAR2		IN
+PROCEDURE REVOKE_ADMIN_REPSCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERID 			VARCHAR2		IN
+PROCEDURE REVOKE_ADMIN_SCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+PROCEDURE REVOKE_SNAPADMIN_PROXY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+PROCEDURE UNREGISTER_USER_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ PRIVILEGE_TYPE 		VARCHAR2		IN
+ LIST_OF_GNAMES 		VARCHAR2		IN
+PROCEDURE UNREGISTER_USER_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ PRIVILEGE_TYPE 		VARCHAR2		IN
+ TABLE_OF_GNAMES		TABLE OF VARCHAR2(30)	IN
+

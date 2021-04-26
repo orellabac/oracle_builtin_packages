@@ -1,0 +1,157 @@
+PROCEDURE CLEARBINDVALUES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+PROCEDURE CLOSECONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+FUNCTION CONVERT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XMLDATA			VARCHAR2		IN
+ FLAG				NUMBER			IN     DEFAULT
+FUNCTION CONVERT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XMLDATA			CLOB			IN
+ FLAG				NUMBER			IN     DEFAULT
+FUNCTION GETNUMROWSPROCESSED RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+PROCEDURE GETXML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ TMPCLOB			CLOB			IN/OUT
+ DTDORSCHEMA			NUMBER			IN     DEFAULT
+FUNCTION GETXML RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ DTDORSCHEMA			NUMBER			IN     DEFAULT
+FUNCTION GETXML RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQLQUERY			VARCHAR2		IN
+ DTDORSCHEMA			NUMBER			IN     DEFAULT
+PROCEDURE GETXMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ TMPXMLTYPE			XMLTYPE 		IN/OUT
+ DTDORSCHEMA			NUMBER			IN     DEFAULT
+FUNCTION GETXMLTYPE RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ DTDORSCHEMA			NUMBER			IN     DEFAULT
+FUNCTION GETXMLTYPE RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQLQUERY			VARCHAR2		IN
+ DTDORSCHEMA			NUMBER			IN     DEFAULT
+FUNCTION NEWCONTEXT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUERYSTRING			VARCHAR2		IN
+FUNCTION NEWCONTEXT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUERYSTRING			REF CURSOR		IN
+FUNCTION NEWCONTEXTFROMHIERARCHY RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUERYSTRING			VARCHAR2		IN
+PROCEDURE REMOVEXSLTPARAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ NAME				VARCHAR2		IN
+PROCEDURE RESTARTQUERY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+PROCEDURE SETBINDVALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ BINDNAME			VARCHAR2		IN
+ BINDVALUE			VARCHAR2		IN
+PROCEDURE SETCHECKINVALIDCHARS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ CHK				BOOLEAN 		IN
+PROCEDURE SETCONVERTSPECIALCHARS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ REPLACE			BOOLEAN 		IN
+PROCEDURE SETINDENTATIONWIDTH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ WIDTH				NUMBER			IN
+PROCEDURE SETMAXROWS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ MAXROWS			NUMBER			IN
+PROCEDURE SETNULLHANDLING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ FLAG				NUMBER			IN
+PROCEDURE SETPRETTYPRINTING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ PP				BOOLEAN 		IN
+PROCEDURE SETROWSETTAG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ ROWSETTAGNAME			VARCHAR2		IN
+PROCEDURE SETROWTAG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ ROWTAGNAME			VARCHAR2		IN
+PROCEDURE SETSKIPROWS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ SKIPROWS			NUMBER			IN
+PROCEDURE SETXSLT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ STYLESHEET			CLOB			IN
+PROCEDURE SETXSLT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ STYLESHEET			XMLTYPE 		IN
+PROCEDURE SETXSLT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ URI				VARCHAR2		IN
+PROCEDURE SETXSLTPARAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE USEITEMTAGSFORCOLL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+PROCEDURE USENULLATTRIBUTEINDICATOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTX				NUMBER			IN
+ ATTRIND			BOOLEAN 		IN     DEFAULT
+

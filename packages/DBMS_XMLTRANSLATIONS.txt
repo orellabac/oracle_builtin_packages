@@ -1,0 +1,48 @@
+PROCEDURE DISABLETRANSLATION
+PROCEDURE ENABLETRANSLATION
+FUNCTION EXTRACTXLIFF RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				XMLTYPE 		IN
+ XPATH				VARCHAR2		IN
+ NAMESPACE			VARCHAR2		IN     DEFAULT
+FUNCTION EXTRACTXLIFF RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ABSPATH			VARCHAR2		IN
+ XPATH				VARCHAR2		IN
+ NAMESPACE			VARCHAR2		IN     DEFAULT
+FUNCTION GETBASEDOCUMENT RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				XMLTYPE 		IN
+FUNCTION MERGEXLIFF RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				XMLTYPE 		IN
+ XLIFF				XMLTYPE 		IN
+PROCEDURE MERGEXLIFF
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XLIFF				XMLTYPE 		IN
+FUNCTION SETSOURCELANG RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				XMLTYPE 		IN
+ XPATH				VARCHAR2		IN
+ LANG				VARCHAR2		IN
+ NAMESPACE			VARCHAR2		IN     DEFAULT
+FUNCTION TRANSLATEXML RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				XMLTYPE 		IN
+ LANG				VARCHAR2		IN
+FUNCTION UPDATETRANSLATION RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOC				XMLTYPE 		IN
+ XPATH				VARCHAR2		IN
+ LANG				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+ NAMESPACE			VARCHAR2		IN     DEFAULT
+

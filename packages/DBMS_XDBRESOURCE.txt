@@ -1,0 +1,317 @@
+PROCEDURE FREERESOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETACL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETACLDOCFROMRES RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETAUTHOR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETCHARACTERSET RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETCOMMENT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETCONTENTBLOB RETURNS BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+ CSID				BINARY_INTEGER		OUT
+FUNCTION GETCONTENTCLOB RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETCONTENTREF RETURNS REF OF XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETCONTENTTYPE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETCONTENTVARCHAR2 RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETCONTENTXML RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETCREATIONDATE RETURNS TIMESTAMP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETCREATOR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETCUSTOMMETADATA RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+ XPATH				VARCHAR2		IN
+ NAMESPACE			VARCHAR2		IN
+FUNCTION GETDISPLAYNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETLANGUAGE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETLASTMODIFIER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETMODIFICATIONDATE RETURNS TIMESTAMP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETOWNER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETREFCOUNT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETVERSIONID RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASACLCHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASAUTHORCHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASCHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+ XPATH				VARCHAR2		IN
+ BNAMESPACE			VARCHAR2		IN
+FUNCTION HASCHARACTERSETCHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASCOMMENTCHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASCONTENTCHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASCONTENTTYPECHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASCREATIONDATECHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASCREATORCHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASCUSTOMMETADATACHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASDISPLAYNAMECHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASLANGUAGECHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASLASTMODIFIERCHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASMODIFICATIONDATECHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASOWNERCHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASREFCOUNTCHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION HASVERSIONIDCHANGED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISFOLDER RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION MAKEDOCUMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE SAVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE SETACL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN/OUT
+   ID				RAW(13) 		IN/OUT
+ ACLPATH			VARCHAR2		IN
+PROCEDURE SETAUTHOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN/OUT
+   ID				RAW(13) 		IN/OUT
+ AUTHOR 			VARCHAR2		IN
+PROCEDURE SETCHARACTERSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN/OUT
+   ID				RAW(13) 		IN/OUT
+ CHARSET			VARCHAR2		IN
+PROCEDURE SETCOMMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN/OUT
+   ID				RAW(13) 		IN/OUT
+ COMMENT			VARCHAR2		IN
+PROCEDURE SETCONTENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN/OUT
+   ID				RAW(13) 		IN/OUT
+ DATA				CLOB			IN
+PROCEDURE SETCONTENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN/OUT
+   ID				RAW(13) 		IN/OUT
+ DATA				BLOB			IN
+ CSID				BINARY_INTEGER		IN
+PROCEDURE SETCONTENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN/OUT
+   ID				RAW(13) 		IN/OUT
+ DATA				XMLTYPE 		IN
+PROCEDURE SETCONTENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN/OUT
+   ID				RAW(13) 		IN/OUT
+ DATA				VARCHAR2		IN
+PROCEDURE SETCONTENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN/OUT
+   ID				RAW(13) 		IN/OUT
+ DATA				REF OF XMLTYPE		IN
+ STICKY 			BOOLEAN 		IN     DEFAULT
+PROCEDURE SETCONTENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN/OUT
+   ID				RAW(13) 		IN/OUT
+ DATA				BINARY FILE LOB 	IN
+ CSID_BFILE			BINARY_INTEGER		IN
+PROCEDURE SETCONTENTTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN/OUT
+   ID				RAW(13) 		IN/OUT
+ CONTTYPE			VARCHAR2		IN
+PROCEDURE SETCUSTOMMETADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN
+   ID				RAW(13) 		IN
+ XPATH				VARCHAR2		IN
+ NAMESPACE			VARCHAR2		IN
+ NEWMETADATA			XMLTYPE 		IN
+PROCEDURE SETDISPLAYNAME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN/OUT
+   ID				RAW(13) 		IN/OUT
+ NAME				VARCHAR2		IN
+PROCEDURE SETLANGUAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN/OUT
+   ID				RAW(13) 		IN/OUT
+ LANG				VARCHAR2		IN
+PROCEDURE SETOWNER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RES				RECORD			IN/OUT
+   ID				RAW(13) 		IN/OUT
+ OWNER				VARCHAR2		IN
+

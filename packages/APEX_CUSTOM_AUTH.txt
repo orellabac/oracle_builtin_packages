@@ -1,0 +1,95 @@
+FUNCTION APPLICATION_PAGE_ITEM_EXISTS RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ITEM_NAME			VARCHAR2		IN
+FUNCTION CURRENT_PAGE_IS_PUBLIC RETURNS BOOLEAN
+PROCEDURE DEFINE_USER_SESSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER 			VARCHAR2		IN
+ P_SESSION_ID			NUMBER			IN
+PROCEDURE GET_COOKIE_PROPS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APP_ID			NUMBER			IN
+ P_COOKIE_NAME			VARCHAR2		OUT
+ P_COOKIE_PATH			VARCHAR2		OUT
+ P_COOKIE_DOMAIN		VARCHAR2		OUT
+ P_SECURE			BOOLEAN 		OUT
+PROCEDURE GET_LDAP_PROPS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_LDAP_HOST			VARCHAR2		OUT
+ P_LDAP_PORT			NUMBER(38)		OUT
+ P_USE_SSL			VARCHAR2		OUT
+ P_USE_EXACT_DN 		VARCHAR2		OUT
+ P_LDAP_DN			VARCHAR2		OUT
+ P_SEARCH_FILTER		VARCHAR2		OUT
+ P_LDAP_EDIT_FUNCTION		VARCHAR2		OUT
+FUNCTION GET_NEXT_SESSION_ID RETURNS NUMBER
+FUNCTION GET_SECURITY_GROUP_ID RETURNS NUMBER
+FUNCTION GET_SESSION_ID RETURNS NUMBER
+FUNCTION GET_SESSION_ID_FROM_COOKIE RETURNS NUMBER
+FUNCTION GET_USER RETURNS VARCHAR2
+FUNCTION GET_USERNAME RETURNS VARCHAR2
+FUNCTION IS_SESSION_VALID RETURNS BOOLEAN
+FUNCTION LDAP_AUTHENTICATE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERNAME			VARCHAR2		IN
+ P_PASSWORD			VARCHAR2		IN
+ P_LDAP_HOST			VARCHAR2		IN
+ P_LDAP_PORT			NUMBER			IN
+ P_USE_SSL			VARCHAR2		IN     DEFAULT
+ P_USE_EXACT_DN 		VARCHAR2		IN     DEFAULT
+ P_LDAP_STRING			VARCHAR2		IN
+ P_SEARCH_FILTER		VARCHAR2		IN     DEFAULT
+ P_LDAP_EDIT_FUNCTION		VARCHAR2		IN
+ P_OWNER			VARCHAR2		IN
+FUNCTION LDAP_DNPREP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERNAME			VARCHAR2		IN
+PROCEDURE LOGIN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_UNAME			VARCHAR2		IN     DEFAULT
+ P_PASSWORD			VARCHAR2		IN     DEFAULT
+ P_SESSION_ID			VARCHAR2		IN     DEFAULT
+ P_APP_PAGE			VARCHAR2		IN     DEFAULT
+ P_ENTRY_POINT			VARCHAR2		IN     DEFAULT
+ P_PRESERVE_CASE		BOOLEAN 		IN     DEFAULT
+PROCEDURE LOGOUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_THIS_APP			VARCHAR2		IN     DEFAULT
+ P_NEXT_APP_PAGE_SESS		VARCHAR2		IN     DEFAULT
+ P_NEXT_URL			VARCHAR2		IN     DEFAULT
+PROCEDURE LOGOUT_THEN_GO_TO_PAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ARGS 			VARCHAR2		IN     DEFAULT
+PROCEDURE LOGOUT_THEN_GO_TO_URL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ARGS 			VARCHAR2		IN     DEFAULT
+FUNCTION PORTAL_SSO_SENTRY_V1 RETURNS BOOLEAN
+PROCEDURE POST_LOGIN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_UNAME			VARCHAR2		IN     DEFAULT
+ P_SESSION_ID			VARCHAR2		IN     DEFAULT
+ P_APP_PAGE			VARCHAR2		IN     DEFAULT
+ P_PRESERVE_CASE		BOOLEAN 		IN     DEFAULT
+PROCEDURE REMOVE_SESSION
+FUNCTION SESSION_ID_EXISTS RETURNS BOOLEAN
+PROCEDURE SET_SESSION_ID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_SESSION_ID			NUMBER			IN
+PROCEDURE SET_SESSION_ID_TO_NEXT_VALUE
+PROCEDURE SET_USER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER 			VARCHAR2		IN
+

@@ -1,0 +1,618 @@
+FUNCTION AFFINETRANSFORMS RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ TRANSLATION			VARCHAR2		IN     DEFAULT
+ TX				NUMBER			IN     DEFAULT
+ TY				NUMBER			IN     DEFAULT
+ TZ				NUMBER			IN     DEFAULT
+ SCALING			VARCHAR2		IN     DEFAULT
+ PSC1				SDO_GEOMETRY		IN     DEFAULT
+ SX				NUMBER			IN     DEFAULT
+ SY				NUMBER			IN     DEFAULT
+ SZ				NUMBER			IN     DEFAULT
+ ROTATION			VARCHAR2		IN     DEFAULT
+ P1				SDO_GEOMETRY		IN     DEFAULT
+ LINE1				SDO_GEOMETRY		IN     DEFAULT
+ ANGLE				NUMBER			IN     DEFAULT
+ DIR				NUMBER			IN     DEFAULT
+ SHEARING			VARCHAR2		IN     DEFAULT
+ SHXY				NUMBER			IN     DEFAULT
+ SHYX				NUMBER			IN     DEFAULT
+ SHXZ				NUMBER			IN     DEFAULT
+ SHZX				NUMBER			IN     DEFAULT
+ SHYZ				NUMBER			IN     DEFAULT
+ SHZY				NUMBER			IN     DEFAULT
+ REFLECTION			VARCHAR2		IN     DEFAULT
+ PREF				SDO_GEOMETRY		IN     DEFAULT
+ LINER				SDO_GEOMETRY		IN     DEFAULT
+ DIRR				NUMBER			IN     DEFAULT
+ PLANER 			VARCHAR2		IN     DEFAULT
+ N				SDO_NUMBER_ARRAY	IN     DEFAULT
+ BIGD				SDO_NUMBER_ARRAY	IN     DEFAULT
+FUNCTION APPEND RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY1			SDO_GEOMETRY		IN
+ GEOMETRY2			SDO_GEOMETRY		IN
+PROCEDURE BEARING_TILT_FOR_POINTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ START_POINT			SDO_GEOMETRY		IN
+ END_POINT			SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+ BEARING			NUMBER			OUT
+ TILT				NUMBER			OUT
+FUNCTION CIRCLE_POLYGON RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POINT				SDO_GEOMETRY		IN
+ RADIUS 			NUMBER			IN
+ ARC_TOLERANCE			NUMBER			IN
+ START_AZIMUTH			NUMBER			IN     DEFAULT
+ END_AZIMUTH			NUMBER			IN     DEFAULT
+ ORIENTATION			NUMBER			IN     DEFAULT
+ ARC				NUMBER			IN     DEFAULT
+FUNCTION CIRCLE_POLYGON RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CENTER_LONGITUDE		NUMBER			IN
+ CENTER_LATITUDE		NUMBER			IN
+ RADIUS 			NUMBER			IN
+ ARC_TOLERANCE			NUMBER			IN
+FUNCTION CIRCLE_POLYGON RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CENTER_LONGITUDE		NUMBER			IN
+ CENTER_LATITUDE		NUMBER			IN
+ RADIUS 			NUMBER			IN
+ START_AZIMUTH			NUMBER			IN
+ END_AZIMUTH			NUMBER			IN
+ ARC_TOLERANCE			NUMBER			IN
+FUNCTION CONCAT_LINES RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY1			SDO_GEOMETRY		IN
+ GEOMETRY2			SDO_GEOMETRY		IN
+FUNCTION CONVERT3007TO3008 RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION CONVERT_DISTANCE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			IN
+ DISTANCE			NUMBER			IN
+ UNIT_SPEC			VARCHAR2		IN
+FUNCTION CONVERT_UNIT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				NUMBER			IN
+ IN_UNIT			VARCHAR2		IN
+ OUT_UNIT			VARCHAR2		IN
+PROCEDURE DROP_WORK_TABLES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OIDSTR 			VARCHAR2		IN
+FUNCTION ELLIPSE_POLYGON RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CENTER_LONGITUDE		NUMBER			IN
+ CENTER_LATITUDE		NUMBER			IN
+ SEMI_MAJOR_AXIS		NUMBER			IN
+ SEMI_MINOR_AXIS		NUMBER			IN
+ AZIMUTH			NUMBER			IN
+ ARC_TOLERANCE			NUMBER			IN
+FUNCTION EXPAND_GEOM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION EXPAND_MULTI_POINT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION EXTRACT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ ELEMENT			NUMBER			IN
+ RING				NUMBER			IN     DEFAULT
+FUNCTION EXTRACT3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ LABEL				VARCHAR2		IN
+FUNCTION EXTRACTVOIDS RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+FUNCTION EXTRACT_ALL RETURNS SDO_GEOMETRY_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ FLATTEN			NUMBER			IN     DEFAULT
+FUNCTION EXTRUDE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ GRDHEIGHT			SDO_NUMBER_ARRAY	IN
+ HEIGHT 			SDO_NUMBER_ARRAY	IN
+ COND				VARCHAR2		IN
+ TOL				NUMBER			IN
+FUNCTION EXTRUDE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ GRDHEIGHT			SDO_NUMBER_ARRAY	IN
+ HEIGHT 			SDO_NUMBER_ARRAY	IN
+ TOL				NUMBER			IN
+ OPTIONAL3DSRID 		NUMBER			IN     DEFAULT
+FUNCTION FROM_CLOB RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLOBGEOM			CLOB			IN
+FUNCTION FROM_GML311GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			CLOB			IN
+FUNCTION FROM_GML311GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			CLOB			IN
+ SRSNAMESPACE			VARCHAR2		IN
+FUNCTION FROM_GML311GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			VARCHAR2		IN
+FUNCTION FROM_GML311GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			VARCHAR2		IN
+ SRSNAMESPACE			VARCHAR2		IN
+FUNCTION FROM_GML311GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			CLOB			IN
+ COORDORDER			NUMBER			IN
+FUNCTION FROM_GML311GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			CLOB			IN
+ SRSNAMESPACE			VARCHAR2		IN
+ COORDORDER			NUMBER			IN
+FUNCTION FROM_GML311GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			VARCHAR2		IN
+ COORDORDER			NUMBER			IN
+FUNCTION FROM_GML311GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			VARCHAR2		IN
+ SRSNAMESPACE			VARCHAR2		IN
+ COORDORDER			NUMBER			IN
+FUNCTION FROM_GMLGEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			CLOB			IN
+FUNCTION FROM_GMLGEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			CLOB			IN
+ SRSNAMESPACE			VARCHAR2		IN
+FUNCTION FROM_GMLGEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			VARCHAR2		IN
+FUNCTION FROM_GMLGEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			VARCHAR2		IN
+ SRSNAMESPACE			VARCHAR2		IN
+FUNCTION FROM_GMLGEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			CLOB			IN
+ COORDORDER			NUMBER			IN
+FUNCTION FROM_GMLGEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			CLOB			IN
+ SRSNAMESPACE			VARCHAR2		IN
+ COORDORDER			NUMBER			IN
+FUNCTION FROM_GMLGEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			VARCHAR2		IN
+ COORDORDER			NUMBER			IN
+FUNCTION FROM_GMLGEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			VARCHAR2		IN
+ SRSNAMESPACE			VARCHAR2		IN
+ COORDORDER			NUMBER			IN
+FUNCTION FROM_KMLGEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			CLOB			IN
+FUNCTION FROM_KMLGEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			VARCHAR2		IN
+FUNCTION FROM_WKBGEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			BLOB			IN
+FUNCTION FROM_WKTGEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			CLOB			IN
+FUNCTION FROM_WKTGEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			VARCHAR2		IN
+FUNCTION GETLABELBYELEMENT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCEGEOMETRY 		SDO_GEOMETRY		IN
+ QUERYELEMENT			SDO_GEOMETRY		IN
+ TOL				NUMBER			IN
+FUNCTION GETNUMELEM RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION GETNUMRINGS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+FUNCTION GETNUMVERTICES RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION GETNURBSAPPROX RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+FUNCTION GETVERTICES RETURNS VERTEX_SET_TYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION GET_2D_FOOTPRINT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION GET_BOUNDARY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION HYBRID_TILES RETURNS H81_INDEX_OBJ_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ SDO_LEVEL			NUMBER			IN     DEFAULT
+ SDO_NTILES			NUMBER			IN     DEFAULT
+ TOL				NUMBER			IN     DEFAULT
+PROCEDURE INITIALIZE_INDEXES_FOR_TTS
+PROCEDURE INSERT_SDO_GEOM_METADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER				VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+ DIMINFO			SDO_DIM_ARRAY		IN
+ SRID				NUMBER			IN
+FUNCTION INTERIOR_POINT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN     DEFAULT
+FUNCTION INTERNAL_MAKE_LINE_OUT_OF_ELEM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MULTILINESTRING		SDO_GEOMETRY		IN
+ ELEMENT_INDEX			NUMBER(38)		IN
+FUNCTION INTERNAL_MERGE_LINESTRINGS RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION INTERNAL_MERGE_LINESTRINGS RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMARR			SDO_GEOMETRY_ARRAY	IN
+PROCEDURE INTERNAL_ORDINATE_COPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC				SDO_ORDINATE_ARRAY	IN
+ SRC_POSITION			NUMBER(38)		IN
+ DST				SDO_ORDINATE_ARRAY	IN/OUT
+ DST_POSITION			NUMBER(38)		IN
+ LENGTH 			NUMBER(38)		IN
+PROCEDURE INTERNAL_REVERSE_LINE_POINTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ORDINATES			SDO_ORDINATE_ARRAY	IN/OUT
+FUNCTION JSPH_GETNURBSAPPROX RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION LINEAR_KEY RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ DIMINFO			SDO_DIM_ARRAY		IN
+ LVL				NUMBER			IN     DEFAULT
+FUNCTION LINEAR_KEY RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ MIN_X				NUMBER			IN
+ MIN_Y				NUMBER			IN
+ MAX_X				NUMBER			IN
+ MAX_Y				NUMBER			IN
+ LVL				NUMBER			IN     DEFAULT
+FUNCTION MDUTL_IS_NUMERIC RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INSTR				VARCHAR2		IN
+ FORMAT_MASK			VARCHAR2		IN
+FUNCTION NUMBER_OF_COMPONENTS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ REQUESTED_TYPE 		VARCHAR2		IN
+FUNCTION NUMBER_TO_CHAR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				NUMBER			IN
+ FORMAT_MASK			VARCHAR2		IN     DEFAULT
+ NLS_LANGUAGE			VARCHAR2		IN     DEFAULT
+FUNCTION NUMBER_TO_CHAR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				VARCHAR2		IN
+ FORMAT_MASK			VARCHAR2		IN     DEFAULT
+ NLS_LANGUAGE			VARCHAR2		IN     DEFAULT
+FUNCTION NUMBER_TO_CHAR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				DATE			IN
+ FORMAT_MASK			VARCHAR2		IN     DEFAULT
+ OPTION_SETTING 		VARCHAR2		IN     DEFAULT
+FUNCTION NUMBER_TO_CHAR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				TIMESTAMP		IN
+ FORMAT_MASK			VARCHAR2		IN     DEFAULT
+ OPTION_SETTING 		VARCHAR2		IN     DEFAULT
+FUNCTION NUMBER_TO_CHAR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				RAW			IN
+FUNCTION NUMBER_TO_CHAR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				CLOB			IN
+FUNCTION OUTERLN RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+PROCEDURE PARTITION_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMANAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+ OUTPUT_DATA_TABLE		VARCHAR2		IN
+ OUTPUT_PTN_TABLE		VARCHAR2		IN
+ PTN_CAPACITY			NUMBER			IN     DEFAULT
+ NUMDIM 			NUMBER			IN     DEFAULT
+ WRK_TBLSPC			VARCHAR2		IN     DEFAULT
+ PTN_TYPE			VARCHAR2		IN     DEFAULT
+ DOP				NUMBER			IN     DEFAULT
+FUNCTION POINT_AT_BEARING RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ START_POINT			SDO_GEOMETRY		IN
+ BEARING			NUMBER			IN
+ DISTANCE			NUMBER			IN
+FUNCTION POINT_TO_LINE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ GEOM2				SDO_GEOMETRY		IN
+ TOL				NUMBER			IN     DEFAULT
+FUNCTION POLYGONTOLINE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+PROCEDURE PREPARE_FOR_TTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_SPACE			VARCHAR2		IN
+FUNCTION QUAD_TILES RETURNS F81_INDEX_OBJ_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ SDO_LEVEL			NUMBER			IN
+ TOL				NUMBER			IN     DEFAULT
+FUNCTION RECTIFY_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+FUNCTION REFINEMGON RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MGON				SDO_GEOMETRY		IN
+ GON				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+FUNCTION REMOVE_DUPLICATES RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+FUNCTION REMOVE_DUPLICATE_VERTICES RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+FUNCTION REMOVE_INNER_RINGS RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPGEOM			SDO_GEOMETRY		IN
+ INPTOL 			NUMBER			IN
+FUNCTION REVERSE_LINESTRING RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION SIMPLIFY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ THRESHOLD			NUMBER			IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+ REMOVE_LOOPS			NUMBER			IN     DEFAULT
+FUNCTION SIMPLIFYVW RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ VERTEX_THRESHOLD		NUMBER			IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+ REMOVE_LOOPS			NUMBER			IN     DEFAULT
+FUNCTION THEME3D_GET_BLOCK_TABLE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEME_NAME			VARCHAR2		IN
+FUNCTION THEME3D_HAS_LOD RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEME_NAME			VARCHAR2		IN
+FUNCTION THEME3D_HAS_TEXTURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEME_NAME			VARCHAR2		IN
+FUNCTION TOGNOMONIC RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ LONGITUDE			NUMBER			IN
+ LATITUDE			NUMBER			IN
+FUNCTION TO_CLOB RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION TO_GML311GEOMETRY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION TO_GML311GEOMETRY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ SRSNAMESPACE			VARCHAR2		IN
+ SRSNSALIAS			VARCHAR2		IN
+FUNCTION TO_GML311GEOMETRY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ COORDORDER			NUMBER			IN
+FUNCTION TO_GML311GEOMETRY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ SRSNAMESPACE			VARCHAR2		IN
+ SRSNSALIAS			VARCHAR2		IN
+ COORDORDER			NUMBER			IN
+FUNCTION TO_GML321GEOMETRY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION TO_GML321GEOMETRY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ SRSNAMESPACE			VARCHAR2		IN
+ SRSNSALIAS			VARCHAR2		IN
+FUNCTION TO_GML321GEOMETRY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ COORDORDER			NUMBER			IN
+FUNCTION TO_GML321GEOMETRY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ SRSNAMESPACE			VARCHAR2		IN
+ SRSNSALIAS			VARCHAR2		IN
+ COORDORDER			NUMBER			IN
+FUNCTION TO_GMLGEOMETRY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION TO_GMLGEOMETRY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ SRSNAMESPACE			VARCHAR2		IN
+ SRSNSALIAS			VARCHAR2		IN
+FUNCTION TO_GMLGEOMETRY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ COORDORDER			NUMBER			IN
+FUNCTION TO_GMLGEOMETRY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ SRSNAMESPACE			VARCHAR2		IN
+ SRSNSALIAS			VARCHAR2		IN
+ COORDORDER			NUMBER			IN
+FUNCTION TO_KMLGEOMETRY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION TO_WKBGEOMETRY RETURNS BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION TO_WKTGEOMETRY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION TO_WKTGEOMETRY_VARCHAR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+FUNCTION TRUNCATE_NUMBER RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				NUMBER			IN
+ NO_OF_DIGITS			NUMBER			IN
+FUNCTION VALIDATE_3DTHEME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEME_NAME			VARCHAR2		IN
+FUNCTION VALIDATE_SCENE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCENE_NAME			VARCHAR2		IN
+FUNCTION VALIDATE_VIEWFRAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VIEWFRAME_NAME 		VARCHAR2		IN
+FUNCTION VALIDATE_WKBGEOMETRY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			BLOB			IN
+FUNCTION VALIDATE_WKTGEOMETRY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			CLOB			IN
+FUNCTION VALIDATE_WKTGEOMETRY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			VARCHAR2		IN
+

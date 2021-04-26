@@ -1,0 +1,11 @@
+PROCEDURE BUILD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DICTIONARY_FILENAME		VARCHAR2		IN     DEFAULT
+ DICTIONARY_LOCATION		VARCHAR2		IN     DEFAULT
+ OPTIONS			NUMBER			IN     DEFAULT
+PROCEDURE SET_TABLESPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NEW_TABLESPACE 		VARCHAR2		IN
+

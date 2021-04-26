@@ -1,0 +1,969 @@
+PROCEDURE AGENDA_CALENDAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_DATE_TYPE_FIELD		VARCHAR2		IN     DEFAULT
+FUNCTION CACHE_GET_DATE_OF_PAGE_CACHE RETURNS DATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APPLICATION			NUMBER			IN
+ P_PAGE 			NUMBER			IN
+FUNCTION CACHE_GET_DATE_OF_REGION_CACHE RETURNS DATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APPLICATION			NUMBER			IN
+ P_PAGE 			NUMBER			IN
+ P_REGION_NAME			VARCHAR2		IN
+PROCEDURE CACHE_PURGE_BY_APPLICATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APPLICATION			NUMBER			IN
+PROCEDURE CACHE_PURGE_BY_PAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APPLICATION			NUMBER			IN
+ P_PAGE 			NUMBER			IN
+ P_USER_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE CACHE_PURGE_STALE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APPLICATION			NUMBER			IN
+PROCEDURE CHANGE_CURRENT_USER_PW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_NEW_PASSWORD 		VARCHAR2		IN
+FUNCTION CHANGE_PASSWORD_ON_FIRST_USE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_NAME			VARCHAR2		IN
+PROCEDURE CLEAR_APP_CACHE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APP_ID			VARCHAR2		IN     DEFAULT
+PROCEDURE CLEAR_PAGE_CACHE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_PAGE_ID			NUMBER			IN     DEFAULT
+PROCEDURE CLEAR_USER_CACHE
+PROCEDURE CLOSE_OPEN_DB_LINKS
+FUNCTION COMPRESS_INT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_NUMBER			NUMBER(38)		IN
+PROCEDURE COUNT_CLICK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_URL				VARCHAR2		IN
+ P_CAT				VARCHAR2		IN
+ P_ID				VARCHAR2		IN     DEFAULT
+ P_USER 			VARCHAR2		IN     DEFAULT
+ P_COMPANY			VARCHAR2		IN     DEFAULT
+ P_WORKSPACE			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_USER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_ID			NUMBER			IN     DEFAULT
+ P_USER_NAME			VARCHAR2		IN
+ P_FIRST_NAME			VARCHAR2		IN     DEFAULT
+ P_LAST_NAME			VARCHAR2		IN     DEFAULT
+ P_DESCRIPTION			VARCHAR2		IN     DEFAULT
+ P_EMAIL_ADDRESS		VARCHAR2		IN     DEFAULT
+ P_WEB_PASSWORD 		VARCHAR2		IN
+ P_WEB_PASSWORD_FORMAT		VARCHAR2		IN     DEFAULT
+ P_GROUP_IDS			VARCHAR2		IN     DEFAULT
+ P_DEVELOPER_PRIVS		VARCHAR2		IN     DEFAULT
+ P_DEFAULT_SCHEMA		VARCHAR2		IN     DEFAULT
+ P_DEFAULT_DATE_FORMAT		VARCHAR2		IN     DEFAULT
+ P_ALLOW_ACCESS_TO_SCHEMAS	VARCHAR2		IN     DEFAULT
+ P_ACCOUNT_EXPIRY		DATE			IN     DEFAULT
+ P_ACCOUNT_LOCKED		VARCHAR2		IN     DEFAULT
+ P_FAILED_ACCESS_ATTEMPTS	NUMBER			IN     DEFAULT
+ P_CHANGE_PASSWORD_ON_FIRST_USE VARCHAR2		IN     DEFAULT
+ P_FIRST_PASSWORD_USE_OCCURRED	VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_01 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_02 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_03 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_04 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_05 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_06 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_07 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_08 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_09 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_10 		VARCHAR2		IN     DEFAULT
+ P_ALLOW_APP_BUILDING_YN	VARCHAR2		IN     DEFAULT
+ P_ALLOW_SQL_WORKSHOP_YN	VARCHAR2		IN     DEFAULT
+ P_ALLOW_WEBSHEET_DEV_YN	VARCHAR2		IN     DEFAULT
+ P_ALLOW_TEAM_DEVELOPMENT_YN	VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_USER_FROM_FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ID				NUMBER			IN
+ P_MODE 			VARCHAR2		IN     DEFAULT
+ P_FORMAT			VARCHAR2		IN     DEFAULT
+ P_PASSWORD			VARCHAR2		IN     DEFAULT
+ P_APP				VARCHAR2		IN     DEFAULT
+ P_APPURL			VARCHAR2		IN     DEFAULT
+ P_START			VARCHAR2		OUT
+ P_END				VARCHAR2		OUT
+ P_LOADED			VARCHAR2		OUT
+PROCEDURE CREATE_USER_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ID				NUMBER			IN     DEFAULT
+ P_GROUP_NAME			VARCHAR2		IN
+ P_SECURITY_GROUP_ID		NUMBER			IN     DEFAULT
+ P_GROUP_DESC			VARCHAR2		IN     DEFAULT
+FUNCTION CURRENT_USER_IN_GROUP RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_GROUP_NAME			VARCHAR2		IN
+FUNCTION CURRENT_USER_IN_GROUP RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_GROUP_ID			NUMBER			IN
+PROCEDURE CUSTOM_CALENDAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_DATE_TYPE_FIELD		VARCHAR2		IN     DEFAULT
+PROCEDURE DAILY_CALENDAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_DATE_TYPE_FIELD		VARCHAR2		IN     DEFAULT
+PROCEDURE DECREMENT_CALENDAR
+PROCEDURE DELETE_USER_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_GROUP_ID			NUMBER			IN
+PROCEDURE DELETE_USER_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_GROUP_NAME			VARCHAR2		IN
+PROCEDURE DOWNLOAD_PRINT_DOCUMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_FILE_NAME			VARCHAR2		IN
+ P_CONTENT_DISPOSITION		VARCHAR2		IN     DEFAULT
+ P_REPORT_DATA			CLOB			IN
+ P_REPORT_LAYOUT		CLOB			IN
+ P_REPORT_LAYOUT_TYPE		VARCHAR2		IN     DEFAULT
+ P_DOCUMENT_FORMAT		VARCHAR2		IN     DEFAULT
+ P_PRINT_SERVER 		VARCHAR2		IN     DEFAULT
+PROCEDURE DOWNLOAD_PRINT_DOCUMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_FILE_NAME			VARCHAR2		IN
+ P_CONTENT_DISPOSITION		VARCHAR2		IN     DEFAULT
+ P_REPORT_DATA			BLOB			IN
+ P_REPORT_LAYOUT		CLOB			IN
+ P_REPORT_LAYOUT_TYPE		VARCHAR2		IN     DEFAULT
+ P_DOCUMENT_FORMAT		VARCHAR2		IN     DEFAULT
+ P_PRINT_SERVER 		VARCHAR2		IN     DEFAULT
+PROCEDURE DOWNLOAD_PRINT_DOCUMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_FILE_NAME			VARCHAR2		IN
+ P_CONTENT_DISPOSITION		VARCHAR2		IN     DEFAULT
+ P_APPLICATION_ID		NUMBER			IN
+ P_REPORT_QUERY_NAME		VARCHAR2		IN
+ P_REPORT_LAYOUT_NAME		VARCHAR2		IN     DEFAULT
+ P_REPORT_LAYOUT_TYPE		VARCHAR2		IN     DEFAULT
+ P_DOCUMENT_FORMAT		VARCHAR2		IN     DEFAULT
+ P_PRINT_SERVER 		VARCHAR2		IN     DEFAULT
+PROCEDURE DOWNLOAD_PRINT_DOCUMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_FILE_NAME			VARCHAR2		IN
+ P_CONTENT_DISPOSITION		VARCHAR2		IN     DEFAULT
+ P_APPLICATION_ID		NUMBER			IN
+ P_REPORT_QUERY_NAME		VARCHAR2		IN
+ P_REPORT_LAYOUT		CLOB			IN
+ P_REPORT_LAYOUT_TYPE		VARCHAR2		IN     DEFAULT
+ P_DOCUMENT_FORMAT		VARCHAR2		IN     DEFAULT
+ P_PRINT_SERVER 		VARCHAR2		IN     DEFAULT
+PROCEDURE EDIT_USER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_ID			NUMBER			IN
+ P_USER_NAME			VARCHAR2		IN
+ P_FIRST_NAME			VARCHAR2		IN     DEFAULT
+ P_LAST_NAME			VARCHAR2		IN     DEFAULT
+ P_WEB_PASSWORD 		VARCHAR2		IN     DEFAULT
+ P_NEW_PASSWORD 		VARCHAR2		IN     DEFAULT
+ P_EMAIL_ADDRESS		VARCHAR2		IN     DEFAULT
+ P_START_DATE			VARCHAR2		IN     DEFAULT
+ P_END_DATE			VARCHAR2		IN     DEFAULT
+ P_EMPLOYEE_ID			VARCHAR2		IN     DEFAULT
+ P_ALLOW_ACCESS_TO_SCHEMAS	VARCHAR2		IN     DEFAULT
+ P_PERSON_TYPE			VARCHAR2		IN     DEFAULT
+ P_DEFAULT_SCHEMA		VARCHAR2		IN     DEFAULT
+ P_DEFAULT_DATE_FORMAT		VARCHAR2		IN     DEFAULT
+ P_GROUP_IDS			VARCHAR2		IN     DEFAULT
+ P_DEVELOPER_ROLES		VARCHAR2		IN     DEFAULT
+ P_DESCRIPTION			VARCHAR2		IN     DEFAULT
+ P_ACCOUNT_EXPIRY		DATE			IN     DEFAULT
+ P_ACCOUNT_LOCKED		VARCHAR2		IN     DEFAULT
+ P_FAILED_ACCESS_ATTEMPTS	NUMBER			IN     DEFAULT
+ P_CHANGE_PASSWORD_ON_FIRST_USE VARCHAR2		IN     DEFAULT
+ P_FIRST_PASSWORD_USE_OCCURRED	VARCHAR2		IN     DEFAULT
+FUNCTION END_USER_ACCOUNT_DAYS_LEFT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_NAME			VARCHAR2		IN
+PROCEDURE EXPIRE_END_USER_ACCOUNT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_NAME			VARCHAR2		IN
+PROCEDURE EXPIRE_WORKSPACE_ACCOUNT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_NAME			VARCHAR2		IN
+PROCEDURE EXPORT_APPLICATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_WORKSPACE_ID 		NUMBER			IN
+ P_APPLICATION_ID		NUMBER			IN
+PROCEDURE EXPORT_APPLICATION_COMPONENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_WORKSPACE_ID 		NUMBER			IN
+ P_APPLICATION_ID		NUMBER			IN
+ P_COMPONENT_ID 		NUMBER			IN
+ P_COMPONENT_TYPE		VARCHAR2		IN
+PROCEDURE EXPORT_APPLICATION_PAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_WORKSPACE_ID 		NUMBER			IN
+ P_APPLICATION_ID		NUMBER			IN
+ P_PAGE_ID			NUMBER			IN
+PROCEDURE EXPORT_USERS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_EXPORT_FORMAT		VARCHAR2		IN     DEFAULT
+FUNCTION FEEDBACK_ENABLED RETURNS BOOLEAN
+FUNCTION FETCH_APP_ITEM RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ITEM 			VARCHAR2		IN
+ P_APP				NUMBER			IN     DEFAULT
+ P_SESSION			NUMBER			IN     DEFAULT
+PROCEDURE FETCH_USER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_ID			NUMBER			IN
+ P_WORKSPACE			VARCHAR2		OUT
+ P_USER_NAME			VARCHAR2		OUT
+ P_FIRST_NAME			VARCHAR2		OUT
+ P_LAST_NAME			VARCHAR2		OUT
+ P_WEB_PASSWORD 		VARCHAR2		OUT
+ P_EMAIL_ADDRESS		VARCHAR2		OUT
+ P_START_DATE			VARCHAR2		OUT
+ P_END_DATE			VARCHAR2		OUT
+ P_EMPLOYEE_ID			VARCHAR2		OUT
+ P_ALLOW_ACCESS_TO_SCHEMAS	VARCHAR2		OUT
+ P_PERSON_TYPE			VARCHAR2		OUT
+ P_DEFAULT_SCHEMA		VARCHAR2		OUT
+ P_GROUPS			VARCHAR2		OUT
+ P_DEVELOPER_ROLE		VARCHAR2		OUT
+ P_DESCRIPTION			VARCHAR2		OUT
+PROCEDURE FETCH_USER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_ID			NUMBER			IN
+ P_USER_NAME			VARCHAR2		OUT
+ P_FIRST_NAME			VARCHAR2		OUT
+ P_LAST_NAME			VARCHAR2		OUT
+ P_EMAIL_ADDRESS		VARCHAR2		OUT
+ P_GROUPS			VARCHAR2		OUT
+ P_DEVELOPER_ROLE		VARCHAR2		OUT
+ P_DESCRIPTION			VARCHAR2		OUT
+PROCEDURE FETCH_USER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_ID			NUMBER			IN
+ P_WORKSPACE			VARCHAR2		OUT
+ P_USER_NAME			VARCHAR2		OUT
+ P_FIRST_NAME			VARCHAR2		OUT
+ P_LAST_NAME			VARCHAR2		OUT
+ P_WEB_PASSWORD 		VARCHAR2		OUT
+ P_EMAIL_ADDRESS		VARCHAR2		OUT
+ P_START_DATE			VARCHAR2		OUT
+ P_END_DATE			VARCHAR2		OUT
+ P_EMPLOYEE_ID			VARCHAR2		OUT
+ P_ALLOW_ACCESS_TO_SCHEMAS	VARCHAR2		OUT
+ P_PERSON_TYPE			VARCHAR2		OUT
+ P_DEFAULT_SCHEMA		VARCHAR2		OUT
+ P_GROUPS			VARCHAR2		OUT
+ P_DEVELOPER_ROLE		VARCHAR2		OUT
+ P_DESCRIPTION			VARCHAR2		OUT
+ P_ACCOUNT_EXPIRY		DATE			OUT
+ P_ACCOUNT_LOCKED		VARCHAR2		OUT
+ P_FAILED_ACCESS_ATTEMPTS	NUMBER			OUT
+ P_CHANGE_PASSWORD_ON_FIRST_USE VARCHAR2		OUT
+ P_FIRST_PASSWORD_USE_OCCURRED	VARCHAR2		OUT
+FUNCTION FILESIZE_MASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_NUMBER			NUMBER			IN     DEFAULT
+FUNCTION FIND_SECURITY_GROUP_ID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_WORKSPACE			VARCHAR2		IN     DEFAULT
+FUNCTION FIND_WORKSPACE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_SECURITY_GROUP_ID		VARCHAR2		IN     DEFAULT
+PROCEDURE FLASH2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				VARCHAR2		IN
+ PRELOADERLOADINGTEXT		VARCHAR2		IN     DEFAULT
+ SWFFILE			VARCHAR2		IN     DEFAULT
+ PRELOADERINITTEXT		VARCHAR2		IN     DEFAULT
+ XMLCALLDATE			VARCHAR2		IN     DEFAULT
+FUNCTION GET_ACCOUNT_LOCKED_STATUS RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_NAME			VARCHAR2		IN
+FUNCTION GET_APEX_CHAR_ID RETURNS VARCHAR2
+FUNCTION GET_APEX_ID RETURNS NUMBER
+FUNCTION GET_APPLICATION_ID_STATUS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_WORKSPACE_ID 		NUMBER			IN
+ P_APPLICATION_ID		NUMBER			IN
+FUNCTION GET_APPLICATION_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_WORKSPACE_ID 		NUMBER			IN
+ P_APPLICATION_ID		NUMBER			IN
+FUNCTION GET_ATTRIBUTE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERNAME			VARCHAR2		IN
+ P_ATTRIBUTE_NUMBER		NUMBER			IN
+FUNCTION GET_AUTHENTICATION_RESULT RETURNS NUMBER
+PROCEDURE GET_BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ S				NUMBER			IN
+ A				NUMBER			IN
+ C				NUMBER			IN
+ P				NUMBER			IN
+ K1				VARCHAR2		IN
+ CK				VARCHAR2		IN
+ RT				VARCHAR2		IN     DEFAULT
+ K2				VARCHAR2		IN     DEFAULT
+ LM				VARCHAR2		IN     DEFAULT
+PROCEDURE GET_BLOB_FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ S				NUMBER			IN
+ A				NUMBER			IN
+ P				NUMBER			IN
+ D				NUMBER			IN
+ I				NUMBER			IN
+ P_PK1				VARCHAR2		IN
+ P_CK				VARCHAR2		IN
+ P_PK2				VARCHAR2		IN     DEFAULT
+ P_MIMETYPE			VARCHAR2		IN     DEFAULT
+ P_CONTENT_DISPOSITION		VARCHAR2		IN     DEFAULT
+ P_SHOW_LAST_MOD		VARCHAR2		IN     DEFAULT
+FUNCTION GET_BLOB_FILE_SRC RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ITEM_NAME			VARCHAR2		IN     DEFAULT
+ P_V1				VARCHAR2		IN     DEFAULT
+ P_V2				VARCHAR2		IN     DEFAULT
+ P_CONTENT_DISPOSITION		VARCHAR2		IN     DEFAULT
+FUNCTION GET_BUILD_OPTION_STATUS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APPLICATION_ID		NUMBER			IN
+ P_ID				NUMBER			IN
+FUNCTION GET_BUILD_OPTION_STATUS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APPLICATION_ID		NUMBER			IN
+ P_BUILD_OPTION_NAME		VARCHAR2		IN
+FUNCTION GET_CURRENT_USER_ID RETURNS NUMBER
+FUNCTION GET_DEFAULT_SCHEMA RETURNS VARCHAR2
+FUNCTION GET_EDITION RETURNS VARCHAR2
+FUNCTION GET_EMAIL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERNAME			VARCHAR2		IN
+FUNCTION GET_FEEDBACK_FOLLOW_UP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_FEEDBACK_ID			NUMBER			IN
+ P_ROW				NUMBER			IN     DEFAULT
+ P_TEMPLATE			VARCHAR2		IN     DEFAULT
+PROCEDURE GET_FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_FILE_ID			VARCHAR2		IN
+ P_MIME_TYPE			VARCHAR2		IN     DEFAULT
+ P_INLINE			VARCHAR2		IN     DEFAULT
+FUNCTION GET_FILE_ID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_NAME 			VARCHAR2		IN
+FUNCTION GET_FIRST_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERNAME			VARCHAR2		IN
+FUNCTION GET_GROUPS_USER_BELONGS_TO RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERNAME			VARCHAR2		IN
+FUNCTION GET_GROUP_ID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_GROUP_NAME			VARCHAR2		IN
+FUNCTION GET_GROUP_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_GROUP_ID			VARCHAR2		IN
+FUNCTION GET_GROUP_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_GROUP_ID			NUMBER			IN
+FUNCTION GET_HASH RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_VALUES			WWV_FLOW_T_VARCHAR2	IN
+ P_SALTED			BOOLEAN 		IN     DEFAULT
+FUNCTION GET_HIGH_CONTRAST_MODE_TOGGLE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ON_MESSAGE			VARCHAR2		IN     DEFAULT
+ P_OFF_MESSAGE			VARCHAR2		IN     DEFAULT
+FUNCTION GET_LANGUAGE_SELECTOR_LIST RETURNS VARCHAR2
+FUNCTION GET_LANGUAGE_SELECTOR_UL RETURNS VARCHAR2
+FUNCTION GET_LANGUAGE_SELECTOR_UL2 RETURNS VARCHAR2
+FUNCTION GET_LAST_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERNAME			VARCHAR2		IN
+FUNCTION GET_NUMERIC_SESSION_STATE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ITEM 			VARCHAR2		IN
+FUNCTION GET_PREFERENCE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_PREFERENCE			VARCHAR2		IN     DEFAULT
+ P_USER 			VARCHAR2		IN     DEFAULT
+FUNCTION GET_PRINT_DOCUMENT RETURNS BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_REPORT_DATA			CLOB			IN
+ P_REPORT_LAYOUT		CLOB			IN
+ P_REPORT_LAYOUT_TYPE		VARCHAR2		IN     DEFAULT
+ P_DOCUMENT_FORMAT		VARCHAR2		IN     DEFAULT
+ P_PRINT_SERVER 		VARCHAR2		IN     DEFAULT
+FUNCTION GET_PRINT_DOCUMENT RETURNS BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_REPORT_DATA			BLOB			IN
+ P_REPORT_LAYOUT		CLOB			IN
+ P_REPORT_LAYOUT_TYPE		VARCHAR2		IN     DEFAULT
+ P_DOCUMENT_FORMAT		VARCHAR2		IN     DEFAULT
+ P_PRINT_SERVER 		VARCHAR2		IN     DEFAULT
+FUNCTION GET_PRINT_DOCUMENT RETURNS BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APPLICATION_ID		NUMBER			IN
+ P_REPORT_QUERY_NAME		VARCHAR2		IN
+ P_REPORT_LAYOUT_NAME		VARCHAR2		IN     DEFAULT
+ P_REPORT_LAYOUT_TYPE		VARCHAR2		IN     DEFAULT
+ P_DOCUMENT_FORMAT		VARCHAR2		IN     DEFAULT
+ P_PRINT_SERVER 		VARCHAR2		IN     DEFAULT
+FUNCTION GET_PRINT_DOCUMENT RETURNS BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APPLICATION_ID		NUMBER			IN
+ P_REPORT_QUERY_NAME		VARCHAR2		IN
+ P_REPORT_LAYOUT		CLOB			IN
+ P_REPORT_LAYOUT_TYPE		VARCHAR2		IN     DEFAULT
+ P_DOCUMENT_FORMAT		VARCHAR2		IN     DEFAULT
+ P_PRINT_SERVER 		VARCHAR2		IN     DEFAULT
+FUNCTION GET_SCREEN_READER_MODE_TOGGLE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ON_MESSAGE			VARCHAR2		IN     DEFAULT
+ P_OFF_MESSAGE			VARCHAR2		IN     DEFAULT
+FUNCTION GET_SESSION_LANG RETURNS VARCHAR2
+FUNCTION GET_SESSION_STATE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ITEM 			VARCHAR2		IN
+FUNCTION GET_SESSION_TERRITORY RETURNS VARCHAR2
+FUNCTION GET_SESSION_TIME_ZONE RETURNS VARCHAR2
+FUNCTION GET_SINCE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_DATE 			DATE			IN
+FUNCTION GET_SINCE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_VALUE			TIMESTAMP		IN
+FUNCTION GET_SINCE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_VALUE			TIMESTAMP WITH TIME ZONE IN
+FUNCTION GET_SINCE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_VALUE			TIMESTAMP WITH LOCAL TIME ZONE IN
+FUNCTION GET_SINCE_TSWLTZ RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_LTIMESTAMP			TIMESTAMP WITH LOCAL TIME ZONE IN
+FUNCTION GET_SINCE_TSWTZ RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_TIMESTAMP			TIMESTAMP WITH TIME ZONE IN
+FUNCTION GET_TIMEFRAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_DAYS 			NUMBER			IN     DEFAULT
+FUNCTION GET_USERNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERID			NUMBER			IN
+FUNCTION GET_USER_ID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERNAME			VARCHAR2		IN
+FUNCTION GET_USER_ROLES RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERNAME			VARCHAR2		IN
+FUNCTION GET_UUID RETURNS VARCHAR2
+FUNCTION HAS_RESTRICTED_CHARS RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_VALUE			VARCHAR2		IN
+ P_CHECK			VARCHAR2		IN
+FUNCTION HOST_URL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_OPTION			VARCHAR2		IN     DEFAULT
+FUNCTION HTML_PCT_GRAPH_MASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_NUMBER			NUMBER			IN     DEFAULT
+ P_SIZE 			NUMBER			IN     DEFAULT
+ P_BACKGROUND			VARCHAR2		IN     DEFAULT
+ P_BAR_BACKGROUND		VARCHAR2		IN     DEFAULT
+ P_FORMAT			VARCHAR2		IN     DEFAULT
+PROCEDURE INCREMENT_CALENDAR
+PROCEDURE IR_CLEAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_PAGE_ID			NUMBER			IN
+ P_REPORT_ALIAS 		VARCHAR2		IN     DEFAULT
+PROCEDURE IR_DELETE_REPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_REPORT_ID			NUMBER			IN
+PROCEDURE IR_DELETE_SUBSCRIPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_SUBSCRIPTION_ID		NUMBER			IN
+PROCEDURE IR_FILTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_PAGE_ID			NUMBER			IN
+ P_REPORT_COLUMN		VARCHAR2		IN
+ P_OPERATOR_ABBR		VARCHAR2		IN     DEFAULT
+ P_FILTER_VALUE 		VARCHAR2		IN
+ P_REPORT_ALIAS 		VARCHAR2		IN     DEFAULT
+PROCEDURE IR_RESET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_PAGE_ID			NUMBER			IN
+ P_REPORT_ALIAS 		VARCHAR2		IN     DEFAULT
+FUNCTION IS_HIGH_CONTRAST_SESSION RETURNS BOOLEAN
+FUNCTION IS_HIGH_CONTRAST_SESSION_YN RETURNS VARCHAR2
+FUNCTION IS_LOGIN_PASSWORD_VALID RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERNAME			VARCHAR2		IN     DEFAULT
+ P_PASSWORD			VARCHAR2		IN     DEFAULT
+FUNCTION IS_SCREEN_READER_SESSION RETURNS BOOLEAN
+FUNCTION IS_SCREEN_READER_SESSION_YN RETURNS VARCHAR2
+FUNCTION IS_USERNAME_UNIQUE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERNAME			VARCHAR2		IN
+PROCEDURE JSON_FROM_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ROWS 			NUMBER			IN     DEFAULT
+ P_COLS 			NUMBER			IN     DEFAULT
+ P_NAME01			VARCHAR2		IN     DEFAULT
+ P_NAME02			VARCHAR2		IN     DEFAULT
+ P_NAME03			VARCHAR2		IN     DEFAULT
+ P_NAME04			VARCHAR2		IN     DEFAULT
+ P_NAME05			VARCHAR2		IN     DEFAULT
+ P_NAME06			VARCHAR2		IN     DEFAULT
+ P_NAME07			VARCHAR2		IN     DEFAULT
+ P_NAME08			VARCHAR2		IN     DEFAULT
+ P_NAME09			VARCHAR2		IN     DEFAULT
+ P_NAME10			VARCHAR2		IN     DEFAULT
+ P_F01				TABLE OF VARCHAR2(32767) IN	DEFAULT
+ P_F02				TABLE OF VARCHAR2(32767) IN	DEFAULT
+ P_F03				TABLE OF VARCHAR2(32767) IN	DEFAULT
+ P_F04				TABLE OF VARCHAR2(32767) IN	DEFAULT
+ P_F05				TABLE OF VARCHAR2(32767) IN	DEFAULT
+ P_F06				TABLE OF VARCHAR2(32767) IN	DEFAULT
+ P_F07				TABLE OF VARCHAR2(32767) IN	DEFAULT
+ P_F08				TABLE OF VARCHAR2(32767) IN	DEFAULT
+ P_F09				TABLE OF VARCHAR2(32767) IN	DEFAULT
+ P_F10				TABLE OF VARCHAR2(32767) IN	DEFAULT
+ P_SUB				VARCHAR2		IN     DEFAULT
+PROCEDURE JSON_FROM_ITEMS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ITEMS			VARCHAR2		IN     DEFAULT
+ P_SEPARATOR			VARCHAR2		IN     DEFAULT
+ P_SUB				VARCHAR2		IN     DEFAULT
+PROCEDURE JSON_FROM_SQL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQLQ				VARCHAR2		IN     DEFAULT
+ P_SUB				VARCHAR2		IN     DEFAULT
+ P_OWNER			VARCHAR2		IN     DEFAULT
+PROCEDURE JSON_FROM_STRING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ITEMS			VARCHAR2		IN     DEFAULT
+ P_SEPARATOR			VARCHAR2		IN     DEFAULT
+ P_SUB				VARCHAR2		IN     DEFAULT
+FUNCTION KEYVAL_NUM RETURNS NUMBER
+FUNCTION KEYVAL_VC2 RETURNS VARCHAR2
+PROCEDURE LOCK_ACCOUNT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_NAME			VARCHAR2		IN
+FUNCTION MINIMUM_FREE_APPLICATION_ID RETURNS NUMBER
+PROCEDURE MONTH_CALENDAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_DATE_TYPE_FIELD		VARCHAR2		IN     DEFAULT
+FUNCTION PASSWORD_FIRST_USE_OCCURRED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_NAME			VARCHAR2		IN
+PROCEDURE PAUSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_SECONDS			NUMBER			IN
+FUNCTION PREPARE_URL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_URL				VARCHAR2		IN
+ P_URL_CHARSET			VARCHAR2		IN     DEFAULT
+ P_CHECKSUM_TYPE		VARCHAR2		IN     DEFAULT
+ P_TRIGGERING_ELEMENT		VARCHAR2		IN     DEFAULT
+ P_DIALOG			VARCHAR2		IN     DEFAULT
+FUNCTION PUBLIC_CHECK_AUTHORIZATION RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_SECURITY_SCHEME		VARCHAR2		IN
+PROCEDURE PURGE_REGIONS_BY_APP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APPLICATION			NUMBER			IN
+PROCEDURE PURGE_REGIONS_BY_NAME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APPLICATION			NUMBER			IN
+ P_PAGE 			NUMBER			IN
+ P_REGION_NAME			VARCHAR2		IN
+PROCEDURE PURGE_REGIONS_BY_PAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APPLICATION			NUMBER			IN
+ P_PAGE 			NUMBER			IN
+PROCEDURE REDIRECT_URL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_URL				VARCHAR2		IN
+ P_RESET_HTP_BUFFER		BOOLEAN 		IN     DEFAULT
+PROCEDURE REMOVE_PREFERENCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_PREFERENCE			VARCHAR2		IN     DEFAULT
+ P_USER 			VARCHAR2		IN     DEFAULT
+PROCEDURE REMOVE_SORT_PREFERENCES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER 			VARCHAR2		IN     DEFAULT
+PROCEDURE REMOVE_USER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_ID			NUMBER			IN
+PROCEDURE REMOVE_USER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_NAME			VARCHAR2		IN
+PROCEDURE RESET_AUTHORIZATIONS
+PROCEDURE RESET_PASSWORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_NAME			VARCHAR2		IN     DEFAULT
+ P_OLD_PASSWORD 		VARCHAR2		IN     DEFAULT
+ P_NEW_PASSWORD 		VARCHAR2		IN
+ P_CHANGE_PASSWORD_ON_FIRST_USE BOOLEAN 		IN     DEFAULT
+PROCEDURE RESET_PW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER 			VARCHAR2		IN
+ P_MSG				VARCHAR2		IN
+PROCEDURE RESET_SESSION_LANG
+PROCEDURE RESET_SESSION_TERRITORY
+PROCEDURE RESET_SESSION_TIME_ZONE
+FUNCTION SAVEKEY_NUM RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_VAL				NUMBER			IN
+FUNCTION SAVEKEY_VC2 RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_VAL				VARCHAR2		IN
+PROCEDURE SET_ATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERID			NUMBER			IN
+ P_ATTRIBUTE_NUMBER		NUMBER			IN
+ P_ATTRIBUTE_VALUE		VARCHAR2		IN
+PROCEDURE SET_AUTHENTICATION_RESULT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_CODE 			NUMBER			IN
+FUNCTION SET_BLOB RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APPLICATION_ID		VARCHAR2		IN     DEFAULT
+ P_PAGE_ID			VARCHAR2		IN     DEFAULT
+ P_SESSION_ID			VARCHAR2		IN     DEFAULT
+ P_REQUEST			VARCHAR2		IN     DEFAULT
+ P_ITEM_ID			VARCHAR2		IN     DEFAULT
+ P_FILE_NAME			VARCHAR2		IN     DEFAULT
+ P_MIME_TYPE			VARCHAR2		IN     DEFAULT
+ P_BLOB_CONTENT 		BLOB			IN
+PROCEDURE SET_BUILD_OPTION_STATUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APPLICATION_ID		NUMBER			IN
+ P_ID				NUMBER			IN
+ P_BUILD_STATUS 		VARCHAR2		IN
+PROCEDURE SET_COMPATIBILITY_MODE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_APPLICATION_ID		NUMBER			IN
+ P_COMPATIBILITY_MODE		VARCHAR2		IN
+PROCEDURE SET_CURRENT_THEME_STYLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_THEME_NUMBER 		NUMBER			IN
+ P_THEME_STYLE_ID		NUMBER			IN
+PROCEDURE SET_CUSTOM_AUTH_STATUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_STATUS			VARCHAR2		IN
+PROCEDURE SET_EDITION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_EDITION			VARCHAR2		IN
+PROCEDURE SET_EMAIL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERID			NUMBER			IN
+ P_EMAIL			VARCHAR2		IN
+PROCEDURE SET_FIRST_NAME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERID			NUMBER			IN
+ P_FIRST_NAME			VARCHAR2		IN
+PROCEDURE SET_GROUP_GROUP_GRANTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_GROUP_NAME			VARCHAR2		IN
+ P_GRANTED_GROUP_NAMES		WWV_FLOW_T_VARCHAR2	IN
+PROCEDURE SET_GROUP_USER_GRANTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_NAME			VARCHAR2		IN
+ P_GRANTED_GROUP_NAMES		WWV_FLOW_T_VARCHAR2	IN
+PROCEDURE SET_LAST_NAME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERID			NUMBER			IN
+ P_LAST_NAME			VARCHAR2		IN
+PROCEDURE SET_PREFERENCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_PREFERENCE			VARCHAR2		IN     DEFAULT
+ P_VALUE			VARCHAR2		IN     DEFAULT
+ P_USER 			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_REPORT_COLUMN_FORMAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_COLUMN_FORMAT		TABLE OF VARCHAR2(32767) IN	DEFAULT
+PROCEDURE SET_SECURITY_GROUP_ID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_SECURITY_GROUP_ID		NUMBER			IN
+PROCEDURE SET_SESSION_HIGH_CONTRAST_OFF
+PROCEDURE SET_SESSION_HIGH_CONTRAST_ON
+PROCEDURE SET_SESSION_LANG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_LANG 			VARCHAR2		IN
+PROCEDURE SET_SESSION_LIFETIME_SECONDS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_SECONDS			NUMBER			IN
+ P_SCOPE			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_SESSION_MAX_IDLE_SECONDS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_SECONDS			NUMBER			IN
+ P_SCOPE			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_SESSION_SCREEN_READER_OFF
+PROCEDURE SET_SESSION_SCREEN_READER_ON
+PROCEDURE SET_SESSION_STATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_NAME 			VARCHAR2		IN     DEFAULT
+ P_VALUE			VARCHAR2		IN     DEFAULT
+ P_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE SET_SESSION_TERRITORY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_TERRITORY			VARCHAR2		IN
+PROCEDURE SET_SESSION_TIME_ZONE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_TIME_ZONE			VARCHAR2		IN
+PROCEDURE SET_USERNAME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERID			NUMBER			IN
+ P_USERNAME			VARCHAR2		IN
+PROCEDURE SHOW_HIGH_CONTRAST_MODE_TOGGLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ON_MESSAGE			VARCHAR2		IN     DEFAULT
+ P_OFF_MESSAGE			VARCHAR2		IN     DEFAULT
+PROCEDURE SHOW_SCREEN_READER_MODE_TOGGLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_ON_MESSAGE			VARCHAR2		IN     DEFAULT
+ P_OFF_MESSAGE			VARCHAR2		IN     DEFAULT
+FUNCTION STRING_TO_TABLE RETURNS TABLE OF VARCHAR2(32767)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_STRING			VARCHAR2		IN
+ P_SEPARATOR			VARCHAR2		IN     DEFAULT
+PROCEDURE STRONG_PASSWORD_CHECK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERNAME			VARCHAR2		IN
+ P_PASSWORD			VARCHAR2		IN
+ P_OLD_PASSWORD 		VARCHAR2		IN
+ P_WORKSPACE_NAME		VARCHAR2		IN
+ P_USE_STRONG_RULES		BOOLEAN 		IN
+ P_MIN_LENGTH_ERR		BOOLEAN 		OUT
+ P_NEW_DIFFERS_BY_ERR		BOOLEAN 		OUT
+ P_ONE_ALPHA_ERR		BOOLEAN 		OUT
+ P_ONE_NUMERIC_ERR		BOOLEAN 		OUT
+ P_ONE_PUNCTUATION_ERR		BOOLEAN 		OUT
+ P_ONE_UPPER_ERR		BOOLEAN 		OUT
+ P_ONE_LOWER_ERR		BOOLEAN 		OUT
+ P_NOT_LIKE_USERNAME_ERR	BOOLEAN 		OUT
+ P_NOT_LIKE_WORKSPACE_NAME_ERR	BOOLEAN 		OUT
+ P_NOT_LIKE_WORDS_ERR		BOOLEAN 		OUT
+ P_NOT_REUSABLE_ERR		BOOLEAN 		OUT
+FUNCTION STRONG_PASSWORD_VALIDATION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USERNAME			VARCHAR2		IN
+ P_PASSWORD			VARCHAR2		IN
+ P_OLD_PASSWORD 		VARCHAR2		IN     DEFAULT
+ P_WORKSPACE_NAME		VARCHAR2		IN
+ P_USE_STRONG_RULES		BOOLEAN 		IN     DEFAULT
+PROCEDURE SUBMIT_FEEDBACK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_COMMENT			VARCHAR2		IN     DEFAULT
+ P_TYPE 			NUMBER			IN     DEFAULT
+ P_APPLICATION_ID		VARCHAR2		IN     DEFAULT
+ P_PAGE_ID			VARCHAR2		IN     DEFAULT
+ P_EMAIL			VARCHAR2		IN     DEFAULT
+ P_SCREEN_WIDTH 		VARCHAR2		IN     DEFAULT
+ P_SCREEN_HEIGHT		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_01 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_02 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_03 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_04 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_05 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_06 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_07 		VARCHAR2		IN     DEFAULT
+ P_ATTRIBUTE_08 		VARCHAR2		IN     DEFAULT
+ P_LABEL_01			VARCHAR2		IN     DEFAULT
+ P_LABEL_02			VARCHAR2		IN     DEFAULT
+ P_LABEL_03			VARCHAR2		IN     DEFAULT
+ P_LABEL_04			VARCHAR2		IN     DEFAULT
+ P_LABEL_05			VARCHAR2		IN     DEFAULT
+ P_LABEL_06			VARCHAR2		IN     DEFAULT
+ P_LABEL_07			VARCHAR2		IN     DEFAULT
+ P_LABEL_08			VARCHAR2		IN     DEFAULT
+PROCEDURE SUBMIT_FEEDBACK_FOLLOWUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_FEEDBACK_ID			NUMBER			IN
+ P_FOLLOW_UP			VARCHAR2		IN     DEFAULT
+ P_EMAIL			VARCHAR2		IN     DEFAULT
+FUNCTION TABLE_TO_STRING RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_TABLE			TABLE OF VARCHAR2(32767) IN
+ P_STRING			VARCHAR2		IN     DEFAULT
+PROCEDURE TODAY_CALENDAR
+FUNCTION UNCOMPRESS_INT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_STR				VARCHAR2		IN
+PROCEDURE UNEXPIRE_END_USER_ACCOUNT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_NAME			VARCHAR2		IN
+PROCEDURE UNEXPIRE_WORKSPACE_ACCOUNT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_NAME			VARCHAR2		IN
+PROCEDURE UNLOCK_ACCOUNT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_NAME			VARCHAR2		IN
+FUNCTION URL_ENCODE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_URL				VARCHAR2		IN
+FUNCTION USER_IN_GROUP RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_GROUP_NAME			VARCHAR2		IN
+PROCEDURE WEEKLY_CALENDAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_DATE_TYPE_FIELD		VARCHAR2		IN     DEFAULT
+FUNCTION WORKSPACE_ACCOUNT_DAYS_LEFT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_USER_NAME			VARCHAR2		IN
+

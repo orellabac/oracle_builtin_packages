@@ -1,0 +1,433 @@
+PROCEDURE ADD_ATTR_SECTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ TAG				VARCHAR2		IN
+PROCEDURE ADD_AUTO_OPTIMIZE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+ OPTLEVEL			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_FIELD_SECTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ TAG				VARCHAR2		IN
+ VISIBLE			BOOLEAN 		IN     DEFAULT
+PROCEDURE ADD_INDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SET_NAME			VARCHAR2		IN
+ COLUMN_LIST			VARCHAR2		IN
+ STORAGE_CLAUSE 		VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_MDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ MDATA_VALUE			VARCHAR2		IN
+ MDATA_ROWID			ROWID			IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_MDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ MDATA_VALUES			ODCIVARCHAR2LIST	IN
+ MDATA_ROWIDS			ODCIRIDLIST		IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_MDATA_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+PROCEDURE ADD_MDATA_SECTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ TAG				VARCHAR2		IN
+ READ_ONLY			BOOLEAN 		IN     DEFAULT
+PROCEDURE ADD_MVDATA_SECTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ TAG				VARCHAR2		IN
+ DATATYPE			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_NDATA_SECTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ TAG				VARCHAR2		IN
+PROCEDURE ADD_SDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ SDATA_VALUE			VARCHAR2		IN
+ SDATA_ROWID			ROWID			IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_SDATA_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+PROCEDURE ADD_SDATA_SECTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ TAG				VARCHAR2		IN
+ DATATYPE			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_SEC_GRP_ATTR_VAL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+ ATTRIBUTE_VALUE		VARCHAR2		IN
+PROCEDURE ADD_SPECIAL_SECTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+PROCEDURE ADD_STOPCLASS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STOPLIST_NAME			VARCHAR2		IN
+ STOPCLASS			VARCHAR2		IN
+ STOPPATTERN			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_STOPTHEME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STOPLIST_NAME			VARCHAR2		IN
+ STOPTHEME			VARCHAR2		IN
+PROCEDURE ADD_STOPWORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STOPLIST_NAME			VARCHAR2		IN
+ STOPWORD			VARCHAR2		IN
+ LANGUAGE			VARCHAR2		IN     DEFAULT
+ LANGUAGE_DEPENDENT		BOOLEAN 		IN     DEFAULT
+PROCEDURE ADD_STOP_SECTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ TAG				VARCHAR2		IN
+PROCEDURE ADD_SUB_LEXER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LEXER_NAME			VARCHAR2		IN
+ LANGUAGE			VARCHAR2		IN
+ SUB_LEXER			VARCHAR2		IN
+ ALT_VALUE			VARCHAR2		IN     DEFAULT
+ LANGUAGE_DEPENDENT		BOOLEAN 		IN     DEFAULT
+PROCEDURE ADD_ZONE_SECTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ TAG				VARCHAR2		IN
+PROCEDURE ALTER_INDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ PARAMETERS			VARCHAR2		IN
+PROCEDURE COPY_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCE_POLICY			VARCHAR2		IN
+ POLICY_NAME			VARCHAR2		IN
+PROCEDURE CREATE_INDEX_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SET_NAME			VARCHAR2		IN
+PROCEDURE CREATE_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POLICY_NAME			VARCHAR2		IN
+ FILTER 			VARCHAR2		IN     DEFAULT
+ SECTION_GROUP			VARCHAR2		IN     DEFAULT
+ LEXER				VARCHAR2		IN     DEFAULT
+ STOPLIST			VARCHAR2		IN     DEFAULT
+ WORDLIST			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_PREFERENCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PREFERENCE_NAME		VARCHAR2		IN
+ OBJECT_NAME			VARCHAR2		IN
+PROCEDURE CREATE_SECTION_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ GROUP_TYPE			VARCHAR2		IN
+PROCEDURE CREATE_SHADOW_INDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ PARAMETER_STRING		VARCHAR2		IN     DEFAULT
+ PARALLEL_DEGREE		NUMBER			IN     DEFAULT
+PROCEDURE CREATE_STOPLIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STOPLIST_NAME			VARCHAR2		IN
+ STOPLIST_TYPE			VARCHAR2		IN     DEFAULT
+PROCEDURE DELETE_MVDATA_VALUES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN     DEFAULT
+ SECTION_NAME			VARCHAR2		IN     DEFAULT
+ MVDATA_VALUES			ODCINUMBERLIST		IN
+ MVDATA_ROWIDS			ODCIRIDLIST		IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_INDEX_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SET_NAME			VARCHAR2		IN
+PROCEDURE DROP_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POLICY_NAME			VARCHAR2		IN
+PROCEDURE DROP_PREFERENCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PREFERENCE_NAME		VARCHAR2		IN
+PROCEDURE DROP_SECTION_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+PROCEDURE DROP_SHADOW_INDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+PROCEDURE DROP_STOPLIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STOPLIST_NAME			VARCHAR2		IN
+PROCEDURE EXCHANGE_SHADOW_INDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ PARTITION_NAME 		VARCHAR2		IN     DEFAULT
+PROCEDURE INSERT_MVDATA_VALUES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN     DEFAULT
+ SECTION_NAME			VARCHAR2		IN     DEFAULT
+ MVDATA_VALUES			ODCINUMBERLIST		IN
+ MVDATA_ROWIDS			ODCIRIDLIST		IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE OPTIMIZE_INDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ OPTLEVEL			VARCHAR2		IN
+ MAXTIME			NUMBER			IN     DEFAULT
+ TOKEN				VARCHAR2		IN     DEFAULT
+ PART_NAME			VARCHAR2		IN     DEFAULT
+ TOKEN_TYPE			NUMBER			IN     DEFAULT
+ PARALLEL_DEGREE		NUMBER			IN     DEFAULT
+ MEMORY 			VARCHAR2		IN     DEFAULT
+ BACKGROUND			BOOLEAN 		IN     DEFAULT
+PROCEDURE POPULATE_PENDING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE RECREATE_INDEX_ONLINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ PARAMETER_STRING		VARCHAR2		IN     DEFAULT
+ PARALLEL_DEGREE		NUMBER			IN     DEFAULT
+ PARTITION_NAME 		VARCHAR2		IN     DEFAULT
+PROCEDURE REMOVE_AUTO_OPTIMIZE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE REMOVE_INDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SET_NAME			VARCHAR2		IN
+ COLUMN_LIST			VARCHAR2		IN
+PROCEDURE REMOVE_MDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ MDATA_VALUE			VARCHAR2		IN
+ MDATA_ROWID			ROWID			IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE REMOVE_MDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ MDATA_VALUES			ODCIVARCHAR2LIST	IN
+ MDATA_ROWIDS			ODCIRIDLIST		IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE REMOVE_SDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ SDATA_VALUE			VARCHAR2		IN
+ SDATA_ROWID			ROWID			IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE REMOVE_SECTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+PROCEDURE REMOVE_SECTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ SECTION_ID			NUMBER			IN
+PROCEDURE REMOVE_STOPCLASS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STOPLIST_NAME			VARCHAR2		IN
+ STOPCLASS			VARCHAR2		IN
+PROCEDURE REMOVE_STOPTHEME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STOPLIST_NAME			VARCHAR2		IN
+ STOPTHEME			VARCHAR2		IN
+PROCEDURE REMOVE_STOPWORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STOPLIST_NAME			VARCHAR2		IN
+ STOPWORD			VARCHAR2		IN
+ LANGUAGE			VARCHAR2		IN     DEFAULT
+PROCEDURE REMOVE_SUB_LEXER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LEXER_NAME			VARCHAR2		IN
+ LANGUAGE			VARCHAR2		IN
+PROCEDURE REM_SEC_GRP_ATTR_VAL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+ ATTRIBUTE_VALUE		VARCHAR2		IN
+PROCEDURE REPLACE_INDEX_METADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ PARAMETER_STRING		VARCHAR2		IN
+PROCEDURE REPOPULATE_DOLLARN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_ATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PREFERENCE_NAME		VARCHAR2		IN
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+ ATTRIBUTE_VALUE		VARCHAR2		IN
+PROCEDURE SET_SECTION_ATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+ ATTRIBUTE_VALUE		VARCHAR2		IN
+PROCEDURE SET_SEC_GRP_ATTR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+ ATTRIBUTE_VALUE		VARCHAR2		IN
+PROCEDURE SPLIT_DOLLARI
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ PART_NAME			VARCHAR2		IN
+ MAPPING_TAB			VARCHAR2		IN
+ NAME_PREFIX			VARCHAR2		IN
+ TSPACE 			VARCHAR2		IN     DEFAULT
+PROCEDURE SPLIT_ZONE_TOKENS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+ SOURCE_SECTION 		VARCHAR2		IN
+ SPLIT_MAP			TABLE OF RECORD 	IN
+PROCEDURE SYNC_INDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN     DEFAULT
+ MEMORY 			VARCHAR2		IN     DEFAULT
+ PART_NAME			VARCHAR2		IN     DEFAULT
+ PARALLEL_DEGREE		NUMBER			IN     DEFAULT
+ MAXTIME			NUMBER			IN     DEFAULT
+ LOCKING			NUMBER			IN     DEFAULT
+ DIRECT_PATH			BOOLEAN 		IN     DEFAULT
+PROCEDURE UNSET_ATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PREFERENCE_NAME		VARCHAR2		IN
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+PROCEDURE UNSET_SECTION_ATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+PROCEDURE UNSET_SEC_GRP_ATTR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GROUP_NAME			VARCHAR2		IN
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+PROCEDURE UPDATE_MVDATA_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN     DEFAULT
+ SECTION_NAME			VARCHAR2		IN     DEFAULT
+ MVDATA_VALUES			ODCINUMBERLIST		IN
+ MVDATA_ROWIDS			ODCIRIDLIST		IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE UPDATE_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POLICY_NAME			VARCHAR2		IN
+ FILTER 			VARCHAR2		IN     DEFAULT
+ SECTION_GROUP			VARCHAR2		IN     DEFAULT
+ LEXER				VARCHAR2		IN     DEFAULT
+ STOPLIST			VARCHAR2		IN     DEFAULT
+ WORDLIST			VARCHAR2		IN     DEFAULT
+PROCEDURE UPDATE_SDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ SECTION_NAME			VARCHAR2		IN
+ SDATA_VALUE			ANYDATA 		IN
+ SDATA_ROWID			ROWID			IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE UPDATE_SUB_LEXER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LEXER_NAME			VARCHAR2		IN
+ LANGUAGE			VARCHAR2		IN
+ SUB_LEXER			VARCHAR2		IN
+PROCEDURE ZONE_TO_FIELD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IDX_NAME			VARCHAR2		IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+ LEX_PREF			VARCHAR2		IN
+ STORAGE_PREF			VARCHAR2		IN
+ ATTR_VAL_TAB			VARCHAR2		IN
+ ZONE_SEC_LIST			TABLE OF RECORD 	IN
+ FLD_SEC_LIST			TABLE OF RECORD 	IN
+ MEMORY 			VARCHAR2		IN     DEFAULT
+

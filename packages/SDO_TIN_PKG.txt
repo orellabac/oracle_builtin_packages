@@ -1,0 +1,88 @@
+FUNCTION CLIP_TIN RETURNS SDO_TIN_BLK_TYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INP				SDO_TIN 		IN
+ QRY				SDO_GEOMETRY		IN
+ QRY_MIN_RES			NUMBER			IN
+ QRY_MAX_RES			NUMBER			IN
+ BLKNO				NUMBER			IN     DEFAULT
+FUNCTION CLIP_TIN_INTO_PC RETURNS SDO_PC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TIN_INP			SDO_TIN 		IN
+ TIN_QRY			SDO_GEOMETRY		IN
+ TIN_QRY_MIN_RES		NUMBER			IN
+ TIN_QRY_MAX_RES		NUMBER			IN
+ PC_BASETABLE			VARCHAR2		IN
+ PC_BASECOL			VARCHAR2		IN
+ PC_BLKTABLE			VARCHAR2		IN
+ PC_PTN_PARAMS			VARCHAR2		IN     DEFAULT
+ TIN_BLKNO			NUMBER			IN     DEFAULT
+PROCEDURE CREATE_TIN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INP				SDO_TIN 		IN
+ INPTABLE			VARCHAR2		IN
+ CLSTPCDATATBL			VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_DEPENDENCIES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BASETABLE			VARCHAR2		IN
+ COL				VARCHAR2		IN
+FUNCTION GET_SURFACE_OF_TIN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TIN				SDO_TIN 		IN
+ GEOM2D 			SDO_GEOMETRY		IN
+FUNCTION GET_SURFACE_OF_TIN_FOOTPRINT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TIN				SDO_TIN 		IN
+ GEOM2D 			SDO_GEOMETRY		IN
+FUNCTION GET_VOLUME_UNDER_TIN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TIN				SDO_TIN 		IN
+ GEOM2D 			SDO_GEOMETRY		IN
+ BASE_HEIGHT			NUMBER			IN
+FUNCTION INIT RETURNS SDO_TIN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BASETABLE			VARCHAR2		IN
+ BASECOL			VARCHAR2		IN
+ BLKTABLE			VARCHAR2		IN
+ PTN_PARAMS			VARCHAR2		IN     DEFAULT
+ TIN_EXTENT			SDO_GEOMETRY		IN     DEFAULT
+ TIN_TOL			NUMBER			IN     DEFAULT
+ TIN_TOT_DIMENSIONS		NUMBER			IN     DEFAULT
+ TIN_DOMAIN			SDO_ORGSCL_TYPE 	IN     DEFAULT
+ TIN_BREAK_LINES		SDO_GEOMETRY		IN     DEFAULT
+ TIN_STOP_LINES 		SDO_GEOMETRY		IN     DEFAULT
+ TIN_VOID_RGNS			SDO_GEOMETRY		IN     DEFAULT
+ TIN_VAL_ATTR_TABLES		SDO_STRING_ARRAY	IN     DEFAULT
+ TIN_OTHER_ATTRS		XMLTYPE 		IN     DEFAULT
+FUNCTION PROJECT_ORDINATES_ONTO_TIN RETURNS SDO_ORDINATE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ORDINATES2D			SDO_ORDINATE_ARRAY	IN
+ TIN				SDO_TIN 		IN
+PROCEDURE TO_DEM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TIN				SDO_TIN 		IN
+ DEM				SDO_GEORASTER		IN/OUT
+ BLOCKSIZE			NUMBER			IN
+ CRS_UNITS_PER_PIXEL		NUMBER			IN
+FUNCTION TO_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PTS				BLOB			IN
+ TRS				BLOB			IN
+ NUM_PTS			NUMBER			IN
+ NUM_TRS			NUMBER			IN
+ TIN_IND_DIM			NUMBER			IN
+ TIN_TOT_DIM			NUMBER			IN
+ SRID				NUMBER			IN     DEFAULT
+ BLK_DOMAIN			SDO_ORGSCL_TYPE 	IN     DEFAULT
+ GET_IDS			NUMBER			IN     DEFAULT
+

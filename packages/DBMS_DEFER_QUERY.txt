@@ -1,0 +1,184 @@
+FUNCTION GET_ANYDATA_ARG RETURNS ANYDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_ARG_CSETID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN
+FUNCTION GET_ARG_FORM RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN
+FUNCTION GET_ARG_TYPE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN
+FUNCTION GET_BLOB_ARG RETURNS BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+PROCEDURE GET_CALL_ARGS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ STARTARG			NUMBER			IN     DEFAULT
+ ARGCNT 			NUMBER			IN
+ ARGSIZE			NUMBER			IN
+ TRAN_DB			VARCHAR2		IN
+ TRAN_ID			VARCHAR2		IN
+ DATE_FMT			VARCHAR2		IN
+ TYPES				TABLE OF NUMBER 	OUT
+ VALS				TABLE OF VARCHAR2(2000) OUT
+PROCEDURE GET_CALL_ARGS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ STARTARG			NUMBER			IN     DEFAULT
+ ARGCNT 			NUMBER			IN
+ ARGSIZE			NUMBER			IN
+ TRAN_ID			VARCHAR2		IN
+ DATE_FMT			VARCHAR2		IN
+ TIME_FMT			VARCHAR2		IN
+ TTZ_FMT			VARCHAR2		IN
+ TIMESTAMP_FMT			VARCHAR2		IN
+ TSTZ_FMT			VARCHAR2		IN
+ TYPES				TABLE OF NUMBER 	OUT
+ FORMS				TABLE OF NUMBER 	OUT
+ VALS				TABLE OF VARCHAR2(2000) OUT
+PROCEDURE GET_CALL_ARGS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ STARTARG			NUMBER			IN     DEFAULT
+ ARGCNT 			NUMBER			IN
+ ARGSIZE			NUMBER			IN
+ TRAN_ID			VARCHAR2		IN
+ DATE_FMT			VARCHAR2		IN
+ TIME_FMT			VARCHAR2		IN
+ TTZ_FMT			VARCHAR2		IN
+ TIMESTAMP_FMT			VARCHAR2		IN
+ TSTZ_FMT			VARCHAR2		IN
+ TSLTZ_FMT			VARCHAR2		IN
+ TYPES				TABLE OF NUMBER 	OUT
+ FORMS				TABLE OF NUMBER 	OUT
+ VALS				TABLE OF VARCHAR2(2000) OUT
+FUNCTION GET_CHAR_ARG RETURNS CHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_CLOB_ARG RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_DATE_ARG RETURNS DATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_IDS_ARG RETURNS INTERVAL DAY TO SECOND
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_IYM_ARG RETURNS INTERVAL YEAR TO MONTH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_NCHAR_ARG RETURNS NCHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_NCLOB_ARG RETURNS NCLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_NUMBER_ARG RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_NVARCHAR2_ARG RETURNS NVARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_OBJECT_NULL_VECTOR_ARG RETURNS REPCAT$_OBJECT_NULL_VECTOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_RAW_ARG RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_ROWID_ARG RETURNS ROWID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_TIMESTAMP_ARG RETURNS TIMESTAMP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_TIME_ARG RETURNS TIME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_TSLTZ_ARG RETURNS TIMESTAMP WITH LOCAL TIME ZONE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_TSTZ_ARG RETURNS TIMESTAMP WITH TIME ZONE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_TTZ_ARG RETURNS TIME WITH TIME ZONE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+FUNCTION GET_VARCHAR2_ARG RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALLNO 			NUMBER			IN
+ ARG_NO 			NUMBER			IN
+ DEFERRED_TRAN_ID		VARCHAR2		IN     DEFAULT
+

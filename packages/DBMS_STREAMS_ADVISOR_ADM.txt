@@ -1,0 +1,7 @@
+PROCEDURE ANALYZE_CURRENT_PERFORMANCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COMPONENT_NAME 		VARCHAR2		IN     DEFAULT
+ COMPONENT_DB			VARCHAR2		IN     DEFAULT
+ COMPONENT_TYPE 		NUMBER			IN     DEFAULT
+

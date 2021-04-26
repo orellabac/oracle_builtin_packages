@@ -1,0 +1,23 @@
+PROCEDURE GRANT_ADMIN_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GRANTEE			VARCHAR2		IN
+ GRANT_PRIVILEGES		BOOLEAN 		IN     DEFAULT
+ FILE_NAME			VARCHAR2		IN     DEFAULT
+ DIRECTORY_NAME 		VARCHAR2		IN     DEFAULT
+PROCEDURE GRANT_REMOTE_ADMIN_ACCESS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GRANTEE			VARCHAR2		IN
+PROCEDURE REVOKE_ADMIN_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GRANTEE			VARCHAR2		IN
+ REVOKE_PRIVILEGES		BOOLEAN 		IN     DEFAULT
+ FILE_NAME			VARCHAR2		IN     DEFAULT
+ DIRECTORY_NAME 		VARCHAR2		IN     DEFAULT
+PROCEDURE REVOKE_REMOTE_ADMIN_ACCESS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GRANTEE			VARCHAR2		IN
+

@@ -1,0 +1,30 @@
+PROCEDURE ADD_LOGFILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOGFILENAME			VARCHAR2		IN
+ OPTIONS			BINARY_INTEGER		IN     DEFAULT
+FUNCTION COLUMN_PRESENT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_REDO_UNDO			NUMBER			IN     DEFAULT
+ COLUMN_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE END_LOGMNR
+FUNCTION MINE_VALUE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_REDO_UNDO			NUMBER			IN     DEFAULT
+ COLUMN_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE REMOVE_LOGFILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOGFILENAME			VARCHAR2		IN
+PROCEDURE START_LOGMNR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STARTSCN			NUMBER			IN     DEFAULT
+ ENDSCN 			NUMBER			IN     DEFAULT
+ STARTTIME			DATE			IN     DEFAULT
+ ENDTIME			DATE			IN     DEFAULT
+ DICTFILENAME			VARCHAR2		IN     DEFAULT
+ OPTIONS			BINARY_INTEGER		IN     DEFAULT
+

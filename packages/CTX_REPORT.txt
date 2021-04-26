@@ -1,0 +1,125 @@
+PROCEDURE CREATE_INDEX_SCRIPT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ REPORT 			CLOB			IN/OUT
+ PREFNAME_PREFIX		VARCHAR2		IN     DEFAULT
+FUNCTION CREATE_INDEX_SCRIPT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ PREFNAME_PREFIX		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_POLICY_SCRIPT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POLICY_NAME			VARCHAR2		IN
+ REPORT 			CLOB			IN/OUT
+ PREFNAME_PREFIX		VARCHAR2		IN     DEFAULT
+FUNCTION CREATE_POLICY_SCRIPT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POLICY_NAME			VARCHAR2		IN
+ PREFNAME_PREFIX		VARCHAR2		IN     DEFAULT
+PROCEDURE DESCRIBE_INDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ REPORT 			CLOB			IN/OUT
+ REPORT_FORMAT			VARCHAR2		IN     DEFAULT
+FUNCTION DESCRIBE_INDEX RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ REPORT_FORMAT			VARCHAR2		IN     DEFAULT
+PROCEDURE DESCRIBE_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POLICY_NAME			VARCHAR2		IN
+ REPORT 			CLOB			IN/OUT
+ REPORT_FORMAT			VARCHAR2		IN     DEFAULT
+FUNCTION DESCRIBE_POLICY RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POLICY_NAME			VARCHAR2		IN
+ REPORT_FORMAT			VARCHAR2		IN     DEFAULT
+PROCEDURE INDEX_SIZE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ REPORT 			CLOB			IN/OUT
+ PART_NAME			VARCHAR2		IN     DEFAULT
+ REPORT_FORMAT			VARCHAR2		IN     DEFAULT
+FUNCTION INDEX_SIZE RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+ REPORT_FORMAT			VARCHAR2		IN     DEFAULT
+PROCEDURE INDEX_STATS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ REPORT 			CLOB			IN/OUT
+ PART_NAME			VARCHAR2		IN     DEFAULT
+ FRAG_STATS			BOOLEAN 		IN     DEFAULT
+ LIST_SIZE			NUMBER			IN     DEFAULT
+ REPORT_FORMAT			VARCHAR2		IN     DEFAULT
+ STAT_TYPE			VARCHAR2		IN     DEFAULT
+FUNCTION OFFSET_INFO RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ DOCID				VARCHAR2		IN
+ TOKEN_TYPE			NUMBER			IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+ RAW_INFO			VARCHAR2		IN     DEFAULT
+ DECODED_INFO			VARCHAR2		IN     DEFAULT
+ REPORT_FORMAT			VARCHAR2		IN     DEFAULT
+PROCEDURE QUERY_LOG_SUMMARY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOGFILE			VARCHAR2		IN
+ INDEXNAME			VARCHAR2		IN     DEFAULT
+ RESULT_TABLE			TABLE OF RECORD 	IN/OUT
+ ROW_NUM			NUMBER			IN     DEFAULT
+ MOST_FREQ			BOOLEAN 		IN     DEFAULT
+ HAS_HIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE TOKEN_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ REPORT 			CLOB			IN/OUT
+ TOKEN				VARCHAR2		IN
+ TOKEN_TYPE			NUMBER			IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+ RAW_INFO			BOOLEAN 		IN     DEFAULT
+ DECODED_INFO			BOOLEAN 		IN     DEFAULT
+ REPORT_FORMAT			VARCHAR2		IN     DEFAULT
+FUNCTION TOKEN_INFO RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ TOKEN				VARCHAR2		IN
+ TOKEN_TYPE			NUMBER			IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+ RAW_INFO			VARCHAR2		IN     DEFAULT
+ DECODED_INFO			VARCHAR2		IN     DEFAULT
+ REPORT_FORMAT			VARCHAR2		IN     DEFAULT
+FUNCTION TOKEN_TYPE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ TYPE_NAME			VARCHAR2		IN
+PROCEDURE VALIDATE_INDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+FUNCTION VALIDATE_MVDATA RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ TOKEN				VARCHAR2		IN
+ TOKEN_TYPE			NUMBER			IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+

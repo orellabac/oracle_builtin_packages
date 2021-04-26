@@ -1,0 +1,250 @@
+FUNCTION ADD_S RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ ENTRYDN			VARCHAR2		IN
+ MODPTR 			RAW(32) 		IN
+PROCEDURE BER_FREE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BER				RAW(32) 		IN
+ FREEBUF			BINARY_INTEGER		IN
+FUNCTION BIND_S RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ DN				VARCHAR2		IN
+ CRED				VARCHAR2		IN
+ METH				BINARY_INTEGER		IN
+FUNCTION CHECK_INTERFACE_VERSION RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INTERFACE_VERSION		VARCHAR2		IN
+FUNCTION COMPARE_S RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ DN				VARCHAR2		IN
+ ATTR				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+FUNCTION COUNT_ENTRIES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ MSG				RAW(32) 		IN
+FUNCTION COUNT_VALUES RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALS				TABLE OF VARCHAR2(32767) IN
+FUNCTION COUNT_VALUES_BLOB RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALS				TABLE OF BLOB		IN
+FUNCTION COUNT_VALUES_LEN RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALS				TABLE OF RAW(32767)	IN
+FUNCTION CREATE_MOD_ARRAY RETURNS RAW(32)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUM				BINARY_INTEGER		IN
+FUNCTION DELETE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ ENTRYDN			VARCHAR2		IN
+FUNCTION DELETE_S RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ ENTRYDN			VARCHAR2		IN
+FUNCTION ERR2STRING RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LDAP_ERR			BINARY_INTEGER		IN
+FUNCTION EXPLODE_DN RETURNS TABLE OF VARCHAR2(32767)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DN				VARCHAR2		IN
+ NOTYPES			BINARY_INTEGER		IN
+FUNCTION FIRST_ATTRIBUTE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ LDAPENTRY			RAW(32) 		IN
+ BER_ELEM			RAW(32) 		OUT
+FUNCTION FIRST_ENTRY RETURNS RAW(32)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ MSG				RAW(32) 		IN
+PROCEDURE FREE_MOD_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODPTR 			RAW(32) 		IN
+FUNCTION GET_DN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ LDAPENTRY			RAW(32) 		IN
+FUNCTION GET_SESSION_INFO RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ DATA_TYPE			BINARY_INTEGER		IN
+ DATA				VARCHAR2		OUT
+FUNCTION GET_TRACE_LEVEL RETURNS BINARY_INTEGER
+FUNCTION GET_VALUES RETURNS TABLE OF VARCHAR2(32767)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ LDAPENTRY			RAW(32) 		IN
+ ATTR				VARCHAR2		IN
+FUNCTION GET_VALUES_BLOB RETURNS TABLE OF BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ LDAPENTRY			RAW(32) 		IN
+ ATTR				VARCHAR2		IN
+FUNCTION GET_VALUES_LEN RETURNS TABLE OF RAW(32767)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ LDAPENTRY			RAW(32) 		IN
+ ATTR				VARCHAR2		IN
+FUNCTION INIT RETURNS RAW(32)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HOSTNAME			VARCHAR2		IN
+ PORTNUM			BINARY_INTEGER		IN
+FUNCTION MODIFY_S RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ ENTRYDN			VARCHAR2		IN
+ MODPTR 			RAW(32) 		IN
+FUNCTION MODRDN2_S RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ ENTRYDN			VARCHAR2		IN
+ NEWRDN 			VARCHAR2		IN
+ DELETEOLDRDN			BINARY_INTEGER		IN
+FUNCTION MSGFREE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LM				RAW(32) 		IN
+FUNCTION NEXT_ATTRIBUTE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ LDAPENTRY			RAW(32) 		IN
+ BER_ELEM			RAW(32) 		IN
+FUNCTION NEXT_ENTRY RETURNS RAW(32)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ MSG				RAW(32) 		IN
+FUNCTION NLS_CONVERT_FROM_UTF8 RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA_UTF8			VARCHAR2		IN
+FUNCTION NLS_CONVERT_FROM_UTF8 RETURNS TABLE OF VARCHAR2(32767)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA_UTF8			TABLE OF VARCHAR2(32767) IN
+FUNCTION NLS_CONVERT_TO_UTF8 RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA_LOCAL			VARCHAR2		IN
+FUNCTION NLS_CONVERT_TO_UTF8 RETURNS TABLE OF VARCHAR2(32767)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA_LOCAL			TABLE OF VARCHAR2(32767) IN
+FUNCTION NLS_GET_DBCHARSET_NAME RETURNS VARCHAR2
+FUNCTION OPEN_SSL RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ SSLWRL 			VARCHAR2		IN
+ SSLWALLETPASSWD		VARCHAR2		IN
+ SSLAUTH			BINARY_INTEGER		IN
+PROCEDURE POPULATE_MOD_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODPTR 			RAW(32) 		IN
+ MOD_OP 			BINARY_INTEGER		IN
+ MOD_TYPE			VARCHAR2		IN
+ MODVAL 			TABLE OF VARCHAR2(32767) IN
+PROCEDURE POPULATE_MOD_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODPTR 			RAW(32) 		IN
+ MOD_OP 			BINARY_INTEGER		IN
+ MOD_TYPE			VARCHAR2		IN
+ MODBVAL			TABLE OF RAW(32767)	IN
+PROCEDURE POPULATE_MOD_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODPTR 			RAW(32) 		IN
+ MOD_OP 			BINARY_INTEGER		IN
+ MOD_TYPE			VARCHAR2		IN
+ MODBVAL			TABLE OF BLOB		IN
+FUNCTION RENAME_S RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ DN				VARCHAR2		IN
+ NEWRDN 			VARCHAR2		IN
+ NEWPARENT			VARCHAR2		IN
+ DELETEOLDRDN			BINARY_INTEGER		IN
+ SERVERCTRLS			RECORD			IN     DEFAULT
+   LDCTL_OID			VARCHAR2(256)		IN     DEFAULT
+   LDCTL_VALUE			RAW(32000)		IN     DEFAULT
+   LDCTL_ISCRITICAL		VARCHAR2(1)		IN     DEFAULT
+ CLIENTCTRLS			RECORD			IN     DEFAULT
+   LDCTL_OID			VARCHAR2(256)		IN     DEFAULT
+   LDCTL_VALUE			RAW(32000)		IN     DEFAULT
+   LDCTL_ISCRITICAL		VARCHAR2(1)		IN     DEFAULT
+FUNCTION SEARCH_S RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ BASE				VARCHAR2		IN
+ SCOPE				BINARY_INTEGER		IN
+ FILTER 			VARCHAR2		IN
+ ATTRS				TABLE OF VARCHAR2(32767) IN
+ ATTRONLY			BINARY_INTEGER		IN
+ RES				RAW(32) 		OUT
+FUNCTION SEARCH_ST RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ BASE				VARCHAR2		IN
+ SCOPE				BINARY_INTEGER		IN
+ FILTER 			VARCHAR2		IN
+ ATTRS				TABLE OF VARCHAR2(32767) IN
+ ATTRONLY			BINARY_INTEGER		IN
+ TV				RECORD			IN
+   SECONDS			BINARY_INTEGER		IN
+   USECONDS			BINARY_INTEGER		IN
+ RES				RAW(32) 		OUT
+PROCEDURE SET_TRACE_LEVEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NEW_TRACE_LEVEL		BINARY_INTEGER		IN
+FUNCTION SIMPLE_BIND_S RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN
+ DN				VARCHAR2		IN
+ PASSWD 			VARCHAR2		IN
+FUNCTION UNBIND_S RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LD				RAW(32) 		IN/OUT
+PROCEDURE VALUE_FREE_BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALS				TABLE OF BLOB		IN/OUT
+

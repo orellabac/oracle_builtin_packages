@@ -1,0 +1,1528 @@
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ N_TAB				TABLE OF NUMBER 	IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ C_TAB				TABLE OF VARCHAR2(4000) IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ D_TAB				TABLE OF DATE		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ BL_TAB 			TABLE OF BLOB		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ CL_TAB 			TABLE OF CLOB		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ BF_TAB 			TABLE OF BINARY FILE LOB IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ N_TAB				TABLE OF NUMBER 	IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ C_TAB				TABLE OF VARCHAR2(4000) IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ D_TAB				TABLE OF DATE		IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ BL_TAB 			TABLE OF BLOB		IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ CL_TAB 			TABLE OF CLOB		IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ BF_TAB 			TABLE OF BINARY FILE LOB IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ UR_TAB 			TABLE OF ROWID		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ UR_TAB 			TABLE OF ROWID		IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ TM_TAB 			TABLE OF TIME		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ TM_TAB 			TABLE OF TIME		IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ TMS_TAB			TABLE OF TIMESTAMP	IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ TMS_TAB			TABLE OF TIMESTAMP	IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ TTZ_TAB			TABLE OF TIME WITH TIME ZONE IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ TTZ_TAB			TABLE OF TIME WITH TIME ZONE IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ TSTZ_TAB			TABLE OF TIMESTAMP WITH TIME ZONE IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ TSTZ_TAB			TABLE OF TIMESTAMP WITH TIME ZONE IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ TSTZ_TAB			TABLE OF TIMESTAMP WITH LOCAL TIME ZONE IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ TSTZ_TAB			TABLE OF TIMESTAMP WITH LOCAL TIME ZONE IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ IYM_TAB			TABLE OF INTERVAL YEAR TO MONTH IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ IYM_TAB			TABLE OF INTERVAL YEAR TO MONTH IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ IDS_TAB			TABLE OF INTERVAL DAY TO SECOND IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ IDS_TAB			TABLE OF INTERVAL DAY TO SECOND IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ BFLT_TAB			TABLE OF BINARY_FLOAT	IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ BFLT_TAB			TABLE OF BINARY_FLOAT	IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ BDBL_TAB			TABLE OF BINARY_DOUBLE	IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ BDBL_TAB			TABLE OF BINARY_DOUBLE	IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ C_TAB				TABLE OF VARCHAR2(32767) IN
+PROCEDURE BIND_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ C_TAB				TABLE OF VARCHAR2(32767) IN
+ INDEX1 			NUMBER(38)		IN
+ INDEX2 			NUMBER(38)		IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				NUMBER			IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+ OUT_VALUE_SIZE 		NUMBER(38)		IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				DATE			IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				BLOB			IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				CLOB			IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				BINARY FILE LOB 	IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				ROWID			IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TIME			IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TIMESTAMP		IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TIME WITH TIME ZONE	IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TIMESTAMP WITH TIME ZONE IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TIMESTAMP WITH LOCAL TIME ZONE IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				INTERVAL YEAR TO MONTH	IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				INTERVAL DAY TO SECOND	IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				BINARY_FLOAT		IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				BINARY_DOUBLE		IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				<ADT_1> 		IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				REF OF STANDARD 	IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				<TABLE_1>		IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				<VARRAY_1>		IN
+PROCEDURE BIND_VARIABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				<OPAQUE_1>		IN
+PROCEDURE BIND_VARIABLE_CHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				CHAR			IN
+PROCEDURE BIND_VARIABLE_CHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				CHAR			IN
+ OUT_VALUE_SIZE 		NUMBER(38)		IN
+PROCEDURE BIND_VARIABLE_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				RAW			IN
+PROCEDURE BIND_VARIABLE_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				RAW			IN
+ OUT_VALUE_SIZE 		NUMBER(38)		IN
+PROCEDURE BIND_VARIABLE_ROWID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				ROWID			IN
+PROCEDURE CLOSE_CURSOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				NUMBER			OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				VARCHAR2		OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				DATE			OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				BLOB			OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				CLOB			OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				BINARY FILE LOB 	OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				NUMBER			OUT
+ COLUMN_ERROR			NUMBER			OUT
+ ACTUAL_LENGTH			NUMBER(38)		OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				VARCHAR2		OUT
+ COLUMN_ERROR			NUMBER			OUT
+ ACTUAL_LENGTH			NUMBER(38)		OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				DATE			OUT
+ COLUMN_ERROR			NUMBER			OUT
+ ACTUAL_LENGTH			NUMBER(38)		OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ N_TAB				TABLE OF NUMBER 	IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ C_TAB				TABLE OF VARCHAR2(4000) IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ D_TAB				TABLE OF DATE		IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ BL_TAB 			TABLE OF BLOB		IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ CL_TAB 			TABLE OF CLOB		IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ BF_TAB 			TABLE OF BINARY FILE LOB IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				ROWID			OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ UR_TAB 			TABLE OF ROWID		IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				TIME			OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ TM_TAB 			TABLE OF TIME		IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				TIMESTAMP		OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ TMS_TAB			TABLE OF TIMESTAMP	IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				TIME WITH TIME ZONE	OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ TTZ_TAB			TABLE OF TIME WITH TIME ZONE IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				TIMESTAMP WITH TIME ZONE OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ TSTZ_TAB			TABLE OF TIMESTAMP WITH TIME ZONE IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				TIMESTAMP WITH LOCAL TIME ZONE OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ TSTZ_TAB			TABLE OF TIMESTAMP WITH LOCAL TIME ZONE IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				INTERVAL YEAR TO MONTH	OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ IYM_TAB			TABLE OF INTERVAL YEAR TO MONTH IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				INTERVAL DAY TO SECOND	OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ IDS_TAB			TABLE OF INTERVAL DAY TO SECOND IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				BINARY_FLOAT		OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ BFLT_TAB			TABLE OF BINARY_FLOAT	IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				BINARY_DOUBLE		OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ BDBL_TAB			TABLE OF BINARY_DOUBLE	IN/OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			BINARY_INTEGER		IN
+ VALUE				<ADT_1> 		OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			BINARY_INTEGER		IN
+ VALUE				REF OF STANDARD 	OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			BINARY_INTEGER		IN
+ VALUE				<TABLE_1>		OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			BINARY_INTEGER		IN
+ VALUE				<VARRAY_1>		OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			BINARY_INTEGER		IN
+ VALUE				<OPAQUE_1>		OUT
+PROCEDURE COLUMN_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ C_TAB				TABLE OF VARCHAR2(32767) IN/OUT
+PROCEDURE COLUMN_VALUE_CHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				CHAR			OUT
+PROCEDURE COLUMN_VALUE_CHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				CHAR			OUT
+ COLUMN_ERROR			NUMBER			OUT
+ ACTUAL_LENGTH			NUMBER(38)		OUT
+PROCEDURE COLUMN_VALUE_LONG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ LENGTH 			NUMBER(38)		IN
+ OFFSET 			NUMBER(38)		IN
+ VALUE				VARCHAR2		OUT
+ VALUE_LENGTH			NUMBER(38)		OUT
+PROCEDURE COLUMN_VALUE_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				RAW			OUT
+PROCEDURE COLUMN_VALUE_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				RAW			OUT
+ COLUMN_ERROR			NUMBER			OUT
+ ACTUAL_LENGTH			NUMBER(38)		OUT
+PROCEDURE COLUMN_VALUE_ROWID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				ROWID			OUT
+PROCEDURE COLUMN_VALUE_ROWID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ VALUE				ROWID			OUT
+ COLUMN_ERROR			NUMBER			OUT
+ ACTUAL_LENGTH			NUMBER(38)		OUT
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ N_TAB				TABLE OF NUMBER 	IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ C_TAB				TABLE OF VARCHAR2(4000) IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ D_TAB				TABLE OF DATE		IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ BL_TAB 			TABLE OF BLOB		IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ CL_TAB 			TABLE OF CLOB		IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ BF_TAB 			TABLE OF BINARY FILE LOB IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ UR_TAB 			TABLE OF ROWID		IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ TM_TAB 			TABLE OF TIME		IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ TMS_TAB			TABLE OF TIMESTAMP	IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ TTZ_TAB			TABLE OF TIME WITH TIME ZONE IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ TSTZ_TAB			TABLE OF TIMESTAMP WITH TIME ZONE IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ TSTZ_TAB			TABLE OF TIMESTAMP WITH LOCAL TIME ZONE IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ IYM_TAB			TABLE OF INTERVAL YEAR TO MONTH IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ IDS_TAB			TABLE OF INTERVAL DAY TO SECOND IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ BFLT_TAB			TABLE OF BINARY_FLOAT	IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ BDBL_TAB			TABLE OF BINARY_DOUBLE	IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ C_TAB				TABLE OF VARCHAR2(32767) IN
+ CNT				NUMBER(38)		IN
+ LOWER_BOUND			NUMBER(38)		IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			NUMBER			IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			VARCHAR2		IN
+ COLUMN_SIZE			NUMBER(38)		IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			DATE			IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			BLOB			IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			CLOB			IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			BINARY FILE LOB 	IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			ROWID			IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			TIME			IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			TIMESTAMP		IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			TIME WITH TIME ZONE	IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			TIMESTAMP WITH TIME ZONE IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			TIMESTAMP WITH LOCAL TIME ZONE IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			INTERVAL YEAR TO MONTH	IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			INTERVAL DAY TO SECOND	IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			BINARY_FLOAT		IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			BINARY_DOUBLE		IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			BINARY_INTEGER		IN
+ COLUMN 			<ADT_1> 		IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			BINARY_INTEGER		IN
+ COLUMN 			REF OF STANDARD 	IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			BINARY_INTEGER		IN
+ COLUMN 			<TABLE_1>		IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			BINARY_INTEGER		IN
+ COLUMN 			<VARRAY_1>		IN
+PROCEDURE DEFINE_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			BINARY_INTEGER		IN
+ COLUMN 			<OPAQUE_1>		IN
+PROCEDURE DEFINE_COLUMN_CHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			CHAR			IN
+ COLUMN_SIZE			NUMBER(38)		IN
+PROCEDURE DEFINE_COLUMN_LONG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+PROCEDURE DEFINE_COLUMN_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			RAW			IN
+ COLUMN_SIZE			NUMBER(38)		IN
+PROCEDURE DEFINE_COLUMN_ROWID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ POSITION			NUMBER(38)		IN
+ COLUMN 			ROWID			IN
+PROCEDURE DESCRIBE_COLUMNS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ COL_CNT			NUMBER(38)		OUT
+ DESC_T 			TABLE OF RECORD 	OUT
+PROCEDURE DESCRIBE_COLUMNS2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ COL_CNT			NUMBER(38)		OUT
+ DESC_T 			TABLE OF RECORD 	OUT
+PROCEDURE DESCRIBE_COLUMNS3
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ COL_CNT			NUMBER(38)		OUT
+ DESC_T 			TABLE OF RECORD 	OUT
+FUNCTION EXECUTE RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+FUNCTION EXECUTE_AND_FETCH RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ EXACT				BOOLEAN 		IN     DEFAULT
+FUNCTION FETCH_ROWS RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+PROCEDURE GET_NEXT_RESULT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ RC				REF CURSOR		OUT
+PROCEDURE GET_NEXT_RESULT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ RC				NUMBER(38)		OUT
+FUNCTION IS_OPEN RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+FUNCTION LAST_ERROR_POSITION RETURNS NUMBER(38)
+FUNCTION LAST_ROW_COUNT RETURNS NUMBER(38)
+FUNCTION LAST_ROW_ID RETURNS ROWID
+FUNCTION LAST_SQL_FUNCTION_CODE RETURNS NUMBER(38)
+FUNCTION OPEN_CURSOR RETURNS NUMBER(38)
+FUNCTION OPEN_CURSOR RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SECURITY_LEVEL 		NUMBER(38)		IN
+FUNCTION OPEN_CURSOR RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TREAT_AS_CLIENT_FOR_RESULTS	BOOLEAN 		IN
+FUNCTION OPEN_CURSOR RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SECURITY_LEVEL 		NUMBER(38)		IN
+ TREAT_AS_CLIENT_FOR_RESULTS	BOOLEAN 		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			VARCHAR2		IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			TABLE OF VARCHAR2(32767) IN
+ LB				NUMBER(38)		IN
+ UB				NUMBER(38)		IN
+ LFFLG				BOOLEAN 		IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			TABLE OF VARCHAR2(256)	IN
+ LB				NUMBER(38)		IN
+ UB				NUMBER(38)		IN
+ LFFLG				BOOLEAN 		IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			CLOB			IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			VARCHAR2		IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			VARCHAR2		IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN     DEFAULT
+ APPLY_CROSSEDITION_TRIGGER	VARCHAR2		IN
+ FIRE_APPLY_TRIGGER		BOOLEAN 		IN     DEFAULT
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			CLOB			IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			CLOB			IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN     DEFAULT
+ APPLY_CROSSEDITION_TRIGGER	VARCHAR2		IN
+ FIRE_APPLY_TRIGGER		BOOLEAN 		IN     DEFAULT
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			TABLE OF VARCHAR2(32767) IN
+ LB				NUMBER(38)		IN
+ UB				NUMBER(38)		IN
+ LFFLG				BOOLEAN 		IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			TABLE OF VARCHAR2(32767) IN
+ LB				NUMBER(38)		IN
+ UB				NUMBER(38)		IN
+ LFFLG				BOOLEAN 		IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN     DEFAULT
+ APPLY_CROSSEDITION_TRIGGER	VARCHAR2		IN
+ FIRE_APPLY_TRIGGER		BOOLEAN 		IN     DEFAULT
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			TABLE OF VARCHAR2(256)	IN
+ LB				NUMBER(38)		IN
+ UB				NUMBER(38)		IN
+ LFFLG				BOOLEAN 		IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			TABLE OF VARCHAR2(256)	IN
+ LB				NUMBER(38)		IN
+ UB				NUMBER(38)		IN
+ LFFLG				BOOLEAN 		IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN     DEFAULT
+ APPLY_CROSSEDITION_TRIGGER	VARCHAR2		IN
+ FIRE_APPLY_TRIGGER		BOOLEAN 		IN     DEFAULT
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			VARCHAR2		IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN     DEFAULT
+ APPLY_CROSSEDITION_TRIGGER	VARCHAR2		IN     DEFAULT
+ FIRE_APPLY_TRIGGER		BOOLEAN 		IN     DEFAULT
+ SCHEMA 			VARCHAR2		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			CLOB			IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN     DEFAULT
+ APPLY_CROSSEDITION_TRIGGER	VARCHAR2		IN     DEFAULT
+ FIRE_APPLY_TRIGGER		BOOLEAN 		IN     DEFAULT
+ SCHEMA 			VARCHAR2		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			TABLE OF VARCHAR2(32767) IN
+ LB				NUMBER(38)		IN
+ UB				NUMBER(38)		IN
+ LFFLG				BOOLEAN 		IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN     DEFAULT
+ APPLY_CROSSEDITION_TRIGGER	VARCHAR2		IN     DEFAULT
+ FIRE_APPLY_TRIGGER		BOOLEAN 		IN     DEFAULT
+ SCHEMA 			VARCHAR2		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			TABLE OF VARCHAR2(256)	IN
+ LB				NUMBER(38)		IN
+ UB				NUMBER(38)		IN
+ LFFLG				BOOLEAN 		IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN     DEFAULT
+ APPLY_CROSSEDITION_TRIGGER	VARCHAR2		IN     DEFAULT
+ FIRE_APPLY_TRIGGER		BOOLEAN 		IN     DEFAULT
+ SCHEMA 			VARCHAR2		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			VARCHAR2		IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN     DEFAULT
+ APPLY_CROSSEDITION_TRIGGER	VARCHAR2		IN     DEFAULT
+ FIRE_APPLY_TRIGGER		BOOLEAN 		IN     DEFAULT
+ SCHEMA 			VARCHAR2		IN     DEFAULT
+ CONTAINER			VARCHAR2		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			CLOB			IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN     DEFAULT
+ APPLY_CROSSEDITION_TRIGGER	VARCHAR2		IN     DEFAULT
+ FIRE_APPLY_TRIGGER		BOOLEAN 		IN     DEFAULT
+ SCHEMA 			VARCHAR2		IN     DEFAULT
+ CONTAINER			VARCHAR2		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			TABLE OF VARCHAR2(32767) IN
+ LB				NUMBER(38)		IN
+ UB				NUMBER(38)		IN
+ LFFLG				BOOLEAN 		IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN     DEFAULT
+ APPLY_CROSSEDITION_TRIGGER	VARCHAR2		IN     DEFAULT
+ FIRE_APPLY_TRIGGER		BOOLEAN 		IN     DEFAULT
+ SCHEMA 			VARCHAR2		IN     DEFAULT
+ CONTAINER			VARCHAR2		IN
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ STATEMENT			TABLE OF VARCHAR2(256)	IN
+ LB				NUMBER(38)		IN
+ UB				NUMBER(38)		IN
+ LFFLG				BOOLEAN 		IN
+ LANGUAGE_FLAG			NUMBER(38)		IN
+ EDITION			VARCHAR2		IN     DEFAULT
+ APPLY_CROSSEDITION_TRIGGER	VARCHAR2		IN     DEFAULT
+ FIRE_APPLY_TRIGGER		BOOLEAN 		IN     DEFAULT
+ SCHEMA 			VARCHAR2		IN     DEFAULT
+ CONTAINER			VARCHAR2		IN
+PROCEDURE RETURN_RESULT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RC				REF CURSOR		IN/OUT
+ TO_CLIENT			BOOLEAN 		IN     DEFAULT
+PROCEDURE RETURN_RESULT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RC				NUMBER(38)		IN/OUT
+ TO_CLIENT			BOOLEAN 		IN     DEFAULT
+FUNCTION TO_CURSOR_NUMBER RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RC				REF CURSOR		IN/OUT
+FUNCTION TO_REFCURSOR RETURNS REF CURSOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CURSOR_NUMBER			NUMBER(38)		IN/OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				NUMBER			OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				DATE			OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				BLOB			OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				CLOB			OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				BINARY FILE LOB 	OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF NUMBER 	OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF VARCHAR2(4000) OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF DATE		OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF BLOB		OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF CLOB		OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF BINARY FILE LOB OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				ROWID			OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF ROWID		OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TIME			OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF TIME		OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TIMESTAMP		OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF TIMESTAMP	OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TIME WITH TIME ZONE	OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF TIME WITH TIME ZONE OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TIMESTAMP WITH TIME ZONE OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF TIMESTAMP WITH TIME ZONE OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TIMESTAMP WITH LOCAL TIME ZONE OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF TIMESTAMP WITH LOCAL TIME ZONE OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				INTERVAL YEAR TO MONTH	OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF INTERVAL YEAR TO MONTH OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				INTERVAL DAY TO SECOND	OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF INTERVAL DAY TO SECOND OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				BINARY_FLOAT		OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF BINARY_FLOAT	OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				BINARY_DOUBLE		OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF BINARY_DOUBLE	OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				<ADT_1> 		OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				REF OF STANDARD 	OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				<TABLE_1>		OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				<VARRAY_1>		OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				<OPAQUE_1>		OUT
+PROCEDURE VARIABLE_VALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				TABLE OF VARCHAR2(32767) OUT
+PROCEDURE VARIABLE_VALUE_CHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				CHAR			OUT
+PROCEDURE VARIABLE_VALUE_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				RAW			OUT
+PROCEDURE VARIABLE_VALUE_ROWID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ C				NUMBER(38)		IN
+ NAME				VARCHAR2		IN
+ VALUE				ROWID			OUT
+

@@ -1,0 +1,46 @@
+PROCEDURE DROP_ALL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DICTIONARY_UPDATE		BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_ELEMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEMNAME			VARCHAR2		IN
+ CASCADE			BOOLEAN 		IN
+ DICTIONARY_UPDATE		BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILENAME			VARCHAR2		IN
+ CASCADE			BOOLEAN 		IN
+ DICTIONARY_UPDATE		BOOLEAN 		IN     DEFAULT
+PROCEDURE LOCK_MAP
+PROCEDURE MAP_ALL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MAX_NUM_FILEEXTENT		NUMBER			IN     DEFAULT
+ DICTIONARY_UPDATE		BOOLEAN 		IN     DEFAULT
+PROCEDURE MAP_ELEMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEMNAME			VARCHAR2		IN
+ CASCADE			BOOLEAN 		IN
+ DICTIONARY_UPDATE		BOOLEAN 		IN     DEFAULT
+PROCEDURE MAP_FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILENAME			VARCHAR2		IN
+ FILETYPE			VARCHAR2		IN
+ CASCADE			BOOLEAN 		IN
+ MAX_NUM_FILEEXTENT		NUMBER			IN     DEFAULT
+ DICTIONARY_UPDATE		BOOLEAN 		IN     DEFAULT
+PROCEDURE MAP_OBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJNAME			VARCHAR2		IN
+ OWNER				VARCHAR2		IN
+ OBJTYPE			VARCHAR2		IN
+PROCEDURE RESTORE
+PROCEDURE SAVE
+PROCEDURE UNLOCK_MAP
+

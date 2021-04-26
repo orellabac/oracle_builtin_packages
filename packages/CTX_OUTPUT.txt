@@ -1,0 +1,52 @@
+PROCEDURE ADD_EVENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EVENT				NUMBER			IN
+ ERRNUM 			NUMBER			IN     DEFAULT
+PROCEDURE ADD_TRACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRACE_ID			BINARY_INTEGER		IN
+PROCEDURE DISABLE_QUERY_STATS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEXNAME			VARCHAR2		IN
+FUNCTION DUMPEDERRORS RETURNS DR$NUMTABLE
+PROCEDURE ENABLE_QUERY_STATS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEXNAME			VARCHAR2		IN
+PROCEDURE END_LOG
+PROCEDURE END_QUERY_LOG
+FUNCTION GET_TRACE_VALUE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRACE_ID			BINARY_INTEGER		IN
+FUNCTION LOGFILENAME RETURNS VARCHAR2
+FUNCTION LOGFILEOVERWRITE RETURNS BOOLEAN
+FUNCTION LOGGING RETURNS BOOLEAN
+PROCEDURE LOG_TRACES
+PROCEDURE REMOVE_EVENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EVENT				NUMBER			IN
+ ERRNUM 			NUMBER			IN     DEFAULT
+PROCEDURE REMOVE_TRACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRACE_ID			BINARY_INTEGER		IN
+PROCEDURE RESET_TRACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRACE_ID			BINARY_INTEGER		IN
+PROCEDURE START_LOG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOGFILE			VARCHAR2		IN
+ OVERWRITE			BOOLEAN 		IN     DEFAULT
+PROCEDURE START_QUERY_LOG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOGFILE			VARCHAR2		IN
+ OVERWRITE			BOOLEAN 		IN     DEFAULT
+

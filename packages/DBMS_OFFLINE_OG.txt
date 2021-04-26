@@ -1,0 +1,40 @@
+PROCEDURE BEGIN_FLAVOR_CHANGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ SITE				VARCHAR2		IN
+ FNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE BEGIN_INSTANTIATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ NEW_SITE			VARCHAR2		IN
+ FNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE BEGIN_LOAD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ NEW_SITE			VARCHAR2		IN
+PROCEDURE END_FLAVOR_CHANGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ SITE				VARCHAR2		IN
+PROCEDURE END_INSTANTIATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ NEW_SITE			VARCHAR2		IN
+PROCEDURE END_LOAD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ NEW_SITE			VARCHAR2		IN
+ FNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE RESUME_SUBSET_OF_MASTERS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ NEW_SITE			VARCHAR2		IN
+ OVERRIDE			BOOLEAN 		IN     DEFAULT
+

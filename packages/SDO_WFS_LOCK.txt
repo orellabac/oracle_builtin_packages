@@ -1,0 +1,77 @@
+PROCEDURE DELETETOKENSESSIONMAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TID				VARCHAR2		IN
+PROCEDURE ENABLEDBTXNS
+FUNCTION GENERATETOKENID RETURNS VARCHAR2
+FUNCTION LOCKROWSBYID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+ TABLEALIAS			VARCHAR2		IN
+ EXPIRYTIME			NUMBER			IN
+ ROWSLOCKED			ROWPOINTERLIST		OUT
+ ROWSNOTLOCKED			ROWPOINTERLIST		OUT
+ LOCKALL			VARCHAR2		IN
+ PKEYCOLS			STRINGLIST		IN
+ AUTOCOMMIT			VARCHAR2		IN
+ ROWSTOBELOCKED 		ROWPOINTERLIST		IN
+ ORDERCLAUSE			VARCHAR2		IN
+ INDEXCLAUSE			VARCHAR2		IN
+ MAXCNT 			NUMBER			IN
+PROCEDURE LOCKROWSBYID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PTOKENID			VARCHAR2		IN
+ USERNAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+ TABLEALIAS			VARCHAR2		IN
+ EXPIRYTIME			NUMBER			IN
+ ROWSLOCKED			ROWPOINTERLIST		OUT
+ ROWSNOTLOCKED			ROWPOINTERLIST		OUT
+ LOCKALL			VARCHAR2		IN
+ PKEYCOLS			STRINGLIST		IN
+ AUTOCOMMIT			VARCHAR2		IN
+ ROWSTOBELOCKED 		ROWPOINTERLIST		IN
+ ORDERCLAUSE			VARCHAR2		IN
+ INDEXCLAUSE			VARCHAR2		IN
+ MAXCNT 			NUMBER			IN
+FUNCTION QUERYTOKENSESSIONMAP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TID				VARCHAR2		IN
+PROCEDURE REGISTERFEATURETABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+PROCEDURE RESETTOKENEXPIRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TID				VARCHAR2		IN
+PROCEDURE TRANSFERTOKENBYID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PTOKENID			VARCHAR2		IN
+PROCEDURE UNLOCKROWSBYID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PTOKENID			VARCHAR2		IN
+ USERNAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+ TABLEALIAS			VARCHAR2		IN
+ PKEYCOLS			STRINGLIST		IN
+ AUTOCOMMIT			VARCHAR2		IN
+ ROWSTOBEUNLOCKED		ROWPOINTERLIST		IN
+PROCEDURE UNREGISTERFEATURETABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+PROCEDURE UPDATETOKENSESSIONMAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TID				VARCHAR2		IN
+ SID				VARCHAR2		IN
+

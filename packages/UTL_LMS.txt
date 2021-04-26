@@ -1,0 +1,14 @@
+FUNCTION FORMAT_MESSAGE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FORMAT 			VARCHAR2		IN
+ ARGS				UNDEFINED		IN
+FUNCTION GET_MESSAGE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ERRNUM 			BINARY_INTEGER		IN
+ PRODUCT			VARCHAR2		IN
+ FACILITY			VARCHAR2		IN
+ LANGUAGE			VARCHAR2		IN
+ MESSAGE			VARCHAR2		OUT
+

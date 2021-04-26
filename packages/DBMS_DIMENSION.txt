@@ -1,0 +1,18 @@
+PROCEDURE DESCRIBE_DIMENSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIMENSION			VARCHAR2		IN
+PROCEDURE VALIDATE_DIMENSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIMENSION			VARCHAR2		IN
+ INCREMENTAL			BOOLEAN 		IN     DEFAULT
+ CHECK_NULLS			BOOLEAN 		IN     DEFAULT
+ STATEMENT_ID			VARCHAR2		IN     DEFAULT
+PROCEDURE VALIDATE_DIMENSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIMENSION			VARCHAR2		IN
+ CHECK_NULLS			BOOLEAN 		IN     DEFAULT
+ STATEMENT_ID			VARCHAR2		IN     DEFAULT
+

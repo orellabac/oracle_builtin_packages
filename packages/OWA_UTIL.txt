@@ -1,0 +1,345 @@
+FUNCTION BIND_VARIABLES RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ THEQUERY			VARCHAR2		IN
+ BV1NAME			VARCHAR2		IN     DEFAULT
+ BV1VALUE			VARCHAR2		IN     DEFAULT
+ BV2NAME			VARCHAR2		IN     DEFAULT
+ BV2VALUE			VARCHAR2		IN     DEFAULT
+ BV3NAME			VARCHAR2		IN     DEFAULT
+ BV3VALUE			VARCHAR2		IN     DEFAULT
+ BV4NAME			VARCHAR2		IN     DEFAULT
+ BV4VALUE			VARCHAR2		IN     DEFAULT
+ BV5NAME			VARCHAR2		IN     DEFAULT
+ BV5VALUE			VARCHAR2		IN     DEFAULT
+ BV6NAME			VARCHAR2		IN     DEFAULT
+ BV6VALUE			VARCHAR2		IN     DEFAULT
+ BV7NAME			VARCHAR2		IN     DEFAULT
+ BV7VALUE			VARCHAR2		IN     DEFAULT
+ BV8NAME			VARCHAR2		IN     DEFAULT
+ BV8VALUE			VARCHAR2		IN     DEFAULT
+ BV9NAME			VARCHAR2		IN     DEFAULT
+ BV9VALUE			VARCHAR2		IN     DEFAULT
+ BV10NAME			VARCHAR2		IN     DEFAULT
+ BV10VALUE			VARCHAR2		IN     DEFAULT
+ BV11NAME			VARCHAR2		IN     DEFAULT
+ BV11VALUE			VARCHAR2		IN     DEFAULT
+ BV12NAME			VARCHAR2		IN     DEFAULT
+ BV12VALUE			VARCHAR2		IN     DEFAULT
+ BV13NAME			VARCHAR2		IN     DEFAULT
+ BV13VALUE			VARCHAR2		IN     DEFAULT
+ BV14NAME			VARCHAR2		IN     DEFAULT
+ BV14VALUE			VARCHAR2		IN     DEFAULT
+ BV15NAME			VARCHAR2		IN     DEFAULT
+ BV15VALUE			VARCHAR2		IN     DEFAULT
+ BV16NAME			VARCHAR2		IN     DEFAULT
+ BV16VALUE			VARCHAR2		IN     DEFAULT
+ BV17NAME			VARCHAR2		IN     DEFAULT
+ BV17VALUE			VARCHAR2		IN     DEFAULT
+ BV18NAME			VARCHAR2		IN     DEFAULT
+ BV18VALUE			VARCHAR2		IN     DEFAULT
+ BV19NAME			VARCHAR2		IN     DEFAULT
+ BV19VALUE			VARCHAR2		IN     DEFAULT
+ BV20NAME			VARCHAR2		IN     DEFAULT
+ BV20VALUE			VARCHAR2		IN     DEFAULT
+ BV21NAME			VARCHAR2		IN     DEFAULT
+ BV21VALUE			VARCHAR2		IN     DEFAULT
+ BV22NAME			VARCHAR2		IN     DEFAULT
+ BV22VALUE			VARCHAR2		IN     DEFAULT
+ BV23NAME			VARCHAR2		IN     DEFAULT
+ BV23VALUE			VARCHAR2		IN     DEFAULT
+ BV24NAME			VARCHAR2		IN     DEFAULT
+ BV24VALUE			VARCHAR2		IN     DEFAULT
+ BV25NAME			VARCHAR2		IN     DEFAULT
+ BV25VALUE			VARCHAR2		IN     DEFAULT
+PROCEDURE CALENDARPRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_QUERY			VARCHAR2		IN
+ P_MF_ONLY			VARCHAR2		IN     DEFAULT
+PROCEDURE CALENDARPRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_CURSOR			NUMBER(38)		IN
+ P_MF_ONLY			VARCHAR2		IN     DEFAULT
+PROCEDURE CELLSPRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_COLCNT			NUMBER(38)		IN
+ P_RESULTTBL			TABLE OF VARCHAR2(32000) IN
+ P_FORMAT_NUMBERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CELLSPRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_THEQUERY			VARCHAR2		IN
+ P_MAX_ROWS			NUMBER			IN     DEFAULT
+ P_FORMAT_NUMBERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CELLSPRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_THECURSOR			NUMBER(38)		IN
+ P_MAX_ROWS			NUMBER			IN     DEFAULT
+ P_FORMAT_NUMBERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CELLSPRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_THEQUERY			VARCHAR2		IN
+ P_MAX_ROWS			NUMBER			IN     DEFAULT
+ P_FORMAT_NUMBERS		VARCHAR2		IN     DEFAULT
+ P_SKIP_REC			NUMBER			IN     DEFAULT
+ P_MORE_DATA			BOOLEAN 		OUT
+PROCEDURE CELLSPRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_THECURSOR			NUMBER(38)		IN
+ P_MAX_ROWS			NUMBER			IN     DEFAULT
+ P_FORMAT_NUMBERS		VARCHAR2		IN     DEFAULT
+ P_SKIP_REC			NUMBER			IN     DEFAULT
+ P_MORE_DATA			BOOLEAN 		OUT
+PROCEDURE CELLSPRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_THEQUERY			VARCHAR2		IN
+ P_MAX_ROWS			NUMBER			IN     DEFAULT
+ P_FORMAT_NUMBERS		VARCHAR2		IN     DEFAULT
+ P_RECCNT			NUMBER			OUT
+PROCEDURE CELLSPRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_THECURSOR			NUMBER(38)		IN
+ P_MAX_ROWS			NUMBER			IN     DEFAULT
+ P_FORMAT_NUMBERS		VARCHAR2		IN     DEFAULT
+ P_RECCNT			NUMBER			OUT
+PROCEDURE CELLSPRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_THEQUERY			VARCHAR2		IN
+ P_MAX_ROWS			NUMBER			IN     DEFAULT
+ P_FORMAT_NUMBERS		VARCHAR2		IN     DEFAULT
+ P_SKIP_REC			NUMBER			IN     DEFAULT
+ P_MORE_DATA			BOOLEAN 		OUT
+ P_RECCNT			NUMBER			OUT
+PROCEDURE CELLSPRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_THECURSOR			NUMBER(38)		IN
+ P_MAX_ROWS			NUMBER			IN     DEFAULT
+ P_FORMAT_NUMBERS		VARCHAR2		IN     DEFAULT
+ P_SKIP_REC			NUMBER			IN     DEFAULT
+ P_MORE_DATA			BOOLEAN 		OUT
+ P_RECCNT			NUMBER			OUT
+PROCEDURE CHOOSE_DATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_NAME 			VARCHAR2		IN
+ P_DATE 			DATE			IN     DEFAULT
+PROCEDURE COMMA_TO_IDENT_ARR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LIST				VARCHAR2		IN
+ ARR				TABLE OF VARCHAR2(30)	OUT
+ LENARR 			TABLE OF NUMBER 	OUT
+ ARRLEN 			NUMBER(38)		OUT
+PROCEDURE COMMA_TO_IDENT_ARR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LIST				VARCHAR2		IN
+ ARR				TABLE OF VARCHAR2(60)	OUT
+ LENARR 			TABLE OF NUMBER 	OUT
+ ARRLEN 			NUMBER(38)		OUT
+PROCEDURE DESCRIBE_COLS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTABLE 			VARCHAR2		IN
+ CCOLUMNS			VARCHAR2		IN
+ COL_NAMES			TABLE OF VARCHAR2(30)	OUT
+ COL_DTYPES			TABLE OF VARCHAR2(30)	OUT
+ NNUM_COLS			NUMBER(38)		OUT
+FUNCTION GET_CGI_ENV RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAM_NAME			VARCHAR2		IN
+FUNCTION GET_OWA_SERVICE_PATH RETURNS VARCHAR2
+FUNCTION GET_PROCEDURE RETURNS VARCHAR2
+FUNCTION GET_VERSION RETURNS VARCHAR2
+PROCEDURE HTTP_HEADER_CLOSE
+FUNCTION ITE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TF				BOOLEAN 		IN
+ YES				VARCHAR2		IN
+ NO				VARCHAR2		IN
+PROCEDURE LISTPRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_THECURSOR			NUMBER(38)		IN
+ P_CNAME			VARCHAR2		IN
+ P_NSIZE			NUMBER			IN
+ P_MULTIPLE			BOOLEAN 		IN     DEFAULT
+PROCEDURE LISTPRINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_THEQUERY			VARCHAR2		IN
+ P_CNAME			VARCHAR2		IN
+ P_NSIZE			NUMBER			IN
+ P_MULTIPLE			BOOLEAN 		IN     DEFAULT
+PROCEDURE MIME_HEADER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCONTENT_TYPE			VARCHAR2		IN     DEFAULT
+ BCLOSE_HEADER			BOOLEAN 		IN     DEFAULT
+ CCHARSET			VARCHAR2		IN     DEFAULT
+PROCEDURE NAME_RESOLVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+ O_PROCOWNER			VARCHAR2		OUT
+ O_PROCNAME			VARCHAR2		OUT
+FUNCTION PATH_TO_ME RETURNS VARCHAR2
+PROCEDURE PRINT_CGI_ENV
+PROCEDURE PRINT_VERSION
+PROCEDURE REDIRECT_URL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CURL				VARCHAR2		IN
+ BCLOSE_HEADER			BOOLEAN 		IN     DEFAULT
+PROCEDURE RESOLVE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COBJECT			VARCHAR2		IN
+ CSCHEMA			VARCHAR2		IN
+ RESOLVED_NAME			VARCHAR2		OUT
+ RESOLVED_OWNER 		VARCHAR2		OUT
+ RESOLVED_DB_LINK		VARCHAR2		OUT
+PROCEDURE SHOWPAGE
+PROCEDURE SHOWSOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+PROCEDURE SHOW_QUERY_COLUMNS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTABLE 			VARCHAR2		IN
+PROCEDURE SIGNATURE
+PROCEDURE SIGNATURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CNAME				VARCHAR2		IN
+PROCEDURE STATUS_LINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NSTATUS			NUMBER(38)		IN
+ CREASON			VARCHAR2		IN     DEFAULT
+ BCLOSE_HEADER			BOOLEAN 		IN     DEFAULT
+PROCEDURE TABLECAPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCAPTION			VARCHAR2		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ NTABLE_TYPE			NUMBER(38)		IN     DEFAULT
+PROCEDURE TABLECLOSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NTABLE_TYPE			NUMBER(38)		IN     DEFAULT
+PROCEDURE TABLECLOSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NTABLE_WIDTH			NUMBER(38)		IN
+ NTABLE_TYPE			NUMBER(38)		IN     DEFAULT
+PROCEDURE TABLEDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CDATA				VARCHAR2		IN
+ NCOLUMN_SIZE			NUMBER(38)		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CROWSTRING			VARCHAR2		IN/OUT
+ NTABLE_TYPE			NUMBER(38)		IN     DEFAULT
+PROCEDURE TABLEHEADER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCOLUMN_NAME			VARCHAR2		IN
+ NCOLUMN_SIZE			NUMBER(38)		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CROWSTRING			VARCHAR2		IN/OUT
+ NTABLE_TYPE			NUMBER(38)		IN     DEFAULT
+PROCEDURE TABLEHEADER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CCOLUMN_NAME			VARCHAR2		IN
+ NCOLUMN_SIZE			NUMBER(38)		IN
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CROWSTRING			VARCHAR2		IN/OUT
+ NTABLE_WIDTH			NUMBER(38)		IN/OUT
+ NTABLE_TYPE			NUMBER(38)		IN     DEFAULT
+PROCEDURE TABLEHEADERROWCLOSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CROWSTRING			VARCHAR2		IN/OUT
+ NTABLE_TYPE			NUMBER(38)		IN     DEFAULT
+PROCEDURE TABLEHEADERROWCLOSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CROWSTRING			VARCHAR2		IN/OUT
+ NTABLE_WIDTH			NUMBER(38)		IN
+ NTABLE_TYPE			NUMBER(38)		IN     DEFAULT
+PROCEDURE TABLEHEADERROWOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CROWSTRING			VARCHAR2		IN/OUT
+ NTABLE_TYPE			NUMBER(38)		IN     DEFAULT
+PROCEDURE TABLEHEADERROWOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CROWSTRING			VARCHAR2		IN/OUT
+ NTABLE_WIDTH			NUMBER(38)		OUT
+ NTABLE_TYPE			NUMBER(38)		IN     DEFAULT
+PROCEDURE TABLENODATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CALIGN 			VARCHAR2		IN     DEFAULT
+ CROWSTRING			VARCHAR2		IN/OUT
+ NNUM_COLS			NUMBER(38)		IN
+ NTABLE_WIDTH			NUMBER(38)		IN
+ NTABLE_TYPE			NUMBER(38)		IN     DEFAULT
+PROCEDURE TABLEOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+ NTABLE_TYPE			NUMBER(38)		IN     DEFAULT
+FUNCTION TABLEPRINT RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CTABLE 			VARCHAR2		IN
+ CATTRIBUTES			VARCHAR2		IN     DEFAULT
+ NTABLE_TYPE			NUMBER(38)		IN     DEFAULT
+ CCOLUMNS			VARCHAR2		IN     DEFAULT
+ CCLAUSES			VARCHAR2		IN     DEFAULT
+ CCOL_ALIASES			VARCHAR2		IN     DEFAULT
+ NROW_MIN			NUMBER			IN     DEFAULT
+ NROW_MAX			NUMBER			IN     DEFAULT
+PROCEDURE TABLEROWCLOSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CROWSTRING			VARCHAR2		IN/OUT
+ NTABLE_TYPE			NUMBER(38)		IN     DEFAULT
+PROCEDURE TABLEROWOPEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CROWSTRING			VARCHAR2		IN/OUT
+ NTABLE_TYPE			NUMBER(38)		IN     DEFAULT
+FUNCTION TODATE RETURNS DATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_DATEARRAY			TABLE OF VARCHAR2(10)	IN
+FUNCTION VALIDATE_ARG RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAM				VARCHAR2		IN
+PROCEDURE WHO_CALLED_ME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER				VARCHAR2		OUT
+ NAME				VARCHAR2		OUT
+ LINENO 			NUMBER			OUT
+ CALLER_T			VARCHAR2		OUT
+

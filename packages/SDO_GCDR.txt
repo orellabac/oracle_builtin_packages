@@ -1,0 +1,164 @@
+FUNCTION BATCH_GEOCODE RETURNS SDO_KEYWORDARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ADDRESS_LIST			VARCHAR2		IN
+ GC_USERNAME			VARCHAR2		IN
+ MAX_RESULT_COUNT		NUMBER			IN
+PROCEDURE CREATE_PROFILE_TABLES
+FUNCTION DATA_VERSION RETURNS SDO_STRING_ARRAY
+FUNCTION GEOCODE RETURNS SDO_GEO_ADDR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ ADDR_LINES			SDO_KEYWORDARRAY	IN
+ COUNTRY			VARCHAR2		IN
+ MATCH_MODE			VARCHAR2		IN
+ LOGGING			NUMBER			IN     DEFAULT
+FUNCTION GEOCODE_ADDR RETURNS SDO_GEO_ADDR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GC_USERNAME			VARCHAR2		IN
+ ADDRESS			SDO_GEO_ADDR		IN
+ LOGGING			NUMBER			IN     DEFAULT
+FUNCTION GEOCODE_ADDR_ALL RETURNS SDO_ADDR_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GC_USERNAME			VARCHAR2		IN
+ ADDRESS			SDO_GEO_ADDR		IN
+ MAX_RES_NUM			NUMBER			IN     DEFAULT
+FUNCTION GEOCODE_ALL RETURNS SDO_ADDR_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GC_USERNAME			VARCHAR2		IN
+ ADDR_LINES			SDO_KEYWORDARRAY	IN
+ COUNTRY			VARCHAR2		IN
+ MATCH_MODE			VARCHAR2		IN
+ MAX_RES_NUM			NUMBER			IN     DEFAULT
+FUNCTION GEOCODE_AS_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ ADDR_LINES			SDO_KEYWORDARRAY	IN
+ COUNTRY			VARCHAR2		IN
+FUNCTION LIST_COUNTRIES RETURNS SDO_STRING_ARRAY
+FUNCTION REVERSE_GEOCODE RETURNS SDO_GEO_ADDR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ LONGITUDE			NUMBER			IN
+ LATITUDE			NUMBER			IN
+ COUNTRY			VARCHAR2		IN
+FUNCTION REVERSE_GEOCODE RETURNS SDO_GEO_ADDR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ LONGITUDE			NUMBER			IN
+ LATITUDE			NUMBER			IN
+ SRID				NUMBER			IN     DEFAULT
+ COUNTRY			VARCHAR2		IN
+FUNCTION REVERSE_GEOCODE RETURNS SDO_GEO_ADDR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ LOCATION			SDO_GEOMETRY		IN
+ COUNTRY			VARCHAR2		IN
+FUNCTION REVERSE_GEOCODE RETURNS SDO_GEO_ADDR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ LONGITUDE			NUMBER			IN
+ LATITUDE			NUMBER			IN
+ LANGUAGE_			VARCHAR2		IN
+ COUNTRY			VARCHAR2		IN
+FUNCTION REVERSE_GEOCODE RETURNS SDO_GEO_ADDR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ LONGITUDE			NUMBER			IN
+ LATITUDE			NUMBER			IN
+ SRID				NUMBER			IN     DEFAULT
+ LANGUAGE_			VARCHAR2		IN
+ COUNTRY			VARCHAR2		IN
+FUNCTION REVERSE_GEOCODE RETURNS SDO_GEO_ADDR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ LOCATION			SDO_GEOMETRY		IN
+ LANGUAGE_			VARCHAR2		IN
+ COUNTRY			VARCHAR2		IN
+PROCEDURE VALIDATECITYROW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COUNTRY			VARCHAR2		IN
+ OUT				VARCHAR2		IN
+ KEYS				SDO_KEYWORDARRAY	IN
+PROCEDURE VALIDATECOUNTRYROW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COUNTRY			VARCHAR2		IN
+ KEYS				SDO_KEYWORDARRAY	IN
+PROCEDURE VALIDATEINLINESTREETTYPEROW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COUNTRY			VARCHAR2		IN
+ POS				VARCHAR2		IN
+ SEP				VARCHAR2		IN
+ OUT				VARCHAR2		IN
+ KEYS				SDO_KEYWORDARRAY	IN
+PROCEDURE VALIDATELOCALITYDICTROW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COUNTRY			VARCHAR2		IN
+ OUT				VARCHAR2		IN
+ KEYS				SDO_KEYWORDARRAY	IN
+PROCEDURE VALIDATEPLACENAMEROW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COUNTRY			VARCHAR2		IN
+ OUT				VARCHAR2		IN
+PROCEDURE VALIDATEPOBOXROW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COUNTRY			VARCHAR2		IN
+ OUT				VARCHAR2		IN
+ KEYS				SDO_KEYWORDARRAY	IN
+PROCEDURE VALIDATEREGIONROW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COUNTRY			VARCHAR2		IN
+ OUT				VARCHAR2		IN
+ KEYS				SDO_KEYWORDARRAY	IN
+PROCEDURE VALIDATESECONDUNITROW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COUNTRY			VARCHAR2		IN
+ POS				VARCHAR2		IN
+ OUT				VARCHAR2		IN
+ KEYS				SDO_KEYWORDARRAY	IN
+PROCEDURE VALIDATESTREETDICTROW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COUNTRY			VARCHAR2		IN
+ OUT				VARCHAR2		IN
+ KEYS				SDO_KEYWORDARRAY	IN
+PROCEDURE VALIDATESTREETPREFIXROW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COUNTRY			VARCHAR2		IN
+ OUT				VARCHAR2		IN
+ KEYS				SDO_KEYWORDARRAY	IN
+PROCEDURE VALIDATESTREETSUFFIXROW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COUNTRY			VARCHAR2		IN
+ OUT				VARCHAR2		IN
+ KEYS				SDO_KEYWORDARRAY	IN
+PROCEDURE VALIDATESTREETTYPEROW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COUNTRY			VARCHAR2		IN
+ POS				VARCHAR2		IN
+ SEP				VARCHAR2		IN
+ OUT				VARCHAR2		IN
+ KEYS				SDO_KEYWORDARRAY	IN
+

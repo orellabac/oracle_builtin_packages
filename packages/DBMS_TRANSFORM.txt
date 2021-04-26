@@ -1,0 +1,30 @@
+PROCEDURE COMPUTE_TRANSFORMATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MESSAGE			<ADT_1> 		IN
+ TRANSFORMATION_SCHEMA		VARCHAR2		IN
+ TRANSFORMATION_NAME		VARCHAR2		IN
+ TRANSFORMED_MESSAGE		<ADT_1> 		OUT
+PROCEDURE CREATE_TRANSFORMATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ FROM_SCHEMA			VARCHAR2		IN
+ FROM_TYPE			VARCHAR2		IN
+ TO_SCHEMA			VARCHAR2		IN
+ TO_TYPE			VARCHAR2		IN
+ TRANSFORMATION 		VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_TRANSFORMATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+PROCEDURE MODIFY_TRANSFORMATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ ATTRIBUTE_NUMBER		NUMBER			IN
+ TRANSFORMATION 		VARCHAR2		IN
+

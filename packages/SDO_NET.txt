@@ -1,0 +1,1141 @@
+PROCEDURE ADD_CHILD_FEATURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARENT_LAYER_ID		NUMBER			IN
+ PARENT_FEATURE_ID		NUMBER			IN
+ CHILD_LAYER_ID 		NUMBER			IN
+ CHILD_FEATURE_ID		NUMBER			IN
+ SEQUENCE_NUMBER		NUMBER			IN     DEFAULT
+ CHECK_INTEGRITY		BOOLEAN 		IN     DEFAULT
+PROCEDURE ADD_CHILD_FEATURES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARENT_LAYER_ID		NUMBER			IN
+ PARENT_FEATURE_ID		NUMBER			IN
+ CHILD_FEATURE_IDS		SDO_NET_LAYER_FEAT_ARRAY IN
+ CHECK_INTEGRITY		BOOLEAN 		IN     DEFAULT
+PROCEDURE ADD_FEATURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+ FEATURE_ID			NUMBER			IN
+ FEATURE_ELEMENTS		SDO_NET_FEAT_ELEM_ARRAY IN     DEFAULT
+ CHILD_FEATURE_IDS		SDO_NET_LAYER_FEAT_ARRAY IN	DEFAULT
+ CHECK_INTEGRITY		BOOLEAN 		IN     DEFAULT
+PROCEDURE ADD_FEATURE_ELEMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+ FEATURE_ID			NUMBER			IN
+ FEATURE_ELEMENT		SDO_NET_FEAT_ELEM	IN
+ SEQUENCE_NUMBER		NUMBER			IN     DEFAULT
+ CHECK_INTEGRITY		BOOLEAN 		IN     DEFAULT
+PROCEDURE ADD_FEATURE_ELEMENTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+ FEATURE_ID			NUMBER			IN
+ FEATURE_ELEMENTS		SDO_NET_FEAT_ELEM_ARRAY IN
+ CHECK_INTEGRITY		BOOLEAN 		IN     DEFAULT
+PROCEDURE ADD_FEATURE_LAYER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK_NAME			VARCHAR2		IN
+ FEATURE_LAYER_NAME		VARCHAR2		IN
+ FEATURE_LAYER_TYPE		NUMBER			IN
+ FEATURE_TABLE			VARCHAR2		IN
+ RELATION_TABLE 		VARCHAR2		IN
+ HIERARCHY_TABLE		VARCHAR2		IN
+FUNCTION COMPUTE_PATH_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ PATH_ID			NUMBER			IN
+ TOLERANCE			NUMBER			IN
+PROCEDURE COPY_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCE_NETWORK 		VARCHAR2		IN
+ TARGET_NETWORK 		VARCHAR2		IN
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_COMPONENT_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+PROCEDURE CREATE_DELETE_TRIGGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE CREATE_LINK_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ GEOM_TYPE			VARCHAR2		IN
+ GEOM_COLUMN			VARCHAR2		IN
+ COST_COLUMN			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ ADD_BIDIRECTED_COLUMN		BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_LOGICAL_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_TABLE_NAME		VARCHAR2		IN
+ NODE_COST_COLUMN		VARCHAR2		IN
+ LINK_TABLE_NAME		VARCHAR2		IN
+ LINK_COST_COLUMN		VARCHAR2		IN
+ PATH_TABLE_NAME		VARCHAR2		IN
+ PATH_LINK_TABLE_NAME		VARCHAR2		IN
+ SUBPATH_TABLE_NAME		VARCHAR2		IN
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_LOGICAL_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_TABLE_NAME		VARCHAR2		IN
+ NODE_COST_COLUMN		VARCHAR2		IN
+ LINK_TABLE_NAME		VARCHAR2		IN
+ LINK_COST_COLUMN		VARCHAR2		IN
+ PATH_TABLE_NAME		VARCHAR2		IN
+ PATH_LINK_TABLE_NAME		VARCHAR2		IN
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_LOGICAL_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_WITH_COST 		BOOLEAN 		IN     DEFAULT
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_LRS_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_TABLE_NAME		VARCHAR2		IN
+ NODE_COST_COLUMN		VARCHAR2		IN
+ LINK_TABLE_NAME		VARCHAR2		IN
+ LINK_COST_COLUMN		VARCHAR2		IN
+ LRS_TABLE_NAME 		VARCHAR2		IN
+ LRS_GEOM_COLUMN		VARCHAR2		IN
+ PATH_TABLE_NAME		VARCHAR2		IN
+ PATH_GEOM_COLUMN		VARCHAR2		IN
+ PATH_LINK_TABLE_NAME		VARCHAR2		IN
+ SUBPATH_TABLE_NAME		VARCHAR2		IN
+ SUBPATH_GEOM_COLUMN		VARCHAR2		IN
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_LRS_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_TABLE_NAME		VARCHAR2		IN
+ NODE_COST_COLUMN		VARCHAR2		IN
+ LINK_TABLE_NAME		VARCHAR2		IN
+ LINK_COST_COLUMN		VARCHAR2		IN
+ LRS_TABLE_NAME 		VARCHAR2		IN
+ LRS_GEOM_COLUMN		VARCHAR2		IN
+ PATH_TABLE_NAME		VARCHAR2		IN
+ PATH_GEOM_COLUMN		VARCHAR2		IN
+ PATH_LINK_TABLE_NAME		VARCHAR2		IN
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_LRS_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LRS_TABLE_NAME 		VARCHAR2		IN
+ LRS_GEOM_COLUMN		VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_WITH_COST 		BOOLEAN 		IN     DEFAULT
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_LRS_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ GEOM_COLUMN			VARCHAR2		IN
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ GEOM_TYPE			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_TABLE_NAME		VARCHAR2		IN
+ NODE_GEOM_COLUMN		VARCHAR2		IN
+ NODE_COST_COLUMN		VARCHAR2		IN
+ LINK_TABLE_NAME		VARCHAR2		IN
+ LINK_GEOM_COLUMN		VARCHAR2		IN
+ LINK_COST_COLUMN		VARCHAR2		IN
+ LRS_TABLE_NAME 		VARCHAR2		IN
+ LRS_GEOM_COLUMN		VARCHAR2		IN
+ PATH_TABLE_NAME		VARCHAR2		IN
+ PATH_GEOM_COLUMN		VARCHAR2		IN
+ PATH_LINK_TABLE_NAME		VARCHAR2		IN
+ SUBPATH_TABLE_NAME		VARCHAR2		IN
+ SUBPATH_GEOM_COLUMN		VARCHAR2		IN
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ GEOM_TYPE			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_TABLE_NAME		VARCHAR2		IN
+ NODE_GEOM_COLUMN		VARCHAR2		IN
+ NODE_COST_COLUMN		VARCHAR2		IN
+ LINK_TABLE_NAME		VARCHAR2		IN
+ LINK_GEOM_COLUMN		VARCHAR2		IN
+ LINK_COST_COLUMN		VARCHAR2		IN
+ LRS_TABLE_NAME 		VARCHAR2		IN
+ LRS_GEOM_COLUMN		VARCHAR2		IN
+ PATH_TABLE_NAME		VARCHAR2		IN
+ PATH_GEOM_COLUMN		VARCHAR2		IN
+ PATH_LINK_TABLE_NAME		VARCHAR2		IN
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ GEOM_TYPE			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_WITH_COST 		BOOLEAN 		IN
+ LRS_TABLE_NAME 		VARCHAR2		IN
+ LRS_GEOM_COLUMN		VARCHAR2		IN
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_NODE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ GEOM_TYPE			VARCHAR2		IN
+ GEOM_COLUMN			VARCHAR2		IN
+ COST_COLUMN			VARCHAR2		IN
+ PARTITION_COLUMN		VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_NODE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ GEOM_TYPE			VARCHAR2		IN
+ GEOM_COLUMN			VARCHAR2		IN
+ COST_COLUMN			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_PARTITION_BLOB_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+PROCEDURE CREATE_PARTITION_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+PROCEDURE CREATE_PATH_LINK_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_PATH_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ GEOM_COLUMN			VARCHAR2		IN
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_REF_CONSTRAINTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE CREATE_SDO_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_TABLE_NAME		VARCHAR2		IN
+ NODE_GEOM_COLUMN		VARCHAR2		IN
+ NODE_COST_COLUMN		VARCHAR2		IN
+ LINK_TABLE_NAME		VARCHAR2		IN
+ LINK_GEOM_COLUMN		VARCHAR2		IN
+ LINK_COST_COLUMN		VARCHAR2		IN
+ PATH_TABLE_NAME		VARCHAR2		IN
+ PATH_GEOM_COLUMN		VARCHAR2		IN
+ PATH_LINK_TABLE_NAME		VARCHAR2		IN
+ SUBPATH_TABLE_NAME		VARCHAR2		IN
+ SUBPATH_GEOM_COLUMN		VARCHAR2		IN
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_SDO_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_TABLE_NAME		VARCHAR2		IN
+ NODE_GEOM_COLUMN		VARCHAR2		IN
+ NODE_COST_COLUMN		VARCHAR2		IN
+ LINK_TABLE_NAME		VARCHAR2		IN
+ LINK_GEOM_COLUMN		VARCHAR2		IN
+ LINK_COST_COLUMN		VARCHAR2		IN
+ PATH_TABLE_NAME		VARCHAR2		IN
+ PATH_GEOM_COLUMN		VARCHAR2		IN
+ PATH_LINK_TABLE_NAME		VARCHAR2		IN
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_SDO_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_WITH_COST 		BOOLEAN 		IN     DEFAULT
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_SUBPATH_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ GEOM_COLUMN			VARCHAR2		IN
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_TOPO_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_TABLE_NAME		VARCHAR2		IN
+ NODE_GEOM_COLUMN		VARCHAR2		IN
+ NODE_COST_COLUMN		VARCHAR2		IN
+ LINK_TABLE_NAME		VARCHAR2		IN
+ LINK_GEOM_COLUMN		VARCHAR2		IN
+ LINK_COST_COLUMN		VARCHAR2		IN
+ PATH_TABLE_NAME		VARCHAR2		IN
+ PATH_GEOM_COLUMN		VARCHAR2		IN
+ PATH_LINK_TABLE_NAME		VARCHAR2		IN
+ SUBPATH_TABLE_NAME		VARCHAR2		IN
+ SUBPATH_GEOM_COLUMN		VARCHAR2		IN
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_TOPO_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_TABLE_NAME		VARCHAR2		IN
+ NODE_GEOM_COLUMN		VARCHAR2		IN
+ NODE_COST_COLUMN		VARCHAR2		IN
+ LINK_TABLE_NAME		VARCHAR2		IN
+ LINK_GEOM_COLUMN		VARCHAR2		IN
+ LINK_COST_COLUMN		VARCHAR2		IN
+ PATH_TABLE_NAME		VARCHAR2		IN
+ PATH_GEOM_COLUMN		VARCHAR2		IN
+ PATH_LINK_TABLE_NAME		VARCHAR2		IN
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_TOPO_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_TABLE_NAME		VARCHAR2		IN
+ NODE_COST_COLUMN		VARCHAR2		IN
+ LINK_TABLE_NAME		VARCHAR2		IN
+ LINK_COST_COLUMN		VARCHAR2		IN
+ PATH_TABLE_NAME		VARCHAR2		IN
+ PATH_GEOM_COLUMN		VARCHAR2		IN
+ PATH_LINK_TABLE_NAME		VARCHAR2		IN
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_TOPO_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_WITH_COST 		BOOLEAN 		IN     DEFAULT
+ IS_COMPLEX			BOOLEAN 		IN     DEFAULT
+ STORAGE_PARAMETERS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_TOPO_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NO_OF_HIERARCHY_LEVELS 	NUMBER			IN
+ IS_DIRECTED			BOOLEAN 		IN
+ NODE_WITH_COST 		BOOLEAN 		IN
+ IS_COMPLEX			BOOLEAN 		IN
+ TOPOLOGY			VARCHAR2		IN
+ STORAGE_PARAMETERS		VARCHAR2		IN
+PROCEDURE DB_SYNC_CLEAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE DB_SYNC_DISABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE DB_SYNC_ENABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ BASE_NODE_TABLE		VARCHAR2		IN     DEFAULT
+ BASE_LINK_TABLE		VARCHAR2		IN     DEFAULT
+FUNCTION DB_SYNC_GET_UPDATE RETURNS TIMESTAMP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LAST_GET_TIME			TIMESTAMP		IN
+ NODE_CHANGE_HISTORY		SDO_NET_UPD_HIST_NTBL	OUT
+ LINK_CHANGE_HISTORY		SDO_NET_UPD_HIST_TBL	OUT
+FUNCTION DB_SYNC_GET_UPDATE RETURNS TIMESTAMP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LAST_GET_TIME			TIMESTAMP		IN
+ NODE_CHANGE_HISTORY		REF CURSOR		OUT
+ LINK_CHANGE_HISTORY		REF CURSOR		OUT
+PROCEDURE DELETE_CHILD_FEATURES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARENT_LAYER_ID		NUMBER			IN
+ PARENT_FEATURE_ID		NUMBER			IN
+ CHILD_FEATURE_IDS		SDO_NET_LAYER_FEAT_ARRAY IN
+PROCEDURE DELETE_CHILD_FEATURES_AT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARENT_LAYER_ID		NUMBER			IN
+ PARENT_ID			NUMBER			IN
+ SEQUENCE_NUMBERS		SDO_NUMBER_ARRAY	IN
+PROCEDURE DELETE_DANGLING_FEATURES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+PROCEDURE DELETE_DANGLING_LINKS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE DELETE_DANGLING_NODES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE DELETE_FEATURES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+ FEATURE_IDS			SDO_NUMBER_ARRAY	IN
+ DELETE_NET_ELEMS		BOOLEAN 		IN     DEFAULT
+ DELETE_CHILDREN		BOOLEAN 		IN     DEFAULT
+PROCEDURE DELETE_FEATURE_ELEMENTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+ FEATURE_ID			NUMBER			IN
+ FEATURE_ELEMENTS		SDO_NET_FEAT_ELEM_ARRAY IN
+ DELETE_NET_ELEMS		BOOLEAN 		IN     DEFAULT
+PROCEDURE DELETE_FEATURE_ELEMENTS_AT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+ FEATURE_ID			NUMBER			IN
+ SEQUENCE_NUMBERS		SDO_NUMBER_ARRAY	IN
+ DELETE_NET_ELEMS		BOOLEAN 		IN     DEFAULT
+PROCEDURE DELETE_LINK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LINK_ID			NUMBER			IN
+PROCEDURE DELETE_NODE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+PROCEDURE DELETE_PATH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ PATH_ID			NUMBER			IN
+PROCEDURE DELETE_PHANTOM_FEATURES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+PROCEDURE DELETE_SUBPATH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ SUBPATH_ID			NUMBER			IN
+PROCEDURE DEREGISTER_CONSTRAINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CONSTRAINT_NAME		VARCHAR2		IN
+PROCEDURE DEREGISTER_JAVA_OBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+PROCEDURE DISABLE_REF_CONSTRAINTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE DROP_FEATURE_LAYER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK_NAME			VARCHAR2		IN
+ FEATURE_LAYER_NAME		VARCHAR2		IN
+ DROP_TABLES			BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE DROP_REF_CONSTRAINTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE ENABLE_REF_CONSTRAINTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE FIND_CONNECTED_COMPONENTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LINK_LEVEL			NUMBER			IN     DEFAULT
+ COMPONENT_TABLE_NAME		VARCHAR2		IN
+ LOG_LOC			VARCHAR2		IN
+ LOG_FILE			VARCHAR2		IN
+ OPEN_MODE			VARCHAR2		IN     DEFAULT
+PROCEDURE GENERATE_NODE_LEVELS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NODE_LEVEL_TABLE_NAME		VARCHAR2		IN
+ OVERWRITE			BOOLEAN 		IN     DEFAULT
+ LOG_LOC			VARCHAR2		IN
+ LOG_FILE			VARCHAR2		IN
+ OPEN_MODE			VARCHAR2		IN     DEFAULT
+PROCEDURE GENERATE_PARENT_LINK_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARENT_NETWORK 		VARCHAR2		IN
+ COST_FUNCTION			VARCHAR2		IN
+PROCEDURE GENERATE_PARTITION_BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LINK_LEVEL			NUMBER			IN     DEFAULT
+ PARTITION_ID			NUMBER			IN
+ INCLUDE_USER_DATA		BOOLEAN 		IN
+ LOG_LOC			VARCHAR2		IN
+ LOG_FILE			VARCHAR2		IN
+ OPEN_MODE			VARCHAR2		IN     DEFAULT
+ PERFORM_DELTA_UPDATE		BOOLEAN 		IN     DEFAULT
+PROCEDURE GENERATE_PARTITION_BLOBS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LINK_LEVEL			NUMBER			IN     DEFAULT
+ PARTITION_BLOB_TABLE_NAME	VARCHAR2		IN
+ INCLUDE_USER_DATA		BOOLEAN 		IN
+ COMMIT_FOR_EACH_BLOB		BOOLEAN 		IN     DEFAULT
+ LOG_LOC			VARCHAR2		IN
+ LOG_FILE			VARCHAR2		IN
+ OPEN_MODE			VARCHAR2		IN     DEFAULT
+ PERFORM_DELTA_UPDATE		BOOLEAN 		IN     DEFAULT
+ REGENERATE_NODE_LEVELS 	BOOLEAN 		IN     DEFAULT
+FUNCTION GET_BUFFER_COST RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUERY_PERCENTAGE		NUMBER			IN
+ INTERVAL_START_PERCENTAGE	NUMBER			IN
+ INTERVAL_END_PERCENTAGE	NUMBER			IN
+ INTERVAL_START_COST		NUMBER			IN
+ INTERVAL_END_COST		NUMBER			IN
+FUNCTION GET_CHILD_FEATURE_IDS RETURNS SDO_NET_LAYER_FEAT_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+ FEATURE_ID			NUMBER			IN
+FUNCTION GET_CHILD_LINKS RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LINK_ID			NUMBER			IN
+FUNCTION GET_CHILD_NODES RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+FUNCTION GET_DANGLING_FEATURES RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+FUNCTION GET_DANGLING_LINKS RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_DANGLING_NODES RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_FEATURES_ON_LINKS RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+ LINK_IDS			SDO_NUMBER_ARRAY	IN
+FUNCTION GET_FEATURES_ON_NODES RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+ NODE_IDS			SDO_NUMBER_ARRAY	IN
+FUNCTION GET_FEATURE_ELEMENTS RETURNS SDO_NET_FEAT_ELEM_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+ FEATURE_ID			NUMBER			IN
+FUNCTION GET_FEATURE_LAYER_ID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK_NAME			VARCHAR2		IN
+ FEATURE_LAYER_NAME		VARCHAR2		IN
+FUNCTION GET_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LINK_ID			NUMBER			IN
+ START_PERCENTAGE		NUMBER			IN
+ END_PERCENTAGE 		NUMBER			IN
+FUNCTION GET_GEOMETRY_TYPE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_INVALID_LINKS RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_INVALID_NODES RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_INVALID_PATHS RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_IN_LINKS RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+FUNCTION GET_ISOLATED_NODES RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_LINKS_IN_CHILD_NETWORK RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LINK_ID			NUMBER			IN
+FUNCTION GET_LINKS_IN_PATH RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ PATH_ID			NUMBER			IN
+FUNCTION GET_LINK_COST_COLUMN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_LINK_DIRECTION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_LINK_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LINK_ID			NUMBER			IN
+ START_PERCENTAGE		NUMBER			IN     DEFAULT
+ END_PERCENTAGE 		NUMBER			IN     DEFAULT
+FUNCTION GET_LINK_GEOM_COLUMN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_LINK_PARTITION_COLUMN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_LINK_TABLE_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_LOGGING_LEVEL RETURNS NUMBER
+FUNCTION GET_LRS_GEOM_COLUMN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_LRS_LINK_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LINK_ID			NUMBER			IN
+FUNCTION GET_LRS_NODE_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+FUNCTION GET_LRS_TABLE_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_NETWORK_CATEGORY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_NETWORK_ID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_NETWORK_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK_ID			NUMBER			IN
+FUNCTION GET_NETWORK_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK_ID			NUMBER			IN
+ OWNER				VARCHAR2		OUT
+FUNCTION GET_NETWORK_OWNER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK_ID			NUMBER			IN
+FUNCTION GET_NETWORK_TYPE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_NODES_IN_CHILD_NETWORK RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+FUNCTION GET_NODES_IN_PATH RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ PATH_ID			NUMBER			IN
+FUNCTION GET_NODE_COST_COLUMN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_NODE_DEGREE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+FUNCTION GET_NODE_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+FUNCTION GET_NODE_GEOM_COLUMN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_NODE_HIERARCHY_LEVEL RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+FUNCTION GET_NODE_IN_DEGREE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+FUNCTION GET_NODE_OUT_DEGREE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+FUNCTION GET_NODE_PARTITION_COLUMN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_NODE_TABLE_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_NO_OF_HIERARCHY_LEVELS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_NO_OF_LINKS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_NO_OF_LINKS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ HIERARCHY_LEVEL		NUMBER			IN
+FUNCTION GET_NO_OF_LINKS_IN_PATH RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ PATH_ID			NUMBER			IN
+FUNCTION GET_NO_OF_NODES RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_NO_OF_NODES RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ HIERARCHY_LEVEL		NUMBER			IN
+FUNCTION GET_NO_OF_NODES_IN_PATH RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ PATH_ID			NUMBER			IN
+FUNCTION GET_NO_OF_PARTITIONS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LINK_LEVEL			NUMBER			IN     DEFAULT
+FUNCTION GET_OUT_LINKS RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+FUNCTION GET_PARENT_FEATURE_IDS RETURNS SDO_NET_LAYER_FEAT_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+ FEATURE_ID			NUMBER			IN
+FUNCTION GET_PARTITION_BLOB_TABLE_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_PARTITION_SIZE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ PARTITION_ID			NUMBER			IN
+ LINK_LEVEL			NUMBER			IN     DEFAULT
+ INCLUDE_USER_DATA		VARCHAR2		IN     DEFAULT
+ INCLUDE_SPATIAL_DATA		VARCHAR2		IN     DEFAULT
+FUNCTION GET_PARTITION_TABLE_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_PATH_GEOM_COLUMN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_PATH_LINK_TABLE_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_PATH_TABLE_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_PERCENTAGE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LINK_ID			NUMBER			IN
+ PT_GEOM			SDO_GEOMETRY		IN
+FUNCTION GET_PHANTOM_FEATURES RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+FUNCTION GET_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LINK_ID			NUMBER			IN
+ PERCENTAGE			NUMBER			IN
+FUNCTION GET_PT_GEOM_ORD RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY			SDO_GEOMETRY		IN
+ IDX				NUMBER(38)		IN
+FUNCTION GET_SUBPATH_GEOM_COLUMN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_SUBPATH_TABLE_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_TOPOLOGY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION GET_TOPO_LINK_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ LINK_ID			NUMBER			IN
+FUNCTION GET_TOPO_NODE_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+FUNCTION GET_USER_DEFINED_DATA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE INSERT_GEOM_METADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_TABLE_NAME		VARCHAR2		IN
+ GEOM_COLUMN_NAME		VARCHAR2		IN
+ DIMINFO			SDO_DIM_ARRAY		IN
+ SRID				NUMBER			IN
+PROCEDURE INSERT_GEOM_METADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ DIMINFO			SDO_DIM_ARRAY		IN
+ SRID				NUMBER			IN
+PROCEDURE INSERT_PATH_LINK_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ PATH_ID			NUMBER			IN
+ LINKS				SDO_NUMBER_ARRAY	IN
+ IS_SIMPLE			BOOLEAN 		IN     DEFAULT
+FUNCTION IS_COMPLEX RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION IS_COVERED_BY_LINK_INTERVAL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUERY_PERCENTAGE		NUMBER			IN
+ INTERVAL_START_PERCENTAGE	NUMBER			IN
+ INTERVAL_END_PERCENTAGE	NUMBER			IN
+FUNCTION IS_GEODETIC RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION IS_HIERARCHICAL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION IS_LINK_IN_PATH RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ PATH_ID			NUMBER			IN
+ LINK_ID			NUMBER			IN
+FUNCTION IS_LOGICAL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION IS_NODE_IN_PATH RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ PATH_ID			NUMBER			IN
+ NODE_ID			NUMBER			IN
+FUNCTION IS_SIMPLE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION IS_SIMPLE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ PATH_ID			NUMBER			IN
+FUNCTION IS_SPATIAL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE LOAD_CONFIG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE_DIRECTORY 		VARCHAR2		IN
+ FILE_NAME			VARCHAR2		IN
+PROCEDURE LOGICAL_PARTITION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ PARTITION_TABLE_NAME		VARCHAR2		IN
+ MAX_NUM_NODES			NUMBER			IN
+ LOG_LOC			VARCHAR2		IN
+ LOG_FILE			VARCHAR2		IN
+ OPEN_MODE			VARCHAR2		IN     DEFAULT
+ LINK_LEVEL			NUMBER(38)		IN     DEFAULT
+PROCEDURE LOGICAL_PARTITION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ PARTITION_TABLE_NAME		VARCHAR2		IN
+ MAX_NUM_NODES			NUMBER			IN
+ LOG_LOC			VARCHAR2		IN
+ LOG_FILE			VARCHAR2		IN
+ OPEN_MODE			VARCHAR2		IN     DEFAULT
+ LINK_LEVEL			NUMBER(38)		IN     DEFAULT
+ PART_SIZE_TOLERANCE		NUMBER			IN
+PROCEDURE LOGICAL_POWERLAW_PARTITION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ PARTITION_TABLE_NAME		VARCHAR2		IN
+ MAX_NUM_NODES			NUMBER			IN
+ LOG_LOC			VARCHAR2		IN
+ LOG_FILE			VARCHAR2		IN
+ OPEN_MODE			VARCHAR2		IN     DEFAULT
+ LINK_LEVEL			NUMBER(38)		IN     DEFAULT
+ PART_SIZE_TOLERANCE		NUMBER			IN     DEFAULT
+FUNCTION LRS_GEOMETRY_NETWORK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION NETWORK_EXISTS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION POST_XML RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ URL				VARCHAR2		IN
+ REQUEST			XMLTYPE 		IN
+PROCEDURE REGISTER_CONSTRAINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CONSTRAINT_NAME		VARCHAR2		IN
+ CLASS_NAME			VARCHAR2		IN
+ DIRECTORY_NAME 		VARCHAR2		IN
+ DESCRIPTION			VARCHAR2		IN
+PROCEDURE REGISTER_JAVA_OBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ CLASS_NAME			VARCHAR2		IN
+ DIRECTORY_NAME 		VARCHAR2		IN
+ DESCRIPTION			VARCHAR2		IN
+ JAVA_INTERFACE 		VARCHAR2		IN
+FUNCTION SDO_GEOMETRY_NETWORK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE SET_LOGGING_LEVEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LEVEL				NUMBER			IN
+PROCEDURE SET_MAX_JAVA_HEAP_SIZE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BYTES				NUMBER			IN
+PROCEDURE SPATIAL_PARTITION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ PARTITION_TABLE_NAME		VARCHAR2		IN
+ MAX_NUM_NODES			NUMBER			IN
+ LOG_LOC			VARCHAR2		IN
+ LOG_FILE			VARCHAR2		IN
+ OPEN_MODE			VARCHAR2		IN     DEFAULT
+ LINK_LEVEL			NUMBER(38)		IN     DEFAULT
+PROCEDURE SWITCH_TO_LOGICAL_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE SWITCH_TO_SPATIAL_NETWORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ NODE_GEOM_COL			VARCHAR2		IN
+ LINK_GEOM_COL			VARCHAR2		IN
+ PATH_GEOM_COL			VARCHAR2		IN
+ SUBPATH_GEOM_COL		VARCHAR2		IN
+FUNCTION TOPO_GEOMETRY_NETWORK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE UPDATE_CONSISTENCY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+PROCEDURE UPDATE_FEATURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+ FEATURE_ID			NUMBER			IN
+ FEATURE_ELEMENTS		SDO_NET_FEAT_ELEM_ARRAY IN     DEFAULT
+ CHILD_FEATURE_IDS		SDO_NET_LAYER_FEAT_ARRAY IN	DEFAULT
+ CHECK_INTEGRITY		BOOLEAN 		IN     DEFAULT
+PROCEDURE UPDATE_FEATURE_ELEMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE_LAYER_ID		NUMBER			IN
+ FEATURE_ID			NUMBER			IN
+ SEQUENCE_NUMBER		NUMBER			IN
+ FEATURE_ELEMENT		SDO_NET_FEAT_ELEM	IN
+ CHECK_INTEGRITY		BOOLEAN 		IN     DEFAULT
+FUNCTION VALIDATE_COMPONENT_SCHEMA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION VALIDATE_CONSISTENCY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ IS_FAST			VARCHAR2		IN     DEFAULT
+FUNCTION VALIDATE_LINK_SCHEMA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION VALIDATE_LRS_SCHEMA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION VALIDATE_NETWORK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ CHECK_DATA			VARCHAR2		IN     DEFAULT
+FUNCTION VALIDATE_NODE_SCHEMA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION VALIDATE_PARTITION_BLOB_SCHEMA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION VALIDATE_PARTITION_INFO RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+ CHECK_DATA			VARCHAR2		IN     DEFAULT
+FUNCTION VALIDATE_PARTITION_SCHEMA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION VALIDATE_PATH_SCHEMA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+FUNCTION VALIDATE_SUBPATH_SCHEMA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NETWORK			VARCHAR2		IN
+

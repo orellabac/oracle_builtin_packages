@@ -1,0 +1,22 @@
+PROCEDURE CLEARREPOSITORYXMLINDEX
+PROCEDURE CREATENONCEKEY
+PROCEDURE CREATEREPOSITORYXMLINDEX
+PROCEDURE DROPREPOSITORYXMLINDEX
+PROCEDURE INSTALLDEFAULTWALLET
+PROCEDURE MOVEXDB_TABLESPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NEW_TABLESPACE 		VARCHAR2		IN
+ TRACE				BOOLEAN 		IN     DEFAULT
+PROCEDURE REBUILDHIERARCHICALINDEX
+PROCEDURE XMLINDEXADDPATH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATH				VARCHAR2		IN
+ RECURSE			BOOLEAN 		IN     DEFAULT
+PROCEDURE XMLINDEXREMOVEPATH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATH				VARCHAR2		IN
+ RECURSE			BOOLEAN 		IN     DEFAULT
+

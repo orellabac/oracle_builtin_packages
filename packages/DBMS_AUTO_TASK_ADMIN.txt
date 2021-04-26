@@ -1,0 +1,69 @@
+PROCEDURE DEFAULT_RESET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_NAME			VARCHAR2		IN
+ OPERATION_NAME 		VARCHAR2		IN     DEFAULT
+PROCEDURE DISABLE
+PROCEDURE DISABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_NAME			VARCHAR2		IN
+ OPERATION			VARCHAR2		IN
+ WINDOW_NAME			VARCHAR2		IN
+PROCEDURE ENABLE
+PROCEDURE ENABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_NAME			VARCHAR2		IN
+ OPERATION			VARCHAR2		IN
+ WINDOW_NAME			VARCHAR2		IN
+PROCEDURE GET_CLIENT_ATTRIBUTES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_NAME			VARCHAR2		IN
+ SERVICE_NAME			VARCHAR2		OUT
+ WINDOW_GROUP			VARCHAR2		OUT
+PROCEDURE GET_P1_RESOURCES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STATS_GROUP_PCT		NUMBER			OUT
+ SEG_GROUP_PCT			NUMBER			OUT
+ TUNE_GROUP_PCT 		NUMBER			OUT
+ HEALTH_GROUP_PCT		NUMBER			OUT
+PROCEDURE OVERRIDE_PRIORITY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_NAME			VARCHAR2		IN
+ PRIORITY			VARCHAR2		IN
+PROCEDURE OVERRIDE_PRIORITY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_NAME			VARCHAR2		IN
+ OPERATION			VARCHAR2		IN
+ PRIORITY			VARCHAR2		IN
+PROCEDURE SET_ATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_NAME			VARCHAR2		IN
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+ ATTRIBUTE_VALUE		VARCHAR2		IN
+PROCEDURE SET_ATTRIBUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_NAME			VARCHAR2		IN
+ OPERATION			VARCHAR2		IN
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+ ATTRIBUTE_VALUE		VARCHAR2		IN
+PROCEDURE SET_CLIENT_SERVICE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_NAME			VARCHAR2		IN
+ SERVICE_NAME			VARCHAR2		IN
+PROCEDURE SET_P1_RESOURCES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STATS_GROUP_PCT		NUMBER			IN
+ SEG_GROUP_PCT			NUMBER			IN
+ TUNE_GROUP_PCT 		NUMBER			IN
+ HEALTH_GROUP_PCT		NUMBER			IN
+

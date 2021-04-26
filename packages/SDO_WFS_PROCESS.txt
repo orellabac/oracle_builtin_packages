@@ -1,0 +1,509 @@
+FUNCTION CONTAINSSDO RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NS				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ FTID				NUMBER			IN
+FUNCTION CONTAINSSDOINTERNAL RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ROOTNS 			VARCHAR2		IN
+ ROOTNAME			VARCHAR2		IN
+ NS				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ FTID				NUMBER			IN
+PROCEDURE DELETECAPABILITIESINFO
+PROCEDURE DELETEFEATURETYPEXMLINFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTYPEID			NUMBER			IN
+PROCEDURE DROPFEATURETYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTNSURL			VARCHAR2		IN
+ FTNAME 			VARCHAR2		IN
+PROCEDURE DROPFEATURETYPES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTNSURL			VARCHAR2		IN
+PROCEDURE DROP_EXPORT_TABLES
+FUNCTION ENUMERATEARRPATHS RETURNS STRINGLIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATHPATTERN			VARCHAR2		IN
+ NSPARAM			VARCHAR2		IN
+ DATA				XMLTYPE 		IN
+FUNCTION EXPANDPATH RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ALIASEDPATH			VARCHAR2		IN
+ NSPARAM			VARCHAR2		IN
+FUNCTION EXTRACTID RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XMLDATA			XMLTYPE 		IN
+ IDPATHS			STRINGLIST		IN
+FUNCTION EXTRACTSDO RETURNS SDO_GEOM_PATH_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XMLDATA			XMLTYPE 		IN
+ SPATIALPATHS			STRINGLIST		IN
+ SRSNS				VARCHAR2		IN
+ ISGML3 			VARCHAR2		IN
+ SPPATHSSRSNSLIST		STRINGLISTLIST		IN
+FUNCTION FINDNSURL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NSALIAS			VARCHAR2		IN
+ NSALIASLIST			STRINGLIST		IN
+ NSURLLIST			STRINGLIST		IN
+PROCEDURE GENCOLLECTIONPROCS
+PROCEDURE GENCOLLECTIONPROCSHELPER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJNS				VARCHAR2		IN
+ OBJNAME			VARCHAR2		IN
+FUNCTION GENERATEALIASSTRING RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ALIASLIST			STRINGLIST		IN
+FUNCTION GENERATEPARSEDSPATIALPATH RETURNS STRINGLISTLIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SPATIALPATHS			STRINGLIST		IN
+FUNCTION GENIDVALUE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA				XMLTYPE 		IN
+ IDPATHS			STRINGLIST		IN
+ TNS				VARCHAR2		IN
+ TNAME				VARCHAR2		IN
+ FTUSERNAME			VARCHAR2		IN
+PROCEDURE GENRECORDTYPEPROCESSINGLOGIC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TNS				VARCHAR2		IN
+ TNAME				VARCHAR2		IN
+FUNCTION GENSPATIALARRINFO RETURNS SDO_GEOM_PATH_INFO_LIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLENAMEPREFIX		VARCHAR2		IN
+ PKVAL				VARCHAR2		IN
+ L_SPATIALARRLIST		STRINGLISTLIST		IN
+ DATA				XMLTYPE 		IN
+ SRSNS				VARCHAR2		IN
+ SPATIALARRUPDMAP		VARCHAR2		IN
+ ISGML3 			VARCHAR2		IN
+ SPARRPATHSSRSNSLIST		STRINGLISTLIST		IN
+FUNCTION GENSPATIALPATHELEMCOLINDEX RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SPATIALPATHS			STRINGLIST		IN
+ SPATIALPATHELEM		SDO_GEOM_PATH_ELEM	IN
+PROCEDURE GENTRIGGERS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TNS				VARCHAR2		IN
+ TNAME				VARCHAR2		IN
+PROCEDURE GENUPDATESTR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SPATIALCOLCOUNT		NUMBER			IN
+ UPDATE_PREFIX			VARCHAR2		IN
+ UPDATE_SUFFIX			VARCHAR2		IN
+FUNCTION GETALIAS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NSURL				VARCHAR2		IN
+ ALIASLIST			STRINGLIST		IN
+FUNCTION GETCOUNT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATHPATTERN			VARCHAR2		IN
+ NSPARAM			VARCHAR2		IN
+ DATA				XMLTYPE 		IN
+FUNCTION GETFEATURETYPEID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTNSURL			VARCHAR2		IN
+ FTNAME 			VARCHAR2		IN
+FUNCTION GETPARSEDPATH RETURNS STRINGLIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATH				VARCHAR2		IN
+FUNCTION GETPATH RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATH				STRINGLIST		IN
+FUNCTION GETUPDATEMAP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SPATIALARRLIST 		STRINGLISTLIST		IN
+FUNCTION GETXMLTAGTYPE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TYPEOWNER			VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+PROCEDURE GRANTFEATURETYPETOUSER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTNSURL			VARCHAR2		IN
+ FTNAME 			VARCHAR2		IN
+ USERNAME			VARCHAR2		IN
+PROCEDURE GRANTMDACCESSTOADMINUSER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+PROCEDURE GRANTMDACCESSTOUSER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+PROCEDURE INITIALIZE_AFTER_IMPORT
+PROCEDURE INSERTCAPABILITIESINFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPABILITIESINFO		XMLTYPE 		IN
+ WFS_VERSION			VARCHAR2		IN     DEFAULT
+PROCEDURE INSERTFTDATAUPDATED
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NS				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ UPDATEDROWLIST 		ROWPOINTERLIST		IN
+ UPDATETS			TIMESTAMP		IN
+PROCEDURE INSERTFTMDUPDATED
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NS				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ UPDATETS			TIMESTAMP		IN
+FUNCTION ISCOMPLEXOBJECTTYPE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELEMTYPE			VARCHAR2		IN
+ GMLALIAS			VARCHAR2		IN
+FUNCTION ISINLIST RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L				STRINGLIST		IN
+ ITEM				VARCHAR2		IN
+FUNCTION ISLISTMEMBER RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURETYPENAME		VARCHAR2		IN
+ NAMESPACEURL			VARCHAR2		IN
+ FTIDLIST			STRINGLISTLIST		IN
+FUNCTION ISPKCOLIN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				VARCHAR2		IN
+ RLIST				ROWPOINTERLIST		IN
+FUNCTION ISROWIDIN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				ROWID			IN
+ RLIST				ROWPOINTERLIST		IN
+FUNCTION NOTINARRAY RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				VARCHAR2		IN
+ PLIST				ROWPOINTERLIST		IN
+FUNCTION ORDERINLIST RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ L				STRINGLIST		IN
+ ITEM				VARCHAR2		IN
+FUNCTION PARSEPATH RETURNS STRINGLIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATH				VARCHAR2		IN
+PROCEDURE POPULATEFEATURETYPEXMLINFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XMLCOLTYPEXSD			XMLTYPE 		IN
+ FTYPEID			NUMBER			IN
+ COLUMNNAME			VARCHAR2		IN
+ OBJPATHINFO			STRINGLIST		IN
+FUNCTION POPULATEVARYINGALIASES RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTXSD				XMLTYPE 		IN
+ FTNAME 			VARCHAR2		IN
+ FEATURETYPEID			NUMBER			IN
+ COL_NAME			VARCHAR2		IN
+ TAGTYPENAME			VARCHAR2		OUT
+FUNCTION PREPARE_FOR_EXPORT_ALL RETURNS VARCHAR2
+FUNCTION PREPARE_FOR_EXPORT_ALL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXPORTSDOMETADATA		VARCHAR2		IN
+FUNCTION PREPARE_FOR_EXPORT_FTS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTLIST 			STRINGLISTLIST		IN
+FUNCTION PREPARE_FOR_EXPORT_FTS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTLIST 			STRINGLISTLIST		IN
+ EXPORTSDOMETADATA		VARCHAR2		IN
+PROCEDURE PREPARE_FOR_EXPORT_FT_INT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTNAME 			VARCHAR2		IN
+ FTNSURL			VARCHAR2		IN
+ EXPORTSDOMETADATA		VARCHAR2		IN
+PROCEDURE PREPARE_FOR_EXPORT_FT_M_INT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTNAME 			VARCHAR2		IN
+ FTNSURL			VARCHAR2		IN
+ EXPORTSDOMETADATA		VARCHAR2		IN
+FUNCTION PREPARE_FOR_EXPORT_USER RETURNS VARCHAR2
+FUNCTION PREPARE_FOR_EXPORT_USER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXPORTSDOMETADATA		VARCHAR2		IN
+PROCEDURE PREPROCESSINSERT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XMLDATA			XMLTYPE 		IN
+ IDPATHS			STRINGLIST		IN
+ SPATIALPATHS			STRINGLIST		IN
+ PARSEDALIASSPPATH		STRINGLISTLIST		IN
+ SPPATHSSRSNSLIST		STRINGLISTLIST		IN
+ SPATIALARRPATHSLIST		STRINGLISTLIST		IN
+ SPARRPATHSSRSNSLIST		STRINGLISTLIST		IN
+ FTNS				VARCHAR2		IN
+ FTNAME 			VARCHAR2		IN
+ FTID				NUMBER			IN
+ FTUSERNAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+ SRSNS				VARCHAR2		IN
+ ISGML3 			VARCHAR2		IN
+ SPATIALPATHSSTGSRIDS		SDONUMLIST		IN
+ SPATIALARRPATHSSTGSRIDS	SDONUMLIST		IN
+ PKCOLVAL			VARCHAR2		OUT
+PROCEDURE PREPROCESSUPDATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XMLDATA			XMLTYPE 		IN
+ OLDID				VARCHAR2		IN
+ SPCOLUPDMAP			STRINGLIST		IN
+ SPARRCOLUPDMAP 		STRINGLIST		IN
+ IDPATHS			STRINGLIST		IN
+ SPATIALPATHS			STRINGLIST		IN
+ PARSEDALIASSPPATH		STRINGLISTLIST		IN
+ SPPATHSSRSNSLIST		STRINGLISTLIST		IN
+ SPATIALARRPATHSLIST		STRINGLISTLIST		IN
+ SPARRPATHSSRSNSLIST		STRINGLISTLIST		IN
+ FTNS				VARCHAR2		IN
+ FTNAME 			VARCHAR2		IN
+ FTID				NUMBER			IN
+ FTUSERNAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+ SRSNS				VARCHAR2		IN
+ ISGML3 			VARCHAR2		IN
+ SPATIALPATHSSTGSRIDS		SDONUMLIST		IN
+ SPATIALARRPATHSSTGSRIDS	SDONUMLIST		IN
+ COMPUTESP			NUMBER			IN
+ NEWID				VARCHAR2		OUT
+PROCEDURE PROCESSCOMPLEXELEMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTXSD				XMLTYPE 		IN
+ ELEMENTTYPE			VARCHAR2		IN
+ SPATIALCOLS			STRINGLIST		IN/OUT
+ CURRGMLELEMENTSCNT		NUMBER			IN/OUT
+ GMLELEMENTSCNT 		NUMBER			IN
+ PARENTELEMPATH 		VARCHAR2		IN
+ GMLALIAS			VARCHAR2		IN
+FUNCTION PROCESSIDPATH RETURNS STRINGLIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRCPATHS			STRINGLIST		IN
+PROCEDURE PROCESSINLINECOMPLEXELEMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTXSD				XMLTYPE 		IN
+ ELEMENTXML			XMLTYPE 		IN
+ ELEMINDEX			NUMBER			IN
+ SPATIALCOLS			STRINGLIST		IN/OUT
+ CURRGMLELEMENTSCNT		NUMBER			IN/OUT
+ GMLELEMENTSCNT 		NUMBER			IN
+ PARENTELEMPATH 		VARCHAR2		IN
+ GMLALIAS			VARCHAR2		IN
+FUNCTION PROCESSPATH RETURNS STRINGLISTLIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRCPATHS			STRINGLISTLIST		IN
+ GENARRIDX			NUMBER			IN
+PROCEDURE PUBLISHFEATURETYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATASRC			VARCHAR2		IN
+ FTNSURL			VARCHAR2		IN
+ FTNAME 			VARCHAR2		IN
+ FTNSALIAS			VARCHAR2		IN
+ FEATUREDESC			XMLTYPE 		IN
+ SCHEMALOCATION 		VARCHAR2		IN
+ PKEYCOL			VARCHAR2		IN
+ COLUMNINFO			STRINGLIST		IN
+ PSPATIALCOL			VARCHAR2		IN
+ FEATUREMEMBERNS		VARCHAR2		IN
+ FEATUREMEMBERNAME		VARCHAR2		IN
+ SRSNS				VARCHAR2		IN
+ SRSNSALIAS			VARCHAR2		IN
+ MANDATORYCOLUMNINFO		STRINGLIST		IN     DEFAULT
+ WFS_VERSION			VARCHAR2		IN     DEFAULT
+ FTXSD				XMLTYPE 		IN     DEFAULT
+ CUSTOMSRSNAMEPREFIXES		VARCHAR2		IN     DEFAULT
+PROCEDURE PUBLISHFEATURETYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATASRC			VARCHAR2		IN
+ FTNSURL			VARCHAR2		IN
+ FTNAME 			VARCHAR2		IN
+ FTNSALIAS			VARCHAR2		IN
+ FEATUREDESC			XMLTYPE 		IN
+ SCHEMALOCATION 		VARCHAR2		IN
+ PKEYCOL			VARCHAR2		IN
+ COLUMNINFO			STRINGLIST		IN
+ PSPATIALCOL			VARCHAR2		IN
+ FEATUREMEMBERNS		VARCHAR2		IN
+ FEATUREMEMBERNAME		VARCHAR2		IN
+ SRSNS				VARCHAR2		IN
+ SRSNSALIAS			VARCHAR2		IN
+ VIEWTABLENAME			VARCHAR2		IN
+ VIEWTABLEPKEYCOL		VARCHAR2		IN
+ MANDATORYCOLUMNINFO		STRINGLIST		IN     DEFAULT
+ WFS_VERSION			VARCHAR2		IN     DEFAULT
+ FTXSD				XMLTYPE 		IN     DEFAULT
+ CUSTOMSRSNAMEPREFIXES		VARCHAR2		IN     DEFAULT
+PROCEDURE PUBLISHFEATURETYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATASRC			VARCHAR2		IN
+ FTNSURL			VARCHAR2		IN
+ FTNAME 			VARCHAR2		IN
+ FTNSALIAS			VARCHAR2		IN
+ FEATUREDESC			XMLTYPE 		IN
+ SCHEMALOCATION 		VARCHAR2		IN
+ PKEYCOL			VARCHAR2		IN
+ COLUMNINFO			STRINGLIST		IN
+ PSPATIALCOL			VARCHAR2		IN
+ FEATUREMEMBERNS		VARCHAR2		IN
+ FEATUREMEMBERNAME		VARCHAR2		IN
+ SRSNS				VARCHAR2		IN
+ SRSNSALIAS			VARCHAR2		IN
+ FEATURECOLLECTIONNS		VARCHAR2		IN
+ FEATURECOLLECTIONNAME		VARCHAR2		IN
+ ISGML3 			VARCHAR2		IN
+ FORMATTEDKEYCOLS		STRINGLIST		IN
+ VIEWTABLENAME			VARCHAR2		IN
+ VIEWTABLEPKEYCOL		VARCHAR2		IN
+ VIEWTABLEFMTKEYCOLS		STRINGLIST		IN
+ MANDATORYCOLUMNINFO		STRINGLIST		IN     DEFAULT
+ WFS_VERSION			VARCHAR2		IN     DEFAULT
+ FTXSD				XMLTYPE 		IN     DEFAULT
+ CUSTOMSRSNAMEPREFIXES		VARCHAR2		IN     DEFAULT
+PROCEDURE PUBLISHFEATURETYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTXSD				XMLTYPE 		IN
+ FEATUREDESC			XMLTYPE 		IN
+ WFS_VERSION			VARCHAR2		IN     DEFAULT
+PROCEDURE PUBLISH_FEATURETYPES_IN_SCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_OWNER			VARCHAR2		IN
+ P_NAMESPACE_URL		VARCHAR2		IN
+ P_NAMESPACE_ALIAS		VARCHAR2		IN
+ P_WLS_POSTXML_URL		VARCHAR2		IN
+ P_TABLENAME_PATTERN		VARCHAR2		IN     DEFAULT
+ P_WFS_VERSION			VARCHAR2		IN     DEFAULT
+ P_WRITE_XSD			VARCHAR2		IN     DEFAULT
+FUNCTION PUTALIAS RETURNS STRINGLIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NSURL				VARCHAR2		IN
+ ALIAS				VARCHAR2		IN
+ ALIASLIST			STRINGLIST		IN
+PROCEDURE REGISTERMTABLEVIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTNSURL			VARCHAR2		IN
+ FTNAME 			VARCHAR2		IN
+ VIEWTABLELIST			STRINGLIST		IN
+ VIEWTABLEPKEYCOLLIST		STRINGLIST		IN
+ TABLEPKEYCOLLIST		STRINGLIST		IN
+PROCEDURE REGISTERMTABLEVIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTNSURL			VARCHAR2		IN
+ FTNAME 			VARCHAR2		IN
+ VIEWTABLELIST			STRINGLIST		IN
+ VIEWTABLEPKEYCOLLIST		STRINGLIST		IN
+ FORMATTEDVIEWTABLECOLLIST	STRINGLISTLIST		IN
+ TABLEPKEYCOLLIST		STRINGLIST		IN
+PROCEDURE REGISTEROBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJNS				VARCHAR2		IN
+ OBJNAME			VARCHAR2		IN
+ FTNSURL			VARCHAR2		IN
+ CURROBJCOLPATH 		VARCHAR2		IN
+ OBJNAMEINDEX			NUMBER			IN
+ FTID				NUMBER			IN
+ SPATIALCOLINFO 		STRINGLIST		IN
+ SPATIALCOLINFOINDEX		NUMBER			IN/OUT
+PROCEDURE REVOKEFEATURETYPEFROMUSER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTNSURL			VARCHAR2		IN
+ FTNAME 			VARCHAR2		IN
+ USERNAME			VARCHAR2		IN
+PROCEDURE REVOKEMDACCESSFROMADMINUSER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+PROCEDURE REVOKEMDACCESSFROMUSER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+FUNCTION SORTSPCONTENTBYCOLINDEX RETURNS SDO_GEOM_PATH_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SPATIALPATHS			STRINGLIST		IN
+ SPATIALPATHINFO		SDO_GEOM_PATH_INFO	IN
+ USERNAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+FUNCTION STRIP_SPECIAL_CHARS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT_STR			VARCHAR2		IN
+ CHARS_TO_BE_DELETED		VARCHAR2		IN
+ PLACEHOLDERS			VARCHAR2		IN     DEFAULT
+PROCEDURE UNREGISTERMTABLEVIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FTNSURL			VARCHAR2		IN
+ FTNAME 			VARCHAR2		IN
+PROCEDURE UPDATEOBJECTREF
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REFOBJNS			VARCHAR2		IN
+ REFOBJNAME			VARCHAR2		IN
+ FEATURETYPEID			NUMBER			IN
+ REFOBJSEQNO			NUMBER			IN
+PROCEDURE UPDATEOBJECTREF
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REFOBJNS			VARCHAR2		IN
+ REFOBJNAME			VARCHAR2		IN
+ REFOBJSEQNO			NUMBER			IN
+ NSURL				VARCHAR2		IN
+ CONTAINEROBJNS 		VARCHAR2		IN
+ CONTAINEROBJNAME		VARCHAR2		IN
+ CONTAINEROBJNAMEINDEX		NUMBER			IN
+ FEATURETYPEID			NUMBER			IN
+

@@ -1,0 +1,9 @@
+PROCEDURE ANALYZE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INNAME 			VARCHAR2		IN
+PROCEDURE CLEAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INNAME 			VARCHAR2		IN
+

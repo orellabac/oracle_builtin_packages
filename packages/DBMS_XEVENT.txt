@@ -1,0 +1,234 @@
+PROCEDURE CLEAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HL				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETAPPLICATIONDATA RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EV				RAW(32) 		IN
+FUNCTION GETCHILDOID RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINK				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETCURRENTUSER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EV				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETDAVOWNER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LK				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETDAVTOKEN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LK				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETDEPTH RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LK				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETEVENT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EV				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETEXPIRY RETURNS TIMESTAMP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LK				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETFIRST RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(32) 		OUT
+ HL				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETHANDLERLIST RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(32) 		OUT
+ EV				RAW(32) 		IN
+FUNCTION GETINTERFACE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EV				RAW(32) 		IN
+FUNCTION GETLANGUAGE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLER			RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETLINK RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(32) 		OUT
+ EV				RAW(32) 		IN
+FUNCTION GETLINKNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINK				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETLOCK RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(32) 		OUT
+ EV				RAW(32) 		IN
+FUNCTION GETLOCKMODE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LK				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETLOCKTYPE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LK				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATH				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETNEXT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(32) 		OUT
+ HL				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETNFSNODEID RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LK				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETOLDRESOURCE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ EV				RAW(32) 		IN
+FUNCTION GETOPENACCESSMODE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EV				RAW(32) 		IN
+FUNCTION GETOPENDENYMODE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EV				RAW(32) 		IN
+FUNCTION GETOUTPUTSTREAM RETURNS BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EV				RAW(32) 		IN
+FUNCTION GETPARAMETER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EV				RAW(32) 		IN
+ KEY				VARCHAR2		IN
+FUNCTION GETPARENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ EV				RAW(32) 		IN
+FUNCTION GETPARENTNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINK				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETPARENTOID RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINK				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETPARENTPATH RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(32) 		OUT
+ PATH				RECORD			IN
+   ID				RAW(32) 		IN
+ LEVEL				BINARY_INTEGER		IN
+FUNCTION GETPATH RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(32) 		OUT
+ EV				RAW(32) 		IN
+FUNCTION GETRESOURCE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ EV				RAW(32) 		IN
+FUNCTION GETSCHEMA RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLER			RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETSOURCE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLER			RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION GETUPDATEBYTECOUNT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EV				RAW(32) 		IN
+FUNCTION GETUPDATEBYTEOFFSET RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EV				RAW(32) 		IN
+FUNCTION GETXDBEVENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(32) 		OUT
+ EV				RAW(32) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EV				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REPEV				RAW(32) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HL				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLER			RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATH				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINK				RECORD			IN
+   ID				RAW(32) 		IN
+FUNCTION ISNULL RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LK				RECORD			IN
+   ID				RAW(32) 		IN
+PROCEDURE REMOVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HL				RECORD			IN
+   ID				RAW(32) 		IN
+ HANDLER			RECORD			IN
+   ID				RAW(32) 		IN
+PROCEDURE SETRENDERPATH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EV				RAW(32) 		IN
+ PATH				VARCHAR2		IN
+PROCEDURE SETRENDERSTREAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EV				RAW(32) 		IN
+ ISTR				BLOB			IN
+

@@ -1,0 +1,29 @@
+PROCEDURE CREATE_OFFLINE_DICTIONARY
+PROCEDURE CREATE_SCHEMA
+PROCEDURE DROP_SCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FORCE				BOOLEAN 		IN     DEFAULT
+FUNCTION GET_RUN_REPORT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RUN_NAME			VARCHAR2		IN
+ REPORT_TYPE			VARCHAR2		IN     DEFAULT
+ REPORT_LEVEL			VARCHAR2		IN     DEFAULT
+PROCEDURE RUN_CHECK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHECK_NAME			VARCHAR2		IN
+ RUN_NAME			VARCHAR2		IN     DEFAULT
+ TIMEOUT			NUMBER			IN     DEFAULT
+ INPUT_PARAMS			VARCHAR2		IN     DEFAULT
+FUNCTION RUN_DDE_ACTION RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INCIDENT_ID			NUMBER			IN
+ DIRECTORY_NAME 		VARCHAR2		IN
+ CHECK_NAME			VARCHAR2		IN
+ RUN_NAME			VARCHAR2		IN
+ TIMEOUT			NUMBER			IN
+ PARAMS 			VARCHAR2		IN
+

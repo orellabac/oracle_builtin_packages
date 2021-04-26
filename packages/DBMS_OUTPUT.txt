@@ -1,0 +1,30 @@
+PROCEDURE DISABLE
+PROCEDURE ENABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BUFFER_SIZE			NUMBER(38)		IN     DEFAULT
+PROCEDURE GET_LINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINE				VARCHAR2		OUT
+ STATUS 			NUMBER(38)		OUT
+PROCEDURE GET_LINES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINES				TABLE OF VARCHAR2(32767) OUT
+ NUMLINES			NUMBER(38)		IN/OUT
+PROCEDURE GET_LINES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LINES				DBMSOUTPUT_LINESARRAY	OUT
+ NUMLINES			NUMBER(38)		IN/OUT
+PROCEDURE NEW_LINE
+PROCEDURE PUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ A				VARCHAR2		IN
+PROCEDURE PUT_LINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ A				VARCHAR2		IN
+

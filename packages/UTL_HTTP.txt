@@ -1,0 +1,412 @@
+PROCEDURE ADD_COOKIES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COOKIES			TABLE OF RECORD 	IN
+ REQUEST_CONTEXT		BINARY_INTEGER		IN     DEFAULT
+FUNCTION BEGIN_REQUEST RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   URL				VARCHAR2(32767) 	OUT
+   METHOD			VARCHAR2(64)		OUT
+   HTTP_VERSION 		VARCHAR2(64)		OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		OUT
+ URL				VARCHAR2		IN
+ METHOD 			VARCHAR2		IN     DEFAULT
+ HTTP_VERSION			VARCHAR2		IN     DEFAULT
+ REQUEST_CONTEXT		BINARY_INTEGER		IN     DEFAULT
+PROCEDURE CLEAR_COOKIES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REQUEST_CONTEXT		BINARY_INTEGER		IN     DEFAULT
+PROCEDURE CLOSE_PERSISTENT_CONN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CONN				RECORD			IN
+   HOST 			VARCHAR2(256)		IN
+   PORT 			BINARY_INTEGER		IN
+   PROXY_HOST			VARCHAR2(256)		IN
+   PROXY_PORT			BINARY_INTEGER		IN
+   SSL				BOOLEAN 		IN
+PROCEDURE CLOSE_PERSISTENT_CONNS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HOST				VARCHAR2		IN     DEFAULT
+ PORT				BINARY_INTEGER		IN     DEFAULT
+ PROXY_HOST			VARCHAR2		IN     DEFAULT
+ PROXY_PORT			BINARY_INTEGER		IN     DEFAULT
+ SSL				BOOLEAN 		IN     DEFAULT
+FUNCTION CREATE_REQUEST_CONTEXT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WALLET_PATH			VARCHAR2		IN     DEFAULT
+ WALLET_PASSWORD		VARCHAR2		IN     DEFAULT
+ ENABLE_COOKIES 		BOOLEAN 		IN     DEFAULT
+ MAX_COOKIES			BINARY_INTEGER		IN     DEFAULT
+ MAX_COOKIES_PER_SITE		BINARY_INTEGER		IN     DEFAULT
+PROCEDURE DESTROY_REQUEST_CONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REQUEST_CONTEXT		BINARY_INTEGER		IN/OUT
+PROCEDURE END_REQUEST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+PROCEDURE END_RESPONSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   STATUS_CODE			BINARY_INTEGER		IN/OUT
+   REASON_PHRASE		VARCHAR2(256)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+PROCEDURE GET_AUTHENTICATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   STATUS_CODE			BINARY_INTEGER		IN/OUT
+   REASON_PHRASE		VARCHAR2(256)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ SCHEME 			VARCHAR2		OUT
+ REALM				VARCHAR2		OUT
+ FOR_PROXY			BOOLEAN 		IN     DEFAULT
+PROCEDURE GET_BODY_CHARSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHARSET			VARCHAR2		OUT
+FUNCTION GET_BODY_CHARSET RETURNS VARCHAR2
+PROCEDURE GET_CONTENT_ENCODING_SUPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEME 			VARCHAR2		IN
+ ENABLE 			BOOLEAN 		OUT
+PROCEDURE GET_COOKIES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COOKIES			TABLE OF RECORD 	IN/OUT
+ REQUEST_CONTEXT		BINARY_INTEGER		IN     DEFAULT
+FUNCTION GET_COOKIE_COUNT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REQUEST_CONTEXT		BINARY_INTEGER		IN     DEFAULT
+PROCEDURE GET_COOKIE_SUPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ENABLE 			BOOLEAN 		OUT
+ MAX_COOKIES			BINARY_INTEGER		OUT
+ MAX_COOKIES_PER_SITE		BINARY_INTEGER		OUT
+PROCEDURE GET_DETAILED_EXCP_SUPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ENABLE 			BOOLEAN 		OUT
+FUNCTION GET_DETAILED_SQLCODE RETURNS BINARY_INTEGER
+FUNCTION GET_DETAILED_SQLERRM RETURNS VARCHAR2
+PROCEDURE GET_FOLLOW_REDIRECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MAX_REDIRECTS			BINARY_INTEGER		OUT
+PROCEDURE GET_HEADER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   STATUS_CODE			BINARY_INTEGER		IN/OUT
+   REASON_PHRASE		VARCHAR2(256)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ N				BINARY_INTEGER		IN
+ NAME				VARCHAR2		OUT
+ VALUE				VARCHAR2		OUT
+PROCEDURE GET_HEADER_BY_NAME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   STATUS_CODE			BINARY_INTEGER		IN/OUT
+   REASON_PHRASE		VARCHAR2(256)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		OUT
+ N				BINARY_INTEGER		IN     DEFAULT
+FUNCTION GET_HEADER_COUNT RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   STATUS_CODE			BINARY_INTEGER		IN/OUT
+   REASON_PHRASE		VARCHAR2(256)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+PROCEDURE GET_PERSISTENT_CONNS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CONNECTIONS			TABLE OF RECORD 	IN/OUT
+FUNCTION GET_PERSISTENT_CONN_COUNT RETURNS BINARY_INTEGER
+PROCEDURE GET_PERSISTENT_CONN_SUPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ENABLE 			BOOLEAN 		OUT
+ MAX_CONNS			BINARY_INTEGER		OUT
+PROCEDURE GET_PROXY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PROXY				VARCHAR2		OUT
+ NO_PROXY_DOMAINS		VARCHAR2		OUT
+FUNCTION GET_RESPONSE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   STATUS_CODE			BINARY_INTEGER		OUT
+   REASON_PHRASE		VARCHAR2(256)		OUT
+   HTTP_VERSION 		VARCHAR2(64)		OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		OUT
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ RETURN_INFO_RESPONSE		BOOLEAN 		IN     DEFAULT
+PROCEDURE GET_RESPONSE_ERROR_CHECK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ENABLE 			BOOLEAN 		OUT
+PROCEDURE GET_TRANSFER_TIMEOUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TIMEOUT			BINARY_INTEGER		OUT
+PROCEDURE READ_LINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   STATUS_CODE			BINARY_INTEGER		IN/OUT
+   REASON_PHRASE		VARCHAR2(256)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ DATA				VARCHAR2		OUT
+ REMOVE_CRLF			BOOLEAN 		IN     DEFAULT
+PROCEDURE READ_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   STATUS_CODE			BINARY_INTEGER		IN/OUT
+   REASON_PHRASE		VARCHAR2(256)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ DATA				RAW			OUT
+ LEN				BINARY_INTEGER		IN     DEFAULT
+PROCEDURE READ_TEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   STATUS_CODE			BINARY_INTEGER		IN/OUT
+   REASON_PHRASE		VARCHAR2(256)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ DATA				VARCHAR2		OUT
+ LEN				BINARY_INTEGER		IN     DEFAULT
+FUNCTION REQUEST RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ URL				VARCHAR2		IN
+ PROXY				VARCHAR2		IN     DEFAULT
+ WALLET_PATH			VARCHAR2		IN     DEFAULT
+ WALLET_PASSWORD		VARCHAR2		IN     DEFAULT
+FUNCTION REQUEST_PIECES RETURNS TABLE OF VARCHAR2(2000)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ URL				VARCHAR2		IN
+ MAX_PIECES			BINARY_INTEGER		IN     DEFAULT
+ PROXY				VARCHAR2		IN     DEFAULT
+ WALLET_PATH			VARCHAR2		IN     DEFAULT
+ WALLET_PASSWORD		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_AUTHENTICATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ USERNAME			VARCHAR2		IN
+ PASSWORD			VARCHAR2		IN     DEFAULT
+ SCHEME 			VARCHAR2		IN     DEFAULT
+ FOR_PROXY			BOOLEAN 		IN     DEFAULT
+PROCEDURE SET_AUTHENTICATION_FROM_WALLET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ ALIAS				VARCHAR2		IN
+ SCHEME 			VARCHAR2		IN     DEFAULT
+ FOR_PROXY			BOOLEAN 		IN     DEFAULT
+PROCEDURE SET_BODY_CHARSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHARSET			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_BODY_CHARSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ CHARSET			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_BODY_CHARSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   STATUS_CODE			BINARY_INTEGER		IN/OUT
+   REASON_PHRASE		VARCHAR2(256)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ CHARSET			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_CONTENT_ENCODING_SUPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEME 			VARCHAR2		IN
+ ENABLE 			BOOLEAN 		IN     DEFAULT
+PROCEDURE SET_CONTENT_ENCODING_SUPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ SCHEME 			VARCHAR2		IN
+ ENABLE 			BOOLEAN 		IN     DEFAULT
+PROCEDURE SET_COOKIE_SUPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ENABLE 			BOOLEAN 		IN
+ MAX_COOKIES			BINARY_INTEGER		IN     DEFAULT
+ MAX_COOKIES_PER_SITE		BINARY_INTEGER		IN     DEFAULT
+PROCEDURE SET_COOKIE_SUPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ ENABLE 			BOOLEAN 		IN     DEFAULT
+PROCEDURE SET_DETAILED_EXCP_SUPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ENABLE 			BOOLEAN 		IN     DEFAULT
+PROCEDURE SET_FOLLOW_REDIRECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MAX_REDIRECTS			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE SET_FOLLOW_REDIRECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ MAX_REDIRECTS			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE SET_HEADER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		IN     DEFAULT
+PROCEDURE SET_PERSISTENT_CONN_SUPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ENABLE 			BOOLEAN 		IN
+ MAX_CONNS			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE SET_PERSISTENT_CONN_SUPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ ENABLE 			BOOLEAN 		IN     DEFAULT
+PROCEDURE SET_PROPERTY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		IN     DEFAULT
+PROCEDURE SET_PROXY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PROXY				VARCHAR2		IN
+ NO_PROXY_DOMAINS		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_RESPONSE_ERROR_CHECK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ENABLE 			BOOLEAN 		IN     DEFAULT
+PROCEDURE SET_RESPONSE_ERROR_CHECK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ ENABLE 			BOOLEAN 		IN     DEFAULT
+PROCEDURE SET_TRANSFER_TIMEOUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TIMEOUT			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE SET_TRANSFER_TIMEOUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ TIMEOUT			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE SET_WALLET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATH				VARCHAR2		IN
+ PASSWORD			VARCHAR2		IN     DEFAULT
+PROCEDURE WRITE_LINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ DATA				VARCHAR2		IN
+PROCEDURE WRITE_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ DATA				RAW			IN
+PROCEDURE WRITE_TEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RECORD			IN/OUT
+   URL				VARCHAR2(32767) 	IN/OUT
+   METHOD			VARCHAR2(64)		IN/OUT
+   HTTP_VERSION 		VARCHAR2(64)		IN/OUT
+   PRIVATE_HNDL 		BINARY_INTEGER		IN/OUT
+ DATA				VARCHAR2		IN
+

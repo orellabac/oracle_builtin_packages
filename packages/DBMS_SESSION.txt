@@ -1,0 +1,99 @@
+PROCEDURE CLEAR_ALL_CONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAMESPACE			VARCHAR2		IN
+PROCEDURE CLEAR_CONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAMESPACE			VARCHAR2		IN
+ CLIENT_ID			VARCHAR2		IN     DEFAULT
+ ATTRIBUTE			VARCHAR2		IN     DEFAULT
+PROCEDURE CLEAR_IDENTIFIER
+PROCEDURE CLOSE_DATABASE_LINK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBLINK 			VARCHAR2		IN
+PROCEDURE FREE_UNUSED_USER_MEMORY
+PROCEDURE GET_PACKAGE_MEMORY_UTILIZATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER_NAMES			TABLE OF VARCHAR2(4000) OUT
+ UNIT_NAMES			TABLE OF VARCHAR2(4000) OUT
+ UNIT_TYPES			TABLE OF BINARY_INTEGER OUT
+ USED_AMOUNTS			TABLE OF BINARY_INTEGER OUT
+ FREE_AMOUNTS			TABLE OF BINARY_INTEGER OUT
+PROCEDURE GET_PACKAGE_MEMORY_UTILIZATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DESIRED_INFO			TABLE OF BINARY_INTEGER IN
+ OWNER_NAMES			TABLE OF VARCHAR2(4000) OUT
+ UNIT_NAMES			TABLE OF VARCHAR2(4000) OUT
+ UNIT_TYPES			TABLE OF BINARY_INTEGER OUT
+ AMOUNTS			TABLE OF TABLE OF	OUT
+FUNCTION IS_ROLE_ENABLED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ROLENAME			VARCHAR2		IN
+FUNCTION IS_SESSION_ALIVE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UNIQUEID			VARCHAR2		IN
+PROCEDURE LIST_CONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LIST				TABLE OF RECORD 	OUT
+ LSIZE				NUMBER			OUT
+PROCEDURE MODIFY_PACKAGE_STATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACTION_FLAGS			BINARY_INTEGER		IN
+PROCEDURE RESET_PACKAGE
+PROCEDURE SESSION_TRACE_DISABLE
+PROCEDURE SESSION_TRACE_ENABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WAITS				BOOLEAN 		IN     DEFAULT
+ BINDS				BOOLEAN 		IN     DEFAULT
+ PLAN_STAT			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_CLOSE_CACHED_OPEN_CURSORS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLOSE_CURSORS			BOOLEAN 		IN
+PROCEDURE SET_CONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAMESPACE			VARCHAR2		IN
+ ATTRIBUTE			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+ USERNAME			VARCHAR2		IN     DEFAULT
+ CLIENT_ID			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_EDITION_DEFERRED
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EDITION			VARCHAR2		IN
+PROCEDURE SET_IDENTIFIER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_ID			VARCHAR2		IN
+PROCEDURE SET_NLS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAM				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE SET_ROLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ROLE_CMD			VARCHAR2		IN
+PROCEDURE SET_SQL_TRACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_TRACE			BOOLEAN 		IN
+PROCEDURE SWITCH_CURRENT_CONSUMER_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NEW_CONSUMER_GROUP		VARCHAR2		IN
+ OLD_CONSUMER_GROUP		VARCHAR2		OUT
+ INITIAL_GROUP_ON_ERROR 	BOOLEAN 		IN
+FUNCTION UNIQUE_SESSION_ID RETURNS VARCHAR2
+PROCEDURE USE_DEFAULT_EDITION_DEFERRED
+

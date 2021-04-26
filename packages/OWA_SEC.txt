@@ -1,0 +1,13 @@
+FUNCTION GET_CLIENT_HOSTNAME RETURNS VARCHAR2
+FUNCTION GET_CLIENT_IP RETURNS TABLE OF NUMBER(38)
+FUNCTION GET_PASSWORD RETURNS VARCHAR2
+FUNCTION GET_USER_ID RETURNS VARCHAR2
+PROCEDURE SET_AUTHORIZATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEME 			NUMBER(38)		IN
+PROCEDURE SET_PROTECTION_REALM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REALM				VARCHAR2		IN
+

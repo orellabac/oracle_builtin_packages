@@ -1,0 +1,197 @@
+PROCEDURE BUILD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCRIPT 			VARCHAR2		IN
+ METHOD 			VARCHAR2		IN     DEFAULT
+ REFRESH_AFTER_ERRORS		BOOLEAN 		IN     DEFAULT
+ PARALLELISM			BINARY_INTEGER		IN     DEFAULT
+ ATOMIC_REFRESH 		BOOLEAN 		IN     DEFAULT
+ AUTOMATIC_ORDER		BOOLEAN 		IN     DEFAULT
+ ADD_DIMENSIONS 		BOOLEAN 		IN     DEFAULT
+ SCHEDULER_JOB			VARCHAR2		IN     DEFAULT
+ MASTER_BUILD_ID		BINARY_INTEGER		IN     DEFAULT
+ REBUILD_FREEPOOLS		BOOLEAN 		IN     DEFAULT
+ NESTED 			BOOLEAN 		IN     DEFAULT
+ JOB_CLASS			VARCHAR2		IN     DEFAULT
+PROCEDURE BUILD_SLAVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCRIPT 			VARCHAR2		IN
+ PARTITION_MEMBER		VARCHAR2		IN
+ SCHEDULER_JOB			VARCHAR2		IN
+ MASTER_BUILD_ID		BINARY_INTEGER		IN
+ JOB_CLASS			VARCHAR2		IN
+ SLAVE_BUILD_NUMBER		BINARY_INTEGER		IN
+PROCEDURE CREATE_CUBE_DIM_REFRESH_MVIEWS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA_NAME			VARCHAR2		IN
+ CUBE_DIM_NAME			VARCHAR2		IN
+ USING_CONSTRAINTS_CLAUSE	VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_CUBE_REFRESH_MVIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA_NAME			VARCHAR2		IN
+ CUBE_NAME			VARCHAR2		IN
+ REFRESH_TYPE			VARCHAR2		IN     DEFAULT
+ USING_CONSTRAINTS_CLAUSE	VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_CUBE_REWRITE_MVIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA_NAME			VARCHAR2		IN
+ CUBE_NAME			VARCHAR2		IN
+ REWRITE_TYPE			VARCHAR2		IN     DEFAULT
+ REFRESH_TYPE			VARCHAR2		IN     DEFAULT
+ USING_CONSTRAINTS_CLAUSE	VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_EXPORT_OPTIONS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OUT_OPTIONS_XML		CLOB			IN/OUT
+ TARGET_VERSION 		VARCHAR2		IN     DEFAULT
+ SUPPRESS_OWNER 		BOOLEAN 		IN     DEFAULT
+ SUPPRESS_NAMESPACE		BOOLEAN 		IN     DEFAULT
+ PRESERVE_TABLE_OWNERS		BOOLEAN 		IN     DEFAULT
+ METADATA_CHANGES		CLOB			IN     DEFAULT
+PROCEDURE CREATE_IMPORT_OPTIONS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OUT_OPTIONS_XML		CLOB			IN/OUT
+ VALIDATE_ONLY			BOOLEAN 		IN     DEFAULT
+ RENAME_TABLE			VARCHAR2		IN     DEFAULT
+ MODIFY_IF_EXISTS		BOOLEAN 		IN     DEFAULT
+ TARGET_SCHEMA			VARCHAR2		IN     DEFAULT
+FUNCTION CREATE_MVIEW RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MVOWNER			VARCHAR2		IN
+ MVNAME 			VARCHAR2		IN
+ SAM_PARAMETERS 		CLOB			IN     DEFAULT
+FUNCTION DERIVE_FROM_MVIEW RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MVOWNER			VARCHAR2		IN
+ MVNAME 			VARCHAR2		IN
+ SAM_PARAMETERS 		CLOB			IN     DEFAULT
+FUNCTION DRILL_THROUGH RETURNS REF CURSOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QDR				VARCHAR2		IN
+ ET_COLUMNS			ID_ARRAY		IN
+ LANGUAGE			VARCHAR2		IN     DEFAULT
+ SCHEMA 			VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_MVIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MVOWNER			VARCHAR2		IN
+ MVNAME 			VARCHAR2		IN
+ SAM_PARAMETERS 		CLOB			IN     DEFAULT
+PROCEDURE EXPORT_XML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_IDS			VARCHAR2		IN
+ OUT_XML			CLOB			IN/OUT
+PROCEDURE EXPORT_XML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_IDS			VARCHAR2		IN
+ OPTIONS_XML			CLOB			IN
+ OUT_XML			CLOB			IN/OUT
+PROCEDURE EXPORT_XML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_IDS			VARCHAR2		IN
+ OPTIONS_DIRNAME		VARCHAR2		IN
+ OPTIONS_FILENAME		VARCHAR2		IN
+ OUT_XML			CLOB			IN/OUT
+PROCEDURE EXPORT_XML_TO_FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_IDS			VARCHAR2		IN
+ OUTPUT_DIRNAME 		VARCHAR2		IN
+ OUTPUT_FILENAME		VARCHAR2		IN
+PROCEDURE EXPORT_XML_TO_FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_IDS			VARCHAR2		IN
+ OPTIONS_DIRNAME		VARCHAR2		IN
+ OPTIONS_FILENAME		VARCHAR2		IN
+ OUTPUT_DIRNAME 		VARCHAR2		IN
+ OUTPUT_FILENAME		VARCHAR2		IN
+FUNCTION GET_BREAKOUT_DIMENSIONS RETURNS ID_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIMENSION			VARCHAR2		IN
+ CUBE				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN     DEFAULT
+PROCEDURE IMPORT_XML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IN_XML 			CLOB			IN
+PROCEDURE IMPORT_XML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IN_XML 			CLOB			IN
+ OUT_XML			CLOB			IN/OUT
+PROCEDURE IMPORT_XML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRNAME			VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+PROCEDURE IMPORT_XML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRNAME			VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+ OUT_XML			CLOB			IN/OUT
+PROCEDURE IMPORT_XML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IN_XML 			CLOB			IN
+ OPTIONS_XML			CLOB			IN
+ OUT_XML			CLOB			IN/OUT
+PROCEDURE IMPORT_XML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT_DIRNAME			VARCHAR2		IN
+ INPUT_FILENAME 		VARCHAR2		IN
+ OPTIONS_DIRNAME		VARCHAR2		IN
+ OPTIONS_FILENAME		VARCHAR2		IN
+ OUT_XML			CLOB			IN/OUT
+PROCEDURE INITIALIZE_CUBE_UPGRADE
+PROCEDURE INITIALIZE_CUBE_UPGRADE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POUTTBLNAME			VARCHAR2		IN/OUT
+FUNCTION IS_DRILL_THROUGH_ALLOWED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CUBE				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN     DEFAULT
+PROCEDURE REFRESH_MVIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MVOWNER			VARCHAR2		IN
+ MVNAME 			VARCHAR2		IN
+ METHOD 			VARCHAR2		IN     DEFAULT
+ REFRESH_AFTER_ERRORS		BOOLEAN 		IN     DEFAULT
+ PARALLELISM			BINARY_INTEGER		IN     DEFAULT
+ ATOMIC_REFRESH 		BOOLEAN 		IN     DEFAULT
+ SCHEDULER_JOB			VARCHAR2		IN     DEFAULT
+ SAM_PARAMETERS 		CLOB			IN     DEFAULT
+ NESTED 			BOOLEAN 		IN     DEFAULT
+PROCEDURE UPGRADE_AW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCEAW			VARCHAR2		IN
+ DESTAW 			VARCHAR2		IN
+ UPGOPTIONS			CLOB			IN     DEFAULT
+PROCEDURE VALIDATE_XML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IN_XML 			CLOB			IN
+PROCEDURE VALIDATE_XML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRNAME			VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+

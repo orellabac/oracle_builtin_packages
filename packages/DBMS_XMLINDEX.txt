@@ -1,0 +1,51 @@
+PROCEDURE CREATEDATEINDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XML_INDEX_SCHEMA		VARCHAR2		IN     DEFAULT
+ XML_INDEX_NAME 		VARCHAR2		IN
+ DATE_INDEX_NAME		VARCHAR2		IN     DEFAULT
+ XMLTYPENAME			VARCHAR2		IN     DEFAULT
+ DATE_INDEX_CLAUSE		VARCHAR2		IN     DEFAULT
+ COLUMN_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATENUMBERINDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XML_INDEX_SCHEMA		VARCHAR2		IN     DEFAULT
+ XML_INDEX_NAME 		VARCHAR2		IN
+ NUM_INDEX_NAME 		VARCHAR2		IN     DEFAULT
+ NUM_INDEX_CLAUSE		VARCHAR2		IN     DEFAULT
+ XMLTYPENAME			VARCHAR2		IN     DEFAULT
+ COLUMN_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE DROPPARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAMNAME			VARCHAR2		IN
+FUNCTION GETPARAMETER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAMNAME			VARCHAR2		IN
+PROCEDURE MODIFYPARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAMNAME			VARCHAR2		IN
+ PARAMSTR			CLOB			IN
+PROCEDURE PROCESS_PENDING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XML_INDEX_SCHEMA		VARCHAR2		IN
+ XML_INDEX_NAME 		VARCHAR2		IN
+ PENDING_ROW_COUNT		BINARY_INTEGER		OUT
+ ERROR_ROW_COUNT		BINARY_INTEGER		OUT
+PROCEDURE REGISTERPARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAMNAME			VARCHAR2		IN
+ PARAMSTR			CLOB			IN
+PROCEDURE SYNCINDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XML_INDEX_SCHEMA		VARCHAR2		IN     DEFAULT
+ XML_INDEX_NAME 		VARCHAR2		IN
+ PARTITION_NAME 		VARCHAR2		IN     DEFAULT
+ REINDEX			BOOLEAN 		IN     DEFAULT
+

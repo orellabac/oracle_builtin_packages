@@ -1,0 +1,191 @@
+PROCEDURE ACTIVE_INSTANCES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INSTANCE_TABLE 		TABLE OF RECORD 	OUT
+ INSTANCE_COUNT 		NUMBER			OUT
+PROCEDURE ANALYZE_DATABASE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ METHOD 			VARCHAR2		IN
+ ESTIMATE_ROWS			NUMBER			IN     DEFAULT
+ ESTIMATE_PERCENT		NUMBER			IN     DEFAULT
+ METHOD_OPT			VARCHAR2		IN     DEFAULT
+PROCEDURE ANALYZE_PART_OBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN     DEFAULT
+ OBJECT_TYPE			CHAR			IN     DEFAULT
+ COMMAND_TYPE			CHAR			IN     DEFAULT
+ COMMAND_OPT			VARCHAR2		IN     DEFAULT
+ SAMPLE_CLAUSE			VARCHAR2		IN     DEFAULT
+PROCEDURE ANALYZE_SCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ METHOD 			VARCHAR2		IN
+ ESTIMATE_ROWS			NUMBER			IN     DEFAULT
+ ESTIMATE_PERCENT		NUMBER			IN     DEFAULT
+ METHOD_OPT			VARCHAR2		IN     DEFAULT
+PROCEDURE CANONICALIZE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ CANON_NAME			VARCHAR2		OUT
+ CANON_LEN			BINARY_INTEGER		IN
+PROCEDURE COMMA_TO_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LIST				VARCHAR2		IN
+ TABLEN 			BINARY_INTEGER		OUT
+ TAB				TABLE OF VARCHAR2(227)	OUT
+PROCEDURE COMMA_TO_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LIST				VARCHAR2		IN
+ TABLEN 			BINARY_INTEGER		OUT
+ TAB				TABLE OF VARCHAR2(4000) OUT
+PROCEDURE COMPILE_SCHEMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ COMPILE_ALL			BOOLEAN 		IN     DEFAULT
+ REUSE_SETTINGS 		BOOLEAN 		IN     DEFAULT
+PROCEDURE CREATE_ALTER_TYPE_ERROR_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA_NAME			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+FUNCTION CURRENT_INSTANCE RETURNS NUMBER
+FUNCTION DATA_BLOCK_ADDRESS_BLOCK RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBA				NUMBER			IN
+FUNCTION DATA_BLOCK_ADDRESS_FILE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBA				NUMBER			IN
+PROCEDURE DB_VERSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VERSION			VARCHAR2		OUT
+ COMPATIBILITY			VARCHAR2		OUT
+PROCEDURE EXEC_DDL_STATEMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARSE_STRING			VARCHAR2		IN
+PROCEDURE EXPAND_SQL_TEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INPUT_SQL_TEXT 		CLOB			IN
+ OUTPUT_SQL_TEXT		CLOB			OUT
+FUNCTION FORMAT_CALL_STACK RETURNS VARCHAR2
+FUNCTION FORMAT_ERROR_BACKTRACE RETURNS VARCHAR2
+FUNCTION FORMAT_ERROR_STACK RETURNS VARCHAR2
+FUNCTION GET_CPU_TIME RETURNS NUMBER
+PROCEDURE GET_DEPENDENCY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TYPE				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+FUNCTION GET_ENDIANNESS RETURNS NUMBER
+FUNCTION GET_HASH_VALUE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ BASE				NUMBER			IN
+ HASH_SIZE			NUMBER			IN
+FUNCTION GET_PARAMETER_VALUE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARNAM 			VARCHAR2		IN
+ INTVAL 			BINARY_INTEGER		IN/OUT
+ STRVAL 			VARCHAR2		IN/OUT
+ LISTNO 			BINARY_INTEGER		IN     DEFAULT
+FUNCTION GET_SQL_HASH RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ HASH				RAW			OUT
+ PRE10IHASH			NUMBER			OUT
+FUNCTION GET_TIME RETURNS NUMBER
+PROCEDURE GET_TZ_TRANSITIONS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REGIONID			NUMBER			IN
+ TRANSITIONS			RAW(32767)		OUT
+PROCEDURE INVALIDATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P_OBJECT_ID			NUMBER			IN
+ P_PLSQL_OBJECT_SETTINGS	VARCHAR2		IN     DEFAULT
+ P_OPTION_FLAGS 		BINARY_INTEGER		IN     DEFAULT
+FUNCTION IS_BIT_SET RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+ N				NUMBER			IN
+FUNCTION IS_CLUSTER_DATABASE RETURNS BOOLEAN
+FUNCTION MAKE_DATA_BLOCK_ADDRESS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				NUMBER			IN
+ BLOCK				NUMBER			IN
+PROCEDURE NAME_RESOLVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ CONTEXT			NUMBER			IN
+ SCHEMA 			VARCHAR2		OUT
+ PART1				VARCHAR2		OUT
+ PART2				VARCHAR2		OUT
+ DBLINK 			VARCHAR2		OUT
+ PART1_TYPE			NUMBER			OUT
+ OBJECT_NUMBER			NUMBER			OUT
+PROCEDURE NAME_TOKENIZE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ A				VARCHAR2		OUT
+ B				VARCHAR2		OUT
+ C				VARCHAR2		OUT
+ DBLINK 			VARCHAR2		OUT
+ NEXTPOS			BINARY_INTEGER		OUT
+FUNCTION OLD_CURRENT_SCHEMA RETURNS VARCHAR2
+FUNCTION OLD_CURRENT_USER RETURNS VARCHAR2
+FUNCTION PORT_STRING RETURNS VARCHAR2
+FUNCTION SQLID_TO_SQLHASH RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_ID 			VARCHAR2		IN
+PROCEDURE TABLE_TO_COMMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TAB				TABLE OF VARCHAR2(227)	IN
+ TABLEN 			BINARY_INTEGER		OUT
+ LIST				VARCHAR2		OUT
+PROCEDURE TABLE_TO_COMMA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TAB				TABLE OF VARCHAR2(4000) IN
+ TABLEN 			BINARY_INTEGER		OUT
+ LIST				VARCHAR2		OUT
+PROCEDURE VALIDATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_ID			NUMBER			IN
+PROCEDURE VALIDATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER				VARCHAR2		IN
+ OBJNAME			VARCHAR2		IN
+ NAMESPACE			NUMBER			IN
+ EDITION			VARCHAR2		IN     DEFAULT
+FUNCTION WAIT_ON_PENDING_DML RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLES 			VARCHAR2		IN
+ TIMEOUT			BINARY_INTEGER		IN
+ SCN				NUMBER			IN/OUT
+

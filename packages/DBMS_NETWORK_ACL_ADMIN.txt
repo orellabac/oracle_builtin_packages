@@ -1,0 +1,146 @@
+PROCEDURE ADD_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACL				VARCHAR2		IN
+ PRINCIPAL			VARCHAR2		IN
+ IS_GRANT			BOOLEAN 		IN
+ PRIVILEGE			VARCHAR2		IN
+ POSITION			BINARY_INTEGER		IN     DEFAULT
+ START_DATE			TIMESTAMP WITH TIME ZONE IN	DEFAULT
+ END_DATE			TIMESTAMP WITH TIME ZONE IN	DEFAULT
+PROCEDURE APPEND_HOST_ACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HOST				VARCHAR2		IN
+ LOWER_PORT			BINARY_INTEGER		IN     DEFAULT
+ UPPER_PORT			BINARY_INTEGER		IN     DEFAULT
+ ACE				XS$ACE_TYPE		IN
+PROCEDURE APPEND_HOST_ACL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HOST				VARCHAR2		IN
+ LOWER_PORT			BINARY_INTEGER		IN     DEFAULT
+ UPPER_PORT			BINARY_INTEGER		IN     DEFAULT
+ ACL				VARCHAR2		IN
+PROCEDURE APPEND_WALLET_ACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WALLET_PATH			VARCHAR2		IN
+ ACE				XS$ACE_TYPE		IN
+PROCEDURE APPEND_WALLET_ACL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WALLET_PATH			VARCHAR2		IN
+ ACL				VARCHAR2		IN
+PROCEDURE ASSIGN_ACL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACL				VARCHAR2		IN
+ HOST				VARCHAR2		IN
+ LOWER_PORT			BINARY_INTEGER		IN     DEFAULT
+ UPPER_PORT			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE ASSIGN_WALLET_ACL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACL				VARCHAR2		IN
+ WALLET_PATH			VARCHAR2		IN
+FUNCTION CHECK_PRIVILEGE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACL				VARCHAR2		IN
+ USER				VARCHAR2		IN
+ PRIVILEGE			VARCHAR2		IN
+FUNCTION CHECK_PRIVILEGE_ACLID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACLID				RAW			IN
+ USER				VARCHAR2		IN
+ PRIVILEGE			VARCHAR2		IN
+PROCEDURE CREATE_ACL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACL				VARCHAR2		IN
+ DESCRIPTION			VARCHAR2		IN
+ PRINCIPAL			VARCHAR2		IN
+ IS_GRANT			BOOLEAN 		IN
+ PRIVILEGE			VARCHAR2		IN
+ START_DATE			TIMESTAMP WITH TIME ZONE IN	DEFAULT
+ END_DATE			TIMESTAMP WITH TIME ZONE IN	DEFAULT
+PROCEDURE DELETE_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACL				VARCHAR2		IN
+ PRINCIPAL			VARCHAR2		IN
+ IS_GRANT			BOOLEAN 		IN     DEFAULT
+ PRIVILEGE			VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_ACL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACL				VARCHAR2		IN
+FUNCTION GET_HOST_ACLIDS RETURNS TABLE OF NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HOST				VARCHAR2		IN
+ PORT				NUMBER			IN
+FUNCTION GET_WALLET_ACLID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WALLET_PATH			VARCHAR2		IN
+PROCEDURE INSTANCE_CALLOUT_IMP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJ_NAME			VARCHAR2		IN
+ OBJ_SCHEMA			VARCHAR2		IN
+ OBJ_TYPE			NUMBER			IN
+ PREPOST			BINARY_INTEGER		IN
+ ACTION 			VARCHAR2		OUT
+ ALT_NAME			VARCHAR2		OUT
+PROCEDURE INSTANCE_EXPORT_ACTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJ_NAME			VARCHAR2		IN
+ OBJ_SCHEMA			VARCHAR2		IN
+ OBJ_TYPE			NUMBER			IN
+ TGT_VERSION			VARCHAR2		IN
+ ACTION 			VARCHAR2		OUT
+ ALT_NAME			VARCHAR2		OUT
+ WHERE_CLAUSE			VARCHAR2		OUT
+PROCEDURE REMOVE_HOST_ACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HOST				VARCHAR2		IN
+ LOWER_PORT			BINARY_INTEGER		IN     DEFAULT
+ UPPER_PORT			BINARY_INTEGER		IN     DEFAULT
+ ACE				XS$ACE_TYPE		IN
+ REMOVE_EMPTY_ACL		BOOLEAN 		IN     DEFAULT
+PROCEDURE REMOVE_WALLET_ACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WALLET_PATH			VARCHAR2		IN
+ ACE				XS$ACE_TYPE		IN
+ REMOVE_EMPTY_ACL		BOOLEAN 		IN     DEFAULT
+PROCEDURE SET_HOST_ACL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HOST				VARCHAR2		IN
+ LOWER_PORT			BINARY_INTEGER		IN     DEFAULT
+ UPPER_PORT			BINARY_INTEGER		IN     DEFAULT
+ ACL				VARCHAR2		IN
+PROCEDURE SET_WALLET_ACL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WALLET_PATH			VARCHAR2		IN
+ ACL				VARCHAR2		IN
+PROCEDURE UNASSIGN_ACL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACL				VARCHAR2		IN     DEFAULT
+ HOST				VARCHAR2		IN     DEFAULT
+ LOWER_PORT			BINARY_INTEGER		IN     DEFAULT
+ UPPER_PORT			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE UNASSIGN_WALLET_ACL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ACL				VARCHAR2		IN     DEFAULT
+ WALLET_PATH			VARCHAR2		IN     DEFAULT
+

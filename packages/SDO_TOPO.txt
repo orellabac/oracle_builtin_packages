@@ -1,0 +1,162 @@
+PROCEDURE ADD_TOPO_GEOMETRY_LAYER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+ TOPO_GEOMETRY_LAYER_TYPE	VARCHAR2		IN
+ RELATION_TABLE_STORAGE 	VARCHAR2		IN     DEFAULT
+ CHILD_LAYER_ID 		NUMBER			IN     DEFAULT
+ LAYER_ID			NUMBER			IN     DEFAULT
+FUNCTION ALIGN_EDGE_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY1			SDO_GEOMETRY		IN
+ GEOMETRY2			SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+ DGTS				NUMBER			IN
+FUNCTION ALIGN_LINEAR_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY1			SDO_GEOMETRY		IN
+ GEOMETRY2			SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+FUNCTION ALIGN_POINT_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOMETRY1			SDO_GEOMETRY		IN
+ GEOMETRY2			SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+PROCEDURE CREATE_TOPOLOGY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOLERANCE			NUMBER			IN
+ SRID				NUMBER			IN     DEFAULT
+ NODE_TABLE_STORAGE		VARCHAR2		IN     DEFAULT
+ EDGE_TABLE_STORAGE		VARCHAR2		IN     DEFAULT
+ FACE_TABLE_STORAGE		VARCHAR2		IN     DEFAULT
+ HISTORY_TABLE_STORAGE		VARCHAR2		IN     DEFAULT
+ DIGITS_RIGHT_OF_DECIMAL	NUMBER			IN     DEFAULT
+ TOPOLOGY_ID			NUMBER			IN     DEFAULT
+PROCEDURE DELETE_TOPO_GEOMETRY_LAYER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+PROCEDURE DROP_TOPOLOGY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+FUNCTION GET_FACE_BOUNDARY RETURNS SDO_LIST_TYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ FACE_ID			NUMBER			IN
+ ALL_EDGES			VARCHAR2		IN     DEFAULT
+FUNCTION GET_INTERACTING_TGIDS RETURNS SDO_LIST_TYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BASE_LAYER_ID			NUMBER			IN
+ Q_FEATURE			SDO_TOPO_GEOMETRY	IN
+ MASK				VARCHAR2		IN
+FUNCTION GET_INTERACTING_TGIDS RETURNS SDO_LIST_TYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TP_ID				NUMBER			IN
+ BASE_LAYER_ID			NUMBER			IN
+ TOPO_ELEM_ARRAY		SDO_TOPO_OBJECT_ARRAY	IN
+ MASK				VARCHAR2		IN
+FUNCTION GET_INTERNAL_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ NODEIDS			SDO_NUMBER_ARRAY	IN
+ DIM				SDO_DIM_ARRAY		IN
+FUNCTION GET_TOPO_OBJECTS RETURNS SDO_TOPO_OBJECT_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_GEOMETRY_LAYER_ID 	NUMBER			IN
+ TOPO_GEOMETRY_ID		NUMBER			IN
+FUNCTION GET_TOPO_OBJECTS RETURNS SDO_TOPO_OBJECT_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ GEOMETRY			SDO_GEOMETRY		IN
+PROCEDURE INITIALIZE_AFTER_IMPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TG_LAYER_OWNER 		VARCHAR2		IN     DEFAULT
+PROCEDURE INITIALIZE_METADATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+FUNCTION INTERNAL_GET_TGIDS RETURNS SDO_LIST_TYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ GEOMETRY			SDO_GEOMETRY		IN
+ IN_TG_LAYER_ID 		NUMBER			IN     DEFAULT
+ OPERATOR			VARCHAR2		IN
+FUNCTION INTERNAL_GET_TGIDS RETURNS SDO_LIST_TYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ Q_TG_LAYER_ID			NUMBER			IN
+ Q_TG_ID			NUMBER			IN
+ IN_TG_LAYER_ID 		NUMBER			IN     DEFAULT
+ OPERATOR			VARCHAR2		IN
+PROCEDURE LOCKROW_UNIVERSEFACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGYID			NUMBER			IN
+PROCEDURE PREPARE_FOR_EXPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+FUNCTION RELATE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_TOPO_GEOMETRY	IN
+ GEOM2				SDO_TOPO_GEOMETRY	IN
+ MASK				VARCHAR2		IN
+FUNCTION RELATE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_TOPO_GEOMETRY	IN
+ TOPO_ELEM_ARRAY		SDO_TOPO_OBJECT_ARRAY	IN
+ MASK				VARCHAR2		IN
+FUNCTION RELATE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FEATURE1			SDO_TOPO_GEOMETRY	IN
+ FEATURE2			SDO_GEOMETRY		IN
+ MASK				VARCHAR2		IN
+PROCEDURE SDO_TOPO_CRT_RLIDS_VIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_ID			NUMBER			IN
+FUNCTION TG_INSERT_RELATION RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TG_LAYER_ID			NUMBER			IN
+ TOPO_IDS			SDO_TOPO_OBJECT_ARRAY	IN
+ GTYPE				NUMBER			IN
+ INPUT_TG_ID			NUMBER			IN
+ INPUT_TG_ATTRIBUTE		VARCHAR2		IN
+FUNCTION TG_INSERT_RELATION RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TG_LAYER_ID			NUMBER			IN
+ TOPO_IDS			SDO_TGL_OBJECT_ARRAY	IN
+ GTYPE				NUMBER			IN
+ INPUT_TG_ID			NUMBER			IN
+ INPUT_TG_ATTRIBUTE		VARCHAR2		IN
+ CHILD_LID			NUMBER			IN
+

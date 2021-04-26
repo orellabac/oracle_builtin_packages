@@ -1,0 +1,133 @@
+PROCEDURE FREEPARSER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETBASEDIR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETDOCTYPE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETDOCUMENT RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETERRORLOG RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION GETRELEASEVERSION RETURNS VARCHAR2
+FUNCTION GETVALIDATIONMODE RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION NEWPARSER RETURNS RECORD
+   ID				RAW(13) 		OUT
+FUNCTION PARSE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ URL				VARCHAR2		IN
+ CSID				NUMBER			IN     DEFAULT
+PROCEDURE PARSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ URL				VARCHAR2		IN
+ CSID				NUMBER			IN     DEFAULT
+PROCEDURE PARSEBUFFER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ DOC				VARCHAR2		IN
+PROCEDURE PARSECLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ DOC				CLOB			IN
+PROCEDURE PARSEDTD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ URL				VARCHAR2		IN
+ ROOT				VARCHAR2		IN
+ CSID				NUMBER			IN     DEFAULT
+PROCEDURE PARSEDTDBUFFER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ DTD				VARCHAR2		IN
+ ROOT				VARCHAR2		IN
+PROCEDURE PARSEDTDCLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ DTD				CLOB			IN
+ ROOT				VARCHAR2		IN
+PROCEDURE RETAINCDATASECTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ FLAG				BOOLEAN 		IN
+PROCEDURE SETBASEDIR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ DIR				VARCHAR2		IN
+PROCEDURE SETDOCTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ DTD				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE SETERRORLOG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ FILENAME			VARCHAR2		IN
+PROCEDURE SETPRESERVEWHITESPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ YES				BOOLEAN 		IN
+PROCEDURE SETVALIDATIONMODE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ YES				BOOLEAN 		IN
+PROCEDURE SHOWWARNINGS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ YES				BOOLEAN 		IN
+PROCEDURE WRITEERRORS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ ERR_NUM			NUMBER			IN
+ ERR_MSG			VARCHAR2		IN
+

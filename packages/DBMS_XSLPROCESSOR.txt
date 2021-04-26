@@ -1,0 +1,220 @@
+PROCEDURE CLOB2FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CL				CLOB			IN
+ FLOCATION			VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+ CSID				NUMBER			IN     DEFAULT
+PROCEDURE FREEPROCESSOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE FREESTYLESHEET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION NEWPROCESSOR RETURNS RECORD
+   ID				RAW(13) 		OUT
+FUNCTION NEWSTYLESHEET RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ XMLDOC 			RECORD			IN
+   ID				RAW(13) 		IN
+ REFURL 			VARCHAR2		IN
+FUNCTION NEWSTYLESHEET RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ INP				VARCHAR2		IN
+ REFURL 			VARCHAR2		IN
+FUNCTION PROCESSXSL RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+ XMLDOC 			RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION PROCESSXSL RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+ CL				CLOB			IN
+PROCEDURE PROCESSXSL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+ XMLDOC 			RECORD			IN
+   ID				RAW(13) 		IN
+ DIR				VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+PROCEDURE PROCESSXSL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+ URL				VARCHAR2		IN
+ DIR				VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+PROCEDURE PROCESSXSL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+ XMLDOC 			RECORD			IN
+   ID				RAW(13) 		IN
+ BUFFER 			VARCHAR2		IN/OUT
+PROCEDURE PROCESSXSL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+ XMLDOC 			RECORD			IN
+   ID				RAW(13) 		IN
+ CL				CLOB			IN/OUT
+PROCEDURE PROCESSXSL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+ XMLDOC 			RECORD			IN
+   ID				RAW(13) 		IN
+ CL				CLOB			IN/OUT
+ ISOUTPUTXML			BOOLEAN 		OUT
+FUNCTION PROCESSXSL RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+ XMLDF				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE PROCESSXSL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+ XMLDF				RECORD			IN
+   ID				RAW(13) 		IN
+ DIR				VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+PROCEDURE PROCESSXSL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+ XMLDF				RECORD			IN
+   ID				RAW(13) 		IN
+ BUFFER 			VARCHAR2		IN/OUT
+PROCEDURE PROCESSXSL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+ XMLDF				RECORD			IN
+   ID				RAW(13) 		IN
+ CL				CLOB			IN/OUT
+FUNCTION READ2CLOB RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FLOCATION			VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+ CSID				NUMBER			IN     DEFAULT
+PROCEDURE REMOVEPARAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+PROCEDURE RESETPARAMS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+FUNCTION SELECTNODES RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ PATTERN			VARCHAR2		IN
+ NAMESPACE			VARCHAR2		IN     DEFAULT
+FUNCTION SELECTSINGLENODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ PATTERN			VARCHAR2		IN
+ NAMESPACE			VARCHAR2		IN     DEFAULT
+PROCEDURE SETERRORLOG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ FILENAME			VARCHAR2		IN
+PROCEDURE SETPARAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+ NAME				VARCHAR2		IN
+ VAL				VARCHAR2		IN
+PROCEDURE SHOWWARNINGS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ P				RECORD			IN
+   ID				RAW(13) 		IN
+ YES				BOOLEAN 		IN
+FUNCTION TRANSFORMNODE RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				RAW(13) 		OUT
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ SS				RECORD			IN
+   ID				RAW(13) 		IN
+PROCEDURE VALUEOF
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ PATTERN			VARCHAR2		IN
+ VAL				VARCHAR2		OUT
+ NAMESPACE			VARCHAR2		IN     DEFAULT
+FUNCTION VALUEOF RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				RECORD			IN
+   ID				RAW(13) 		IN
+ PATTERN			VARCHAR2		IN
+ NAMESPACE			VARCHAR2		IN     DEFAULT
+

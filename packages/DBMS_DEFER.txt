@@ -1,0 +1,141 @@
+PROCEDURE ANYDATA_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				ANYDATA 		IN
+PROCEDURE ANY_CHAR_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				CHAR			IN
+PROCEDURE ANY_CLOB_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				CLOB			IN
+PROCEDURE ANY_VARCHAR2_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				VARCHAR2		IN
+PROCEDURE BLOB_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				BLOB			IN
+PROCEDURE CALL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA_NAME			VARCHAR2		IN
+ PACKAGE_NAME			VARCHAR2		IN
+ PROC_NAME			VARCHAR2		IN
+ ARG_COUNT			BINARY_INTEGER		IN
+ GROUP_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE CALL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA_NAME			VARCHAR2		IN
+ PACKAGE_NAME			VARCHAR2		IN
+ PROC_NAME			VARCHAR2		IN
+ ARG_COUNT			BINARY_INTEGER		IN
+ NODES				TABLE OF VARCHAR2(128)	IN
+PROCEDURE CHAR_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				CHAR			IN
+PROCEDURE CLOB_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				CLOB			IN
+PROCEDURE COMMIT_WORK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COMMIT_WORK_COMMENT		VARCHAR2		IN
+PROCEDURE DATE_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				DATE			IN
+PROCEDURE GET_NEXT_TXN_LOG_RUN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RUN_SEQ			NUMBER			OUT
+ RUN_LEN			NUMBER			OUT
+ SCN_FIRST			NUMBER			OUT
+ ID_FIRST			VARCHAR2		OUT
+ SCN_LAST			NUMBER			OUT
+ ID_LAST			VARCHAR2		OUT
+PROCEDURE GET_TXN_LOG_RUNS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ORIGIN_SITE			VARCHAR2		IN
+ ORIGIN_DBLINK			VARCHAR2		IN
+ IN_TRAN_SEQ			NUMBER			IN
+PROCEDURE IDS_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				INTERVAL DAY TO SECOND	IN
+PROCEDURE IYM_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				INTERVAL YEAR TO MONTH	IN
+PROCEDURE NCHAR_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				NCHAR			IN
+PROCEDURE NCLOB_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				NCLOB			IN
+PROCEDURE NUMBER_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				NUMBER			IN
+PROCEDURE NVARCHAR2_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				NVARCHAR2		IN
+PROCEDURE PURGE_TRANSACTION_LOG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ORIGIN_SITE_P			VARCHAR2		IN
+ ORIGIN_DBLINK_P		VARCHAR2		IN
+ TRANSACTION_NUMBER_P		NUMBER			IN
+PROCEDURE RAW_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				RAW			IN
+PROCEDURE RECORD_TRANSACTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ORIGIN_SITE_P			VARCHAR2		IN
+ ORIGIN_DBLINK_P		VARCHAR2		IN
+ TRANSACTION_NUMBER_P		NUMBER			IN
+PROCEDURE ROWID_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				ROWID			IN
+PROCEDURE TIMESTAMP_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				TIMESTAMP		IN
+PROCEDURE TIME_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				TIME			IN
+PROCEDURE TRANSACTION
+PROCEDURE TRANSACTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NODES				TABLE OF VARCHAR2(128)	IN
+PROCEDURE TSLTZ_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				TIMESTAMP WITH LOCAL TIME ZONE IN
+PROCEDURE TSTZ_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				TIMESTAMP WITH TIME ZONE IN
+PROCEDURE TTZ_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				TIME WITH TIME ZONE	IN
+PROCEDURE VARCHAR2_ARG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ARG				VARCHAR2		IN
+

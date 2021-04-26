@@ -1,0 +1,28 @@
+PROCEDURE CREATE_OR_REPLACE_VIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REMOTE_TABLE			VARCHAR2		IN
+ DATABASE_LINK			VARCHAR2		IN
+ ORACLE_VIEW			VARCHAR2		IN     DEFAULT
+ PARALLEL_DEGREE		NUMBER(38)		IN     DEFAULT
+PROCEDURE CREATE_TABLE_TEMPLATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REMOTE_TABLE			VARCHAR2		IN
+ DATABASE_LINK			VARCHAR2		IN
+ ORACLE_TABLE			VARCHAR2		IN     DEFAULT
+ CREATE_TABLE_TEMPLATE_STRING	VARCHAR2		OUT
+PROCEDURE DROP_VIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ORACLE_VIEW			VARCHAR2		IN
+PROCEDURE LOAD_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REMOTE_TABLE			VARCHAR2		IN
+ DATABASE_LINK			VARCHAR2		IN
+ ORACLE_TABLE			VARCHAR2		IN     DEFAULT
+ TRUNCATE			BOOLEAN 		IN     DEFAULT
+ PARALLEL_DEGREE		NUMBER(38)		IN     DEFAULT
+ ROW_COUNT			NUMBER			OUT
+

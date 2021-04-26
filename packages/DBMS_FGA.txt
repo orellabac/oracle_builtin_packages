@@ -1,0 +1,35 @@
+PROCEDURE ADD_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ POLICY_NAME			VARCHAR2		IN
+ AUDIT_CONDITION		VARCHAR2		IN     DEFAULT
+ AUDIT_COLUMN			VARCHAR2		IN     DEFAULT
+ HANDLER_SCHEMA 		VARCHAR2		IN     DEFAULT
+ HANDLER_MODULE 		VARCHAR2		IN     DEFAULT
+ ENABLE 			BOOLEAN 		IN     DEFAULT
+ STATEMENT_TYPES		VARCHAR2		IN     DEFAULT
+ AUDIT_TRAIL			BINARY_INTEGER		IN     DEFAULT
+ AUDIT_COLUMN_OPTS		BINARY_INTEGER		IN     DEFAULT
+ POLICY_OWNER			VARCHAR2		IN     DEFAULT
+PROCEDURE DISABLE_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ POLICY_NAME			VARCHAR2		IN
+PROCEDURE DROP_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ POLICY_NAME			VARCHAR2		IN
+PROCEDURE ENABLE_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ POLICY_NAME			VARCHAR2		IN
+ ENABLE 			BOOLEAN 		IN     DEFAULT
+

@@ -1,0 +1,37 @@
+PROCEDURE FROM_815_TO_81X
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABNAME			VARCHAR2		IN
+ COMMIT_INT			NUMBER			IN     DEFAULT
+PROCEDURE OGIS_METADATA_FROM
+PROCEDURE OGIS_METADATA_TO
+PROCEDURE TO_81X
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER				VARCHAR2		IN
+ NEWTABNAME			VARCHAR2		IN
+ GIDCOLUMN			VARCHAR2		IN
+ GEOCOLNAME			VARCHAR2		IN
+ LAYER_GTYPE			VARCHAR2		IN     DEFAULT
+ UPDATE_FLAG			VARCHAR2		IN     DEFAULT
+PROCEDURE TO_CURRENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER				VARCHAR2		IN
+ NEWTABNAME			VARCHAR2		IN
+ GIDCOLUMN			VARCHAR2		IN
+ GEOCOLNAME			VARCHAR2		IN
+ LAYER_GTYPE			VARCHAR2		IN     DEFAULT
+ UPDATE_FLAG			VARCHAR2		IN     DEFAULT
+PROCEDURE TO_CURRENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABNAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN     DEFAULT
+ COMMIT_INT			NUMBER			IN     DEFAULT
+FUNCTION TO_CURRENT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+

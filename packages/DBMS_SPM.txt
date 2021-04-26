@@ -1,0 +1,205 @@
+PROCEDURE ACCEPT_SQL_PLAN_BASELINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ OBJECT_ID			NUMBER			IN
+ TASK_OWNER			VARCHAR2		IN     DEFAULT
+ FORCE				BOOLEAN 		IN     DEFAULT
+FUNCTION ALTER_SQL_PLAN_BASELINE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_HANDLE			VARCHAR2		IN     DEFAULT
+ PLAN_NAME			VARCHAR2		IN     DEFAULT
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+ ATTRIBUTE_VALUE		VARCHAR2		IN
+PROCEDURE CANCEL_EVOLVE_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+PROCEDURE CONFIGURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAMETER_NAME 		VARCHAR2		IN
+ PARAMETER_VALUE		NUMBER			IN     DEFAULT
+FUNCTION CREATE_EVOLVE_TASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_HANDLE			VARCHAR2		IN     DEFAULT
+ PLAN_NAME			VARCHAR2		IN     DEFAULT
+ TIME_LIMIT			NUMBER			IN     DEFAULT
+ TASK_NAME			VARCHAR2		IN     DEFAULT
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+FUNCTION CREATE_EVOLVE_TASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PLAN_LIST			NAME_LIST		IN
+ TIME_LIMIT			NUMBER			IN     DEFAULT
+ TASK_NAME			VARCHAR2		IN     DEFAULT
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_STGTAB_BASELINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ TABLE_OWNER			VARCHAR2		IN     DEFAULT
+ TABLESPACE_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_EVOLVE_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+FUNCTION DROP_MIGRATED_STORED_OUTLINE RETURNS BINARY_INTEGER
+FUNCTION DROP_SQL_PLAN_BASELINE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_HANDLE			VARCHAR2		IN     DEFAULT
+ PLAN_NAME			VARCHAR2		IN     DEFAULT
+FUNCTION EVOLVE_SQL_PLAN_BASELINE RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_HANDLE			VARCHAR2		IN     DEFAULT
+ PLAN_NAME			VARCHAR2		IN     DEFAULT
+ TIME_LIMIT			NUMBER(38)		IN     DEFAULT
+ VERIFY 			VARCHAR2		IN     DEFAULT
+ COMMIT 			VARCHAR2		IN     DEFAULT
+FUNCTION EVOLVE_SQL_PLAN_BASELINE RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PLAN_LIST			NAME_LIST		IN
+ TIME_LIMIT			NUMBER(38)		IN     DEFAULT
+ VERIFY 			VARCHAR2		IN     DEFAULT
+ COMMIT 			VARCHAR2		IN     DEFAULT
+FUNCTION EXECUTE_EVOLVE_TASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ EXECUTION_NAME 		VARCHAR2		IN     DEFAULT
+ EXECUTION_DESC 		VARCHAR2		IN     DEFAULT
+FUNCTION IMPLEMENT_EVOLVE_TASK RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ TASK_OWNER			VARCHAR2		IN     DEFAULT
+ EXECUTION_NAME 		VARCHAR2		IN     DEFAULT
+ FORCE				BOOLEAN 		IN     DEFAULT
+PROCEDURE INTERRUPT_EVOLVE_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+FUNCTION LOAD_PLANS_FROM_CURSOR_CACHE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+ ATTRIBUTE_VALUE		VARCHAR2		IN
+ FIXED				VARCHAR2		IN     DEFAULT
+ ENABLED			VARCHAR2		IN     DEFAULT
+FUNCTION LOAD_PLANS_FROM_CURSOR_CACHE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_ID 			VARCHAR2		IN
+ PLAN_HASH_VALUE		NUMBER			IN     DEFAULT
+ FIXED				VARCHAR2		IN     DEFAULT
+ ENABLED			VARCHAR2		IN     DEFAULT
+FUNCTION LOAD_PLANS_FROM_CURSOR_CACHE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_ID 			VARCHAR2		IN
+ PLAN_HASH_VALUE		NUMBER			IN     DEFAULT
+ SQL_TEXT			CLOB			IN
+ FIXED				VARCHAR2		IN     DEFAULT
+ ENABLED			VARCHAR2		IN     DEFAULT
+FUNCTION LOAD_PLANS_FROM_CURSOR_CACHE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_ID 			VARCHAR2		IN
+ PLAN_HASH_VALUE		NUMBER			IN     DEFAULT
+ SQL_HANDLE			VARCHAR2		IN
+ FIXED				VARCHAR2		IN     DEFAULT
+ ENABLED			VARCHAR2		IN     DEFAULT
+FUNCTION LOAD_PLANS_FROM_SQLSET RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQLSET_NAME			VARCHAR2		IN
+ SQLSET_OWNER			VARCHAR2		IN     DEFAULT
+ BASIC_FILTER			VARCHAR2		IN     DEFAULT
+ FIXED				VARCHAR2		IN     DEFAULT
+ ENABLED			VARCHAR2		IN     DEFAULT
+ COMMIT_ROWS			NUMBER			IN     DEFAULT
+FUNCTION MIGRATE_STORED_OUTLINE RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+ ATTRIBUTE_VALUE		CLOB			IN     DEFAULT
+ FIXED				VARCHAR2		IN     DEFAULT
+FUNCTION MIGRATE_STORED_OUTLINE RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OUTLN_LIST			NAME_LIST		IN
+ FIXED				VARCHAR2		IN     DEFAULT
+FUNCTION PACK_STGTAB_BASELINE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ TABLE_OWNER			VARCHAR2		IN     DEFAULT
+ SQL_HANDLE			VARCHAR2		IN     DEFAULT
+ PLAN_NAME			VARCHAR2		IN     DEFAULT
+ SQL_TEXT			CLOB			IN     DEFAULT
+ CREATOR			VARCHAR2		IN     DEFAULT
+ ORIGIN 			VARCHAR2		IN     DEFAULT
+ ENABLED			VARCHAR2		IN     DEFAULT
+ ACCEPTED			VARCHAR2		IN     DEFAULT
+ FIXED				VARCHAR2		IN     DEFAULT
+ MODULE 			VARCHAR2		IN     DEFAULT
+ ACTION 			VARCHAR2		IN     DEFAULT
+FUNCTION REPORT_AUTO_EVOLVE_TASK RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TYPE				VARCHAR2		IN     DEFAULT
+ LEVEL				VARCHAR2		IN     DEFAULT
+ SECTION			VARCHAR2		IN     DEFAULT
+ OBJECT_ID			NUMBER			IN     DEFAULT
+ EXECUTION_NAME 		VARCHAR2		IN     DEFAULT
+FUNCTION REPORT_EVOLVE_TASK RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ TYPE				VARCHAR2		IN     DEFAULT
+ LEVEL				VARCHAR2		IN     DEFAULT
+ SECTION			VARCHAR2		IN     DEFAULT
+ OBJECT_ID			NUMBER			IN     DEFAULT
+ TASK_OWNER			VARCHAR2		IN     DEFAULT
+ EXECUTION_NAME 		VARCHAR2		IN     DEFAULT
+PROCEDURE RESET_EVOLVE_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+PROCEDURE RESUME_EVOLVE_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+PROCEDURE SET_EVOLVE_TASK_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ PARAMETER			VARCHAR2		IN
+ VALUE				NUMBER			IN
+PROCEDURE SET_EVOLVE_TASK_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ PARAMETER			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+FUNCTION UNPACK_STGTAB_BASELINE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ TABLE_OWNER			VARCHAR2		IN     DEFAULT
+ SQL_HANDLE			VARCHAR2		IN     DEFAULT
+ PLAN_NAME			VARCHAR2		IN     DEFAULT
+ SQL_TEXT			CLOB			IN     DEFAULT
+ CREATOR			VARCHAR2		IN     DEFAULT
+ ORIGIN 			VARCHAR2		IN     DEFAULT
+ ENABLED			VARCHAR2		IN     DEFAULT
+ ACCEPTED			VARCHAR2		IN     DEFAULT
+ FIXED				VARCHAR2		IN     DEFAULT
+ MODULE 			VARCHAR2		IN     DEFAULT
+ ACTION 			VARCHAR2		IN     DEFAULT
+

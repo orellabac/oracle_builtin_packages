@@ -1,0 +1,39 @@
+PROCEDURE DISABLE
+PROCEDURE ENABLE_AT_SYSTEM_CHANGE_NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUERY_SCN			NUMBER			IN
+PROCEDURE ENABLE_AT_TIME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUERY_TIME			TIMESTAMP		IN
+FUNCTION GET_SYSTEM_CHANGE_NUMBER RETURNS NUMBER
+PROCEDURE TRANSACTION_BACKOUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUMTXNS			NUMBER			IN
+ XIDS				XID_ARRAY		IN
+ OPTIONS			BINARY_INTEGER		IN     DEFAULT
+ SCNHINT			NUMBER			IN     DEFAULT
+PROCEDURE TRANSACTION_BACKOUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUMTXNS			NUMBER			IN
+ XIDS				XID_ARRAY		IN
+ OPTIONS			BINARY_INTEGER		IN     DEFAULT
+ TIMEHINT			TIMESTAMP		IN
+PROCEDURE TRANSACTION_BACKOUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUMTXNS			NUMBER			IN
+ NAMES				TXNAME_ARRAY		IN
+ OPTIONS			BINARY_INTEGER		IN     DEFAULT
+ SCNHINT			NUMBER			IN     DEFAULT
+PROCEDURE TRANSACTION_BACKOUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUMTXNS			NUMBER			IN
+ NAMES				TXNAME_ARRAY		IN
+ OPTIONS			BINARY_INTEGER		IN     DEFAULT
+ TIMEHINT			TIMESTAMP		IN
+

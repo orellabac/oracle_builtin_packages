@@ -1,0 +1,98 @@
+PROCEDURE ANALYZE_RTREE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMANAME			VARCHAR2		IN
+ INDEXNAME			VARCHAR2		IN
+PROCEDURE AVERAGE_MBR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER				VARCHAR2		IN
+ WIDTH				NUMBER			OUT
+ HEIGHT 			NUMBER			OUT
+PROCEDURE AVERAGE_MBR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+ WIDTH				NUMBER			OUT
+ HEIGHT 			NUMBER			OUT
+FUNCTION ESTIMATE_RTREE_INDEX_SIZE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUMBER_OF_GEOMS		NUMBER(38)		IN
+ DB_BLOCK_SIZE			NUMBER(38)		IN
+ SDO_RTR_PCTFREE		NUMBER(38)		IN     DEFAULT
+ NUM_DIMENSIONS 		NUMBER(38)		IN     DEFAULT
+ IS_GEODETIC			NUMBER			IN     DEFAULT
+FUNCTION ESTIMATE_RTREE_INDEX_SIZE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ TABNAME			VARCHAR2		IN
+ COLNAME			VARCHAR2		IN
+ PARTNAME			VARCHAR2		IN     DEFAULT
+PROCEDURE EXTENT_OF
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER				VARCHAR2		IN
+ MIN_X				NUMBER			OUT
+ MAX_X				NUMBER			OUT
+ MIN_Y				NUMBER			OUT
+ MAX_Y				NUMBER			OUT
+FUNCTION EXTENT_OF RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+ USE_INDEX			VARCHAR2		IN     DEFAULT
+PROCEDURE MIX_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER				VARCHAR2		IN
+ TOTAL_GEOM			NUMBER(38)		OUT
+ POINT_GEOM			NUMBER(38)		OUT
+ LINE_GEOM			NUMBER(38)		OUT
+ POLY_GEOM			NUMBER(38)		OUT
+ COMPLEX_GEOM			NUMBER(38)		OUT
+PROCEDURE MIX_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAYER				VARCHAR2		IN
+PROCEDURE MIX_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+ TOTAL_GEOM			NUMBER(38)		OUT
+ POINT_GEOM			NUMBER(38)		OUT
+ CURVE_GEOM			NUMBER(38)		OUT
+ POLY_GEOM			NUMBER(38)		OUT
+ COMPLEX_GEOM			NUMBER(38)		OUT
+PROCEDURE MIX_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+FUNCTION QUALITY_DEGRADATION RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMANAME			VARCHAR2		IN
+ INDEXNAME			VARCHAR2		IN
+ INDEXTABLE			VARCHAR2		IN
+FUNCTION QUALITY_DEGRADATION RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMANAME			VARCHAR2		IN
+ INDEXNAME			VARCHAR2		IN
+FUNCTION RTREE_QUALITY RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMANAME			VARCHAR2		IN
+ INDEXNAME			VARCHAR2		IN
+ INDEXTABLE			VARCHAR2		IN
+FUNCTION RTREE_QUALITY RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMANAME			VARCHAR2		IN
+ INDEXNAME			VARCHAR2		IN
+

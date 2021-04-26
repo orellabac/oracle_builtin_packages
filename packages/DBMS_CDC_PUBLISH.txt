@@ -1,0 +1,128 @@
+PROCEDURE ALTER_AUTOLOG_CHANGE_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHANGE_SOURCE_NAME		VARCHAR2		IN
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ REMOVE_DESCRIPTION		CHAR			IN     DEFAULT
+ FIRST_SCN			NUMBER			IN     DEFAULT
+PROCEDURE ALTER_CHANGE_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHANGE_SET_NAME		VARCHAR2		IN
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ REMOVE_DESCRIPTION		CHAR			IN     DEFAULT
+ ENABLE_CAPTURE 		CHAR			IN     DEFAULT
+ RECOVER_AFTER_ERROR		CHAR			IN     DEFAULT
+ REMOVE_DDL			CHAR			IN     DEFAULT
+ STOP_ON_DDL			CHAR			IN     DEFAULT
+PROCEDURE ALTER_CHANGE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER				VARCHAR2		IN
+ CHANGE_TABLE_NAME		VARCHAR2		IN
+ OPERATION			VARCHAR2		IN
+ COLUMN_LIST			VARCHAR2		IN
+ RS_ID				CHAR			IN
+ ROW_ID 			CHAR			IN
+ USER_ID			CHAR			IN
+ TIMESTAMP			CHAR			IN
+ OBJECT_ID			CHAR			IN
+ SOURCE_COLMAP			CHAR			IN
+ TARGET_COLMAP			CHAR			IN
+ DDL_MARKERS			CHAR			IN     DEFAULT
+PROCEDURE ALTER_HOTLOG_CHANGE_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHANGE_SOURCE_NAME		VARCHAR2		IN
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ REMOVE_DESCRIPTION		CHAR			IN     DEFAULT
+ ENABLE_SOURCE			CHAR			IN     DEFAULT
+PROCEDURE CREATE_AUTOLOG_CHANGE_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHANGE_SOURCE_NAME		VARCHAR2		IN
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ SOURCE_DATABASE		VARCHAR2		IN
+ FIRST_SCN			NUMBER			IN
+ ONLINE_LOG			CHAR			IN     DEFAULT
+PROCEDURE CREATE_CHANGE_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHANGE_SET_NAME		VARCHAR2		IN
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ CHANGE_SOURCE_NAME		VARCHAR2		IN
+ STOP_ON_DDL			CHAR			IN     DEFAULT
+ BEGIN_DATE			DATE			IN     DEFAULT
+ END_DATE			DATE			IN     DEFAULT
+PROCEDURE CREATE_CHANGE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER				VARCHAR2		IN
+ CHANGE_TABLE_NAME		VARCHAR2		IN
+ CHANGE_SET_NAME		VARCHAR2		IN
+ SOURCE_SCHEMA			VARCHAR2		IN
+ SOURCE_TABLE			VARCHAR2		IN
+ COLUMN_TYPE_LIST		VARCHAR2		IN
+ CAPTURE_VALUES 		VARCHAR2		IN
+ RS_ID				CHAR			IN
+ ROW_ID 			CHAR			IN
+ USER_ID			CHAR			IN
+ TIMESTAMP			CHAR			IN
+ OBJECT_ID			CHAR			IN
+ SOURCE_COLMAP			CHAR			IN
+ TARGET_COLMAP			CHAR			IN
+ OPTIONS_STRING 		VARCHAR2		IN
+ DDL_MARKERS			CHAR			IN     DEFAULT
+PROCEDURE CREATE_HOTLOG_CHANGE_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHANGE_SOURCE_NAME		VARCHAR2		IN
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ SOURCE_DATABASE		VARCHAR2		IN
+PROCEDURE DROP_CHANGE_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHANGE_SET_NAME		VARCHAR2		IN
+PROCEDURE DROP_CHANGE_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHANGE_SOURCE_NAME		VARCHAR2		IN
+PROCEDURE DROP_CHANGE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER				VARCHAR2		IN
+ CHANGE_TABLE_NAME		VARCHAR2		IN
+ FORCE_FLAG			CHAR			IN
+PROCEDURE DROP_SUBSCRIBER_VIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_HANDLE		NUMBER			IN
+ SOURCE_SCHEMA			VARCHAR2		IN
+ SOURCE_TABLE			VARCHAR2		IN
+PROCEDURE DROP_SUBSCRIPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_NAME		VARCHAR2		IN
+PROCEDURE DROP_SUBSCRIPTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SUBSCRIPTION_HANDLE		NUMBER			IN
+FUNCTION GET_DDLOPER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DDLOPER			BINARY_INTEGER		IN
+PROCEDURE PURGE
+PROCEDURE PURGE_CHANGE_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHANGE_SET_NAME		VARCHAR2		IN
+ FORCE				CHAR			IN     DEFAULT
+ PURGE_DATE			DATE			IN     DEFAULT
+PROCEDURE PURGE_CHANGE_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER				VARCHAR2		IN
+ CHANGE_TABLE_NAME		VARCHAR2		IN
+ FORCE				CHAR			IN     DEFAULT
+ PURGE_DATE			DATE			IN     DEFAULT
+

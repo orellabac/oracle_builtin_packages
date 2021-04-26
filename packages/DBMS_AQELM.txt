@@ -1,0 +1,51 @@
+PROCEDURE GET_MAILHOST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MAILHOST			VARCHAR2		OUT
+PROCEDURE GET_MAILPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MAILPORT			NUMBER			OUT
+PROCEDURE GET_PROXY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PROXY				VARCHAR2		OUT
+ NO_PROXY_DOMAINS		VARCHAR2		OUT
+PROCEDURE GET_SENDFROM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SENDFROM			VARCHAR2		OUT
+PROCEDURE GET_TXTIMEOUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TIMEOUT			NUMBER			OUT
+PROCEDURE HTTP_SEND
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ URL				VARCHAR2		IN
+ WHAT				VARCHAR2		IN
+ WHATL				NUMBER			IN
+ STATUS_CODE			VARCHAR2		OUT
+PROCEDURE SEND_EMAIL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SENDTO 			VARCHAR2		IN
+ TEXT				VARCHAR2		IN
+PROCEDURE SET_MAILHOST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MAILHOST			VARCHAR2		IN
+PROCEDURE SET_MAILPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MAILPORT			NUMBER			IN
+PROCEDURE SET_PROXY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PROXY				VARCHAR2		IN
+ NO_PROXY_DOMAINS		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_SENDFROM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SENDFROM			VARCHAR2		IN
+

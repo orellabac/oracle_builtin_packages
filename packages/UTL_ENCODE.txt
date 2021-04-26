@@ -1,0 +1,50 @@
+FUNCTION BASE64_DECODE RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+FUNCTION BASE64_ENCODE RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+FUNCTION MIMEHEADER_DECODE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BUF				VARCHAR2		IN
+FUNCTION MIMEHEADER_ENCODE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BUF				VARCHAR2		IN
+ ENCODE_CHARSET 		VARCHAR2		IN     DEFAULT
+ ENCODING			BINARY_INTEGER		IN     DEFAULT
+FUNCTION QUOTED_PRINTABLE_DECODE RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+FUNCTION QUOTED_PRINTABLE_ENCODE RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+FUNCTION TEXT_DECODE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BUF				VARCHAR2		IN
+ ENCODE_CHARSET 		VARCHAR2		IN     DEFAULT
+ ENCODING			BINARY_INTEGER		IN     DEFAULT
+FUNCTION TEXT_ENCODE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BUF				VARCHAR2		IN
+ ENCODE_CHARSET 		VARCHAR2		IN     DEFAULT
+ ENCODING			BINARY_INTEGER		IN     DEFAULT
+FUNCTION UUDECODE RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+FUNCTION UUENCODE RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ R				RAW			IN
+ TYPE				BINARY_INTEGER		IN     DEFAULT
+ FILENAME			VARCHAR2		IN     DEFAULT
+ PERMISSION			VARCHAR2		IN     DEFAULT
+

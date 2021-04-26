@@ -1,0 +1,31 @@
+PROCEDURE DEQUEUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ STREAMS_NAME			VARCHAR2		IN
+ PAYLOAD			ANYDATA 		OUT
+ DEQUEUE_MODE			VARCHAR2		IN     DEFAULT
+ NAVIGATION			VARCHAR2		IN     DEFAULT
+ WAIT				BINARY_INTEGER		IN     DEFAULT
+PROCEDURE DEQUEUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ STREAMS_NAME			VARCHAR2		IN
+ PAYLOAD			ANYDATA 		OUT
+ DEQUEUE_MODE			VARCHAR2		IN     DEFAULT
+ NAVIGATION			VARCHAR2		IN     DEFAULT
+ WAIT				BINARY_INTEGER		IN     DEFAULT
+ MSGID				RAW			OUT
+PROCEDURE ENQUEUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ PAYLOAD			ANYDATA 		IN
+PROCEDURE ENQUEUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUEUE_NAME			VARCHAR2		IN
+ PAYLOAD			ANYDATA 		IN
+ MSGID				RAW			OUT
+

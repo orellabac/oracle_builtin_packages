@@ -1,0 +1,32 @@
+PROCEDURE INITIALIZE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VAL				BINARY_INTEGER		IN
+FUNCTION NORMAL RETURNS NUMBER
+FUNCTION RANDOM RETURNS BINARY_INTEGER
+PROCEDURE RECORD_RANDOM_NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VAL				NUMBER			IN
+FUNCTION REPLAY_RANDOM_NUMBER RETURNS NUMBER
+PROCEDURE SEED
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VAL				BINARY_INTEGER		IN
+PROCEDURE SEED
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VAL				VARCHAR2		IN
+FUNCTION STRING RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPT				CHAR			IN
+ LEN				NUMBER			IN
+PROCEDURE TERMINATE
+FUNCTION VALUE RETURNS NUMBER
+FUNCTION VALUE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOW				NUMBER			IN
+ HIGH				NUMBER			IN
+

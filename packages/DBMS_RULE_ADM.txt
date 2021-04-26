@@ -1,0 +1,175 @@
+PROCEDURE ADD_RULE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_NAME			VARCHAR2		IN
+ RULE_SET_NAME			VARCHAR2		IN
+ EVALUATION_CONTEXT		VARCHAR2		IN     DEFAULT
+ RULE_COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_RULE_INT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_NAME			VARCHAR2		IN
+ RULE_SET_NAME			VARCHAR2		IN
+ EVALUATION_CONTEXT		VARCHAR2		IN     DEFAULT
+ RULE_COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE ALTER_EVALUATION_CONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EVALUATION_CONTEXT_NAME	VARCHAR2		IN
+ TABLE_ALIASES			RE$TABLE_ALIAS_LIST	IN     DEFAULT
+ REMOVE_TABLE_ALIASES		BOOLEAN 		IN     DEFAULT
+ VARIABLE_TYPES 		RE$VARIABLE_TYPE_LIST	IN     DEFAULT
+ REMOVE_VARIABLE_TYPES		BOOLEAN 		IN     DEFAULT
+ EVALUATION_FUNCTION		VARCHAR2		IN     DEFAULT
+ REMOVE_EVALUATION_FUNCTION	BOOLEAN 		IN     DEFAULT
+ EVALUATION_CONTEXT_COMMENT	VARCHAR2		IN     DEFAULT
+ REMOVE_EVAL_CONTEXT_COMMENT	BOOLEAN 		IN     DEFAULT
+PROCEDURE ALTER_EVALUATION_CONTEXT_INT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EVALUATION_CONTEXT_NAME	VARCHAR2		IN
+ TABLE_ALIASES			RE$TABLE_ALIAS_LIST	IN     DEFAULT
+ REMOVE_TABLE_ALIASES		BOOLEAN 		IN     DEFAULT
+ VARIABLE_TYPES 		RE$VARIABLE_TYPE_LIST	IN     DEFAULT
+ REMOVE_VARIABLE_TYPES		BOOLEAN 		IN     DEFAULT
+ EVALUATION_FUNCTION		VARCHAR2		IN     DEFAULT
+ REMOVE_EVALUATION_FUNCTION	BOOLEAN 		IN     DEFAULT
+ EVALUATION_CONTEXT_COMMENT	VARCHAR2		IN     DEFAULT
+ REMOVE_EVAL_CONTEXT_COMMENT	BOOLEAN 		IN     DEFAULT
+PROCEDURE ALTER_RULE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_NAME			VARCHAR2		IN
+ CONDITION			VARCHAR2		IN     DEFAULT
+ EVALUATION_CONTEXT		VARCHAR2		IN     DEFAULT
+ REMOVE_EVALUATION_CONTEXT	BOOLEAN 		IN     DEFAULT
+ ACTION_CONTEXT 		RE$NV_LIST		IN     DEFAULT
+ REMOVE_ACTION_CONTEXT		BOOLEAN 		IN     DEFAULT
+ RULE_COMMENT			VARCHAR2		IN     DEFAULT
+ REMOVE_RULE_COMMENT		BOOLEAN 		IN     DEFAULT
+PROCEDURE ALTER_RULE_INT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_NAME			VARCHAR2		IN
+ CONDITION			VARCHAR2		IN     DEFAULT
+ EVALUATION_CONTEXT		VARCHAR2		IN     DEFAULT
+ REMOVE_EVALUATION_CONTEXT	BOOLEAN 		IN     DEFAULT
+ ACTION_CONTEXT 		RE$NV_LIST		IN     DEFAULT
+ REMOVE_ACTION_CONTEXT		BOOLEAN 		IN     DEFAULT
+ RULE_COMMENT			VARCHAR2		IN     DEFAULT
+ REMOVE_RULE_COMMENT		BOOLEAN 		IN     DEFAULT
+PROCEDURE CREATE_EVALUATION_CONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EVALUATION_CONTEXT_NAME	VARCHAR2		IN
+ TABLE_ALIASES			RE$TABLE_ALIAS_LIST	IN     DEFAULT
+ VARIABLE_TYPES 		RE$VARIABLE_TYPE_LIST	IN     DEFAULT
+ EVALUATION_FUNCTION		VARCHAR2		IN     DEFAULT
+ EVALUATION_CONTEXT_COMMENT	VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_EVALUATION_CONTEXT_INT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EVALUATION_CONTEXT_NAME	VARCHAR2		IN
+ TABLE_ALIASES			RE$TABLE_ALIAS_LIST	IN     DEFAULT
+ VARIABLE_TYPES 		RE$VARIABLE_TYPE_LIST	IN     DEFAULT
+ EVALUATION_FUNCTION		VARCHAR2		IN     DEFAULT
+ EVALUATION_CONTEXT_COMMENT	VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_RULE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_NAME			VARCHAR2		IN
+ CONDITION			VARCHAR2		IN
+ EVALUATION_CONTEXT		VARCHAR2		IN     DEFAULT
+ ACTION_CONTEXT 		RE$NV_LIST		IN     DEFAULT
+ RULE_COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_RULE_INT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_NAME			VARCHAR2		IN
+ CONDITION			VARCHAR2		IN
+ EVALUATION_CONTEXT		VARCHAR2		IN     DEFAULT
+ ACTION_CONTEXT 		RE$NV_LIST		IN     DEFAULT
+ RULE_COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_RULE_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_SET_NAME			VARCHAR2		IN
+ EVALUATION_CONTEXT		VARCHAR2		IN     DEFAULT
+ RULE_SET_COMMENT		VARCHAR2		IN     DEFAULT
+ RESULT_CACHE			BOOLEAN 		IN     DEFAULT
+PROCEDURE CREATE_RULE_SET_INT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_SET_NAME			VARCHAR2		IN
+ EVALUATION_CONTEXT		VARCHAR2		IN     DEFAULT
+ RULE_SET_COMMENT		VARCHAR2		IN     DEFAULT
+ RESULT_CACHE			BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_EVALUATION_CONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EVALUATION_CONTEXT_NAME	VARCHAR2		IN
+ FORCE				BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_EVALUATION_CONTEXT_INT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EVALUATION_CONTEXT_NAME	VARCHAR2		IN
+ FORCE				BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_RULE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_NAME			VARCHAR2		IN
+ FORCE				BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_RULE_INT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_NAME			VARCHAR2		IN
+ FORCE				BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_RULE_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_SET_NAME			VARCHAR2		IN
+ DELETE_RULES			BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_RULE_SET_INT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_SET_NAME			VARCHAR2		IN
+ DELETE_RULES			BOOLEAN 		IN     DEFAULT
+PROCEDURE GRANT_OBJECT_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIVILEGE			BINARY_INTEGER		IN
+ OBJECT_NAME			VARCHAR2		IN
+ GRANTEE			VARCHAR2		IN
+ GRANT_OPTION			BOOLEAN 		IN     DEFAULT
+PROCEDURE GRANT_SYSTEM_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIVILEGE			BINARY_INTEGER		IN
+ GRANTEE			VARCHAR2		IN
+ GRANT_OPTION			BOOLEAN 		IN     DEFAULT
+PROCEDURE REMOVE_RULE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_NAME			VARCHAR2		IN
+ RULE_SET_NAME			VARCHAR2		IN
+ EVALUATION_CONTEXT		VARCHAR2		IN     DEFAULT
+ ALL_EVALUATION_CONTEXTS	BOOLEAN 		IN     DEFAULT
+PROCEDURE REMOVE_RULE_INT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RULE_NAME			VARCHAR2		IN
+ RULE_SET_NAME			VARCHAR2		IN
+ EVALUATION_CONTEXT		VARCHAR2		IN     DEFAULT
+ ALL_EVALUATION_CONTEXTS	BOOLEAN 		IN     DEFAULT
+PROCEDURE REVOKE_OBJECT_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIVILEGE			BINARY_INTEGER		IN
+ OBJECT_NAME			VARCHAR2		IN
+ REVOKEE			VARCHAR2		IN
+PROCEDURE REVOKE_SYSTEM_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIVILEGE			BINARY_INTEGER		IN
+ REVOKEE			VARCHAR2		IN
+

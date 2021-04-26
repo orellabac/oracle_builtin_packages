@@ -1,0 +1,31 @@
+PROCEDURE ADD_WARNING_SETTING_CAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WARNING_CATEGORY		VARCHAR2		IN
+ WARNING_VALUE			VARCHAR2		IN
+ SCOPE				VARCHAR2		IN
+PROCEDURE ADD_WARNING_SETTING_NUM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WARNING_NUMBER 		BINARY_INTEGER		IN
+ WARNING_VALUE			VARCHAR2		IN
+ SCOPE				VARCHAR2		IN
+FUNCTION GET_CATEGORY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WARNING_NUMBER 		BINARY_INTEGER		IN
+FUNCTION GET_WARNING_SETTING_CAT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WARNING_CATEGORY		VARCHAR2		IN
+FUNCTION GET_WARNING_SETTING_NUM RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WARNING_NUMBER 		BINARY_INTEGER		IN
+FUNCTION GET_WARNING_SETTING_STRING RETURNS VARCHAR2
+PROCEDURE SET_WARNING_SETTING_STRING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				VARCHAR2		IN
+ SCOPE				VARCHAR2		IN
+

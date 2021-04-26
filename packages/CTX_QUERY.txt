@@ -1,0 +1,117 @@
+PROCEDURE BROWSE_WORDS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ SEED				VARCHAR2		IN
+ RESTAB 			VARCHAR2		IN
+ BROWSE_ID			NUMBER			IN     DEFAULT
+ NUMWORDS			NUMBER			IN     DEFAULT
+ DIRECTION			VARCHAR2		IN     DEFAULT
+ PART_NAME			VARCHAR2		IN     DEFAULT
+ TOKEN_TYPE			NUMBER			IN     DEFAULT
+PROCEDURE BROWSE_WORDS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ SEED				VARCHAR2		IN
+ RESARR 			TABLE OF RECORD 	IN/OUT
+ NUMWORDS			NUMBER			IN     DEFAULT
+ DIRECTION			VARCHAR2		IN     DEFAULT
+ PART_NAME			VARCHAR2		IN     DEFAULT
+ TOKEN_TYPE			NUMBER			IN     DEFAULT
+FUNCTION CHK_TXNQRY_DISBL_SWITCH RETURNS NUMBER
+FUNCTION CHK_XPATH RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ TEXT_QUERY			VARCHAR2		IN
+ PART_NAME			VARCHAR2		IN     DEFAULT
+FUNCTION COUNT_HITS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ TEXT_QUERY			VARCHAR2		IN
+ EXACT				BOOLEAN 		IN     DEFAULT
+ PART_NAME			VARCHAR2		IN     DEFAULT
+FUNCTION COUNT_HITS_CLOB_QUERY RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ TEXT_QUERY			CLOB			IN
+ EXACT				BOOLEAN 		IN     DEFAULT
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE EXPLAIN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ TEXT_QUERY			VARCHAR2		IN
+ EXPLAIN_TABLE			VARCHAR2		IN
+ SHARELEVEL			NUMBER			IN     DEFAULT
+ EXPLAIN_ID			VARCHAR2		IN     DEFAULT
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE EXPLAIN_CLOB_QUERY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ TEXT_QUERY			CLOB			IN
+ EXPLAIN_TABLE			VARCHAR2		IN
+ SHARELEVEL			NUMBER			IN     DEFAULT
+ EXPLAIN_ID			VARCHAR2		IN     DEFAULT
+ PART_NAME			VARCHAR2		IN     DEFAULT
+FUNCTION FCONTAINS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TEXT_VALUE			VARCHAR2		IN
+ TEXT_QUERY			VARCHAR2		IN
+ POLICY_NAME			VARCHAR2		IN
+PROCEDURE HFEEDBACK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ TEXT_QUERY			VARCHAR2		IN
+ FEEDBACK_TABLE 		VARCHAR2		IN
+ SHARELEVEL			NUMBER			IN     DEFAULT
+ FEEDBACK_ID			VARCHAR2		IN     DEFAULT
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE HFEEDBACK_CLOB_QUERY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ TEXT_QUERY			CLOB			IN
+ FEEDBACK_TABLE 		VARCHAR2		IN
+ SHARELEVEL			NUMBER			IN     DEFAULT
+ FEEDBACK_ID			VARCHAR2		IN     DEFAULT
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE REMOVE_SQE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUERY_NAME			VARCHAR2		IN
+PROCEDURE RESULT_SET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ QUERY				VARCHAR2		IN
+ RESULT_SET_DESCRIPTOR		CLOB			IN
+ RESULT_SET			CLOB			IN/OUT
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE RESULT_SET_CLOB_QUERY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ QUERY				CLOB			IN
+ RESULT_SET_DESCRIPTOR		CLOB			IN
+ RESULT_SET			CLOB			IN/OUT
+ PART_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE STORE_SQE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUERY_NAME			VARCHAR2		IN
+ TEXT_QUERY			VARCHAR2		IN
+ DURATION			NUMBER			IN     DEFAULT
+PROCEDURE STORE_SQE_CLOB_QUERY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ QUERY_NAME			VARCHAR2		IN
+ TEXT_QUERY			CLOB			IN
+ DURATION			NUMBER			IN     DEFAULT
+

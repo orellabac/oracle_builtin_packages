@@ -1,0 +1,494 @@
+FUNCTION ADD_EDGE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ NODE_ID1			NUMBER			IN
+ NODE_ID2			NUMBER			IN
+ GEOM				SDO_GEOMETRY		IN
+FUNCTION ADD_ISOLATED_NODE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ FACE_ID			NUMBER			IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION ADD_ISOLATED_NODE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ FACE_ID			NUMBER			IN
+ X				NUMBER			IN
+ Y				NUMBER			IN
+FUNCTION ADD_ISOLATED_NODE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION ADD_ISOLATED_NODE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ X				NUMBER			IN
+ Y				NUMBER			IN
+FUNCTION ADD_LINEAR_GEOMETRY RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ CURVE				SDO_GEOMETRY		IN
+FUNCTION ADD_LINEAR_GEOMETRY RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ COORDS 			SDO_NUMBER_ARRAY	IN
+FUNCTION ADD_LOOP RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+ GEOM				SDO_GEOMETRY		IN
+FUNCTION ADD_NODE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ EDGE_ID			NUMBER			IN
+ POINT				SDO_GEOMETRY		IN
+ COORD_INDEX			NUMBER			IN
+ IS_NEW_SHAPE_POINT		VARCHAR2		IN
+FUNCTION ADD_NODE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ EDGE_ID			NUMBER			IN
+ X				NUMBER			IN
+ Y				NUMBER			IN
+ COORD_INDEX			NUMBER			IN
+ IS_NEW_SHAPE_POINT		VARCHAR2		IN
+FUNCTION ADD_POINT_GEOMETRY RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION ADD_POINT_GEOMETRY RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ COORD				SDO_NUMBER_ARRAY	IN
+FUNCTION ADD_POLYGON_GEOMETRY RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ POLYGON			SDO_GEOMETRY		IN
+FUNCTION ADD_POLYGON_GEOMETRY RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ COORDS 			SDO_NUMBER_ARRAY	IN
+PROCEDURE CHANGE_EDGE_COORDS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ EDGE_ID			NUMBER			IN
+ GEOM				SDO_GEOMETRY		IN
+PROCEDURE CHANGE_EDGE_COORDS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ EDGE_ID			NUMBER			IN
+ GEOM				SDO_GEOMETRY		IN
+ MOVED_ISO_NODES		SDO_NUMBER_ARRAY	OUT
+ MOVED_ISO_EDGES		SDO_NUMBER_ARRAY	OUT
+ ALLOW_ISO_MOVES		VARCHAR2		IN
+PROCEDURE CLEAR_TOPO_MAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+PROCEDURE COMMIT_TOPO_MAP
+PROCEDURE CREATE_EDGE_INDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+PROCEDURE CREATE_FACE_INDEX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+FUNCTION CREATE_FEATURE RETURNS SDO_TOPO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+ GEOM				SDO_GEOMETRY		IN
+FUNCTION CREATE_FEATURE RETURNS SDO_TOPO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+ GEOM				SDO_GEOMETRY		IN
+ SNAPFEATURE			NUMBER			IN
+FUNCTION CREATE_FEATURE RETURNS SDO_TOPO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+ DML_CONDITION			VARCHAR2		IN
+PROCEDURE CREATE_TOPO_MAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_MAP			VARCHAR2		IN
+ NUMBER_OF_EDGES		NUMBER			IN
+ NUMBER_OF_NODES		NUMBER			IN
+ NUMBER_OF_FACES		NUMBER			IN
+PROCEDURE CREATE_TOPO_MAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_MAP			VARCHAR2		IN
+PROCEDURE DROP_TOPO_MAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+FUNCTION GET_CONTAINING_FACE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_MAP			VARCHAR2		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_CONTAINING_FACE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_MAP			VARCHAR2		IN
+ POINT				SDO_GEOMETRY		IN
+ ALLOW_ISO_COINCIDENCE		VARCHAR2		IN
+FUNCTION GET_CONTAINING_FACE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_MAP			VARCHAR2		IN
+ X				NUMBER			IN
+ Y				NUMBER			IN
+FUNCTION GET_EDGE_ADDITIONS RETURNS SDO_NUMBER_ARRAY
+FUNCTION GET_EDGE_CHANGES RETURNS SDO_NUMBER_ARRAY
+FUNCTION GET_EDGE_COORDS RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_MAP			VARCHAR2		IN
+ EDGE_ID			NUMBER			IN
+FUNCTION GET_EDGE_DELETIONS RETURNS SDO_NUMBER_ARRAY
+FUNCTION GET_EDGE_NODES RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_MAP			VARCHAR2		IN
+ EDGE_ID			NUMBER			IN
+FUNCTION GET_FACE_ADDITIONS RETURNS SDO_NUMBER_ARRAY
+FUNCTION GET_FACE_BOUNDARY RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_MAP			VARCHAR2		IN
+ FACE_ID			NUMBER			IN
+ OPITON 			NUMBER			IN
+FUNCTION GET_FACE_CHANGES RETURNS SDO_NUMBER_ARRAY
+FUNCTION GET_FACE_DELETIONS RETURNS SDO_NUMBER_ARRAY
+FUNCTION GET_NEAREST_EDGE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_MAP			VARCHAR2		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_NEAREST_EDGE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_MAP			VARCHAR2		IN
+ X				NUMBER			IN
+ Y				NUMBER			IN
+FUNCTION GET_NEAREST_EDGE_IN_CACHE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ X				NUMBER			IN
+ Y				NUMBER			IN
+FUNCTION GET_NEAREST_EDGE_IN_CACHE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_NEAREST_NODE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_MAP			VARCHAR2		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_NEAREST_NODE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_MAP			VARCHAR2		IN
+ X				NUMBER			IN
+ Y				NUMBER			IN
+FUNCTION GET_NEAREST_NODE_IN_CACHE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ X				NUMBER			IN
+ Y				NUMBER			IN
+FUNCTION GET_NEAREST_NODE_IN_CACHE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_NODE_ADDITIONS RETURNS SDO_NUMBER_ARRAY
+FUNCTION GET_NODE_CHANGES RETURNS SDO_NUMBER_ARRAY
+FUNCTION GET_NODE_COORD RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_MAP			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+FUNCTION GET_NODE_DELETIONS RETURNS SDO_NUMBER_ARRAY
+FUNCTION GET_NODE_FACE_STAR RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_MAP			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+FUNCTION GET_NODE_STAR RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TOPO_MAP			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+FUNCTION GET_TOPO_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+FUNCTION GET_TOPO_TRANSACTION_ID RETURNS NUMBER
+FUNCTION LIST_TOPO_MAPS RETURNS VARCHAR2
+FUNCTION LOAD_TOPO_MAP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ XMIN				NUMBER			IN
+ YMIN				NUMBER			IN
+ XMAX				NUMBER			IN
+ YMAX				NUMBER			IN
+ ALLOW_UPDATES			VARCHAR2		IN
+FUNCTION LOAD_TOPO_MAP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ XMIN				NUMBER			IN
+ YMIN				NUMBER			IN
+ XMAX				NUMBER			IN
+ YMAX				NUMBER			IN
+ ALLOW_UPDATES			VARCHAR2		IN
+ BUILD_INDEXES			VARCHAR2		IN
+FUNCTION LOAD_TOPO_MAP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ XMIN				NUMBER			IN
+ YMIN				NUMBER			IN
+ XMAX				NUMBER			IN
+ YMAX				NUMBER			IN
+ ALLOW_UPDATES			VARCHAR2		IN
+ BUILD_INDEXES			VARCHAR2		IN
+ NEXT_LOAD			VARCHAR2		IN
+FUNCTION LOAD_TOPO_MAP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ ALLOW_UPDATES			VARCHAR2		IN
+FUNCTION LOAD_TOPO_MAP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ ALLOW_UPDATES			VARCHAR2		IN
+ BUILD_INDEXES			VARCHAR2		IN
+PROCEDURE LOAD_TOPO_MAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ XMIN				NUMBER			IN
+ YMIN				NUMBER			IN
+ XMAX				NUMBER			IN
+ YMAX				NUMBER			IN
+ ALLOW_UPDATES			VARCHAR2		IN
+PROCEDURE LOAD_TOPO_MAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ XMIN				NUMBER			IN
+ YMIN				NUMBER			IN
+ XMAX				NUMBER			IN
+ YMAX				NUMBER			IN
+ ALLOW_UPDATES			VARCHAR2		IN
+ BUILD_INDEXES			VARCHAR2		IN
+PROCEDURE LOAD_TOPO_MAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ ALLOW_UPDATES			VARCHAR2		IN
+PROCEDURE LOAD_TOPO_MAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ ALLOW_UPDATES			VARCHAR2		IN
+ BUILD_INDEXES			VARCHAR2		IN
+PROCEDURE MOVE_EDGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ EDGE_ID			NUMBER			IN
+ S_NODE_ID			NUMBER			IN
+ T_NODE_ID			NUMBER			IN
+ EDGE_COORDS			SDO_NUMBER_ARRAY	IN
+PROCEDURE MOVE_EDGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ EDGE_ID			NUMBER			IN
+ S_NODE_ID			NUMBER			IN
+ T_NODE_ID			NUMBER			IN
+ EDGE_COORDS			SDO_NUMBER_ARRAY	IN
+ MOVED_ISO_NODES		SDO_NUMBER_ARRAY	OUT
+ MOVED_ISO_EDGES		SDO_NUMBER_ARRAY	OUT
+ ALLOW_ISO_MOVES		VARCHAR2		IN
+PROCEDURE MOVE_ISOLATED_NODE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+ POINT				SDO_GEOMETRY		IN
+PROCEDURE MOVE_ISOLATED_NODE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+ POINT				SDO_GEOMETRY		IN
+ ALLOW_FACE_CHANGE		VARCHAR2		IN
+PROCEDURE MOVE_ISOLATED_NODE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+ X				NUMBER			IN
+ Y				NUMBER			IN
+PROCEDURE MOVE_ISOLATED_NODE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+ X				NUMBER			IN
+ Y				NUMBER			IN
+ ALLOW_FACE_CHANGE		VARCHAR2		IN
+PROCEDURE MOVE_NODE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+ EDGES_COORDS			SDO_EDGE_ARRAY		IN
+PROCEDURE MOVE_NODE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+ EDGES_COORDS			SDO_EDGE_ARRAY		IN
+ MOVED_ISO_NODES		SDO_NUMBER_ARRAY	OUT
+ MOVED_ISO_EDGES		SDO_NUMBER_ARRAY	OUT
+ ALLOW_ISO_MOVES		VARCHAR2		IN
+PROCEDURE REMOVE_EDGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ EDGE_ID			NUMBER			IN
+PROCEDURE REMOVE_NODE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ NODE_ID			NUMBER			IN
+PROCEDURE REMOVE_OBSOLETE_NODES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+PROCEDURE ROLLBACK_TOPO_MAP
+FUNCTION SEARCH_EDGE_RTREE_TOPO_MAP RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ XMIN				NUMBER			IN
+ YMIN				NUMBER			IN
+ XMAX				NUMBER			IN
+ YMAX				NUMBER			IN
+ CAPACITY			NUMBER			IN
+FUNCTION SEARCH_FACE_RTREE_TOPO_MAP RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ XMIN				NUMBER			IN
+ YMIN				NUMBER			IN
+ XMAX				NUMBER			IN
+ YMAX				NUMBER			IN
+ CAPACITY			NUMBER			IN
+PROCEDURE SET_MAX_MEMORY_SIZE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BYTES				NUMBER			IN
+PROCEDURE UPDATE_TOPO_MAP
+FUNCTION VALIDATE_TOPOLOGY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+FUNCTION VALIDATE_TOPOLOGY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ PREVENT_UPDATES		VARCHAR2		IN
+FUNCTION VALIDATE_TOPOLOGY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ PREVENT_UPDATES		VARCHAR2		IN
+ LEVEL				NUMBER			IN
+FUNCTION VALIDATE_TOPOLOGY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ XMIN				NUMBER			IN
+ YMIN				NUMBER			IN
+ XMAX				NUMBER			IN
+ YMAX				NUMBER			IN
+FUNCTION VALIDATE_TOPOLOGY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ XMIN				NUMBER			IN
+ YMIN				NUMBER			IN
+ XMAX				NUMBER			IN
+ YMAX				NUMBER			IN
+ PREVENT_UPDATES		VARCHAR2		IN
+FUNCTION VALIDATE_TOPOLOGY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ XMIN				NUMBER			IN
+ YMIN				NUMBER			IN
+ XMAX				NUMBER			IN
+ YMAX				NUMBER			IN
+ PREVENT_UPDATES		VARCHAR2		IN
+ LEVEL				NUMBER			IN
+FUNCTION VALIDATE_TOPO_MAP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+FUNCTION VALIDATE_TOPO_MAP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPO_MAP			VARCHAR2		IN
+ LEVEL				NUMBER			IN
+

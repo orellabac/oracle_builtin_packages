@@ -1,0 +1,192 @@
+PROCEDURE FCLOSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN/OUT
+   ID				BINARY_INTEGER		IN/OUT
+   DATATYPE			BINARY_INTEGER		IN/OUT
+   BYTE_MODE			BOOLEAN 		IN/OUT
+PROCEDURE FCLOSE_ALL
+PROCEDURE FCOPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC_LOCATION			VARCHAR2		IN
+ SRC_FILENAME			VARCHAR2		IN
+ DEST_LOCATION			VARCHAR2		IN
+ DEST_FILENAME			VARCHAR2		IN
+ START_LINE			BINARY_INTEGER		IN     DEFAULT
+ END_LINE			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE FFLUSH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN
+   ID				BINARY_INTEGER		IN
+   DATATYPE			BINARY_INTEGER		IN
+   BYTE_MODE			BOOLEAN 		IN
+PROCEDURE FGETATTR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOCATION			VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+ FEXISTS			BOOLEAN 		OUT
+ FILE_LENGTH			NUMBER			OUT
+ BLOCK_SIZE			BINARY_INTEGER		OUT
+FUNCTION FGETPOS RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN
+   ID				BINARY_INTEGER		IN
+   DATATYPE			BINARY_INTEGER		IN
+   BYTE_MODE			BOOLEAN 		IN
+FUNCTION FOPEN RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				BINARY_INTEGER		OUT
+   DATATYPE			BINARY_INTEGER		OUT
+   BYTE_MODE			BOOLEAN 		OUT
+ LOCATION			VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+ OPEN_MODE			VARCHAR2		IN
+ MAX_LINESIZE			BINARY_INTEGER		IN     DEFAULT
+FUNCTION FOPEN_NCHAR RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   ID				BINARY_INTEGER		OUT
+   DATATYPE			BINARY_INTEGER		OUT
+   BYTE_MODE			BOOLEAN 		OUT
+ LOCATION			VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+ OPEN_MODE			VARCHAR2		IN
+ MAX_LINESIZE			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE FREMOVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOCATION			VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+PROCEDURE FRENAME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRC_LOCATION			VARCHAR2		IN
+ SRC_FILENAME			VARCHAR2		IN
+ DEST_LOCATION			VARCHAR2		IN
+ DEST_FILENAME			VARCHAR2		IN
+ OVERWRITE			BOOLEAN 		IN     DEFAULT
+PROCEDURE FSEEK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN/OUT
+   ID				BINARY_INTEGER		IN/OUT
+   DATATYPE			BINARY_INTEGER		IN/OUT
+   BYTE_MODE			BOOLEAN 		IN/OUT
+ ABSOLUTE_OFFSET		BINARY_INTEGER		IN     DEFAULT
+ RELATIVE_OFFSET		BINARY_INTEGER		IN     DEFAULT
+PROCEDURE GET_LINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN
+   ID				BINARY_INTEGER		IN
+   DATATYPE			BINARY_INTEGER		IN
+   BYTE_MODE			BOOLEAN 		IN
+ BUFFER 			VARCHAR2		OUT
+ LEN				BINARY_INTEGER		IN     DEFAULT
+PROCEDURE GET_LINE_NCHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN
+   ID				BINARY_INTEGER		IN
+   DATATYPE			BINARY_INTEGER		IN
+   BYTE_MODE			BOOLEAN 		IN
+ BUFFER 			NVARCHAR2		OUT
+ LEN				BINARY_INTEGER		IN     DEFAULT
+PROCEDURE GET_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN
+   ID				BINARY_INTEGER		IN
+   DATATYPE			BINARY_INTEGER		IN
+   BYTE_MODE			BOOLEAN 		IN
+ BUFFER 			RAW			OUT
+ LEN				BINARY_INTEGER		IN     DEFAULT
+FUNCTION IS_OPEN RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN
+   ID				BINARY_INTEGER		IN
+   DATATYPE			BINARY_INTEGER		IN
+   BYTE_MODE			BOOLEAN 		IN
+PROCEDURE NEW_LINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN
+   ID				BINARY_INTEGER		IN
+   DATATYPE			BINARY_INTEGER		IN
+   BYTE_MODE			BOOLEAN 		IN
+ LINES				BINARY_INTEGER		IN     DEFAULT
+PROCEDURE PUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN
+   ID				BINARY_INTEGER		IN
+   DATATYPE			BINARY_INTEGER		IN
+   BYTE_MODE			BOOLEAN 		IN
+ BUFFER 			VARCHAR2		IN
+PROCEDURE PUTF
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN
+   ID				BINARY_INTEGER		IN
+   DATATYPE			BINARY_INTEGER		IN
+   BYTE_MODE			BOOLEAN 		IN
+ FORMAT 			VARCHAR2		IN
+ ARG1				VARCHAR2		IN     DEFAULT
+ ARG2				VARCHAR2		IN     DEFAULT
+ ARG3				VARCHAR2		IN     DEFAULT
+ ARG4				VARCHAR2		IN     DEFAULT
+ ARG5				VARCHAR2		IN     DEFAULT
+PROCEDURE PUTF_NCHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN
+   ID				BINARY_INTEGER		IN
+   DATATYPE			BINARY_INTEGER		IN
+   BYTE_MODE			BOOLEAN 		IN
+ FORMAT 			NVARCHAR2		IN
+ ARG1				NVARCHAR2		IN     DEFAULT
+ ARG2				NVARCHAR2		IN     DEFAULT
+ ARG3				NVARCHAR2		IN     DEFAULT
+ ARG4				NVARCHAR2		IN     DEFAULT
+ ARG5				NVARCHAR2		IN     DEFAULT
+PROCEDURE PUT_LINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN
+   ID				BINARY_INTEGER		IN
+   DATATYPE			BINARY_INTEGER		IN
+   BYTE_MODE			BOOLEAN 		IN
+ BUFFER 			VARCHAR2		IN
+ AUTOFLUSH			BOOLEAN 		IN     DEFAULT
+PROCEDURE PUT_LINE_NCHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN
+   ID				BINARY_INTEGER		IN
+   DATATYPE			BINARY_INTEGER		IN
+   BYTE_MODE			BOOLEAN 		IN
+ BUFFER 			NVARCHAR2		IN
+PROCEDURE PUT_NCHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN
+   ID				BINARY_INTEGER		IN
+   DATATYPE			BINARY_INTEGER		IN
+   BYTE_MODE			BOOLEAN 		IN
+ BUFFER 			NVARCHAR2		IN
+PROCEDURE PUT_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE				RECORD			IN
+   ID				BINARY_INTEGER		IN
+   DATATYPE			BINARY_INTEGER		IN
+   BYTE_MODE			BOOLEAN 		IN
+ BUFFER 			RAW			IN
+ AUTOFLUSH			BOOLEAN 		IN     DEFAULT
+

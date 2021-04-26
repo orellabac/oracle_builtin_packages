@@ -1,0 +1,51 @@
+PROCEDURE ADDREPOSITORYRESCONFIG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RCPATH 			VARCHAR2		IN
+ POS				BINARY_INTEGER		IN     DEFAULT
+PROCEDURE ADDRESCONFIG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESPATH			VARCHAR2		IN
+ RCPATH 			VARCHAR2		IN
+ POS				BINARY_INTEGER		IN     DEFAULT
+PROCEDURE APPENDRESCONFIG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESPATH			VARCHAR2		IN
+ RCPATH 			VARCHAR2		IN
+ APPENDOPTION			BINARY_INTEGER		IN
+PROCEDURE DELETEREPOSITORYRESCONFIG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POS				BINARY_INTEGER		IN
+PROCEDURE DELETERESCONFIG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESPATH			VARCHAR2		IN
+ POS				BINARY_INTEGER		IN
+PROCEDURE DELETERESCONFIG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESPATH			VARCHAR2		IN
+ RCPATH 			VARCHAR2		IN
+ DELETEOPTION			BINARY_INTEGER		IN
+FUNCTION GETLISTENERS RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATH				VARCHAR2		IN
+FUNCTION GETREPOSITORYRESCONFIG RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POS				BINARY_INTEGER		IN
+FUNCTION GETREPOSITORYRESCONFIGPATHS RETURNS XDB$STRING_LIST_T
+FUNCTION GETRESCONFIG RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESPATH			VARCHAR2		IN
+ POS				BINARY_INTEGER		IN
+FUNCTION GETRESCONFIGPATHS RETURNS XDB$STRING_LIST_T
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESPATH			VARCHAR2		IN
+

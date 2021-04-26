@@ -1,0 +1,68 @@
+FUNCTION CHECKIN RETURNS RAW(16)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATHNAME			VARCHAR2		IN
+PROCEDURE CHECKIN_INT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATHNAME			VARCHAR2		IN
+ RESID				RAW(16) 		OUT
+PROCEDURE CHECKOUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATHNAME			VARCHAR2		IN
+FUNCTION GETCONTENTSBLOBBYRESID RETURNS BLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESID				RAW(16) 		IN
+FUNCTION GETCONTENTSCLOBBYRESID RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESID				RAW(16) 		IN
+FUNCTION GETCONTENTSXMLBYRESID RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESID				RAW(16) 		IN
+FUNCTION GETPREDECESSORS RETURNS RESID_LIST_TYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATHNAME			VARCHAR2		IN
+FUNCTION GETPREDSBYRESID RETURNS RESID_LIST_TYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESID				RAW(16) 		IN
+FUNCTION GETRESOURCEBYRESID RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESID				RAW(16) 		IN
+FUNCTION GETSUCCESSORS RETURNS RESID_LIST_TYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATHNAME			VARCHAR2		IN
+FUNCTION GETSUCCSBYRESID RETURNS RESID_LIST_TYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RESID				RAW(16) 		IN
+FUNCTION ISCHECKEDOUT RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATHNAME			VARCHAR2		IN
+FUNCTION MAKEVERSIONED RETURNS RAW(16)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATHNAME			VARCHAR2		IN
+PROCEDURE MAKEVERSIONED_INT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATHNAME			VARCHAR2		IN
+ RESID				RAW(16) 		OUT
+FUNCTION UNCHECKOUT RETURNS RAW(16)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATHNAME			VARCHAR2		IN
+PROCEDURE UNCHECKOUT_INT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PATHNAME			VARCHAR2		IN
+ RESID				RAW(16) 		OUT
+

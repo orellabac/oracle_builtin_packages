@@ -1,0 +1,1307 @@
+FUNCTION BLAS_ASUM RETURNS BINARY_DOUBLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+FUNCTION BLAS_ASUM RETURNS BINARY_FLOAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+PROCEDURE BLAS_AXPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCY				BINARY_INTEGER		IN
+PROCEDURE BLAS_AXPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCY				BINARY_INTEGER		IN
+PROCEDURE BLAS_COPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCY				BINARY_INTEGER		IN
+PROCEDURE BLAS_COPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCY				BINARY_INTEGER		IN
+FUNCTION BLAS_DOT RETURNS BINARY_DOUBLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_DBL	IN
+ INCY				BINARY_INTEGER		IN
+FUNCTION BLAS_DOT RETURNS BINARY_FLOAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_FLT	IN
+ INCY				BINARY_INTEGER		IN
+PROCEDURE BLAS_GBMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRANS				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ KL				BINARY_INTEGER		IN
+ KU				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ A				UTL_NLA_ARRAY_DBL	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+ BETA				BINARY_DOUBLE		IN
+ Y				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCY				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_GBMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRANS				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ KL				BINARY_INTEGER		IN
+ KU				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ A				UTL_NLA_ARRAY_FLT	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+ BETA				BINARY_FLOAT		IN
+ Y				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCY				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_GEMM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRANSA 			CHAR(1) 		IN
+ TRANSB 			CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ K				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ A				UTL_NLA_ARRAY_DBL	IN
+ LDA				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_DBL	IN
+ LDB				BINARY_INTEGER		IN
+ BETA				BINARY_DOUBLE		IN
+ C				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDC				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_GEMM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRANSA 			CHAR(1) 		IN
+ TRANSB 			CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ K				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ A				UTL_NLA_ARRAY_FLT	IN
+ LDA				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_FLT	IN
+ LDB				BINARY_INTEGER		IN
+ BETA				BINARY_FLOAT		IN
+ C				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDC				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_GEMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRANS				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ A				UTL_NLA_ARRAY_DBL	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+ BETA				BINARY_DOUBLE		IN
+ Y				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCY				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_GEMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRANS				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ A				UTL_NLA_ARRAY_FLT	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+ BETA				BINARY_FLOAT		IN
+ Y				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCY				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_GER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_DBL	IN
+ INCY				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_GER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_FLT	IN
+ INCY				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+FUNCTION BLAS_IAMAX RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+FUNCTION BLAS_IAMAX RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+FUNCTION BLAS_NRM2 RETURNS BINARY_DOUBLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+FUNCTION BLAS_NRM2 RETURNS BINARY_FLOAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+PROCEDURE BLAS_ROT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCY				BINARY_INTEGER		IN
+ C				BINARY_DOUBLE		IN
+ S				BINARY_DOUBLE		IN
+PROCEDURE BLAS_ROT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCY				BINARY_INTEGER		IN
+ C				BINARY_FLOAT		IN
+ S				BINARY_FLOAT		IN
+PROCEDURE BLAS_ROTG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ A				BINARY_DOUBLE		IN/OUT
+ B				BINARY_DOUBLE		IN/OUT
+ C				BINARY_DOUBLE		IN/OUT
+ S				BINARY_DOUBLE		IN/OUT
+PROCEDURE BLAS_ROTG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ A				BINARY_FLOAT		IN/OUT
+ B				BINARY_FLOAT		IN/OUT
+ C				BINARY_FLOAT		IN/OUT
+ S				BINARY_FLOAT		IN/OUT
+PROCEDURE BLAS_SBMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ K				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ A				UTL_NLA_ARRAY_DBL	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+ BETA				BINARY_DOUBLE		IN
+ Y				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCY				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SBMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ K				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ A				UTL_NLA_ARRAY_FLT	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+ BETA				BINARY_FLOAT		IN
+ Y				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCY				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SCAL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ X				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCX				BINARY_INTEGER		IN
+PROCEDURE BLAS_SCAL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ X				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCX				BINARY_INTEGER		IN
+PROCEDURE BLAS_SPMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ AP				UTL_NLA_ARRAY_DBL	IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+ BETA				BINARY_DOUBLE		IN
+ Y				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCY				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SPMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ AP				UTL_NLA_ARRAY_FLT	IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+ BETA				BINARY_FLOAT		IN
+ Y				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCY				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SPR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_DBL	IN/OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SPR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_FLT	IN/OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SPR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_DBL	IN
+ INCY				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_DBL	IN/OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SPR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_FLT	IN
+ INCY				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_FLT	IN/OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SWAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCY				BINARY_INTEGER		IN
+PROCEDURE BLAS_SWAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCY				BINARY_INTEGER		IN
+PROCEDURE BLAS_SYMM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SIDE				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ A				UTL_NLA_ARRAY_DBL	IN
+ LDA				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_DBL	IN
+ LDB				BINARY_INTEGER		IN
+ BETA				BINARY_DOUBLE		IN
+ C				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDC				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SYMM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SIDE				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ A				UTL_NLA_ARRAY_FLT	IN
+ LDA				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_FLT	IN
+ LDB				BINARY_INTEGER		IN
+ BETA				BINARY_FLOAT		IN
+ C				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDC				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SYMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ A				UTL_NLA_ARRAY_DBL	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+ BETA				BINARY_DOUBLE		IN
+ Y				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCY				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SYMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ A				UTL_NLA_ARRAY_FLT	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+ BETA				BINARY_FLOAT		IN
+ Y				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCY				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SYR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SYR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SYR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ X				UTL_NLA_ARRAY_DBL	IN
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_DBL	IN
+ INCY				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SYR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ X				UTL_NLA_ARRAY_FLT	IN
+ INCX				BINARY_INTEGER		IN
+ Y				UTL_NLA_ARRAY_FLT	IN
+ INCY				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SYR2K
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ K				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ A				UTL_NLA_ARRAY_DBL	IN
+ LDA				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_DBL	IN
+ LDB				BINARY_INTEGER		IN
+ BETA				BINARY_DOUBLE		IN
+ C				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDC				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SYR2K
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ K				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ A				UTL_NLA_ARRAY_FLT	IN
+ LDA				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_FLT	IN
+ LDB				BINARY_INTEGER		IN
+ BETA				BINARY_FLOAT		IN
+ C				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDC				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SYRK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ K				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ A				UTL_NLA_ARRAY_DBL	IN
+ LDA				BINARY_INTEGER		IN
+ BETA				BINARY_DOUBLE		IN
+ C				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDC				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_SYRK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ K				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ A				UTL_NLA_ARRAY_FLT	IN
+ LDA				BINARY_INTEGER		IN
+ BETA				BINARY_FLOAT		IN
+ C				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDC				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TBMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ K				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TBMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ K				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TBSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ K				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TBSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ K				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TPMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_DBL	IN
+ X				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TPMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_FLT	IN
+ X				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TPSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_DBL	IN
+ X				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TPSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_FLT	IN
+ X				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TRMM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SIDE				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ TRANSA 			CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ A				UTL_NLA_ARRAY_DBL	IN
+ LDA				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TRMM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SIDE				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ TRANSA 			CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ A				UTL_NLA_ARRAY_FLT	IN
+ LDA				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TRMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TRMV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TRSM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SIDE				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ TRANSA 			CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_DOUBLE		IN
+ A				UTL_NLA_ARRAY_DBL	IN
+ LDA				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TRSM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SIDE				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ TRANSA 			CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ ALPHA				BINARY_FLOAT		IN
+ A				UTL_NLA_ARRAY_FLT	IN
+ LDA				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TRSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_DBL	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE BLAS_TRSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ TRANS				CHAR(1) 		IN
+ DIAG				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN
+ LDA				BINARY_INTEGER		IN
+ X				UTL_NLA_ARRAY_FLT	IN/OUT
+ INCX				BINARY_INTEGER		IN
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GBSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ KL				BINARY_INTEGER		IN
+ KU				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ AB				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDAB				BINARY_INTEGER		IN
+ IPIV				UTL_NLA_ARRAY_INT	IN/OUT
+ B				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GBSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ KL				BINARY_INTEGER		IN
+ KU				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ AB				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDAB				BINARY_INTEGER		IN
+ IPIV				UTL_NLA_ARRAY_INT	IN/OUT
+ B				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GEES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBVS				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ WR				UTL_NLA_ARRAY_DBL	IN/OUT
+ WI				UTL_NLA_ARRAY_DBL	IN/OUT
+ VS				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDVS				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GEES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBVS				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ WR				UTL_NLA_ARRAY_FLT	IN/OUT
+ WI				UTL_NLA_ARRAY_FLT	IN/OUT
+ VS				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDVS				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GEEV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBVL				CHAR(1) 		IN
+ JOBVR				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ WR				UTL_NLA_ARRAY_DBL	IN/OUT
+ WI				UTL_NLA_ARRAY_DBL	IN/OUT
+ VL				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDVL				BINARY_INTEGER		IN
+ VR				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDVR				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GEEV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBVL				CHAR(1) 		IN
+ JOBVR				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ WR				UTL_NLA_ARRAY_FLT	IN/OUT
+ WI				UTL_NLA_ARRAY_FLT	IN/OUT
+ VL				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDVL				BINARY_INTEGER		IN
+ VR				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDVR				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GELS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRANS				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GELS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRANS				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GESDD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ S				UTL_NLA_ARRAY_DBL	IN/OUT
+ U				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDU				BINARY_INTEGER		IN
+ VT				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDVT				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GESDD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ S				UTL_NLA_ARRAY_FLT	IN/OUT
+ U				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDU				BINARY_INTEGER		IN
+ VT				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDVT				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GESV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ IPIV				UTL_NLA_ARRAY_INT	IN/OUT
+ B				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GESV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ IPIV				UTL_NLA_ARRAY_INT	IN/OUT
+ B				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GESVD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBU				CHAR(1) 		IN
+ JOBVT				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ S				UTL_NLA_ARRAY_DBL	IN/OUT
+ U				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDU				BINARY_INTEGER		IN
+ VT				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDVT				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GESVD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBU				CHAR(1) 		IN
+ JOBVT				CHAR(1) 		IN
+ M				BINARY_INTEGER		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ S				UTL_NLA_ARRAY_FLT	IN/OUT
+ U				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDU				BINARY_INTEGER		IN
+ VT				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDVT				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GTSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ DL				UTL_NLA_ARRAY_DBL	IN/OUT
+ D				UTL_NLA_ARRAY_DBL	IN/OUT
+ DU				UTL_NLA_ARRAY_DBL	IN/OUT
+ B				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_GTSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ DL				UTL_NLA_ARRAY_FLT	IN/OUT
+ D				UTL_NLA_ARRAY_FLT	IN/OUT
+ DU				UTL_NLA_ARRAY_FLT	IN/OUT
+ B				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_PBSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ KD				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ AB				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDAB				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_PBSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ KD				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ AB				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDAB				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_POSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_POSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ B				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_PPSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_DBL	IN/OUT
+ B				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_PPSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_FLT	IN/OUT
+ B				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_PTSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ D				UTL_NLA_ARRAY_DBL	IN/OUT
+ E				UTL_NLA_ARRAY_DBL	IN/OUT
+ B				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_PTSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ D				UTL_NLA_ARRAY_FLT	IN/OUT
+ E				UTL_NLA_ARRAY_FLT	IN/OUT
+ B				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SBEV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ KD				BINARY_INTEGER		IN
+ AB				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDAB				BINARY_INTEGER		IN
+ W				UTL_NLA_ARRAY_DBL	IN/OUT
+ Z				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDZ				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SBEV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ KD				BINARY_INTEGER		IN
+ AB				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDAB				BINARY_INTEGER		IN
+ W				UTL_NLA_ARRAY_FLT	IN/OUT
+ Z				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDZ				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SBEVD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ KD				BINARY_INTEGER		IN
+ AB				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDAB				BINARY_INTEGER		IN
+ W				UTL_NLA_ARRAY_DBL	IN/OUT
+ Z				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDZ				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SBEVD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ KD				BINARY_INTEGER		IN
+ AB				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDAB				BINARY_INTEGER		IN
+ W				UTL_NLA_ARRAY_FLT	IN/OUT
+ Z				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDZ				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SPEV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_DBL	IN/OUT
+ W				UTL_NLA_ARRAY_DBL	IN/OUT
+ Z				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDZ				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SPEV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_FLT	IN/OUT
+ W				UTL_NLA_ARRAY_FLT	IN/OUT
+ Z				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDZ				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SPEVD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_DBL	IN/OUT
+ W				UTL_NLA_ARRAY_DBL	IN/OUT
+ Z				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDZ				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SPEVD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_FLT	IN/OUT
+ W				UTL_NLA_ARRAY_FLT	IN/OUT
+ Z				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDZ				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SPSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_DBL	IN/OUT
+ IPIV				UTL_NLA_ARRAY_INT	IN/OUT
+ B				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SPSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ AP				UTL_NLA_ARRAY_FLT	IN/OUT
+ IPIV				UTL_NLA_ARRAY_INT	IN/OUT
+ B				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_STEV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ D				UTL_NLA_ARRAY_DBL	IN/OUT
+ E				UTL_NLA_ARRAY_DBL	IN/OUT
+ Z				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDZ				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_STEV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ D				UTL_NLA_ARRAY_FLT	IN/OUT
+ E				UTL_NLA_ARRAY_FLT	IN/OUT
+ Z				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDZ				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_STEVD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ D				UTL_NLA_ARRAY_DBL	IN/OUT
+ E				UTL_NLA_ARRAY_DBL	IN/OUT
+ Z				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDZ				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_STEVD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ D				UTL_NLA_ARRAY_FLT	IN/OUT
+ E				UTL_NLA_ARRAY_FLT	IN/OUT
+ Z				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDZ				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SYEV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ W				UTL_NLA_ARRAY_DBL	IN/OUT
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SYEV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ W				UTL_NLA_ARRAY_FLT	IN/OUT
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SYEVD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ W				UTL_NLA_ARRAY_DBL	IN/OUT
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SYEVD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOBZ				CHAR(1) 		IN
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ W				UTL_NLA_ARRAY_FLT	IN/OUT
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SYSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ IPIV				UTL_NLA_ARRAY_INT	IN/OUT
+ B				UTL_NLA_ARRAY_DBL	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE LAPACK_SYSV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UPLO				CHAR(1) 		IN
+ N				BINARY_INTEGER		IN
+ NRHS				BINARY_INTEGER		IN
+ A				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDA				BINARY_INTEGER		IN
+ IPIV				UTL_NLA_ARRAY_INT	IN/OUT
+ B				UTL_NLA_ARRAY_FLT	IN/OUT
+ LDB				BINARY_INTEGER		IN
+ INFO				NUMBER(38)		OUT
+ PACK				CHAR(1) 		IN     DEFAULT
+PROCEDURE UNIT_TEST_BLAS
+PROCEDURE UNIT_TEST_LAPACK
+

@@ -1,0 +1,54 @@
+PROCEDURE COPYDEFAULTTOKENTABLESET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TSNO				NUMBER			IN
+ QNAMETABLE			VARCHAR2		OUT
+ NMSPCTABLE			VARCHAR2		OUT
+ PTTABLE			VARCHAR2		OUT
+PROCEDURE GATHERTOKENTABLESTATS
+PROCEDURE GETTOKENTABLEINFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNERNAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+ GUID				RAW			OUT
+ QNAMETABLE			VARCHAR2		OUT
+ NMSPCTABLE			VARCHAR2		OUT
+ LEVEL				NUMBER			OUT
+ TABNO				NUMBER			OUT
+FUNCTION GETTOKENTABLEINFO RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABNO				NUMBER			IN
+ GUID				RAW			OUT
+PROCEDURE GETTOKENTABLEINFOBYTABLESPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TSNAME 			VARCHAR2		IN
+ TABLESPACENO			NUMBER			IN
+ GUID				RAW			OUT
+ QNAMETABLE			VARCHAR2		OUT
+ NMSPCTABLE			VARCHAR2		OUT
+ ISDEFAULT			BOOLEAN 		OUT
+ CONTAINTOKTAB			BOOLEAN 		OUT
+FUNCTION INSTANCE_INFO_EXP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN
+ PREPOST			BINARY_INTEGER		IN
+ ISDBA				BINARY_INTEGER		IN
+ VERSION			VARCHAR2		IN
+ NEW_BLOCK			BINARY_INTEGER		OUT
+FUNCTION NAMESPACEIDTABLE RETURNS VARCHAR2
+FUNCTION PATHIDTABLE RETURNS VARCHAR2
+FUNCTION QNAMEIDTABLE RETURNS VARCHAR2
+PROCEDURE REGISTERTOKENTABLESET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TSTABNO			NUMBER			IN     DEFAULT
+ GUID				RAW			IN     DEFAULT
+ FLAGS				NUMBER			IN     DEFAULT
+ TOCREATE			NUMBER			IN     DEFAULT
+ DEFAULTTOKS			NUMBER			IN     DEFAULT
+

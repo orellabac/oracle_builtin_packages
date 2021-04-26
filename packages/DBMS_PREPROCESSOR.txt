@@ -1,0 +1,29 @@
+FUNCTION GET_POST_PROCESSED_SOURCE RETURNS TABLE OF VARCHAR2(32767)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ SCHEMA_NAME			VARCHAR2		IN
+ OBJECT_NAME			VARCHAR2		IN
+FUNCTION GET_POST_PROCESSED_SOURCE RETURNS TABLE OF VARCHAR2(32767)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCE 			VARCHAR2		IN
+FUNCTION GET_POST_PROCESSED_SOURCE RETURNS TABLE OF VARCHAR2(32767)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCE 			TABLE OF VARCHAR2(32767) IN
+PROCEDURE PRINT_POST_PROCESSED_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ SCHEMA_NAME			VARCHAR2		IN
+ OBJECT_NAME			VARCHAR2		IN
+PROCEDURE PRINT_POST_PROCESSED_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCE 			VARCHAR2		IN
+PROCEDURE PRINT_POST_PROCESSED_SOURCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCE 			TABLE OF VARCHAR2(32767) IN
+

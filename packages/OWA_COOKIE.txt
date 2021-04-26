@@ -1,0 +1,31 @@
+FUNCTION GET RETURNS RECORD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+   NAME 			VARCHAR2(4096)		OUT
+   VALS 			TABLE OF VARCHAR2(4096) OUT
+   NUM_VALS			NUMBER(38)		OUT
+ NAME				VARCHAR2		IN
+PROCEDURE GET_ALL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAMES				TABLE OF VARCHAR2(4096) OUT
+ VALS				TABLE OF VARCHAR2(4096) OUT
+ NUM_VALS			NUMBER(38)		OUT
+PROCEDURE INIT
+PROCEDURE REMOVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ VAL				VARCHAR2		IN
+ PATH				VARCHAR2		IN     DEFAULT
+PROCEDURE SEND
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+ EXPIRES			DATE			IN     DEFAULT
+ PATH				VARCHAR2		IN     DEFAULT
+ DOMAIN 			VARCHAR2		IN     DEFAULT
+ SECURE 			VARCHAR2		IN     DEFAULT
+ HTTPONLY			VARCHAR2		IN     DEFAULT
+

@@ -1,0 +1,9 @@
+PROCEDURE CREATE_ERROR_LOG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DML_TABLE_NAME 		VARCHAR2		IN
+ ERR_LOG_TABLE_NAME		VARCHAR2		IN     DEFAULT
+ ERR_LOG_TABLE_OWNER		VARCHAR2		IN     DEFAULT
+ ERR_LOG_TABLE_SPACE		VARCHAR2		IN     DEFAULT
+ SKIP_UNSUPPORTED		BOOLEAN 		IN     DEFAULT
+

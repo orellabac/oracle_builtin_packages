@@ -1,0 +1,1111 @@
+PROCEDURE ABORT_FLAVOR_DEFINITION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+PROCEDURE ADD_COLUMNS_TO_FLAVOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ CNAME_LIST			VARCHAR2		IN
+ DEFER_VALIDATE 		BOOLEAN 		IN     DEFAULT
+PROCEDURE ADD_COLUMNS_TO_FLAVOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ CNAME_TABLE			TABLE OF VARCHAR2(60)	IN
+ DEFER_VALIDATE 		BOOLEAN 		IN     DEFAULT
+PROCEDURE ADD_COLUMN_GROUP_TO_FLAVOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+ DEFER_VALIDATE 		BOOLEAN 		IN     DEFAULT
+PROCEDURE ADD_DELETE_RESOLUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ SEQUENCE_NO			NUMBER			IN
+ PARAMETER_COLUMN_NAME		TABLE OF VARCHAR2(60)	IN
+ FUNCTION_NAME			VARCHAR2		IN
+ COMMENT			VARCHAR2		IN     DEFAULT
+ METHOD 			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_DELETE_RESOLUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ SEQUENCE_NO			NUMBER			IN
+ PARAMETER_COLUMN_NAME		VARCHAR2		IN
+ FUNCTION_NAME			VARCHAR2		IN
+ COMMENT			VARCHAR2		IN     DEFAULT
+ METHOD 			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_GROUPED_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+ LIST_OF_COLUMN_NAMES		VARCHAR2		IN
+PROCEDURE ADD_GROUPED_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+ LIST_OF_COLUMN_NAMES		TABLE OF VARCHAR2(60)	IN
+PROCEDURE ADD_MASTER_DATABASE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MASTER 			VARCHAR2		IN
+ USE_EXISTING_OBJECTS		BOOLEAN 		IN     DEFAULT
+ COPY_ROWS			BOOLEAN 		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+ PROPAGATION_MODE		VARCHAR2		IN     DEFAULT
+ FNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_NEW_MASTERS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXPORT_REQUIRED		BOOLEAN 		IN
+ AVAILABLE_MASTER_TABLE 	TABLE OF VARCHAR2(128)	IN
+ MASTERDEF_FLASHBACK_SCN	NUMBER			OUT
+ EXTENSION_ID			RAW			OUT
+ BREAK_TRANS_TO_MASTERDEF	BOOLEAN 		IN     DEFAULT
+ BREAK_TRANS_TO_NEW_MASTERS	BOOLEAN 		IN     DEFAULT
+ PERCENTAGE_FOR_CATCHUP_MDEF	BINARY_INTEGER		IN     DEFAULT
+ CYCLE_SECONDS_MDEF		BINARY_INTEGER		IN     DEFAULT
+ PERCENTAGE_FOR_CATCHUP_NEW	BINARY_INTEGER		IN     DEFAULT
+ CYCLE_SECONDS_NEW		BINARY_INTEGER		IN     DEFAULT
+PROCEDURE ADD_NEW_MASTERS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXPORT_REQUIRED		BOOLEAN 		IN
+ AVAILABLE_MASTER_LIST		VARCHAR2		IN
+ MASTERDEF_FLASHBACK_SCN	NUMBER			OUT
+ EXTENSION_ID			RAW			OUT
+ BREAK_TRANS_TO_MASTERDEF	BOOLEAN 		IN     DEFAULT
+ BREAK_TRANS_TO_NEW_MASTERS	BOOLEAN 		IN     DEFAULT
+ PERCENTAGE_FOR_CATCHUP_MDEF	BINARY_INTEGER		IN     DEFAULT
+ CYCLE_SECONDS_MDEF		BINARY_INTEGER		IN     DEFAULT
+ PERCENTAGE_FOR_CATCHUP_NEW	BINARY_INTEGER		IN     DEFAULT
+ CYCLE_SECONDS_NEW		BINARY_INTEGER		IN     DEFAULT
+PROCEDURE ADD_OBJECT_TO_FLAVOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+ DEFER_VALIDATE 		BOOLEAN 		IN     DEFAULT
+PROCEDURE ADD_PRIORITY_CHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ VALUE				CHAR			IN
+ PRIORITY			NUMBER			IN
+PROCEDURE ADD_PRIORITY_DATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ VALUE				DATE			IN
+ PRIORITY			NUMBER			IN
+PROCEDURE ADD_PRIORITY_NCHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ VALUE				NCHAR			IN
+ PRIORITY			NUMBER			IN
+PROCEDURE ADD_PRIORITY_NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ VALUE				NUMBER			IN
+ PRIORITY			NUMBER			IN
+PROCEDURE ADD_PRIORITY_NVARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ VALUE				NVARCHAR2		IN
+ PRIORITY			NUMBER			IN
+PROCEDURE ADD_PRIORITY_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ VALUE				RAW			IN
+ PRIORITY			NUMBER			IN
+PROCEDURE ADD_PRIORITY_VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+ PRIORITY			NUMBER			IN
+PROCEDURE ADD_SITE_PRIORITY_SITE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ SITE				VARCHAR2		IN
+ PRIORITY			NUMBER			IN
+PROCEDURE ADD_UNIQUE_RESOLUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ CONSTRAINT_NAME		VARCHAR2		IN
+ SEQUENCE_NO			NUMBER			IN
+ METHOD 			VARCHAR2		IN
+ PARAMETER_COLUMN_NAME		TABLE OF VARCHAR2(60)	IN
+ FUNCTION_NAME			VARCHAR2		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_UNIQUE_RESOLUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ CONSTRAINT_NAME		VARCHAR2		IN
+ SEQUENCE_NO			NUMBER			IN
+ METHOD 			VARCHAR2		IN
+ PARAMETER_COLUMN_NAME		TABLE OF VARCHAR2(4000) IN
+ FUNCTION_NAME			VARCHAR2		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_UNIQUE_RESOLUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ CONSTRAINT_NAME		VARCHAR2		IN
+ SEQUENCE_NO			NUMBER			IN
+ METHOD 			VARCHAR2		IN
+ PARAMETER_COLUMN_NAME		VARCHAR2		IN
+ FUNCTION_NAME			VARCHAR2		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_UPDATE_RESOLUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+ SEQUENCE_NO			NUMBER			IN
+ METHOD 			VARCHAR2		IN
+ PARAMETER_COLUMN_NAME		TABLE OF VARCHAR2(60)	IN
+ PRIORITY_GROUP 		VARCHAR2		IN     DEFAULT
+ FUNCTION_NAME			VARCHAR2		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_UPDATE_RESOLUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+ SEQUENCE_NO			NUMBER			IN
+ METHOD 			VARCHAR2		IN
+ PARAMETER_COLUMN_NAME		TABLE OF VARCHAR2(4000) IN
+ PRIORITY_GROUP 		VARCHAR2		IN     DEFAULT
+ FUNCTION_NAME			VARCHAR2		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_UPDATE_RESOLUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+ SEQUENCE_NO			NUMBER			IN
+ METHOD 			VARCHAR2		IN
+ PARAMETER_COLUMN_NAME		VARCHAR2		IN
+ PRIORITY_GROUP 		VARCHAR2		IN     DEFAULT
+ FUNCTION_NAME			VARCHAR2		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE ALTER_CATCHUP_PARAMETERS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXTENSION_ID			RAW			IN
+ PERCENTAGE_FOR_CATCHUP_MDEF	BINARY_INTEGER		IN     DEFAULT
+ CYCLE_SECONDS_MDEF		BINARY_INTEGER		IN     DEFAULT
+ PERCENTAGE_FOR_CATCHUP_NEW	BINARY_INTEGER		IN     DEFAULT
+ CYCLE_SECONDS_NEW		BINARY_INTEGER		IN     DEFAULT
+PROCEDURE ALTER_MASTER_PROPAGATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MASTER 			VARCHAR2		IN
+ DBLINK_TABLE			TABLE OF VARCHAR2(128)	IN
+ PROPAGATION_MODE		VARCHAR2		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE ALTER_MASTER_PROPAGATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MASTER 			VARCHAR2		IN
+ DBLINK_LIST			VARCHAR2		IN
+ PROPAGATION_MODE		VARCHAR2		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE ALTER_MASTER_REPOBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+ DDL_TEXT			VARCHAR2		IN
+ COMMENT			VARCHAR2		IN     DEFAULT
+ RETRY				BOOLEAN 		IN     DEFAULT
+ SAFE_TABLE_CHANGE		BOOLEAN 		IN     DEFAULT
+PROCEDURE ALTER_MVIEW_PROPAGATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PROPAGATION_MODE		VARCHAR2		IN
+ COMMENT			VARCHAR2		IN     DEFAULT
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE ALTER_PRIORITY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ OLD_PRIORITY			NUMBER			IN
+ NEW_PRIORITY			NUMBER			IN
+PROCEDURE ALTER_PRIORITY_CHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ OLD_VALUE			CHAR			IN
+ NEW_VALUE			CHAR			IN
+PROCEDURE ALTER_PRIORITY_DATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ OLD_VALUE			DATE			IN
+ NEW_VALUE			DATE			IN
+PROCEDURE ALTER_PRIORITY_NCHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ OLD_VALUE			NCHAR			IN
+ NEW_VALUE			NCHAR			IN
+PROCEDURE ALTER_PRIORITY_NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ OLD_VALUE			NUMBER			IN
+ NEW_VALUE			NUMBER			IN
+PROCEDURE ALTER_PRIORITY_NVARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ OLD_VALUE			NVARCHAR2		IN
+ NEW_VALUE			NVARCHAR2		IN
+PROCEDURE ALTER_PRIORITY_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ OLD_VALUE			RAW			IN
+ NEW_VALUE			RAW			IN
+PROCEDURE ALTER_PRIORITY_VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ OLD_VALUE			VARCHAR2		IN
+ NEW_VALUE			VARCHAR2		IN
+PROCEDURE ALTER_SITE_PRIORITY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ OLD_PRIORITY			NUMBER			IN
+ NEW_PRIORITY			NUMBER			IN
+PROCEDURE ALTER_SITE_PRIORITY_SITE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ OLD_SITE			VARCHAR2		IN
+ NEW_SITE			VARCHAR2		IN
+PROCEDURE ALTER_SNAPSHOT_PROPAGATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PROPAGATION_MODE		VARCHAR2		IN
+ COMMENT			VARCHAR2		IN     DEFAULT
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE BEGIN_FLAVOR_DEFINITION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+PROCEDURE BEGIN_FLAVOR_DEFINITION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+ COPY_FNAME			VARCHAR2		IN
+PROCEDURE CANCEL_STATISTICS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+PROCEDURE COMMA_TO_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LIST				VARCHAR2		IN
+ LEN				BINARY_INTEGER		OUT
+ RESULT 			TABLE OF VARCHAR2(128)	OUT
+PROCEDURE COMMENT_ON_COLUMN_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+ COMMENT			VARCHAR2		IN
+PROCEDURE COMMENT_ON_DELETE_RESOLUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ SEQUENCE_NO			NUMBER			IN
+ COMMENT			VARCHAR2		IN
+PROCEDURE COMMENT_ON_MVIEW_REPSITES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GOWNER 			VARCHAR2		IN
+ GNAME				VARCHAR2		IN
+ COMMENT			VARCHAR2		IN
+PROCEDURE COMMENT_ON_PRIORITY_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ COMMENT			VARCHAR2		IN
+PROCEDURE COMMENT_ON_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ COMMENT			VARCHAR2		IN
+PROCEDURE COMMENT_ON_REPOBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+ COMMENT			VARCHAR2		IN
+PROCEDURE COMMENT_ON_REPSITES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MASTER 			VARCHAR2		IN
+ COMMENT			VARCHAR2		IN
+PROCEDURE COMMENT_ON_REPSITES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ COMMENT			VARCHAR2		IN
+PROCEDURE COMMENT_ON_SITE_PRIORITY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ COMMENT			VARCHAR2		IN
+PROCEDURE COMMENT_ON_SNAPSHOT_REPSITES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GOWNER 			VARCHAR2		IN
+ GNAME				VARCHAR2		IN
+ COMMENT			VARCHAR2		IN
+PROCEDURE COMMENT_ON_UNIQUE_RESOLUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ CONSTRAINT_NAME		VARCHAR2		IN
+ SEQUENCE_NO			NUMBER			IN
+ COMMENT			VARCHAR2		IN
+PROCEDURE COMMENT_ON_UPDATE_RESOLUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+ SEQUENCE_NO			NUMBER			IN
+ COMMENT			VARCHAR2		IN
+PROCEDURE COMPARE_OLD_VALUES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_LIST			VARCHAR2		IN
+ OPERATION			VARCHAR2		IN     DEFAULT
+ COMPARE			BOOLEAN 		IN     DEFAULT
+PROCEDURE COMPARE_OLD_VALUES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_TABLE			TABLE OF VARCHAR2(60)	IN
+ OPERATION			VARCHAR2		IN     DEFAULT
+ COMPARE			BOOLEAN 		IN     DEFAULT
+PROCEDURE COMPARE_OLD_VALUES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_TABLE			TABLE OF VARCHAR2(4000) IN
+ OPERATION			VARCHAR2		IN     DEFAULT
+ COMPARE			BOOLEAN 		IN     DEFAULT
+PROCEDURE CREATE_MASTER_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ GROUP_COMMENT			VARCHAR2		IN     DEFAULT
+ MASTER_COMMENT 		VARCHAR2		IN     DEFAULT
+ QUALIFIER			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_MASTER_REPOBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+ USE_EXISTING_OBJECT		BOOLEAN 		IN     DEFAULT
+ DDL_TEXT			VARCHAR2		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+ RETRY				BOOLEAN 		IN     DEFAULT
+ COPY_ROWS			BOOLEAN 		IN     DEFAULT
+ GNAME				VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_MVIEW_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MASTER 			VARCHAR2		IN
+ COMMENT			VARCHAR2		IN     DEFAULT
+ PROPAGATION_MODE		VARCHAR2		IN     DEFAULT
+ FNAME				VARCHAR2		IN     DEFAULT
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_MVIEW_REPOBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+ DDL_TEXT			VARCHAR2		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+ GNAME				VARCHAR2		IN     DEFAULT
+ GEN_OBJS_OWNER 		VARCHAR2		IN     DEFAULT
+ MIN_COMMUNICATION		BOOLEAN 		IN     DEFAULT
+ GENERATE_80_COMPATIBLE 	BOOLEAN 		IN     DEFAULT
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_SNAPSHOT_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MASTER 			VARCHAR2		IN
+ COMMENT			VARCHAR2		IN     DEFAULT
+ PROPAGATION_MODE		VARCHAR2		IN     DEFAULT
+ FNAME				VARCHAR2		IN     DEFAULT
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_SNAPSHOT_REPOBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+ DDL_TEXT			VARCHAR2		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+ GNAME				VARCHAR2		IN     DEFAULT
+ GEN_OBJS_OWNER 		VARCHAR2		IN     DEFAULT
+ MIN_COMMUNICATION		BOOLEAN 		IN     DEFAULT
+ GENERATE_80_COMPATIBLE 	BOOLEAN 		IN     DEFAULT
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE DEFINE_COLUMN_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+ COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE DEFINE_PRIORITY_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ DATATYPE			VARCHAR2		IN
+ FIXED_LENGTH			NUMBER(38)		IN     DEFAULT
+ COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE DEFINE_SITE_PRIORITY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ COMMENT			VARCHAR2		IN     DEFAULT
+PROCEDURE DO_DEFERRED_REPCAT_ADMIN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ ALL_SITES			BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_COLUMNS_FROM_FLAVOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ CNAME_LIST			VARCHAR2		IN
+ DEFER_VALIDATE 		BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_COLUMNS_FROM_FLAVOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ CNAME_TABLE			TABLE OF VARCHAR2(60)	IN
+ DEFER_VALIDATE 		BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_COLUMN_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+PROCEDURE DROP_COLUMN_GROUP_FROM_FLAVOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+ DEFER_VALIDATE 		BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_DELETE_RESOLUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ SEQUENCE_NO			NUMBER			IN
+PROCEDURE DROP_GROUPED_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+ LIST_OF_COLUMN_NAMES		TABLE OF VARCHAR2(60)	IN
+PROCEDURE DROP_GROUPED_COLUMN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+ LIST_OF_COLUMN_NAMES		VARCHAR2		IN
+PROCEDURE DROP_MASTER_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ DROP_CONTENTS			BOOLEAN 		IN     DEFAULT
+ ALL_SITES			BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_MASTER_REPOBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+ DROP_OBJECTS			BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_MVIEW_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ DROP_CONTENTS			BOOLEAN 		IN     DEFAULT
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_MVIEW_REPOBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+ DROP_OBJECTS			BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_OBJECT_FROM_FLAVOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+ DEFER_VALIDATE 		BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_PRIORITY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ PRIORITY_NUM			NUMBER			IN
+PROCEDURE DROP_PRIORITY_CHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ VALUE				CHAR			IN
+PROCEDURE DROP_PRIORITY_DATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ VALUE				DATE			IN
+PROCEDURE DROP_PRIORITY_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+PROCEDURE DROP_PRIORITY_NCHAR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ VALUE				NCHAR			IN
+PROCEDURE DROP_PRIORITY_NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ VALUE				NUMBER			IN
+PROCEDURE DROP_PRIORITY_NVARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ VALUE				NVARCHAR2		IN
+PROCEDURE DROP_PRIORITY_RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ VALUE				RAW			IN
+PROCEDURE DROP_PRIORITY_VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ PGROUP 			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE DROP_SITE_PRIORITY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+PROCEDURE DROP_SITE_PRIORITY_SITE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ SITE				VARCHAR2		IN
+PROCEDURE DROP_SNAPSHOT_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ DROP_CONTENTS			BOOLEAN 		IN     DEFAULT
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_SNAPSHOT_REPOBJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+ DROP_OBJECTS			BOOLEAN 		IN     DEFAULT
+PROCEDURE DROP_UNIQUE_RESOLUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ CONSTRAINT_NAME		VARCHAR2		IN
+ SEQUENCE_NO			NUMBER			IN
+PROCEDURE DROP_UPDATE_RESOLUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+ SEQUENCE_NO			NUMBER			IN
+PROCEDURE EXECUTE_DDL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MASTER_LIST			VARCHAR2		IN     DEFAULT
+ DDL_TEXT			VARCHAR2		IN
+PROCEDURE EXECUTE_DDL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MASTER_TABLE			TABLE OF VARCHAR2(128)	IN
+ DDL_TEXT			VARCHAR2		IN
+FUNCTION GENERATE_FLAVOR_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+PROCEDURE GENERATE_MVIEW_SUPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+ GEN_OBJS_OWNER 		VARCHAR2		IN     DEFAULT
+ MIN_COMMUNICATION		BOOLEAN 		IN     DEFAULT
+ GENERATE_80_COMPATIBLE 	BOOLEAN 		IN     DEFAULT
+PROCEDURE GENERATE_REPLICATION_PACKAGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+PROCEDURE GENERATE_REPLICATION_SUPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+ PACKAGE_PREFIX 		VARCHAR2		IN     DEFAULT
+ PROCEDURE_PREFIX		VARCHAR2		IN     DEFAULT
+ DISTRIBUTED			BOOLEAN 		IN     DEFAULT
+ GEN_OBJS_OWNER 		VARCHAR2		IN     DEFAULT
+ MIN_COMMUNICATION		BOOLEAN 		IN     DEFAULT
+ GENERATE_80_COMPATIBLE 	BOOLEAN 		IN     DEFAULT
+PROCEDURE GENERATE_REPLICATION_TRIGGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ GEN_OBJS_OWNER 		VARCHAR2		IN     DEFAULT
+ MIN_COMMUNICATION		BOOLEAN 		IN     DEFAULT
+PROCEDURE GENERATE_REPLICATION_TRIGGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ GEN_OBJS_OWNER 		VARCHAR2		IN     DEFAULT
+ MIN_COMMUNICATION		BOOLEAN 		IN     DEFAULT
+PROCEDURE GENERATE_SNAPSHOT_SUPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ TYPE				VARCHAR2		IN
+ GEN_OBJS_OWNER 		VARCHAR2		IN     DEFAULT
+ MIN_COMMUNICATION		BOOLEAN 		IN     DEFAULT
+ GENERATE_80_COMPATIBLE 	BOOLEAN 		IN     DEFAULT
+PROCEDURE MAKE_COLUMN_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+ LIST_OF_COLUMN_NAMES		VARCHAR2		IN
+PROCEDURE MAKE_COLUMN_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_GROUP			VARCHAR2		IN
+ LIST_OF_COLUMN_NAMES		TABLE OF VARCHAR2(60)	IN
+PROCEDURE OBSOLETE_FLAVOR_DEFINITION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+PROCEDURE ORDER_USER_OBJECTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNERS 			TABLE OF VARCHAR2(60)	IN
+ OBJECTS			TABLE OF VARCHAR2(60)	IN
+ TYPES				TABLE OF VARCHAR2(60)	IN
+ LEN				BINARY_INTEGER		IN
+ INDICES			TABLE OF NUMBER 	OUT
+PROCEDURE ORDER_USER_OBJECTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNERS 			VARCHAR2		IN
+ OBJECTS			VARCHAR2		IN
+ TYPES				VARCHAR2		IN
+ LEN				BINARY_INTEGER		IN
+ INDICES			TABLE OF NUMBER 	OUT
+PROCEDURE PREPARE_INSTANTIATED_MASTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXTENSION_ID			RAW			IN
+PROCEDURE PUBLISH_FLAVOR_DEFINITION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+ SKIP_VALIDATE			BOOLEAN 		IN     DEFAULT
+PROCEDURE PURGE_FLAVOR_DEFINITION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+PROCEDURE PURGE_MASTER_LOG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ID				BINARY_INTEGER		IN
+ SOURCE 			VARCHAR2		IN
+ GNAME				VARCHAR2		IN
+PROCEDURE PURGE_STATISTICS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ START_DATE			DATE			IN
+ END_DATE			DATE			IN
+PROCEDURE REFRESH_MVIEW_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ DROP_MISSING_CONTENTS		BOOLEAN 		IN     DEFAULT
+ REFRESH_MVIEWS 		BOOLEAN 		IN     DEFAULT
+ REFRESH_OTHER_OBJECTS		BOOLEAN 		IN     DEFAULT
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE REFRESH_SNAPSHOT_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ DROP_MISSING_CONTENTS		BOOLEAN 		IN     DEFAULT
+ REFRESH_SNAPSHOTS		BOOLEAN 		IN     DEFAULT
+ REFRESH_OTHER_OBJECTS		BOOLEAN 		IN     DEFAULT
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE REGISTER_MVIEW_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MVIEWSITE			VARCHAR2		IN
+ COMMENT			VARCHAR2		IN     DEFAULT
+ REP_TYPE			NUMBER			IN     DEFAULT
+ FNAME				VARCHAR2		IN     DEFAULT
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE REGISTER_SNAPSHOT_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ SNAPSITE			VARCHAR2		IN
+ COMMENT			VARCHAR2		IN     DEFAULT
+ REP_TYPE			NUMBER			IN     DEFAULT
+ FNAME				VARCHAR2		IN     DEFAULT
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE REGISTER_STATISTICS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+PROCEDURE RELOCATE_MASTERDEF
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ OLD_MASTERDEF			VARCHAR2		IN
+ NEW_MASTERDEF			VARCHAR2		IN
+ NOTIFY_MASTERS 		BOOLEAN 		IN     DEFAULT
+ INCLUDE_OLD_MASTERDEF		BOOLEAN 		IN     DEFAULT
+ REQUIRE_FLAVOR_CHANGE		BOOLEAN 		IN     DEFAULT
+PROCEDURE REMOVE_MASTER_DATABASES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MASTER_LIST			VARCHAR2		IN
+PROCEDURE REMOVE_MASTER_DATABASES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MASTER_TABLE			TABLE OF VARCHAR2(128)	IN
+PROCEDURE RENAME_SHADOW_COLUMN_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ NEW_COL_GROUP_NAME		VARCHAR2		IN
+PROCEDURE REPCAT_IMPORT_CHECK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MASTER 			BOOLEAN 		IN
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE REPCAT_IMPORT_CHECK
+PROCEDURE REPCAT_IMPORT_REPSCHEMA
+FUNCTION REPCAT_IMPORT_REPSCHEMA_STRING RETURNS VARCHAR2
+PROCEDURE RESUME_MASTER_ACTIVITY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ OVERRIDE			BOOLEAN 		IN     DEFAULT
+PROCEDURE RESUME_PROPAGATION_TO_MDEF
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXTENSION_ID			RAW			IN
+PROCEDURE SEND_AND_COMPARE_OLD_VALUES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_LIST			VARCHAR2		IN
+ OPERATION			VARCHAR2		IN     DEFAULT
+ SEND				BOOLEAN 		IN     DEFAULT
+PROCEDURE SEND_AND_COMPARE_OLD_VALUES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_TABLE			TABLE OF VARCHAR2(60)	IN
+ OPERATION			VARCHAR2		IN     DEFAULT
+ SEND				BOOLEAN 		IN     DEFAULT
+PROCEDURE SEND_OLD_VALUES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_LIST			VARCHAR2		IN
+ OPERATION			VARCHAR2		IN     DEFAULT
+ SEND				BOOLEAN 		IN     DEFAULT
+PROCEDURE SEND_OLD_VALUES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_TABLE			TABLE OF VARCHAR2(60)	IN
+ OPERATION			VARCHAR2		IN     DEFAULT
+ SEND				BOOLEAN 		IN     DEFAULT
+PROCEDURE SEND_OLD_VALUES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_TABLE			TABLE OF VARCHAR2(4000) IN
+ OPERATION			VARCHAR2		IN     DEFAULT
+ SEND				BOOLEAN 		IN     DEFAULT
+PROCEDURE SET_COLUMNS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_LIST			VARCHAR2		IN
+PROCEDURE SET_COLUMNS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_TABLE			TABLE OF VARCHAR2(30)	IN
+PROCEDURE SET_COLUMNS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SNAME				VARCHAR2		IN
+ ONAME				VARCHAR2		IN
+ COLUMN_TABLE			TABLE OF VARCHAR2(4000) IN
+PROCEDURE SET_LOCAL_FLAVOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+ VALIDATE			BOOLEAN 		IN     DEFAULT
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE SPECIFY_NEW_MASTERS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MASTER_LIST			VARCHAR2		IN
+PROCEDURE SPECIFY_NEW_MASTERS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MASTER_TABLE			TABLE OF VARCHAR2(128)	IN
+PROCEDURE STREAMS_MIGRATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAMES 			TABLE OF VARCHAR2(30)	IN
+ FILE_LOCATION			VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+PROCEDURE SUSPEND_MASTER_ACTIVITY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+PROCEDURE SWITCH_MVIEW_MASTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MASTER 			VARCHAR2		IN
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE SWITCH_SNAPSHOT_MASTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MASTER 			VARCHAR2		IN
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE TICKLE_JOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CANON_SNAME			VARCHAR2		IN
+ START_NOW			BOOLEAN 		IN     DEFAULT
+PROCEDURE UNDO_ADD_NEW_MASTERS_REQUEST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXTENSION_ID			RAW			IN
+ DROP_CONTENTS			BOOLEAN 		IN     DEFAULT
+PROCEDURE UNREGISTER_MVIEW_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ MVIEWSITE			VARCHAR2		IN
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE UNREGISTER_SNAPSHOT_REPGROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ SNAPSITE			VARCHAR2		IN
+ GOWNER 			VARCHAR2		IN     DEFAULT
+FUNCTION VALIDATE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ CHECK_GENFLAGS 		BOOLEAN 		IN     DEFAULT
+ CHECK_VALID_OBJS		BOOLEAN 		IN     DEFAULT
+ CHECK_LINKS_SCHED		BOOLEAN 		IN     DEFAULT
+ CHECK_LINKS			BOOLEAN 		IN     DEFAULT
+ ERROR_TABLE			TABLE OF RECORD 	OUT
+FUNCTION VALIDATE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ CHECK_GENFLAGS 		BOOLEAN 		IN     DEFAULT
+ CHECK_VALID_OBJS		BOOLEAN 		IN     DEFAULT
+ CHECK_LINKS_SCHED		BOOLEAN 		IN     DEFAULT
+ CHECK_LINKS			BOOLEAN 		IN     DEFAULT
+ ERROR_MSG_TABLE		TABLE OF VARCHAR2(227)	OUT
+ ERROR_NUM_TABLE		TABLE OF NUMBER 	OUT
+PROCEDURE VALIDATE_FLAVOR_DEFINITION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+PROCEDURE VALIDATE_FOR_LOCAL_FLAVOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ FNAME				VARCHAR2		IN
+ GOWNER 			VARCHAR2		IN     DEFAULT
+PROCEDURE WAIT_MASTER_LOG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GNAME				VARCHAR2		IN
+ RECORD_COUNT			BINARY_INTEGER		IN
+ TIMEOUT			BINARY_INTEGER		IN
+ TRUE_COUNT			BINARY_INTEGER		OUT
+

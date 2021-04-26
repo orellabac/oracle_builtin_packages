@@ -1,0 +1,38 @@
+PROCEDURE DELETEDOCUMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOCNAME			VARCHAR2		IN
+PROCEDURE EDITDATAMODEL
+PROCEDURE EXPORTDATAMODEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRNAME			VARCHAR2		IN
+ EXPORTOPTION			VARCHAR2		IN     DEFAULT
+PROCEDURE EXPORTDOCUMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOCNAME			VARCHAR2		IN
+ DIRNAME			VARCHAR2		IN
+ FILENAME			VARCHAR2		IN
+FUNCTION GENERATETAGLISTDOCUMENT RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOCSET 			VARCHAR2		IN     DEFAULT
+FUNCTION GETDOCUMENTCONTENT RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOCNAME			VARCHAR2		IN
+PROCEDURE IMPORTDATAMODEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIRNAME			VARCHAR2		IN
+ ZIPFILENAME			VARCHAR2		IN
+PROCEDURE INSERTDOCUMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DOCNAME			VARCHAR2		IN
+ DOCTYPE			VARCHAR2		IN
+ XMLDOC 			XMLTYPE 		IN
+PROCEDURE PUBLISHDATAMODEL
+PROCEDURE ROLLBACKDATAMODEL
+

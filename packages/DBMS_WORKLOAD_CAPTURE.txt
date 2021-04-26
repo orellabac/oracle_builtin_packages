@@ -1,0 +1,88 @@
+PROCEDURE ADD_FILTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FNAME				VARCHAR2		IN
+ FATTRIBUTE			VARCHAR2		IN
+ FVALUE 			VARCHAR2		IN
+PROCEDURE ADD_FILTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FNAME				VARCHAR2		IN
+ FATTRIBUTE			VARCHAR2		IN
+ FVALUE 			NUMBER			IN
+PROCEDURE DELETE_CAPTURE_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_ID			NUMBER			IN
+PROCEDURE DELETE_FILTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FNAME				VARCHAR2		IN
+PROCEDURE EXPORT_AWR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_ID			NUMBER			IN
+PROCEDURE EXPORT_PERFORMANCE_DATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_ID			NUMBER			IN
+PROCEDURE EXPORT_UC_GRAPH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_ID			NUMBER			IN
+PROCEDURE FINISH_CAPTURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TIMEOUT			NUMBER			IN     DEFAULT
+ REASON 			VARCHAR2		IN     DEFAULT
+FUNCTION GET_CAPTURE_INFO RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIR				VARCHAR2		IN
+FUNCTION GET_CAPTURE_PATH RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_ID			NUMBER			IN
+PROCEDURE GET_PERF_DATA_EXPORT_STATUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_ID			NUMBER			IN
+ AWR_DATA			VARCHAR2		OUT
+ STS_DATA			VARCHAR2		OUT
+FUNCTION GET_STATE RETURNS BINARY_INTEGER
+FUNCTION IMPORT_AWR RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_ID			NUMBER			IN
+ STAGING_SCHEMA 		VARCHAR2		IN
+ FORCE_CLEANUP			BOOLEAN 		IN     DEFAULT
+FUNCTION IMPORT_PERFORMANCE_DATA RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_ID			NUMBER			IN
+ STAGING_SCHEMA 		VARCHAR2		IN
+ FORCE_CLEANUP			BOOLEAN 		IN     DEFAULT
+PROCEDURE IMPORT_UC_GRAPH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_ID			NUMBER			IN
+FUNCTION REPORT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_ID			NUMBER			IN
+ FORMAT 			VARCHAR2		IN
+PROCEDURE START_CAPTURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ DIR				VARCHAR2		IN
+ DURATION			NUMBER			IN     DEFAULT
+ DEFAULT_ACTION 		VARCHAR2		IN     DEFAULT
+ AUTO_UNRESTRICT		BOOLEAN 		IN     DEFAULT
+ CAPTURE_STS			BOOLEAN 		IN     DEFAULT
+ STS_CAP_INTERVAL		NUMBER			IN     DEFAULT
+FUNCTION USER_CALLS_GRAPH RETURNS UC_GRAPH_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAPTURE_ID			NUMBER			IN
+

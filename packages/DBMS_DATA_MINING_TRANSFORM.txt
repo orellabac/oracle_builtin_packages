@@ -1,0 +1,334 @@
+PROCEDURE CREATE_BIN_CAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BIN_TABLE_NAME 		VARCHAR2		IN
+ BIN_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_BIN_NUM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BIN_TABLE_NAME 		VARCHAR2		IN
+ BIN_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_CLIP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIP_TABLE_NAME		VARCHAR2		IN
+ CLIP_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_COL_REM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REM_TABLE_NAME 		VARCHAR2		IN
+ REM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_MISS_CAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MISS_TABLE_NAME		VARCHAR2		IN
+ MISS_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_MISS_NUM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MISS_TABLE_NAME		VARCHAR2		IN
+ MISS_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_NORM_LIN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NORM_TABLE_NAME		VARCHAR2		IN
+ NORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE DESCRIBE_STACK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XFORM_LIST			TRANSFORM_LIST		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ DESCRIBE_LIST			TABLE OF RECORD 	OUT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE DESCRIBE_STACK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XFORM_LIST			TRANSFORM_LIST		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ DESCRIBE_LIST			TABLE OF RECORD 	OUT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+FUNCTION GET_EXPRESSION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXPRESSION			RECORD			IN
+   LSTMT			TABLE OF VARCHAR2(32767) IN
+   LB				BINARY_INTEGER		IN
+   UB				BINARY_INTEGER		IN
+ CHUNK_NUM			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE INSERT_AUTOBIN_NUM_EQWIDTH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BIN_TABLE_NAME 		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ BIN_NUM			BINARY_INTEGER		IN     DEFAULT
+ MAX_BIN_NUM			BINARY_INTEGER		IN     DEFAULT
+ EXCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ ROUND_NUM			BINARY_INTEGER		IN     DEFAULT
+ SAMPLE_SIZE			BINARY_INTEGER		IN     DEFAULT
+ BIN_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ REM_TABLE_NAME 		VARCHAR2		IN     DEFAULT
+ REM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE INSERT_BIN_CAT_FREQ
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BIN_TABLE_NAME 		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ BIN_NUM			BINARY_INTEGER		IN     DEFAULT
+ EXCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ DEFAULT_NUM			BINARY_INTEGER		IN     DEFAULT
+ BIN_SUPPORT			NUMBER			IN     DEFAULT
+ BIN_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE INSERT_BIN_NUM_EQWIDTH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BIN_TABLE_NAME 		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ BIN_NUM			BINARY_INTEGER		IN     DEFAULT
+ EXCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ ROUND_NUM			BINARY_INTEGER		IN     DEFAULT
+ BIN_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE INSERT_BIN_NUM_QTILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BIN_TABLE_NAME 		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ BIN_NUM			BINARY_INTEGER		IN     DEFAULT
+ EXCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ BIN_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE INSERT_BIN_SUPER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NUM_TABLE_NAME 		VARCHAR2		IN
+ CAT_TABLE_NAME 		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ TARGET_COLUMN_NAME		VARCHAR2		IN
+ MAX_BIN_NUM			BINARY_INTEGER		IN     DEFAULT
+ EXCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ NUM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ CAT_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ REM_TABLE_NAME 		VARCHAR2		IN     DEFAULT
+ REM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE INSERT_CLIP_TRIM_TAIL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIP_TABLE_NAME		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ TAIL_FRAC			NUMBER			IN     DEFAULT
+ EXCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ CLIP_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE INSERT_CLIP_WINSOR_TAIL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIP_TABLE_NAME		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ TAIL_FRAC			NUMBER			IN     DEFAULT
+ EXCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ CLIP_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE INSERT_MISS_CAT_MODE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MISS_TABLE_NAME		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ EXCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ MISS_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE INSERT_MISS_NUM_MEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MISS_TABLE_NAME		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ EXCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ ROUND_NUM			BINARY_INTEGER		IN     DEFAULT
+ MISS_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE INSERT_NORM_LIN_MINMAX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NORM_TABLE_NAME		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ EXCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ ROUND_NUM			BINARY_INTEGER		IN     DEFAULT
+ NORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE INSERT_NORM_LIN_SCALE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NORM_TABLE_NAME		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ EXCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ ROUND_NUM			BINARY_INTEGER		IN     DEFAULT
+ NORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE INSERT_NORM_LIN_ZSCORE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NORM_TABLE_NAME		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ EXCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ ROUND_NUM			BINARY_INTEGER		IN     DEFAULT
+ NORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_EXPRESSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXPRESSION			RECORD			IN/OUT
+   LSTMT			TABLE OF VARCHAR2(32767) IN/OUT
+   LB				BINARY_INTEGER		IN/OUT
+   UB				BINARY_INTEGER		IN/OUT
+ CHUNK				VARCHAR2		IN     DEFAULT
+PROCEDURE SET_TRANSFORM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XFORM_LIST			TRANSFORM_LIST		IN/OUT
+ ATTRIBUTE_NAME 		VARCHAR2		IN
+ ATTRIBUTE_SUBNAME		VARCHAR2		IN
+ EXPRESSION			CLOB			IN
+ REVERSE_EXPRESSION		VARCHAR2		IN
+ ATTRIBUTE_SPEC 		VARCHAR2		IN     DEFAULT
+PROCEDURE STACK_BIN_CAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BIN_TABLE_NAME 		VARCHAR2		IN
+ XFORM_LIST			TRANSFORM_LIST		IN/OUT
+ LITERAL_FLAG			BOOLEAN 		IN     DEFAULT
+ BIN_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE STACK_BIN_NUM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BIN_TABLE_NAME 		VARCHAR2		IN
+ XFORM_LIST			TRANSFORM_LIST		IN/OUT
+ LITERAL_FLAG			BOOLEAN 		IN     DEFAULT
+ BIN_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE STACK_CLIP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIP_TABLE_NAME		VARCHAR2		IN
+ XFORM_LIST			TRANSFORM_LIST		IN/OUT
+ CLIP_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE STACK_COL_REM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REM_TABLE_NAME 		VARCHAR2		IN
+ XFORM_LIST			TRANSFORM_LIST		IN/OUT
+ REM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE STACK_MISS_CAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MISS_TABLE_NAME		VARCHAR2		IN
+ XFORM_LIST			TRANSFORM_LIST		IN/OUT
+ MISS_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE STACK_MISS_NUM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MISS_TABLE_NAME		VARCHAR2		IN
+ XFORM_LIST			TRANSFORM_LIST		IN/OUT
+ MISS_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE STACK_NORM_LIN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NORM_TABLE_NAME		VARCHAR2		IN
+ XFORM_LIST			TRANSFORM_LIST		IN/OUT
+ NORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE XFORM_BIN_CAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BIN_TABLE_NAME 		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ XFORM_VIEW_NAME		VARCHAR2		IN
+ LITERAL_FLAG			BOOLEAN 		IN     DEFAULT
+ BIN_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ XFORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE XFORM_BIN_NUM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BIN_TABLE_NAME 		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ XFORM_VIEW_NAME		VARCHAR2		IN
+ LITERAL_FLAG			BOOLEAN 		IN     DEFAULT
+ BIN_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ XFORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE XFORM_CLIP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIP_TABLE_NAME		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ XFORM_VIEW_NAME		VARCHAR2		IN
+ CLIP_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ XFORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE XFORM_COL_REM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REM_TABLE_NAME 		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ XFORM_VIEW_NAME		VARCHAR2		IN
+ REM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ XFORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE XFORM_EXPR_NUM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXPR_PATTERN			VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ XFORM_VIEW_NAME		VARCHAR2		IN
+ EXCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ INCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ COL_PATTERN			VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ XFORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE XFORM_EXPR_STR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EXPR_PATTERN			VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ XFORM_VIEW_NAME		VARCHAR2		IN
+ EXCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ INCLUDE_LIST			COLUMN_LIST		IN     DEFAULT
+ COL_PATTERN			VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ XFORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE XFORM_MISS_CAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MISS_TABLE_NAME		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ XFORM_VIEW_NAME		VARCHAR2		IN
+ MISS_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ XFORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE XFORM_MISS_NUM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MISS_TABLE_NAME		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ XFORM_VIEW_NAME		VARCHAR2		IN
+ MISS_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ XFORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE XFORM_NORM_LIN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NORM_TABLE_NAME		VARCHAR2		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ XFORM_VIEW_NAME		VARCHAR2		IN
+ NORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ XFORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+PROCEDURE XFORM_STACK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XFORM_LIST			TRANSFORM_LIST		IN
+ DATA_TABLE_NAME		VARCHAR2		IN
+ XFORM_VIEW_NAME		VARCHAR2		IN
+ DATA_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+ XFORM_SCHEMA_NAME		VARCHAR2		IN     DEFAULT
+

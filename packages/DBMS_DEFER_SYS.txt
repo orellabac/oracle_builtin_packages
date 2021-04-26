@@ -1,0 +1,198 @@
+PROCEDURE ADD_DEFAULT_DEST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBLINK 			VARCHAR2		IN
+PROCEDURE CLEAR_PROP_STATISTICS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBLINK 			VARCHAR2		IN
+PROCEDURE DELETE_DEFAULT_DEST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBLINK 			VARCHAR2		IN
+PROCEDURE DELETE_DEF_DESTINATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DESTINATION			VARCHAR2		IN
+ FORCE				BOOLEAN 		IN     DEFAULT
+ CATCHUP			RAW			IN     DEFAULT
+PROCEDURE DELETE_ERROR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DEFERRED_TRAN_ID		VARCHAR2		IN
+ DESTINATION			VARCHAR2		IN
+PROCEDURE DELETE_TRAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DEFERRED_TRAN_ID		VARCHAR2		IN
+ DESTINATION			VARCHAR2		IN
+FUNCTION DISABLED RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DESTINATION			VARCHAR2		IN
+ CATCHUP			RAW			IN     DEFAULT
+FUNCTION EXCLUDE_PUSH RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TIMEOUT			NUMBER(38)		IN
+PROCEDURE EXECUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DESTINATION			VARCHAR2		IN
+ STOP_ON_ERROR			BOOLEAN 		IN     DEFAULT
+ TRANSACTION_COUNT		BINARY_INTEGER		IN     DEFAULT
+ EXECUTION_SECONDS		BINARY_INTEGER		IN     DEFAULT
+ EXECUTE_AS_USER		BOOLEAN 		IN
+ DELAY_SECONDS			BINARY_INTEGER		IN     DEFAULT
+ BATCH_SIZE			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE EXECUTE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DESTINATION			VARCHAR2		IN
+ STOP_ON_ERROR			BOOLEAN 		IN     DEFAULT
+ TRANSACTION_COUNT		BINARY_INTEGER		IN     DEFAULT
+ EXECUTION_SECONDS		BINARY_INTEGER		IN     DEFAULT
+ DELAY_SECONDS			BINARY_INTEGER		IN     DEFAULT
+ BATCH_SIZE			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE EXECUTE_ERROR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DEFERRED_TRAN_ID		VARCHAR2		IN
+ DESTINATION			VARCHAR2		IN
+PROCEDURE EXECUTE_ERROR_AS_USER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DEFERRED_TRAN_ID		VARCHAR2		IN
+ DESTINATION			VARCHAR2		IN
+PROCEDURE EXECUTE_ERROR_CALL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DEFERRED_TRAN_ID		VARCHAR2		IN
+ CALLNO 			NUMBER			IN
+PROCEDURE EXECUTE_ERROR_CALL_AS_USER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DEFERRED_TRAN_ID		VARCHAR2		IN
+ CALLNO 			NUMBER			IN
+PROCEDURE NULLIFY_ALL_TRANS
+PROCEDURE NULLIFY_TRANS_TO_DESTINATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBLINK 			VARCHAR2		IN
+ CATCHUP			RAW			IN     DEFAULT
+FUNCTION PURGE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PURGE_METHOD			BINARY_INTEGER		IN     DEFAULT
+ ROLLBACK_SEGMENT		VARCHAR2		IN     DEFAULT
+ STARTUP_SECONDS		BINARY_INTEGER		IN     DEFAULT
+ EXECUTION_SECONDS		BINARY_INTEGER		IN     DEFAULT
+ DELAY_SECONDS			BINARY_INTEGER		IN     DEFAULT
+ TRANSACTION_COUNT		BINARY_INTEGER		IN     DEFAULT
+ WRITE_TRACE			BOOLEAN 		IN     DEFAULT
+FUNCTION PUSH RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DESTINATION			VARCHAR2		IN
+ PARALLELISM			BINARY_INTEGER		IN     DEFAULT
+ HEAP_SIZE			BINARY_INTEGER		IN     DEFAULT
+ STOP_ON_ERROR			BOOLEAN 		IN     DEFAULT
+ WRITE_TRACE			BOOLEAN 		IN     DEFAULT
+ STARTUP_SECONDS		BINARY_INTEGER		IN     DEFAULT
+ EXECUTION_SECONDS		BINARY_INTEGER		IN     DEFAULT
+ DELAY_SECONDS			BINARY_INTEGER		IN     DEFAULT
+ TRANSACTION_COUNT		BINARY_INTEGER		IN     DEFAULT
+ DELIVERY_ORDER_LIMIT		NUMBER			IN     DEFAULT
+FUNCTION PUSH_WITH_CATCHUP RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DESTINATION			VARCHAR2		IN
+ PARALLELISM			BINARY_INTEGER		IN     DEFAULT
+ HEAP_SIZE			BINARY_INTEGER		IN     DEFAULT
+ STOP_ON_ERROR			BOOLEAN 		IN     DEFAULT
+ WRITE_TRACE			BOOLEAN 		IN     DEFAULT
+ STARTUP_SECONDS		BINARY_INTEGER		IN     DEFAULT
+ EXECUTION_SECONDS		BINARY_INTEGER		IN     DEFAULT
+ DELAY_SECONDS			BINARY_INTEGER		IN     DEFAULT
+ TRANSACTION_COUNT		BINARY_INTEGER		IN     DEFAULT
+ DELIVERY_ORDER_LIMIT		NUMBER			IN     DEFAULT
+ CATCHUP			RAW			IN     DEFAULT
+PROCEDURE REGISTER_PROPAGATOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+PROCEDURE SCHEDULE_EXECUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBLINK 			VARCHAR2		IN
+ INTERVAL			VARCHAR2		IN
+ NEXT_DATE			DATE			IN
+ RESET				BOOLEAN 		IN     DEFAULT
+ STOP_ON_ERROR			BOOLEAN 		IN     DEFAULT
+ TRANSACTION_COUNT		BINARY_INTEGER		IN     DEFAULT
+ EXECUTION_SECONDS		BINARY_INTEGER		IN     DEFAULT
+ EXECUTE_AS_USER		BOOLEAN 		IN
+ DELAY_SECONDS			BINARY_INTEGER		IN     DEFAULT
+ BATCH_SIZE			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE SCHEDULE_EXECUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBLINK 			VARCHAR2		IN
+ INTERVAL			VARCHAR2		IN
+ NEXT_DATE			DATE			IN
+ RESET				BOOLEAN 		IN     DEFAULT
+ STOP_ON_ERROR			BOOLEAN 		IN     DEFAULT
+ TRANSACTION_COUNT		BINARY_INTEGER		IN     DEFAULT
+ EXECUTION_SECONDS		BINARY_INTEGER		IN     DEFAULT
+ DELAY_SECONDS			BINARY_INTEGER		IN     DEFAULT
+ BATCH_SIZE			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE SCHEDULE_PURGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INTERVAL			VARCHAR2		IN
+ NEXT_DATE			DATE			IN
+ RESET				BOOLEAN 		IN     DEFAULT
+ PURGE_METHOD			BINARY_INTEGER		IN     DEFAULT
+ ROLLBACK_SEGMENT		VARCHAR2		IN     DEFAULT
+ STARTUP_SECONDS		BINARY_INTEGER		IN     DEFAULT
+ EXECUTION_SECONDS		BINARY_INTEGER		IN     DEFAULT
+ DELAY_SECONDS			BINARY_INTEGER		IN     DEFAULT
+ TRANSACTION_COUNT		BINARY_INTEGER		IN     DEFAULT
+ WRITE_TRACE			BOOLEAN 		IN     DEFAULT
+PROCEDURE SCHEDULE_PUSH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DESTINATION			VARCHAR2		IN
+ INTERVAL			VARCHAR2		IN
+ NEXT_DATE			DATE			IN
+ RESET				BOOLEAN 		IN     DEFAULT
+ PARALLELISM			BINARY_INTEGER		IN     DEFAULT
+ HEAP_SIZE			BINARY_INTEGER		IN     DEFAULT
+ STOP_ON_ERROR			BOOLEAN 		IN     DEFAULT
+ WRITE_TRACE			BOOLEAN 		IN     DEFAULT
+ STARTUP_SECONDS		BINARY_INTEGER		IN     DEFAULT
+ EXECUTION_SECONDS		BINARY_INTEGER		IN     DEFAULT
+ DELAY_SECONDS			BINARY_INTEGER		IN     DEFAULT
+ TRANSACTION_COUNT		BINARY_INTEGER		IN     DEFAULT
+PROCEDURE SET_DISABLED
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DESTINATION			VARCHAR2		IN
+ DISABLED			BOOLEAN 		IN     DEFAULT
+ CATCHUP			RAW			IN     DEFAULT
+ OVERRIDE			BOOLEAN 		IN     DEFAULT
+PROCEDURE UNREGISTER_PROPAGATOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USERNAME			VARCHAR2		IN
+ TIMEOUT			NUMBER(38)		IN     DEFAULT
+PROCEDURE UNSCHEDULE_EXECUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBLINK 			VARCHAR2		IN
+PROCEDURE UNSCHEDULE_PURGE
+PROCEDURE UNSCHEDULE_PUSH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DBLINK 			VARCHAR2		IN
+

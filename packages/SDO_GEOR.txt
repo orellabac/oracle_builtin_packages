@@ -1,0 +1,1386 @@
+PROCEDURE ADDNODATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ NODATA 			NUMBER			IN
+PROCEDURE ADDNODATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ NODATA 			SDO_RANGE_ARRAY 	IN
+PROCEDURE ADDSOURCEINFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ SOURCEINFO			VARCHAR2		IN
+FUNCTION CALCCOMPRESSIONRATIO RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+PROCEDURE CHANGECELLVALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ WINDOW 			SDO_NUMBER_ARRAY	IN
+ BANDNUMBERS			VARCHAR2		IN
+ NEWCELLVALUE			NUMBER			IN
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE CHANGECELLVALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ WINDOW 			SDO_GEOMETRY		IN
+ LAYERNUMBERS			VARCHAR2		IN
+ NEWCELLVALUE			NUMBER			IN
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE CHANGEFORMAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ STORAGEPARAM			VARCHAR2		IN
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE CHANGEFORMATCOPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ STORAGEPARAM			VARCHAR2		IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE CHANGEFORMATCOPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ STORAGEPARAM			VARCHAR2		IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE COPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+FUNCTION CREATEBLANK RETURNS SDO_GEORASTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RASTERTYPE			NUMBER(38)		IN
+ ULTCOORD			SDO_NUMBER_ARRAY	IN
+ DIMSIZES			SDO_NUMBER_ARRAY	IN
+ CELLVALUE			NUMBER			IN
+ RASTERDATATABLE		VARCHAR2		IN     DEFAULT
+ RASTERID			NUMBER			IN     DEFAULT
+PROCEDURE CREATETEMPLATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ RASTERTYPE			NUMBER			IN
+ RASTERSPEC			VARCHAR2		IN
+ MASKLAYERS			VARCHAR2		IN     DEFAULT
+ INITRDTENTRY			VARCHAR2		IN     DEFAULT
+PROCEDURE DELETECONTROLPOINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN/OUT
+ CONTROLPOINTID 		VARCHAR2		IN
+PROCEDURE DELETENODATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ NODATA 			NUMBER			IN
+PROCEDURE DELETENODATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ NODATA 			SDO_RANGE_ARRAY 	IN
+PROCEDURE DELETEPYRAMID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+FUNCTION EVALUATEDOUBLE RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ ROW				NUMBER			IN
+ COLUMN 			NUMBER			IN
+ BANDS				VARCHAR2		IN
+ INTERPOLATIONMETHOD		VARCHAR2		IN
+FUNCTION EVALUATEDOUBLE RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ PTGEOM 			SDO_GEOMETRY		IN
+ LAYERS 			VARCHAR2		IN
+ INTERPOLATIONMETHOD		VARCHAR2		IN
+PROCEDURE EXPORTTO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ SUBSETPARAM			VARCHAR2		IN
+ R_DESTFORMAT			VARCHAR2		IN
+ R_DESTTYPE			VARCHAR2		IN
+ R_DESTNAME			VARCHAR2		IN
+ H_DESTFORMAT			VARCHAR2		IN     DEFAULT
+ H_DESTTYPE			VARCHAR2		IN     DEFAULT
+ H_DESTNAME			VARCHAR2		IN     DEFAULT
+PROCEDURE EXPORTTO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ SUBSETPARAM			VARCHAR2		IN
+ DESTFORMAT			VARCHAR2		IN
+ DESTBLOB			BLOB			IN/OUT
+PROCEDURE EXPORTTO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ SUBSETPARAM			VARCHAR2		IN
+ R_DESTFORMAT			VARCHAR2		IN
+ R_DESTBLOB			BLOB			IN/OUT
+ H_DESTFORMAT			VARCHAR2		IN
+ H_DESTCLOB			CLOB			IN/OUT
+PROCEDURE GENERATEBLOCKMBR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+PROCEDURE GENERATEPYRAMID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ PYRAMIDPARAMS			VARCHAR2		IN
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+ PARALLELPARAM			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESPATIALEXTENT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ HEIGHT 			NUMBER			IN     DEFAULT
+PROCEDURE GENERATESPATIALRESOLUTIONS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ OUTRESOLUTION			SDO_NUMBER_ARRAY	OUT
+FUNCTION GENERATESPATIALRESOLUTIONS RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN     DEFAULT
+ SRID				NUMBER			IN     DEFAULT
+ RESOLUTIONUNIT 		VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_GEOMETRY		IN
+ HISTOGRAM			VARCHAR2		IN
+ LAYERNUMBERS			VARCHAR2		IN     DEFAULT
+ USEBIN 			VARCHAR2		IN     DEFAULT
+ BINFUNCTION			SDO_NUMBER_ARRAY	IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_NUMBER_ARRAY	IN
+ HISTOGRAM			VARCHAR2		IN
+ LAYERNUMBERS			VARCHAR2		IN     DEFAULT
+ USEBIN 			VARCHAR2		IN     DEFAULT
+ BINFUNCTION			SDO_NUMBER_ARRAY	IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICS RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_NUMBER_ARRAY	IN
+ BANDNUMBERS			VARCHAR2		IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICS RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_GEOMETRY		IN
+ BANDNUMBERS			VARCHAR2		IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+ POLYGONCLIP			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICSMAX RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_NUMBER_ARRAY	IN
+ BANDNUMBERS			VARCHAR2		IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICSMAX RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_GEOMETRY		IN
+ BANDNUMBERS			VARCHAR2		IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+ POLYGONCLIP			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICSMEAN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_NUMBER_ARRAY	IN
+ BANDNUMBERS			VARCHAR2		IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICSMEAN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_GEOMETRY		IN
+ BANDNUMBERS			VARCHAR2		IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+ POLYGONCLIP			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICSMEDIAN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_NUMBER_ARRAY	IN
+ BANDNUMBERS			VARCHAR2		IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICSMEDIAN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_GEOMETRY		IN
+ BANDNUMBERS			VARCHAR2		IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+ POLYGONCLIP			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICSMIN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_NUMBER_ARRAY	IN
+ BANDNUMBERS			VARCHAR2		IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICSMIN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_GEOMETRY		IN
+ BANDNUMBERS			VARCHAR2		IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+ POLYGONCLIP			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICSMODE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_NUMBER_ARRAY	IN
+ BANDNUMBERS			VARCHAR2		IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICSMODE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_GEOMETRY		IN
+ BANDNUMBERS			VARCHAR2		IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+ POLYGONCLIP			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICSSTD RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_NUMBER_ARRAY	IN
+ BANDNUMBERS			VARCHAR2		IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+FUNCTION GENERATESTATISTICSSTD RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ SAMPLINGFACTOR 		VARCHAR2		IN
+ SAMPLINGWINDOW 		SDO_GEOMETRY		IN
+ BANDNUMBERS			VARCHAR2		IN     DEFAULT
+ NODATA 			VARCHAR2		IN     DEFAULT
+ POLYGONCLIP			VARCHAR2		IN     DEFAULT
+PROCEDURE GEOREFERENCE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ SRID				NUMBER			IN
+ MODELCOORDINATELOCATION	NUMBER			IN
+ XCOEFFICIENTS			SDO_NUMBER_ARRAY	IN
+ YCOEFFICIENTS			SDO_NUMBER_ARRAY	IN
+FUNCTION GEOREFERENCE RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN/OUT
+ FFMETHODTYPE			VARCHAR2		IN
+ NGCP				NUMBER			IN
+ GCPS				SDO_GEOR_GCP_COLLECTION IN
+ STOREGCP			VARCHAR2		IN     DEFAULT
+ SRID				NUMBER			IN     DEFAULT
+ MODELCOORDINATELOCATION	NUMBER			IN     DEFAULT
+ SETRESOLUTION			VARCHAR2		IN     DEFAULT
+FUNCTION GEOREFERENCE RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN/OUT
+ GCPGEOREFMODEL 		SDO_GEOR_GCPGEOREFTYPE	IN
+ STOREGCP			VARCHAR2		IN     DEFAULT
+ SRID				NUMBER			IN     DEFAULT
+ MODELCOORDINATELOCATION	NUMBER			IN     DEFAULT
+ SETRESOLUTION			VARCHAR2		IN     DEFAULT
+FUNCTION GEOREFERENCE RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN/OUT
+ FFMETHOD			VARCHAR2		IN     DEFAULT
+ SRID				NUMBER			IN     DEFAULT
+ MODELCOORDINATELOCATION	NUMBER			IN     DEFAULT
+ SETRESOLUTION			VARCHAR2		IN     DEFAULT
+FUNCTION GETBANDDIMSIZE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETBEGINDATETIME RETURNS TIMESTAMP WITH TIME ZONE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETBINFUNCTION RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION GETBINTABLE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION GETBINTYPE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+PROCEDURE GETBITMAPMASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+ STORAGEPARAM			VARCHAR2		IN
+ MASK				SDO_GEORASTER		IN/OUT
+PROCEDURE GETBITMAPMASKSUBSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+ PYRAMIDLEVEL			NUMBER			IN
+ WINDOW 			SDO_NUMBER_ARRAY	IN
+ RASTERBLOB			BLOB			IN/OUT
+ STORAGEPARAM			VARCHAR2		IN     DEFAULT
+PROCEDURE GETBITMAPMASKSUBSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+ PYRAMIDLEVEL			NUMBER			IN
+ WINDOW 			SDO_GEOMETRY		IN
+ RASTERBLOB			BLOB			IN/OUT
+ STORAGEPARAM			VARCHAR2		IN     DEFAULT
+PROCEDURE GETBITMAPMASKSUBSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+ PYRAMIDLEVEL			NUMBER			IN
+ INWINDOW			SDO_NUMBER_ARRAY	IN
+ RASTERBLOB			BLOB			IN/OUT
+ OUTWINDOW			SDO_NUMBER_ARRAY	OUT
+ STORAGEPARAM			VARCHAR2		IN     DEFAULT
+PROCEDURE GETBITMAPMASKSUBSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+ PYRAMIDLEVEL			NUMBER			IN
+ INWINDOW			SDO_GEOMETRY		IN
+ RASTERBLOB			BLOB			IN/OUT
+ OUTWINDOW			SDO_NUMBER_ARRAY	OUT
+ STORAGEPARAM			VARCHAR2		IN     DEFAULT
+FUNCTION GETBITMAPMASKVALUE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+ PYRAMIDLEVEL			NUMBER			IN
+ ROWNUMBER			NUMBER			IN
+ COLNUMBER			NUMBER			IN
+FUNCTION GETBITMAPMASKVALUE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+ PYRAMIDLEVEL			NUMBER			IN
+ PTGEOM 			SDO_GEOMETRY		IN
+FUNCTION GETBLANKCELLVALUE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETBLOCKINGTYPE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETBLOCKSIZE RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETCELLCOORDINATE RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ MODELCOORDINATE		SDO_GEOMETRY		IN
+ SUBCELL			VARCHAR2		IN     DEFAULT
+ HEIGHT 			NUMBER			IN     DEFAULT
+ VERT_ID			NUMBER			IN     DEFAULT
+ ELLIPSOIDAL			VARCHAR2		IN     DEFAULT
+PROCEDURE GETCELLCOORDINATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ MODELCOORDINATE		SDO_GEOMETRY		IN
+ CELLCOORDINATE 		SDO_GEOMETRY		OUT
+ SUBCELL			VARCHAR2		IN     DEFAULT
+ HEIGHT 			NUMBER			IN     DEFAULT
+ VERT_ID			NUMBER			IN     DEFAULT
+ ELLIPSOIDAL			VARCHAR2		IN     DEFAULT
+FUNCTION GETCELLCOORDINATE RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ SOURCEPYRAMIDLEVEL		NUMBER			IN
+ SOURCECELLCOORDINATE		SDO_NUMBER_ARRAY	IN
+ TARGETPYRAMIDLEVEL		NUMBER			IN
+ SUBCELL			VARCHAR2		IN     DEFAULT
+FUNCTION GETCELLCOORDINATE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ SOURCEPYRAMIDLEVEL		NUMBER			IN
+ SOURCECELLCOORDINATE		SDO_GEOMETRY		IN
+ TARGETPYRAMIDLEVEL		NUMBER			IN
+ SUBCELL			VARCHAR2		IN     DEFAULT
+FUNCTION GETCELLDEPTH RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETCELLVALUE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ ROWNUMBER			NUMBER			IN
+ COLNUMBER			NUMBER			IN
+ BANDNUMBER			NUMBER			IN
+FUNCTION GETCELLVALUE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ PTGEOM 			SDO_GEOMETRY		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION GETCELLVALUE RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ ROWNUMBER			NUMBER			IN
+ COLNUMBER			NUMBER			IN
+ BANDS				VARCHAR2		IN
+FUNCTION GETCELLVALUE RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ PTGEOM 			SDO_GEOMETRY		IN
+ LAYERS 			VARCHAR2		IN
+FUNCTION GETCOLORMAP RETURNS SDO_GEOR_COLORMAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION GETCOLORMAPTABLE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION GETCOMPRESSIONTYPE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETCONTROLPOINT RETURNS SDO_GEOR_GCP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ CONTROLPOINTID 		VARCHAR2		IN
+FUNCTION GETDEFAULTALPHA RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETDEFAULTBLUE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETDEFAULTCOLORLAYER RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETDEFAULTGREEN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETDEFAULTPYRAMIDLEVEL RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETDEFAULTRED RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETENDDATETIME RETURNS TIMESTAMP WITH TIME ZONE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETGCPGEOREFMETHOD RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+FUNCTION GETGCPGEOREFMODEL RETURNS SDO_GEOR_GCPGEOREFTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+FUNCTION GETGEOREFERENCETYPE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETGRAYSCALE RETURNS SDO_GEOR_GRAYSCALE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION GETGRAYSCALETABLE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION GETHISTOGRAM RETURNS SDO_GEOR_HISTOGRAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION GETHISTOGRAMTABLE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION GETID RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETINTERLEAVINGTYPE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETLAYERDIMENSION RETURNS SDO_STRING_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETLAYERID RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION GETLAYERORDINATE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION GETMODELCOORDINATE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ CELLCOORDINATE 		SDO_NUMBER_ARRAY	IN
+ HEIGHT 			NUMBER			IN     DEFAULT
+PROCEDURE GETMODELCOORDINATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ CELLCOORDINATE 		SDO_GEOMETRY		IN
+ MODELCOORDINATE		SDO_GEOMETRY		OUT
+ HEIGHT 			NUMBER			IN     DEFAULT
+FUNCTION GETMODELCOORDLOCATION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETMODELSRID RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETNODATA RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETNODATA RETURNS SDO_RANGE_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION GETPYRAMIDMAXLEVEL RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETPYRAMIDTYPE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+PROCEDURE GETRASTERBLOCKLOCATOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ BANDBLOCKNUMBER		NUMBER			IN
+ ROWBLOCKNUMBER 		NUMBER			IN
+ COLUMNBLOCKNUMBER		NUMBER			IN
+ LOC				BLOB			IN/OUT
+ ISBITMAPMASK			VARCHAR2		IN     DEFAULT
+ LOCK_FOR_WRITE 		VARCHAR2		IN     DEFAULT
+PROCEDURE GETRASTERBLOCKLOCATOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ ROWNUMBER			NUMBER			IN
+ COLNUMBER			NUMBER			IN
+ BANDNUMBER			NUMBER			IN
+ OFFSET 			NUMBER			OUT
+ LOC				BLOB			IN/OUT
+ ISBITMAPMASK			VARCHAR2		IN     DEFAULT
+ LOCK_FOR_WRITE 		VARCHAR2		IN     DEFAULT
+PROCEDURE GETRASTERBLOCKLOCATOR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ PTGEOM 			SDO_GEOMETRY		IN
+ LAYERNUMBER			NUMBER			IN
+ OFFSET 			NUMBER			OUT
+ LOC				BLOB			IN/OUT
+ ISBITMAPMASK			VARCHAR2		IN     DEFAULT
+ LOCK_FOR_WRITE 		VARCHAR2		IN     DEFAULT
+FUNCTION GETRASTERBLOCKS RETURNS SDO_RASTERSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ WINDOW 			SDO_NUMBER_ARRAY	IN
+FUNCTION GETRASTERBLOCKS RETURNS SDO_RASTERSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ WINDOW 			SDO_GEOMETRY		IN
+PROCEDURE GETRASTERDATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ RASTERBLOB			BLOB			IN/OUT
+ STORAGEPARAM			VARCHAR2		IN     DEFAULT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+FUNCTION GETRASTERRANGE RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN     DEFAULT
+PROCEDURE GETRASTERSUBSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ WINDOW 			SDO_NUMBER_ARRAY	IN
+ BANDNUMBERS			VARCHAR2		IN
+ RASTERBLOB			BLOB			IN/OUT
+ STORAGEPARAM			VARCHAR2		IN     DEFAULT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE GETRASTERSUBSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ INWINDOW			SDO_NUMBER_ARRAY	IN
+ BANDNUMBERS			VARCHAR2		IN
+ RASTERBLOB			BLOB			IN/OUT
+ OUTWINDOW			SDO_NUMBER_ARRAY	OUT
+ STORAGEPARAM			VARCHAR2		IN     DEFAULT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE GETRASTERSUBSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ WINDOW 			SDO_GEOMETRY		IN
+ LAYERNUMBERS			VARCHAR2		IN
+ RASTERBLOB			BLOB			IN/OUT
+ STORAGEPARAM			VARCHAR2		IN     DEFAULT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+ POLYGONCLIP			VARCHAR2		IN     DEFAULT
+PROCEDURE GETRASTERSUBSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ INWINDOW			SDO_GEOMETRY		IN
+ LAYERNUMBERS			VARCHAR2		IN
+ RASTERBLOB			BLOB			IN/OUT
+ OUTWINDOW			SDO_NUMBER_ARRAY	OUT
+ STORAGEPARAM			VARCHAR2		IN     DEFAULT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+ POLYGONCLIP			VARCHAR2		IN     DEFAULT
+FUNCTION GETSCALING RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION GETSOURCEINFO RETURNS SDO_STRING2_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETSPATIALDIMNUMBER RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETSPATIALDIMSIZES RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETSPATIALRESOLUTIONS RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETSPECTRALRESOLUTION RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETSPECTRALUNIT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETSRS RETURNS SDO_GEOR_SRS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETSTATISTICS RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION GETTOTALLAYERNUMBER RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETULTCOORDINATE RETURNS SDO_NUMBER_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION GETVAT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION GETVERSION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION HASBITMAPMASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION HASGRAYSCALE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION HASNODATAMASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+FUNCTION HASPSEUDOCOLOR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+ LAYERNUMBER			NUMBER			IN
+PROCEDURE IMPORTFROM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ STORAGEPARAM			VARCHAR2		IN
+ R_SOURCEFORMAT 		VARCHAR2		IN
+ R_SOURCETYPE			VARCHAR2		IN
+ R_SOURCENAME			VARCHAR2		IN
+ H_SOURCEFORMAT 		VARCHAR2		IN     DEFAULT
+ H_SOURCETYPE			VARCHAR2		IN     DEFAULT
+ H_SOURCENAME			VARCHAR2		IN     DEFAULT
+PROCEDURE IMPORTFROM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ STORAGEPARAM			VARCHAR2		IN
+ R_SOURCEFORMAT 		VARCHAR2		IN
+ R_SOURCEBLOB			BLOB			IN
+ H_SOURCEFORMAT 		VARCHAR2		IN     DEFAULT
+ H_SOURCECLOB			CLOB			IN     DEFAULT
+FUNCTION INIT RETURNS SDO_GEORASTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ RASTERDATATABLE		VARCHAR2		IN     DEFAULT
+ RASTERID			NUMBER			IN     DEFAULT
+FUNCTION ISBLANK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION ISLOSSLESS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOR				SDO_GEORASTER		IN
+FUNCTION ISORTHORECTIFIED RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION ISRECTIFIED RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+FUNCTION ISSPATIALREFERENCED RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+PROCEDURE MASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ BANDNUMBERS			VARCHAR2		IN
+ MASK				SDO_GEORASTER		IN     DEFAULT
+ STORAGEPARAM			VARCHAR2		IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+ ZEROMAPPING			NUMBER			IN     DEFAULT
+ ONEMAPPING			NUMBER			IN     DEFAULT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE MERGELAYERS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TARGETGEORASTER		SDO_GEORASTER		IN/OUT
+ SOURCEGEORASTER		SDO_GEORASTER		IN
+ SOURCELAYERNUMBERS		VARCHAR2		IN     DEFAULT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE MERGELAYERS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCE1GEORASTER		SDO_GEORASTER		IN
+ SOURCE1LAYERNUMBERS		VARCHAR2		IN
+ SOURCE2GEORASTER		SDO_GEORASTER		IN
+ SOURCE2LAYERNUMBERS		VARCHAR2		IN
+ STORAGEPARAM			VARCHAR2		IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+ PYRAMIDLEVEL			NUMBER			IN     DEFAULT
+PROCEDURE MOSAIC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTERTABLENAME		VARCHAR2		IN
+ GEORASTERCOLUMNNAME		VARCHAR2		IN
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ STORAGEPARAM			VARCHAR2		IN
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE MOSAIC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTERS			REF CURSOR		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ WINDOW 			SDO_GEOMETRY		IN
+ LAYERNUMBERS			VARCHAR2		IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+ STORAGEPARAM			VARCHAR2		IN
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE RECTIFY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ ELEVATIONPARAM 		VARCHAR2		IN
+ DEM				SDO_GEORASTER		IN
+ OUTSRID			NUMBER			IN
+ OUTMODELCOORDLOC		NUMBER			IN
+ CROPAREA			SDO_GEOMETRY		IN
+ POLYGONCLIP			VARCHAR2		IN
+ LAYERNUMBERS			VARCHAR2		IN
+ OUTRESOLUTIONS 		SDO_NUMBER_ARRAY	IN
+ RESOLUTIONUNIT 		VARCHAR2		IN
+ REFERENCEPOINT 		SDO_GEOMETRY		IN
+ RESAMPLEPARAM			VARCHAR2		IN
+ STORAGEPARAM			VARCHAR2		IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE RECTIFY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ ELEVATIONPARAM 		VARCHAR2		IN
+ DEM				SDO_GEORASTER		IN
+ OUTSRID			NUMBER			IN
+ OUTMODELCOORDLOC		NUMBER			IN
+ CROPAREA			SDO_GEOMETRY		IN
+ POLYGONCLIP			VARCHAR2		IN
+ LAYERNUMBERS			VARCHAR2		IN
+ OUTRESOLUTIONS 		SDO_NUMBER_ARRAY	IN
+ RESOLUTIONUNIT 		VARCHAR2		IN
+ REFERENCEPOINT 		SDO_GEOMETRY		IN
+ RESAMPLEPARAM			VARCHAR2		IN
+ STORAGEPARAM			VARCHAR2		IN
+ RASTERBLOB			BLOB			IN/OUT
+ OUTAREA			SDO_GEOMETRY		OUT
+ OUTWINDOW			SDO_NUMBER_ARRAY	OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE REPROJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ RESAMPLEPARAM			VARCHAR2		IN
+ STORAGEPARAM			VARCHAR2		IN
+ OUTSRID			NUMBER			IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE REPROJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ CROPAREA			SDO_GEOMETRY		IN
+ LAYERNUMBERS			VARCHAR2		IN
+ RESAMPLEPARAM			VARCHAR2		IN
+ STORAGEPARAM			VARCHAR2		IN
+ OUTSRID			NUMBER			IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE REPROJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ CROPAREA			SDO_NUMBER_ARRAY	IN
+ BANDNUMBERS			VARCHAR2		IN
+ RESAMPLEPARAM			VARCHAR2		IN
+ STORAGEPARAM			VARCHAR2		IN
+ OUTSRID			NUMBER			IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE REPROJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ CROPAREA			SDO_GEOMETRY		IN
+ LAYERNUMBERS			VARCHAR2		IN
+ RESAMPLEPARAM			VARCHAR2		IN
+ STORAGEPARAM			VARCHAR2		IN
+ OUTSRID			NUMBER			IN
+ RASTERBLOB			BLOB			IN/OUT
+ OUTAREA			SDO_GEOMETRY		OUT
+ OUTWINDOW			SDO_NUMBER_ARRAY	OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE REPROJECT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ CROPAREA			SDO_NUMBER_ARRAY	IN
+ BANDNUMBERS			VARCHAR2		IN
+ RESAMPLEPARAM			VARCHAR2		IN
+ STORAGEPARAM			VARCHAR2		IN
+ OUTSRID			NUMBER			IN
+ RASTERBLOB			BLOB			IN/OUT
+ OUTAREA			SDO_GEOMETRY		OUT
+ OUTWINDOW			SDO_NUMBER_ARRAY	OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE SCALE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN/OUT
+ SCALEPARAM			VARCHAR2		IN
+ RESAMPLEPARAM			VARCHAR2		IN
+ STORAGEPARAM			VARCHAR2		IN
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE SCALECOPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ SCALEPARAM			VARCHAR2		IN
+ RESAMPLEPARAM			VARCHAR2		IN
+ STORAGEPARAM			VARCHAR2		IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE SCALECOPY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ SCALEPARAM			VARCHAR2		IN
+ RESAMPLEPARAM			VARCHAR2		IN
+ STORAGEPARAM			VARCHAR2		IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+FUNCTION SCHEMAVALIDATE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+PROCEDURE SETBEGINDATETIME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ BEGINTIME			TIMESTAMP WITH TIME ZONE IN
+PROCEDURE SETBINFUNCTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ BINFUNCTION			SDO_NUMBER_ARRAY	IN
+PROCEDURE SETBINTABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ TABLENAME			VARCHAR2		IN
+PROCEDURE SETBITMAPMASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ MASK				SDO_GEORASTER		IN
+ NODATAMASK			VARCHAR2		IN     DEFAULT
+PROCEDURE SETBLANKCELLVALUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ VALUE				NUMBER			IN
+PROCEDURE SETCOLORMAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ COLORMAP			SDO_GEOR_COLORMAP	IN
+PROCEDURE SETCOLORMAPTABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ TABLENAME			VARCHAR2		IN
+PROCEDURE SETCONTROLPOINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN/OUT
+ CONTROLPOINT			SDO_GEOR_GCP		IN
+PROCEDURE SETDEFAULTALPHA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ DEFAULTALPHA			NUMBER			IN
+PROCEDURE SETDEFAULTBLUE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ DEFAULTBLUE			NUMBER			IN
+PROCEDURE SETDEFAULTCOLORLAYER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ DEFAULTRGB			SDO_NUMBER_ARRAY	IN
+PROCEDURE SETDEFAULTGREEN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ DEFAULTGREEN			NUMBER			IN
+PROCEDURE SETDEFAULTPYRAMIDLEVEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ DEFAULTPYRAMIDLEVEL		NUMBER			IN
+PROCEDURE SETDEFAULTRED
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ DEFAULTRED			NUMBER			IN
+PROCEDURE SETENDDATETIME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ ENDTIME			TIMESTAMP WITH TIME ZONE IN
+PROCEDURE SETGCPGEOREFMETHOD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN/OUT
+ GEOREFMETHOD			VARCHAR2		IN
+PROCEDURE SETGCPGEOREFMODEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN/OUT
+ GCPGEOREFMODEL 		SDO_GEOR_GCPGEOREFTYPE	IN
+PROCEDURE SETGRAYSCALE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ GRAYSCALE			SDO_GEOR_GRAYSCALE	IN
+PROCEDURE SETGRAYSCALETABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ TABLENAME			VARCHAR2		IN
+PROCEDURE SETHISTOGRAMTABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ TABLENAME			VARCHAR2		IN
+PROCEDURE SETID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ ID				VARCHAR2		IN
+PROCEDURE SETLAYERID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ ID				VARCHAR2		IN
+PROCEDURE SETLAYERORDINATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ ORDINATE			NUMBER			IN
+PROCEDURE SETMODELCOORDLOCATION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ MODELCOORDLOC			VARCHAR2		IN
+PROCEDURE SETMODELSRID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ SRID				NUMBER			IN
+PROCEDURE SETNODATAMASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ ISNODATAMASK			VARCHAR2		IN
+PROCEDURE SETORTHORECTIFIED
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ ISORTHORECTIFIED		VARCHAR2		IN
+PROCEDURE SETRASTERTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ RASTERTYPE			NUMBER			IN
+PROCEDURE SETRECTIFIED
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ ISRECTIFIED			VARCHAR2		IN
+PROCEDURE SETSCALING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ SCALINGFUNC			SDO_NUMBER_ARRAY	IN
+PROCEDURE SETSOURCEINFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ SOURCEINFO			VARCHAR2		IN
+PROCEDURE SETSPATIALREFERENCED
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ ISREFERENCED			VARCHAR2		IN
+PROCEDURE SETSPATIALRESOLUTIONS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ RESOLUTIONS			SDO_NUMBER_ARRAY	IN
+PROCEDURE SETSPECTRALRESOLUTION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ RESOLUTION			NUMBER			IN
+PROCEDURE SETSPECTRALUNIT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ UNIT				VARCHAR2		IN
+PROCEDURE SETSRS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ SRS				SDO_GEOR_SRS		IN
+PROCEDURE SETSTATISTICS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ STATISTICS			SDO_NUMBER_ARRAY	IN
+PROCEDURE SETSTATISTICS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ STATISTICS			SDO_NUMBER_ARRAY	IN
+ HISTOGRAM			SDO_GEOR_HISTOGRAM	IN
+ SAMPLINGFACTOR 		NUMBER			IN     DEFAULT
+ SAMPLINGWINDOW 		SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE SETSTATISTICS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ STATISTICS			SDO_NUMBER_ARRAY	IN
+ HISTOGRAMTABLE 		VARCHAR2		IN
+ SAMPLINGFACTOR 		NUMBER			IN     DEFAULT
+ SAMPLINGWINDOW 		SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE SETULTCOORDINATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ ULTCOORD			SDO_NUMBER_ARRAY	IN
+PROCEDURE SETVAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ LAYERNUMBER			NUMBER			IN
+ VATNAME			VARCHAR2		IN
+PROCEDURE SETVERSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN/OUT
+ MAJORVERSION			VARCHAR2		IN
+ MINORVERSION			VARCHAR2		IN
+PROCEDURE SUBSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ CROPAREA			SDO_GEOMETRY		IN
+ LAYERNUMBERS			VARCHAR2		IN
+ STORAGEPARAM			VARCHAR2		IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+ POLYGONCLIP			VARCHAR2		IN     DEFAULT
+PROCEDURE SUBSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ CROPAREA			SDO_NUMBER_ARRAY	IN
+ BANDNUMBERS			VARCHAR2		IN
+ STORAGEPARAM			VARCHAR2		IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE SUBSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ CROPAREA			SDO_GEOMETRY		IN
+ LAYERNUMBERS			VARCHAR2		IN
+ STORAGEPARAM			VARCHAR2		IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+ POLYGONCLIP			VARCHAR2		IN     DEFAULT
+PROCEDURE SUBSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INGEORASTER			SDO_GEORASTER		IN
+ PYRAMIDLEVEL			NUMBER			IN
+ CROPAREA			SDO_NUMBER_ARRAY	IN
+ BANDNUMBERS			VARCHAR2		IN
+ STORAGEPARAM			VARCHAR2		IN
+ OUTGEORASTER			SDO_GEORASTER		IN/OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE UPDATERASTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TARGETGEORASTER		SDO_GEORASTER		IN/OUT
+ TARGETPYRAMIDLEVEL		NUMBER			IN
+ TARGETLAYERNUMBERS		VARCHAR2		IN
+ TARGETAREA			SDO_GEOMETRY		IN
+ SOURCEGEORASTER		SDO_GEORASTER		IN
+ SOURCEPYRAMIDLEVEL		NUMBER			IN
+ SOURCELAYERNUMBERS		VARCHAR2		IN
+ UPDATEUPPERPYRAMIDS		VARCHAR2		IN
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE UPDATERASTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TARGETGEORASTER		SDO_GEORASTER		IN/OUT
+ TARGETPYRAMIDLEVEL		NUMBER			IN
+ TARGETBANDNUMBERS		VARCHAR2		IN
+ TARGETAREA			SDO_NUMBER_ARRAY	IN
+ SOURCEGEORASTER		SDO_GEORASTER		IN
+ SOURCEPYRAMIDLEVEL		NUMBER			IN
+ SOURCEBANDNUMBERS		VARCHAR2		IN
+ UPDATEUPPERPYRAMIDS		VARCHAR2		IN
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+FUNCTION VALIDATEBLOCKMBR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+PROCEDURE VALIDATEFORMOSAIC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTERTABLENAME		VARCHAR2		IN
+ GEORASTERCOLUMNNAME		VARCHAR2		IN
+ RESULTTABLENAME		VARCHAR2		IN
+FUNCTION VALIDATEGEORASTER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEORASTER			SDO_GEORASTER		IN
+

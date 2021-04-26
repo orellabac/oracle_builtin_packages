@@ -1,0 +1,121 @@
+FUNCTION ENCODE_SQL_XML RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ FLAG				BINARY_INTEGER		IN     DEFAULT
+FUNCTION ESCAPE_REFERENCE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STR				VARCHAR2		IN
+ PAGE_CS_NAME			VARCHAR2		IN     DEFAULT
+FUNCTION GET_COMMON_TIME_ZONES RETURNS TABLE OF VARCHAR2(32767)
+FUNCTION GET_DEFAULT_CHARSET RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LANGUAGE			VARCHAR2		IN
+ CONTEXT			BINARY_INTEGER		IN     DEFAULT
+ ISWINDOWS			BOOLEAN 		IN     DEFAULT
+FUNCTION GET_DEFAULT_ISO_CURRENCY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TERRITORY			VARCHAR2		IN
+FUNCTION GET_DEFAULT_LINGUISTIC_SORT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LANGUAGE			VARCHAR2		IN
+FUNCTION GET_LOCAL_LANGUAGES RETURNS TABLE OF VARCHAR2(32767)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TERRITORY			VARCHAR2		IN
+FUNCTION GET_LOCAL_LINGUISTIC_SORTS RETURNS TABLE OF VARCHAR2(32767)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LANGUAGE			VARCHAR2		IN
+FUNCTION GET_LOCAL_TERRITORIES RETURNS TABLE OF VARCHAR2(32767)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LANGUAGE			VARCHAR2		IN
+FUNCTION GET_LOCAL_TIME_ZONES RETURNS TABLE OF VARCHAR2(32767)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TERRITORY			VARCHAR2		IN
+FUNCTION GET_MAX_CHARACTER_SIZE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHARSET_NAME			VARCHAR2		IN
+FUNCTION GET_TRANSLATION RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAM1 			VARCHAR2		IN
+ TRANS_LANGUAGE 		VARCHAR2		IN     DEFAULT
+ FLAG				BINARY_INTEGER		IN     DEFAULT
+FUNCTION MAP_CHARSET RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CHARSET			VARCHAR2		IN
+ CONTEXT			BINARY_INTEGER		IN     DEFAULT
+ FLAG				BINARY_INTEGER		IN     DEFAULT
+FUNCTION MAP_FROM_SHORT_LANGUAGE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LANGUAGE			VARCHAR2		IN
+FUNCTION MAP_LANGUAGE_FROM_ISO RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ISOLOCALE			VARCHAR2		IN
+FUNCTION MAP_LOCALE_TO_ISO RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ORA_LANGUAGE			VARCHAR2		IN
+ ORA_TERRITORY			VARCHAR2		IN
+FUNCTION MAP_TERRITORY_FROM_ISO RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ISOLOCALE			VARCHAR2		IN
+FUNCTION MAP_TO_SHORT_LANGUAGE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LANGUAGE			VARCHAR2		IN
+FUNCTION RAW_TO_CHAR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA				RAW			IN
+ SRC_CHARSET			VARCHAR2		IN     DEFAULT
+FUNCTION RAW_TO_CHAR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA				RAW			IN
+ SRC_CHARSET			VARCHAR2		IN     DEFAULT
+ SCANNED_LENGTH 		BINARY_INTEGER		OUT
+ SHIFT_STATUS			BINARY_INTEGER		IN/OUT
+FUNCTION RAW_TO_NCHAR RETURNS NVARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA				RAW			IN
+ SRC_CHARSET			VARCHAR2		IN     DEFAULT
+FUNCTION RAW_TO_NCHAR RETURNS NVARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA				RAW			IN
+ SRC_CHARSET			VARCHAR2		IN     DEFAULT
+ SCANNED_LENGTH 		BINARY_INTEGER		OUT
+ SHIFT_STATUS			BINARY_INTEGER		IN/OUT
+FUNCTION STRING_TO_RAW RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA				VARCHAR2		IN
+ DST_CHARSET			VARCHAR2		IN     DEFAULT
+FUNCTION TRANSLITERATE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATA				VARCHAR2		IN
+ NAME				VARCHAR2		IN
+FUNCTION UNESCAPE_REFERENCE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STR				VARCHAR2		IN
+FUNCTION VALIDATE_SQLNAME RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+

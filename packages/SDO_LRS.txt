@@ -1,0 +1,1184 @@
+FUNCTION CLIP_GEOM_SEGMENT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+FUNCTION CLIP_GEOM_SEGMENT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION CLIP_GEOM_SEGMENT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+FUNCTION CLIP_GEOM_SEGMENT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION CONCATENATE_GEOM_SEGMENTS RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT_1 		SDO_GEOMETRY		IN
+ DIM_ARRAY_1			SDO_DIM_ARRAY		IN
+ GEOM_SEGMENT_2 		SDO_GEOMETRY		IN
+ DIM_ARRAY_2			SDO_DIM_ARRAY		IN
+FUNCTION CONCATENATE_GEOM_SEGMENTS RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT_1 		SDO_GEOMETRY		IN
+ GEOM_SEGMENT_2 		SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION CONCATENATE_GEOM_SEGMENTS_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT_1 		SDO_GEOMETRY		IN
+ DIM_ARRAY_1			SDO_DIM_ARRAY		IN
+ GEOM_SEGMENT_2 		SDO_GEOMETRY		IN
+ DIM_ARRAY_2			SDO_DIM_ARRAY		IN
+FUNCTION CONCATENATE_GEOM_SEGMENTS_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT_1 		SDO_GEOMETRY		IN
+ GEOM_SEGMENT_2 		SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION CONNECTED_GEOM_SEGMENTS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT_1 		SDO_GEOMETRY		IN
+ DIM_ARRAY_1			SDO_DIM_ARRAY		IN
+ GEOM_SEGMENT_2 		SDO_GEOMETRY		IN
+ DIM_ARRAY_2			SDO_DIM_ARRAY		IN
+FUNCTION CONNECTED_GEOM_SEGMENTS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT_1 		SDO_GEOMETRY		IN
+ GEOM_SEGMENT_2 		SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+FUNCTION CONNECTED_GEOM_SEGMENTS_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT_1 		SDO_GEOMETRY		IN
+ DIM_ARRAY_1			SDO_DIM_ARRAY		IN
+ GEOM_SEGMENT_2 		SDO_GEOMETRY		IN
+ DIM_ARRAY_2			SDO_DIM_ARRAY		IN
+FUNCTION CONNECTED_GEOM_SEGMENTS_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT_1 		SDO_GEOMETRY		IN
+ GEOM_SEGMENT_2 		SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+FUNCTION CONVERT_TO_LRS_DIM_ARRAY RETURNS SDO_DIM_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ DIM_NAME			VARCHAR2		IN
+ DIM_POS			NUMBER(38)		IN
+ LOWER_BOUND			NUMBER			IN     DEFAULT
+ UPPER_BOUND			NUMBER			IN     DEFAULT
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION CONVERT_TO_LRS_DIM_ARRAY RETURNS SDO_DIM_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ DIM_NAME			VARCHAR2		IN
+ LOWER_BOUND			NUMBER			IN     DEFAULT
+ UPPER_BOUND			NUMBER			IN     DEFAULT
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION CONVERT_TO_LRS_DIM_ARRAY RETURNS SDO_DIM_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ LOWER_BOUND			NUMBER			IN     DEFAULT
+ UPPER_BOUND			NUMBER			IN     DEFAULT
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION CONVERT_TO_LRS_DIM_ARRAY_3D RETURNS SDO_DIM_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ DIM_NAME			VARCHAR2		IN
+ LOWER_BOUND			NUMBER			IN     DEFAULT
+ UPPER_BOUND			NUMBER			IN     DEFAULT
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION CONVERT_TO_LRS_GEOM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STANDARD_GEOM			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ M_POS				NUMBER(38)		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+FUNCTION CONVERT_TO_LRS_GEOM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STANDARD_GEOM			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ M_POS				NUMBER(38)		IN     DEFAULT
+FUNCTION CONVERT_TO_LRS_GEOM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STANDARD_GEOM			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+FUNCTION CONVERT_TO_LRS_GEOM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STANDARD_GEOM			SDO_GEOMETRY		IN
+ M_POS				NUMBER(38)		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+FUNCTION CONVERT_TO_LRS_GEOM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STANDARD_GEOM			SDO_GEOMETRY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+FUNCTION CONVERT_TO_LRS_GEOM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STANDARD_GEOM			SDO_GEOMETRY		IN
+ M_POS				NUMBER(38)		IN
+FUNCTION CONVERT_TO_LRS_GEOM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STANDARD_GEOM			SDO_GEOMETRY		IN
+FUNCTION CONVERT_TO_LRS_GEOM_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STANDARD_GEOM			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ START_MEASURE			NUMBER			IN     DEFAULT
+ END_MEASURE			NUMBER			IN     DEFAULT
+FUNCTION CONVERT_TO_LRS_GEOM_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STANDARD_GEOM			SDO_GEOMETRY		IN
+ START_MEASURE			NUMBER			IN     DEFAULT
+ END_MEASURE			NUMBER			IN     DEFAULT
+FUNCTION CONVERT_TO_LRS_LAYER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+ LOWER_BOUND			NUMBER			IN     DEFAULT
+ UPPER_BOUND			NUMBER			IN     DEFAULT
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION CONVERT_TO_LRS_LAYER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+ DIM_NAME			VARCHAR2		IN
+ DIM_POS			NUMBER(38)		IN
+ LOWER_BOUND			NUMBER			IN     DEFAULT
+ UPPER_BOUND			NUMBER			IN     DEFAULT
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION CONVERT_TO_LRS_LAYER_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+ LOWER_BOUND			NUMBER			IN     DEFAULT
+ UPPER_BOUND			NUMBER			IN     DEFAULT
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION CONVERT_TO_LRS_LAYER_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+ DIM_NAME			VARCHAR2		IN
+ LOWER_BOUND			NUMBER			IN     DEFAULT
+ UPPER_BOUND			NUMBER			IN     DEFAULT
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION CONVERT_TO_STD_DIM_ARRAY RETURNS SDO_DIM_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION CONVERT_TO_STD_DIM_ARRAY RETURNS SDO_DIM_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ M_POS				NUMBER(38)		IN
+FUNCTION CONVERT_TO_STD_DIM_ARRAY_3D RETURNS SDO_DIM_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION CONVERT_TO_STD_GEOM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LRS_GEOM			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION CONVERT_TO_STD_GEOM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LRS_GEOM			SDO_GEOMETRY		IN
+FUNCTION CONVERT_TO_STD_GEOM_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LRS_GEOM			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION CONVERT_TO_STD_GEOM_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LRS_GEOM			SDO_GEOMETRY		IN
+FUNCTION CONVERT_TO_STD_LAYER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+FUNCTION CONVERT_TO_STD_LAYER_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+PROCEDURE DEFINE_GEOM_SEGMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+PROCEDURE DEFINE_GEOM_SEGMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+PROCEDURE DEFINE_GEOM_SEGMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+PROCEDURE DEFINE_GEOM_SEGMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ TOLERANCE			NUMBER			IN     DEFAULT
+PROCEDURE DEFINE_GEOM_SEGMENT_3D
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+PROCEDURE DEFINE_GEOM_SEGMENT_3D
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+PROCEDURE DEFINE_GEOM_SEGMENT_3D
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+PROCEDURE DEFINE_GEOM_SEGMENT_3D
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION DYNAMIC_SEGMENT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+FUNCTION DYNAMIC_SEGMENT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION DYNAMIC_SEGMENT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+FUNCTION DYNAMIC_SEGMENT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION FIND_LRS_DIM_POS RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+FUNCTION FIND_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+ POINT_DIM_ARRAY		SDO_DIM_ARRAY		IN     DEFAULT
+FUNCTION FIND_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ POINT				SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION FIND_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+ POINT_DIM_ARRAY		SDO_DIM_ARRAY		IN     DEFAULT
+FUNCTION FIND_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ POINT				SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION FIND_OFFSET RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+ POINT_DIM_ARRAY		SDO_DIM_ARRAY		IN     DEFAULT
+FUNCTION FIND_OFFSET RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ POINT				SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION GEOM_SEGMENT_END_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION GEOM_SEGMENT_END_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION GEOM_SEGMENT_END_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION GEOM_SEGMENT_END_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION GEOM_SEGMENT_END_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION GEOM_SEGMENT_END_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION GEOM_SEGMENT_END_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION GEOM_SEGMENT_END_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION GEOM_SEGMENT_LENGTH RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION GEOM_SEGMENT_LENGTH RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION GEOM_SEGMENT_LENGTH_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION GEOM_SEGMENT_LENGTH_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION GEOM_SEGMENT_START_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION GEOM_SEGMENT_START_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION GEOM_SEGMENT_START_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION GEOM_SEGMENT_START_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION GEOM_SEGMENT_START_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION GEOM_SEGMENT_START_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION GEOM_SEGMENT_START_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION GEOM_SEGMENT_START_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION GET_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POINT				SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION GET_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POINT				SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION GET_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_NEXT_SHAPE_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_NEXT_SHAPE_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_NEXT_SHAPE_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_NEXT_SHAPE_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_NEXT_SHAPE_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_NEXT_SHAPE_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_NEXT_SHAPE_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_NEXT_SHAPE_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_NEXT_SHAPE_PT_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_NEXT_SHAPE_PT_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_NEXT_SHAPE_PT_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_NEXT_SHAPE_PT_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_NEXT_SHAPE_PT_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_NEXT_SHAPE_PT_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_NEXT_SHAPE_PT_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_NEXT_SHAPE_PT_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_PREV_SHAPE_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_PREV_SHAPE_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_PREV_SHAPE_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_PREV_SHAPE_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_PREV_SHAPE_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_PREV_SHAPE_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_PREV_SHAPE_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_PREV_SHAPE_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_PREV_SHAPE_PT_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_PREV_SHAPE_PT_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_PREV_SHAPE_PT_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_PREV_SHAPE_PT_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_PREV_SHAPE_PT_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_PREV_SHAPE_PT_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+FUNCTION GET_PREV_SHAPE_PT_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION GET_PREV_SHAPE_PT_MEASURE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION IS_GEOM_SEGMENT_DEFINED RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION IS_GEOM_SEGMENT_DEFINED RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION IS_GEOM_SEGMENT_DEFINED_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION IS_GEOM_SEGMENT_DEFINED_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION IS_MEASURE_DECREASING RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION IS_MEASURE_DECREASING RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION IS_MEASURE_DECREASING_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION IS_MEASURE_DECREASING_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION IS_MEASURE_INCREASING RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION IS_MEASURE_INCREASING RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION IS_MEASURE_INCREASING_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION IS_MEASURE_INCREASING_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION IS_SHAPE_PT_MEASURE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION IS_SHAPE_PT_MEASURE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+FUNCTION IS_SHAPE_PT_MEASURE_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION IS_SHAPE_PT_MEASURE_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+FUNCTION LOCATE_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+ OFFSET 			NUMBER			IN     DEFAULT
+FUNCTION LOCATE_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+ OFFSET 			NUMBER			IN     DEFAULT
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION LOCATE_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION LOCATE_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION LRS_INTERSECTION RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_1 			SDO_GEOMETRY		IN
+ DIM_ARRAY_1			SDO_DIM_ARRAY		IN
+ GEOM_2 			SDO_GEOMETRY		IN
+ DIM_ARRAY_2			SDO_DIM_ARRAY		IN
+FUNCTION LRS_INTERSECTION RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_1 			SDO_GEOMETRY		IN
+ GEOM_2 			SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+FUNCTION MEASURE_RANGE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION MEASURE_RANGE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION MEASURE_RANGE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION MEASURE_RANGE_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION MEASURE_TO_PERCENTAGE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION MEASURE_TO_PERCENTAGE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+FUNCTION OFFSET_GEOM_SEGMENT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+ OFFSET 			NUMBER			IN
+ UNIT				VARCHAR2		IN
+FUNCTION OFFSET_GEOM_SEGMENT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+ OFFSET 			NUMBER			IN
+ TOLERANCE			NUMBER			IN
+ UNIT				VARCHAR2		IN
+FUNCTION OFFSET_GEOM_SEGMENT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+ OFFSET 			NUMBER			IN
+FUNCTION OFFSET_GEOM_SEGMENT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+ OFFSET 			NUMBER			IN
+ TOLERANCE			NUMBER			IN
+FUNCTION OFFSET_GEOM_SEGMENT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+ OFFSET 			NUMBER			IN
+FUNCTION PERCENTAGE_TO_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ PERCENTAGE			NUMBER			IN
+FUNCTION PERCENTAGE_TO_MEASURE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ PERCENTAGE			NUMBER			IN
+FUNCTION PROJECT_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+ POINT_DIM_ARRAY		SDO_DIM_ARRAY		IN
+FUNCTION PROJECT_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION PROJECT_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+ POINT_DIM_ARRAY		SDO_DIM_ARRAY		IN
+ OFFSET 			NUMBER			OUT
+FUNCTION PROJECT_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ POINT				SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION PROJECT_PT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ POINT				SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+ OFFSET 			NUMBER			OUT
+FUNCTION PROJECT_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+ POINT_DIM_ARRAY		SDO_DIM_ARRAY		IN
+FUNCTION PROJECT_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+FUNCTION PROJECT_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+ POINT_DIM_ARRAY		SDO_DIM_ARRAY		IN
+ OFFSET 			NUMBER			OUT
+FUNCTION PROJECT_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ POINT				SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION PROJECT_PT_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ POINT				SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+ OFFSET 			NUMBER			OUT
+PROCEDURE REDEFINE_GEOM_SEGMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+PROCEDURE REDEFINE_GEOM_SEGMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+PROCEDURE REDEFINE_GEOM_SEGMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+PROCEDURE REDEFINE_GEOM_SEGMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ TOLERANCE			NUMBER			IN     DEFAULT
+PROCEDURE REDEFINE_GEOM_SEGMENT_3D
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+PROCEDURE REDEFINE_GEOM_SEGMENT_3D
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+PROCEDURE REDEFINE_GEOM_SEGMENT_3D
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+PROCEDURE REDEFINE_GEOM_SEGMENT_3D
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ TOLERANCE			NUMBER			IN     DEFAULT
+PROCEDURE RESET_MEASURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+PROCEDURE RESET_MEASURE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+FUNCTION REVERSE_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION REVERSE_GEOMETRY RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+FUNCTION REVERSE_MEASURE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION REVERSE_MEASURE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION REVERSE_MEASURE_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION REVERSE_MEASURE_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION SCALE_GEOM_SEGMENT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+ SHIFT_MEASURE			NUMBER			IN
+FUNCTION SCALE_GEOM_SEGMENT RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ START_MEASURE			NUMBER			IN
+ END_MEASURE			NUMBER			IN
+ SHIFT_MEASURE			NUMBER			IN
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION SET_PT_MEASURE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+ PT_DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION SET_PT_MEASURE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POINT				SDO_GEOMETRY		IN/OUT
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION SET_PT_MEASURE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POINT				SDO_GEOMETRY		IN/OUT
+ MEASURE			NUMBER			IN
+FUNCTION SET_PT_MEASURE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ POINT				SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+FUNCTION SET_PT_MEASURE_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ POINT				SDO_GEOMETRY		IN
+ PT_DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION SET_PT_MEASURE_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN/OUT
+ POINT				SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+PROCEDURE SPLIT_GEOM_SEGMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ SPLIT_MEASURE			NUMBER			IN
+ SEGMENT_1			SDO_GEOMETRY		OUT
+ SEGMENT_2			SDO_GEOMETRY		OUT
+PROCEDURE SPLIT_GEOM_SEGMENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ SPLIT_MEASURE			NUMBER			IN
+ SEGMENT_1			SDO_GEOMETRY		OUT
+ SEGMENT_2			SDO_GEOMETRY		OUT
+ TOLERANCE			NUMBER			IN     DEFAULT
+PROCEDURE SPLIT_GEOM_SEGMENT_3D
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ SPLIT_MEASURE			NUMBER			IN
+ SEGMENT_1			SDO_GEOMETRY		OUT
+ SEGMENT_2			SDO_GEOMETRY		OUT
+PROCEDURE SPLIT_GEOM_SEGMENT_3D
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ SPLIT_MEASURE			NUMBER			IN
+ SEGMENT_1			SDO_GEOMETRY		OUT
+ SEGMENT_2			SDO_GEOMETRY		OUT
+ TOLERANCE			NUMBER			IN     DEFAULT
+FUNCTION TRANSLATE_MEASURE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ TRANSLATE_M			NUMBER			IN
+FUNCTION TRANSLATE_MEASURE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ TRANSLATE_M			NUMBER			IN
+FUNCTION TRANSLATE_MEASURE_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ TRANSLATE_M			NUMBER			IN
+FUNCTION TRANSLATE_MEASURE_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ TRANSLATE_M			NUMBER			IN
+FUNCTION VALIDATE_LRS_GEOMETRY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION VALIDATE_LRS_GEOMETRY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION VALIDATE_LRS_GEOMETRY_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION VALIDATE_LRS_GEOMETRY_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION VALID_GEOM_SEGMENT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION VALID_GEOM_SEGMENT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION VALID_GEOM_SEGMENT_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION VALID_GEOM_SEGMENT_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+FUNCTION VALID_LRS_PT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POINT				SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION VALID_LRS_PT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POINT				SDO_GEOMETRY		IN
+FUNCTION VALID_LRS_PT_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POINT				SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+FUNCTION VALID_LRS_PT_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POINT				SDO_GEOMETRY		IN
+FUNCTION VALID_MEASURE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION VALID_MEASURE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+FUNCTION VALID_MEASURE_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ DIM_ARRAY			SDO_DIM_ARRAY		IN
+ MEASURE			NUMBER			IN
+FUNCTION VALID_MEASURE_3D RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM_SEGMENT			SDO_GEOMETRY		IN
+ MEASURE			NUMBER			IN
+

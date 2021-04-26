@@ -1,0 +1,68 @@
+PROCEDURE CALCOPTIMIZEDBLOCKSIZE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DIMENSIONSIZE			SDO_NUMBER_ARRAY	IN
+ BLOCKSIZE			SDO_NUMBER_ARRAY	IN/OUT
+ PYRAMIDLEVEL			NUMBER			IN     DEFAULT
+FUNCTION CALCRASTERNOMINALSIZE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOR				SDO_GEORASTER		IN
+ PADDING			VARCHAR2		IN     DEFAULT
+ PYRAMID			VARCHAR2		IN     DEFAULT
+ BITMAPMASK			VARCHAR2		IN     DEFAULT
+FUNCTION CALCRASTERSTORAGESIZE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOR				SDO_GEORASTER		IN
+PROCEDURE CLEARREPORTTABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_ID			NUMBER			IN     DEFAULT
+PROCEDURE CREATEDMLTRIGGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLENAME			VARCHAR2		IN
+ COLUMNNAME			VARCHAR2		IN
+PROCEDURE CREATEREPORTTABLE
+PROCEDURE DISABLEREPORT
+PROCEDURE DROPREPORTTABLE
+PROCEDURE EMPTYBLOCKS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOR				SDO_GEORASTER		IN/OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+PROCEDURE ENABLEREPORT
+PROCEDURE FILLEMPTYBLOCKS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOR				SDO_GEORASTER		IN/OUT
+ BGVALUES			SDO_NUMBER_ARRAY	IN     DEFAULT
+FUNCTION GETALLSTATUSREPORT RETURNS SDO_STRING2_ARRAYSET
+FUNCTION GETPROGRESS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_ID			NUMBER			IN
+ SEQ_ID 			NUMBER			IN     DEFAULT
+FUNCTION GETSTATUSREPORT RETURNS SDO_STRING2_ARRAY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_ID			NUMBER			IN
+ SEQ_ID 			NUMBER			IN     DEFAULT
+FUNCTION ISREPORTING RETURNS NUMBER
+PROCEDURE MAKERDTNAMESUNIQUE
+PROCEDURE RECREATEDMLTRIGGERS
+PROCEDURE RENAMERDT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OLDRDTS			VARCHAR2		IN
+ NEWRDTS			VARCHAR2		IN     DEFAULT
+PROCEDURE SETCLIENTID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CLIENT_ID			NUMBER			IN
+PROCEDURE SETSEQID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SEQ_ID 			NUMBER			IN
+

@@ -1,0 +1,144 @@
+PROCEDURE CANCEL_ANALYSIS_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+FUNCTION CREATE_ANALYSIS_TASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_TEXT			CLOB			IN
+ BIND_LIST			SQL_BINDS		IN     DEFAULT
+ PARSING_SCHEMA 		VARCHAR2		IN     DEFAULT
+ TASK_NAME			VARCHAR2		IN     DEFAULT
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ CON_DBID			NUMBER			IN     DEFAULT
+FUNCTION CREATE_ANALYSIS_TASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_ID 			VARCHAR2		IN
+ PLAN_HASH_VALUE		NUMBER			IN     DEFAULT
+ TASK_NAME			VARCHAR2		IN     DEFAULT
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ CON_NAME			VARCHAR2		IN     DEFAULT
+FUNCTION CREATE_ANALYSIS_TASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BEGIN_SNAP			NUMBER			IN
+ END_SNAP			NUMBER			IN
+ SQL_ID 			VARCHAR2		IN
+ PLAN_HASH_VALUE		NUMBER			IN     DEFAULT
+ TASK_NAME			VARCHAR2		IN     DEFAULT
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ CON_NAME			VARCHAR2		IN     DEFAULT
+FUNCTION CREATE_ANALYSIS_TASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQLSET_NAME			VARCHAR2		IN     DEFAULT
+ BASIC_FILTER			VARCHAR2		IN     DEFAULT
+ ORDER_BY			VARCHAR2		IN     DEFAULT
+ TOP_SQL			NUMBER			IN     DEFAULT
+ TASK_NAME			VARCHAR2		IN     DEFAULT
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ SQLSET_OWNER			VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_ANALYSIS_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+FUNCTION EXECUTE_ANALYSIS_TASK RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ EXECUTION_TYPE 		VARCHAR2		IN     DEFAULT
+ EXECUTION_NAME 		VARCHAR2		IN     DEFAULT
+ EXECUTION_PARAMS		ARGLIST 		IN     DEFAULT
+ EXECUTION_DESC 		VARCHAR2		IN     DEFAULT
+PROCEDURE EXECUTE_ANALYSIS_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ EXECUTION_TYPE 		VARCHAR2		IN     DEFAULT
+ EXECUTION_NAME 		VARCHAR2		IN     DEFAULT
+ EXECUTION_PARAMS		ARGLIST 		IN     DEFAULT
+ EXECUTION_DESC 		VARCHAR2		IN     DEFAULT
+FUNCTION GET_SESS_OPTIMIZER_ENV RETURNS RAW
+PROCEDURE INTERRUPT_ANALYSIS_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+PROCEDURE REMOTE_PROCESS_SQL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SQL_TEXT			CLOB			IN
+ PARSING_SCHEMA 		VARCHAR2		IN
+ BIND_DATA			RAW			IN
+ BIND_LIST			SQL_BINDS		IN
+ ACTION 			VARCHAR2		IN
+ TIME_LIMIT			NUMBER			IN
+ PLAN_HASH1			NUMBER			OUT
+ BUFFER_GETS			NUMBER			OUT
+ CPU_TIME			NUMBER			OUT
+ ELAPSED_TIME			NUMBER			OUT
+ DISK_READS			NUMBER			OUT
+ DISK_WRITES			NUMBER			OUT
+ ROWS_PROCESSED 		NUMBER			OUT
+ OPTIMIZER_COST 		NUMBER			OUT
+ PARSE_TIME			NUMBER			OUT
+ ERR_CODE			NUMBER			OUT
+ ERR_MESG			VARCHAR2		OUT
+ TRACE_FLAGS			BINARY_INTEGER		IN     DEFAULT
+ EXTRA_RES			VARCHAR2		OUT
+ OTHER_XML			VARCHAR2		IN/OUT
+ PHYSICAL_READ_REQUESTS 	NUMBER			OUT
+ PHYSICAL_WRITE_REQUESTS	NUMBER			OUT
+ PHYSICAL_READ_BYTES		NUMBER			OUT
+ PHYSICAL_WRITE_BYTES		NUMBER			OUT
+ USER_IO_TIME			NUMBER			OUT
+ PLAN_HASH2			NUMBER			OUT
+ IO_INTERCONNECT_BYTES		NUMBER			OUT
+ ACTION_FLAGS			BINARY_INTEGER		IN     DEFAULT
+ CONTROL_OPTIONS_XML		VARCHAR2		IN     DEFAULT
+ CON_DBID			NUMBER			IN     DEFAULT
+ CON_NAME			VARCHAR2		OUT
+FUNCTION REPORT_ANALYSIS_TASK RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ TYPE				VARCHAR2		IN     DEFAULT
+ LEVEL				VARCHAR2		IN     DEFAULT
+ SECTION			VARCHAR2		IN     DEFAULT
+ OBJECT_ID			NUMBER			IN     DEFAULT
+ TOP_SQL			NUMBER			IN     DEFAULT
+ EXECUTION_NAME 		VARCHAR2		IN     DEFAULT
+ TASK_OWNER			VARCHAR2		IN     DEFAULT
+ ORDER_BY			VARCHAR2		IN     DEFAULT
+PROCEDURE RESET_ANALYSIS_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+PROCEDURE RESUME_ANALYSIS_TASK
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ BASIC_FILTER			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_ANALYSIS_DEFAULT_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAMETER			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE SET_ANALYSIS_DEFAULT_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAMETER			VARCHAR2		IN
+ VALUE				NUMBER			IN
+PROCEDURE SET_ANALYSIS_TASK_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ PARAMETER			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE SET_ANALYSIS_TASK_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME			VARCHAR2		IN
+ PARAMETER			VARCHAR2		IN
+ VALUE				NUMBER			IN
+

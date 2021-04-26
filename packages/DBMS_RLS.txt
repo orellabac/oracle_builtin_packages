@@ -1,0 +1,131 @@
+PROCEDURE ADD_GROUPED_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ POLICY_GROUP			VARCHAR2		IN     DEFAULT
+ POLICY_NAME			VARCHAR2		IN
+ FUNCTION_SCHEMA		VARCHAR2		IN     DEFAULT
+ POLICY_FUNCTION		VARCHAR2		IN
+ STATEMENT_TYPES		VARCHAR2		IN     DEFAULT
+ UPDATE_CHECK			BOOLEAN 		IN     DEFAULT
+ ENABLE 			BOOLEAN 		IN     DEFAULT
+ STATIC_POLICY			BOOLEAN 		IN     DEFAULT
+ POLICY_TYPE			BINARY_INTEGER		IN     DEFAULT
+ LONG_PREDICATE 		BOOLEAN 		IN     DEFAULT
+ SEC_RELEVANT_COLS		VARCHAR2		IN     DEFAULT
+ SEC_RELEVANT_COLS_OPT		BINARY_INTEGER		IN     DEFAULT
+ NAMESPACE			VARCHAR2		IN     DEFAULT
+ ATTRIBUTE			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ POLICY_NAME			VARCHAR2		IN
+ FUNCTION_SCHEMA		VARCHAR2		IN     DEFAULT
+ POLICY_FUNCTION		VARCHAR2		IN
+ STATEMENT_TYPES		VARCHAR2		IN     DEFAULT
+ UPDATE_CHECK			BOOLEAN 		IN     DEFAULT
+ ENABLE 			BOOLEAN 		IN     DEFAULT
+ STATIC_POLICY			BOOLEAN 		IN     DEFAULT
+ POLICY_TYPE			BINARY_INTEGER		IN     DEFAULT
+ LONG_PREDICATE 		BOOLEAN 		IN     DEFAULT
+ SEC_RELEVANT_COLS		VARCHAR2		IN     DEFAULT
+ SEC_RELEVANT_COLS_OPT		BINARY_INTEGER		IN     DEFAULT
+ NAMESPACE			VARCHAR2		IN     DEFAULT
+ ATTRIBUTE			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_POLICY_CONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ NAMESPACE			VARCHAR2		IN
+ ATTRIBUTE			VARCHAR2		IN
+PROCEDURE ALTER_GROUPED_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ POLICY_GROUP			VARCHAR2		IN     DEFAULT
+ POLICY_NAME			VARCHAR2		IN
+ ALTER_OPTION			BINARY_INTEGER		IN     DEFAULT
+ NAMESPACE			VARCHAR2		IN
+ ATTRIBUTE			VARCHAR2		IN
+PROCEDURE ALTER_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ POLICY_NAME			VARCHAR2		IN
+ ALTER_OPTION			BINARY_INTEGER		IN     DEFAULT
+ NAMESPACE			VARCHAR2		IN
+ ATTRIBUTE			VARCHAR2		IN
+PROCEDURE CREATE_POLICY_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ POLICY_GROUP			VARCHAR2		IN
+PROCEDURE DELETE_POLICY_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ POLICY_GROUP			VARCHAR2		IN
+PROCEDURE DISABLE_GROUPED_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ GROUP_NAME			VARCHAR2		IN
+ POLICY_NAME			VARCHAR2		IN
+PROCEDURE DROP_GROUPED_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ POLICY_GROUP			VARCHAR2		IN     DEFAULT
+ POLICY_NAME			VARCHAR2		IN
+PROCEDURE DROP_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ POLICY_NAME			VARCHAR2		IN
+PROCEDURE DROP_POLICY_CONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ NAMESPACE			VARCHAR2		IN
+ ATTRIBUTE			VARCHAR2		IN
+PROCEDURE ENABLE_GROUPED_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ GROUP_NAME			VARCHAR2		IN
+ POLICY_NAME			VARCHAR2		IN
+ ENABLE 			BOOLEAN 		IN     DEFAULT
+PROCEDURE ENABLE_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN
+ POLICY_NAME			VARCHAR2		IN
+ ENABLE 			BOOLEAN 		IN     DEFAULT
+PROCEDURE REFRESH_GROUPED_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN     DEFAULT
+ GROUP_NAME			VARCHAR2		IN     DEFAULT
+ POLICY_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE REFRESH_POLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_SCHEMA			VARCHAR2		IN     DEFAULT
+ OBJECT_NAME			VARCHAR2		IN     DEFAULT
+ POLICY_NAME			VARCHAR2		IN     DEFAULT
+

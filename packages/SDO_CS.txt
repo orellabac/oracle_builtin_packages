@@ -1,0 +1,700 @@
+PROCEDURE ADD_PREFERENCE_FOR_OP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OP_ID				NUMBER			IN
+ SOURCE_CRS			NUMBER			IN     DEFAULT
+ TARGET_CRS			NUMBER			IN     DEFAULT
+ USE_CASE			VARCHAR2		IN     DEFAULT
+FUNCTION CONVERT_2D_SRID_TO_3D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID2D 			NUMBER			IN
+ VERT_ID			NUMBER			IN     DEFAULT
+ ELLIPSOIDAL			VARCHAR2		IN     DEFAULT
+ UOM_ID 			NUMBER			IN     DEFAULT
+FUNCTION CONVERT_2D_TO_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM2D 			SDO_GEOMETRY		IN
+ HEIGHT 			NUMBER			IN     DEFAULT
+ VERT_ID			NUMBER			IN     DEFAULT
+ ELLIPSOIDAL			VARCHAR2		IN     DEFAULT
+ UOM_ID 			NUMBER			IN     DEFAULT
+FUNCTION CONVERT_3D_SRID_TO_2D RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID3D 			NUMBER			IN
+FUNCTION CONVERT_MIXED_AXES_UNITS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			IN
+ UNITLESS_VALUE 		NUMBER			IN
+ OUTPUT_UNIT			VARCHAR2		IN
+PROCEDURE CONVERT_NADCON_TO_XML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAA_CLOB			CLOB			IN
+ LOA_CLOB			CLOB			IN
+ XML_GRID			XMLTYPE 		OUT
+PROCEDURE CONVERT_NTV2_TO_XML
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NTV2_CLOB			CLOB			IN
+ XML_GRID			XMLTYPE 		OUT
+PROCEDURE CONVERT_NTV2_TO_XML_TABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NTV2_CLOB			CLOB			IN
+ NTV2_FILE_ID			NUMBER			OUT
+PROCEDURE CONVERT_XML_TABLE_TO_NTV2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NTV2_FILE_ID			NUMBER			IN
+ NTV2_CLOB			CLOB			OUT
+PROCEDURE CONVERT_XML_TO_NADCON
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XML_GRID			XMLTYPE 		IN
+ LAA_CLOB			CLOB			OUT
+ LOA_CLOB			CLOB			OUT
+PROCEDURE CONVERT_XML_TO_NTV2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ XML_GRID			XMLTYPE 		IN
+ NTV2_CLOB			CLOB			OUT
+PROCEDURE CREATE_CONCATENATED_OP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OP_ID				NUMBER			IN
+ OP_NAME			VARCHAR2		IN
+ USE_PLAN			TFM_PLAN		IN
+PROCEDURE CREATE_CRS_USING_LEGACY_PROJ
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EPSG_SRID			NUMBER			IN
+ NEW_SRID			NUMBER			IN
+PROCEDURE CREATE_OBVIOUS_EPSG_RULES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USE_CASE			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_PREF_CONCATENATED_OP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OP_ID				NUMBER			IN
+ OP_NAME			VARCHAR2		IN
+ USE_PLAN			TFM_PLAN		IN
+ USE_CASE			VARCHAR2		IN
+PROCEDURE DECIMAL_DEGREES_TO_DMS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DEC_DEG			NUMBER			IN
+ COORD_DEG			NUMBER(38)		OUT
+ COORD_MIN			NUMBER(38)		OUT
+ COORD_SEC			NUMBER			OUT
+ COORD_DIR			CHAR			OUT
+PROCEDURE DECIMAL_DEGREES_TO_DMS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAT				NUMBER			IN
+ LON				NUMBER			IN
+ LAT_DEG			NUMBER(38)		OUT
+ LAT_MIN			NUMBER(38)		OUT
+ LAT_SEC			NUMBER			OUT
+ LAT_DIR			CHAR			OUT
+ LON_DEG			NUMBER(38)		OUT
+ LON_MIN			NUMBER(38)		OUT
+ LON_SEC			NUMBER			OUT
+ LON_DIR			CHAR			OUT
+PROCEDURE DELETE_ALL_EPSG_RULES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USE_CASE			VARCHAR2		IN     DEFAULT
+PROCEDURE DELETE_NTV2_XML_DATA
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NTV2_FILE_ID			NUMBER			IN
+PROCEDURE DELETE_OP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OP_ID				NUMBER			IN
+FUNCTION DETERMINE_CHAIN RETURNS TFM_PLAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRANSIENT_RULE_SET		SDO_TRANSIENT_RULE_SET	IN
+ USE_CASE			VARCHAR2		IN
+ SOURCE_SRID			NUMBER			IN
+ TARGET_SRID			NUMBER			IN
+FUNCTION DETERMINE_DEFAULT_CHAIN RETURNS SDO_SRID_CHAIN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCE_SRID			NUMBER			IN
+ TARGET_SRID			NUMBER			IN
+FUNCTION DETERMINE_NADCON_COVERAGE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COORD_OP_ID			NUMBER			IN
+PROCEDURE DETERMINE_SRID_UNITS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			IN
+ UOM_ID1			NUMBER			OUT
+ UOM_ID2			NUMBER			OUT
+ UOM_ID3			NUMBER			OUT
+FUNCTION DISAMBIGUATE_PROJ_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			IN
+ WKT				VARCHAR2		IN
+FUNCTION DISAMBIGUATE_PROJ_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			IN
+FUNCTION DMS_TO_DECIMAL_DEGREE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LAT_DEG			VARCHAR2		IN
+ LAT_MIN			VARCHAR2		IN
+ LAT_SEC			VARCHAR2		IN
+ LAT_DIR			CHAR			IN
+ LON_DEG			VARCHAR2		IN
+ LON_MIN			VARCHAR2		IN
+ LON_SEC			VARCHAR2		IN
+ LON_DIR			CHAR			IN
+ SRID				NUMBER			IN     DEFAULT
+FUNCTION FILL_IN_DEFAULT_UNITS RETURNS EPSG_PARAMS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAMS 			EPSG_PARAMS		IN
+ CRS				NUMBER			IN
+PROCEDURE FIND_EPSG_PARAMS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			IN
+ EPSG_SRID_GEOG 		NUMBER			OUT
+ DATUM_ID			NUMBER			OUT
+ ELLIPS_ID			NUMBER			OUT
+ PM_ID				NUMBER			OUT
+ PROJ_METHOD_ID 		NUMBER			OUT
+ PROJ_OP_ID			NUMBER			OUT
+ COORD_REF_SYS_KIND		VARCHAR2		OUT
+ SEMI_MAJOR_AXIS		NUMBER			OUT
+ SEMI_MINOR_AXIS		NUMBER			OUT
+ INV_FLATTENING 		NUMBER			OUT
+ PARAMS 			EPSG_PARAMS		OUT
+FUNCTION FIND_GEOG_CRS RETURNS SDO_SRID_LIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REFERENCE_SRID 		NUMBER			IN
+ IS_LEGACY			VARCHAR2		IN
+ MAX_REL_NUM_DIFFERENCE 	NUMBER			IN     DEFAULT
+FUNCTION FIND_GEOG_CRS RETURNS SDO_SRID_LIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REFERENCE_WKT			VARCHAR2		IN
+ IS_LEGACY			VARCHAR2		IN
+ MAX_REL_NUM_DIFFERENCE 	NUMBER			IN     DEFAULT
+FUNCTION FIND_PROJ_CRS RETURNS SDO_SRID_LIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REFERENCE_SRID 		NUMBER			IN
+ IS_LEGACY			VARCHAR2		IN
+ MAX_REL_NUM_DIFFERENCE 	NUMBER			IN     DEFAULT
+FUNCTION FIND_PROJ_CRS RETURNS SDO_SRID_LIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ REFERENCE_WKT			VARCHAR2		IN
+ IS_LEGACY			VARCHAR2		IN
+ MAX_REL_NUM_DIFFERENCE 	NUMBER			IN     DEFAULT
+PROCEDURE FIND_SRID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			OUT
+ EPSG_SRID_GEOG 		NUMBER			IN     DEFAULT
+ EPSG_SRID_PROJ 		NUMBER			IN     DEFAULT
+ DATUM_ID			NUMBER			IN     DEFAULT
+ ELLIPS_ID			NUMBER			IN     DEFAULT
+ PM_ID				NUMBER			IN     DEFAULT
+ PROJ_METHOD_ID 		NUMBER			IN     DEFAULT
+ COORD_REF_SYS_KIND		VARCHAR2		IN     DEFAULT
+ SEMI_MAJOR_AXIS		NUMBER			IN     DEFAULT
+ SEMI_MINOR_AXIS		NUMBER			IN     DEFAULT
+ INV_FLATTENING 		NUMBER			IN     DEFAULT
+ PARAMS 			EPSG_PARAMS		IN     DEFAULT
+PROCEDURE FIND_SRID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			OUT
+ EPSG_SRID_GEOG 		NUMBER			IN     DEFAULT
+ EPSG_SRID_PROJ 		NUMBER			IN     DEFAULT
+ DATUM_ID			NUMBER			IN     DEFAULT
+ ELLIPS_ID			NUMBER			IN     DEFAULT
+ PM_ID				NUMBER			IN     DEFAULT
+ PROJ_METHOD_ID 		NUMBER			IN     DEFAULT
+ PROJ_OP_ID			NUMBER			IN     DEFAULT
+ COORD_REF_SYS_KIND		VARCHAR2		IN     DEFAULT
+ SEMI_MAJOR_AXIS		NUMBER			IN     DEFAULT
+ SEMI_MINOR_AXIS		NUMBER			IN     DEFAULT
+ INV_FLATTENING 		NUMBER			IN     DEFAULT
+ PARAMS 			EPSG_PARAMS		IN     DEFAULT
+ MAX_REL_NUM_DIFFERENCE 	NUMBER			IN     DEFAULT
+FUNCTION FROM_OGC_SIMPLEFEATURE_SRS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WKT				VARCHAR2		IN
+FUNCTION FROM_USNG RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USNG				VARCHAR2		IN
+ SRID				NUMBER			IN
+ DATUM				VARCHAR2		IN     DEFAULT
+FUNCTION GENERATE_CRS_FROM_WKT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WKT				VARCHAR2		IN
+ PROJ_OP_ID			NUMBER			IN
+ PROJ_OP_NAME			VARCHAR2		IN
+ DATUM_TFM_OP_ID		NUMBER			IN
+ DATUM_TFM_OP_NAME		VARCHAR2		IN
+ EXCLUDE_EXISTING_ELEMS 	VARCHAR2		IN     DEFAULT
+FUNCTION GENERATE_EPSG_RULE_FOR_3785 RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SOURCE_SRID			NUMBER			IN
+ DATUM_TFM_OP_ID		NUMBER			IN
+ CONCAT_OP_ID			NUMBER			IN
+FUNCTION GENERATE_SCRIPT_FROM_CS_ID RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CS_ID				NUMBER			IN
+ OFFSET 			NUMBER			IN     DEFAULT
+FUNCTION GENERATE_SCRIPT_FROM_DATUM_ID RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATUM_ID			NUMBER			IN
+ OFFSET 			NUMBER			IN     DEFAULT
+FUNCTION GENERATE_SCRIPT_FROM_ELLIPS_ID RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELLIPSOID_ID			NUMBER			IN
+ OFFSET 			NUMBER			IN     DEFAULT
+FUNCTION GENERATE_SCRIPT_FROM_OP_ID RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OP_ID				NUMBER			IN
+ OFFSET 			NUMBER			IN     DEFAULT
+FUNCTION GENERATE_SCRIPT_FROM_PM_ID RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PM_ID				NUMBER			IN
+ OFFSET 			NUMBER			IN     DEFAULT
+FUNCTION GENERATE_SCRIPT_FROM_SRID RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			IN
+ OFFSET 			NUMBER			IN     DEFAULT
+ INCLUDE_UNITS			NUMBER			IN     DEFAULT
+FUNCTION GENERATE_SCRIPT_FROM_UOM_ID RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ UOM_ID 			NUMBER			IN
+ OFFSET 			NUMBER			IN     DEFAULT
+FUNCTION GET_3D_WKT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			IN
+FUNCTION GET_AXIS_ORDER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			IN
+FUNCTION GET_EPSG_DATA_VERSION RETURNS VARCHAR2
+FUNCTION GET_SRID_FOR_NAMESPACE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRSNAMESPACE			VARCHAR2		IN
+ SRSNAME			VARCHAR2		IN
+FUNCTION GET_SRSNAME_FOR_NAMESPACE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRSNAMESPACE			VARCHAR2		IN
+ SDO_SRID			NUMBER			IN
+FUNCTION GET_WKT_PATH RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WKT				VARCHAR2		IN
+ PATH				VARCHAR2		IN
+ DEFAULT_VALUE			VARCHAR2		IN     DEFAULT
+FUNCTION INTERNAL_DENSIFY_PRIOR_TO_TFM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MBR				SDO_GEOMETRY		IN
+FUNCTION INTERNAL_DET_CHAIN RETURNS TFM_PLAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRANSIENT_RULE_SET		SDO_TRANSIENT_RULE_SET	IN
+ USE_CASE			VARCHAR2		IN
+ SOURCE_SRID			NUMBER			IN
+ TARGET_SRID			NUMBER			IN
+ EXPLAIN			BOOLEAN 		IN
+ EXPLANATION			VARCHAR2		OUT
+FUNCTION INTERNAL_DET_CHAIN_VARCHAR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PLAN				TFM_PLAN		IN
+FUNCTION INTERNAL_DET_SRID_WKT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID1				NUMBER			IN
+FUNCTION INTERNAL_EPSG_PARAM_TO_LEGACY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAM_ID			NUMBER			IN
+ METHOD_ID			NUMBER			IN
+PROCEDURE INTERNAL_GET_DENSIFICATION_RES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CRS_SRID			NUMBER			IN
+ MINIMUM			NUMBER			IN
+ MAXIMUM			NUMBER			IN
+ RESOLUTION			NUMBER			OUT
+ NUM_STEPS			NUMBER			OUT
+FUNCTION INTERNAL_READ_PROJ_FROM_WKT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WKT				VARCHAR2		IN
+PROCEDURE INTL_POPULATE_DATUM_3PARAMS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATUM_ID			NUMBER			IN
+ OP_ID				NUMBER			IN
+PROCEDURE INTL_POPULATE_DATUM_7PARAMS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATUM_ID			NUMBER			IN
+ OP_ID				NUMBER			IN
+FUNCTION INTL_VALIDATE_WKT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			IN
+FUNCTION IS_WITHIN_TOLERANCE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ A				NUMBER			IN
+ B				NUMBER			IN
+ REL_TOLERANCE			NUMBER			IN
+PROCEDURE LOAD_EPSG_MATRIX
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OP_ID				NUMBER			IN
+ PARAMETER_ID			NUMBER			IN
+ DIRECTORY			VARCHAR2		IN
+ FILE_NAME			VARCHAR2		IN
+FUNCTION LOOKUP_EPSG_PARAM RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COORD_OP_ID			NUMBER			IN
+ PARAMETER_ID			NUMBER			IN
+FUNCTION MAKE_2D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM3D 			SDO_GEOMETRY		IN
+ TARGET_SRID			NUMBER			IN     DEFAULT
+FUNCTION MAKE_3D RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM2D 			SDO_GEOMETRY		IN
+ HEIGHT 			NUMBER			IN     DEFAULT
+ TARGET_SRID			NUMBER			IN     DEFAULT
+FUNCTION MAP_EPSG_SRID_TO_ORACLE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EPSG_SRID			NUMBER			IN
+FUNCTION MAP_ORACLE_SRID_TO_EPSG RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LEGACY_SRID			NUMBER			IN
+FUNCTION REFORMAT_GTYPE RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM1				SDO_GEOMETRY		IN
+ SRID2				NUMBER			IN
+PROCEDURE REGISTER_SRSNAMESPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRSNAMESPACE			VARCHAR2		IN
+ SRSNAME			VARCHAR2		IN
+ SDO_SRID			NUMBER			IN
+FUNCTION REVERSE_AXIS_ORDER RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			IN
+PROCEDURE REVOKE_PREFERENCE_FOR_OP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OP_ID				NUMBER			IN
+ SOURCE_CRS			NUMBER			IN     DEFAULT
+ TARGET_CRS			NUMBER			IN     DEFAULT
+ USE_CASE			VARCHAR2		IN     DEFAULT
+PROCEDURE SDO_CS_CONTEXT_INVALIDATE
+FUNCTION TFM_AXIS_ORIENTATION_TO_WKT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ AXIS_ORIENTATION		VARCHAR2		IN
+FUNCTION TO_OGC_SIMPLEFEATURE_SRS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WKT				VARCHAR2		IN
+FUNCTION TO_USNG RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ ACCURACYINMETERS		NUMBER			IN
+ DATUM				VARCHAR2		IN     DEFAULT
+FUNCTION TRANSFORM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ TO_SRID			NUMBER			IN
+FUNCTION TRANSFORM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+ TO_SRID			NUMBER			IN
+FUNCTION TRANSFORM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TO_SRID			NUMBER			IN
+FUNCTION TRANSFORM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ USE_PLAN			TFM_PLAN		IN
+FUNCTION TRANSFORM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ USE_CASE			VARCHAR2		IN
+ TO_SRID			NUMBER			IN
+FUNCTION TRANSFORM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ TO_SRNAME			VARCHAR2		IN
+FUNCTION TRANSFORM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+ TO_SRNAME			VARCHAR2		IN
+FUNCTION TRANSFORM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TO_SRNAME			VARCHAR2		IN
+FUNCTION TRANSFORM_ACROSS_DIMS RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TO_SRID			NUMBER			IN
+FUNCTION TRANSFORM_ACROSS_DIMS_WA RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TO_SRID			NUMBER			IN
+PROCEDURE TRANSFORM_LAYER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_IN			VARCHAR2		IN
+ COLUMN_IN			VARCHAR2		IN
+ TABLE_OUT			VARCHAR2		IN
+ TO_SRID			NUMBER			IN
+PROCEDURE TRANSFORM_LAYER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_IN			VARCHAR2		IN
+ COLUMN_IN			VARCHAR2		IN
+ TABLE_OUT			VARCHAR2		IN
+ USE_PLAN			TFM_PLAN		IN
+PROCEDURE TRANSFORM_LAYER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_IN			VARCHAR2		IN
+ COLUMN_IN			VARCHAR2		IN
+ TABLE_OUT			VARCHAR2		IN
+ USE_CASE			VARCHAR2		IN
+ TO_SRID			NUMBER			IN
+PROCEDURE TRANSFORM_LAYER_ACROSS_DIMS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_IN			VARCHAR2		IN
+ COLUMN_IN			VARCHAR2		IN
+ TABLE_OUT			VARCHAR2		IN
+ TO_SRID			NUMBER			IN
+PROCEDURE TRANSFORM_LAYER_ACROSS_DIMS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_IN			VARCHAR2		IN
+ COLUMN_IN			VARCHAR2		IN
+ TABLE_OUT			VARCHAR2		IN
+ USE_PLAN			TFM_PLAN		IN
+PROCEDURE TRANSFORM_LAYER_ACROSS_DIMS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_IN			VARCHAR2		IN
+ COLUMN_IN			VARCHAR2		IN
+ TABLE_OUT			VARCHAR2		IN
+ USE_CASE			VARCHAR2		IN
+ TO_SRID			NUMBER			IN
+PROCEDURE TRANSFORM_LAYER_WITH_ARCS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_IN			VARCHAR2		IN
+ COLUMN_IN			VARCHAR2		IN
+ TABLE_OUT			VARCHAR2		IN
+ TO_SRID			NUMBER			IN
+FUNCTION TRANSFORM_OGC_CS_WKT_TO_SRS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WKTEXT 			VARCHAR2		IN
+FUNCTION TRANSFORM_ORIG RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ TO_SRID			NUMBER			IN
+FUNCTION TRANSFORM_ORIG RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+ TO_SRID			NUMBER			IN
+FUNCTION TRANSFORM_ORIG RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TO_SRID			NUMBER			IN
+FUNCTION TRANSFORM_ORIG RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ TO_SRNAME			VARCHAR2		IN
+FUNCTION TRANSFORM_ORIG RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TOLERANCE			NUMBER			IN
+ TO_SRNAME			VARCHAR2		IN
+FUNCTION TRANSFORM_ORIG RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TO_SRNAME			VARCHAR2		IN
+FUNCTION TRANSFORM_ORIG_USING_RULES RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ USE_CASE			VARCHAR2		IN
+ TFMCHAIN			VARCHAR2		IN
+ TO_SRID			NUMBER			IN
+FUNCTION TRANSFORM_ORIG_USING_RULES RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ USE_CASE			VARCHAR2		IN
+ TFMCHAIN			VARCHAR2		IN
+ TO_SRID			NUMBER			IN
+FUNCTION TRANSFORM_ORIG_WITH_ARCS RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ DIM				SDO_DIM_ARRAY		IN
+ TO_SRID			NUMBER			IN
+FUNCTION TRANSFORM_ORIG_WITH_ARCS RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TO_SRID			NUMBER			IN
+FUNCTION TRANSFORM_TO_BASE_UNIT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				NUMBER			IN
+ SOURCE_UNIT_ID 		NUMBER			IN
+FUNCTION TRANSFORM_TO_WKT_PARAM_UNIT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				NUMBER			IN
+ SOURCE_UNIT_ID 		NUMBER			IN
+ TARGET_UNIT_ID_IF_LENGTH	NUMBER			IN
+FUNCTION TRANSFORM_USING_CASE_NAME RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ USE_CASE			VARCHAR2		IN
+ TO_SRID			NUMBER			IN
+FUNCTION TRANSFORM_USING_PLAN RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ USE_PLAN			TFM_PLAN		IN
+FUNCTION TRANSFORM_WITH_ARCS RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TO_SRID			NUMBER			IN
+PROCEDURE UPDATE_WKTS_FOR_ALL_EPSG_CRS
+PROCEDURE UPDATE_WKTS_FOR_EPSG_CRS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			IN
+PROCEDURE UPDATE_WKTS_FOR_EPSG_DATUM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DATUM_ID			NUMBER			IN
+PROCEDURE UPDATE_WKTS_FOR_EPSG_ELLIPS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ELLIPSOID_ID			NUMBER			IN
+PROCEDURE UPDATE_WKTS_FOR_EPSG_OP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COORD_OP_ID			NUMBER			IN
+PROCEDURE UPDATE_WKTS_FOR_EPSG_PARAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ COORD_OP_ID			NUMBER			IN
+ PARAMETER_ID			NUMBER			IN
+PROCEDURE UPDATE_WKTS_FOR_EPSG_PM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIME_MERIDIAN_ID		NUMBER			IN
+PROCEDURE UPDATE_WKTS_WITH_HC_PARAMS
+PROCEDURE UPDATE_WKT_WITH_7_PARAMS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARAMS 			VARCHAR2		IN
+ DATUM_NAME			VARCHAR2		IN
+FUNCTION VALIDATE_EPSG_MATRIX RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ METHOD_ID			NUMBER			IN
+ PARAMETER_ID			NUMBER			IN
+ MATRIX 			CLOB			IN
+FUNCTION VALIDATE_OP RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OP_ID				NUMBER			IN
+FUNCTION VALIDATE_WKT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SRID				NUMBER			IN
+FUNCTION VIEWPORT_TRANSFORM RETURNS SDO_GEOMETRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ GEOM				SDO_GEOMETRY		IN
+ TO_SRID			NUMBER			IN
+

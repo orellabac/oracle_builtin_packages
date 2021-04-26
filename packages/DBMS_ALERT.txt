@@ -1,0 +1,34 @@
+PROCEDURE REGISTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ CLEANUP			BOOLEAN 		IN     DEFAULT
+PROCEDURE REMOVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+PROCEDURE REMOVEALL
+PROCEDURE SET_DEFAULTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SENSITIVITY			NUMBER			IN
+PROCEDURE SIGNAL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ MESSAGE			VARCHAR2		IN
+PROCEDURE WAITANY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		OUT
+ MESSAGE			VARCHAR2		OUT
+ STATUS 			NUMBER(38)		OUT
+ TIMEOUT			NUMBER			IN     DEFAULT
+PROCEDURE WAITONE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ MESSAGE			VARCHAR2		OUT
+ STATUS 			NUMBER(38)		OUT
+ TIMEOUT			NUMBER			IN     DEFAULT
+

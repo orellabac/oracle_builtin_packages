@@ -1,0 +1,277 @@
+PROCEDURE ADD_DEVICE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ DEVICENAME			VARCHAR2		IN
+ VOLUMESIZE			VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ FILENAME			VARCHAR2		IN
+ DIRECTORY			VARCHAR2		IN     DEFAULT
+ FILESIZE			VARCHAR2		IN     DEFAULT
+ FILETYPE			NUMBER			IN     DEFAULT
+ REUSEFILE			NUMBER			IN     DEFAULT
+FUNCTION ATTACH RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOB_NAME			VARCHAR2		IN     DEFAULT
+ JOB_OWNER			VARCHAR2		IN     DEFAULT
+PROCEDURE CLIENT_LOB_APPEND
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALUE				VARCHAR2		IN
+ POSITION			NUMBER			IN
+ AS_IS				NUMBER			IN     DEFAULT
+PROCEDURE CLIENT_LOB_DELETE
+FUNCTION CLIENT_LOB_GET RETURNS CLOB
+PROCEDURE CREATE_JOB_VIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOB_SCHEMA			VARCHAR2		IN
+ JOB_NAME			VARCHAR2		IN
+ VIEW_NAME			VARCHAR2		IN
+ VIEW_TYPE			NUMBER			IN     DEFAULT
+PROCEDURE CREATE_JOB_VIEW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ VIEW_NAME			VARCHAR2		IN
+ VIEW_TYPE			NUMBER			IN     DEFAULT
+FUNCTION DATAPUMP_JOB RETURNS BOOLEAN
+PROCEDURE DATA_FILTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				NUMBER			IN
+ TABLE_NAME			VARCHAR2		IN     DEFAULT
+ SCHEMA_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE DATA_FILTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				CLOB			IN
+ TABLE_NAME			VARCHAR2		IN     DEFAULT
+ SCHEMA_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE DATA_FILTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN     DEFAULT
+ SCHEMA_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE DATA_REMAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN 			VARCHAR2		IN
+ FUNCTION			VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN     DEFAULT
+ REMAP_FLAGS			NUMBER			IN     DEFAULT
+PROCEDURE DETACH
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+PROCEDURE DH_KEY_EXCHANGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ A				VARCHAR2		IN
+ B				VARCHAR2		IN
+ C				VARCHAR2		OUT
+ D				VARCHAR2		OUT
+PROCEDURE ESTABLISH_REMOTE_CONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKER_ID			NUMBER			IN
+ REMOTE_LINK			VARCHAR2		IN
+PROCEDURE GET_DUMPFILE_INFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILENAME			VARCHAR2		IN
+ DIRECTORY			VARCHAR2		IN
+ INFO_TABLE			KU$_DUMPFILE_INFO	OUT
+ FILETYPE			NUMBER			OUT
+FUNCTION GET_STATUS RETURNS KU$_STATUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ MASK				NUMBER(38)		IN
+ TIMEOUT			NUMBER			IN     DEFAULT
+PROCEDURE GET_STATUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ MASK				NUMBER(38)		IN
+ TIMEOUT			NUMBER			IN     DEFAULT
+ JOB_STATE			VARCHAR2		OUT
+ STATUS 			KU$_STATUS1010		OUT
+PROCEDURE GET_STATUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ MASK				NUMBER(38)		IN
+ TIMEOUT			NUMBER			IN     DEFAULT
+ JOB_STATE			VARCHAR2		OUT
+ STATUS 			KU$_STATUS1020		OUT
+PROCEDURE GET_STATUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ MASK				NUMBER(38)		IN
+ TIMEOUT			NUMBER			IN     DEFAULT
+ JOB_STATE			VARCHAR2		OUT
+ STATUS 			KU$_STATUS1120		OUT
+PROCEDURE GET_STATUS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ MASK				NUMBER(38)		IN
+ TIMEOUT			NUMBER			IN     DEFAULT
+ JOB_STATE			VARCHAR2		OUT
+ STATUS 			KU$_STATUS1210		OUT
+FUNCTION GET_STATUS_VERSION RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VERSION			NUMBER			IN
+FUNCTION HAS_PRIVS RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPER				VARCHAR2		IN
+PROCEDURE LOG_ENTRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ MESSAGE			VARCHAR2		IN
+ LOG_FILE_ONLY			NUMBER			IN     DEFAULT
+PROCEDURE LOG_ERROR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ MESSAGE			VARCHAR2		IN
+ ERROR_NUMBER			NUMBER			IN     DEFAULT
+ FATAL_ERROR			NUMBER			IN     DEFAULT
+ LOG_FILE_ONLY			NUMBER			IN     DEFAULT
+PROCEDURE METADATA_FILTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+ OBJECT_PATH			VARCHAR2		IN     DEFAULT
+ OBJECT_TYPE			VARCHAR2		IN     DEFAULT
+PROCEDURE METADATA_FILTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				CLOB			IN
+ OBJECT_PATH			VARCHAR2		IN     DEFAULT
+ OBJECT_TYPE			VARCHAR2		IN     DEFAULT
+PROCEDURE METADATA_REMAP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ OLD_VALUE			VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+ OBJECT_TYPE			VARCHAR2		IN     DEFAULT
+PROCEDURE METADATA_TRANSFORM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+ OBJECT_TYPE			VARCHAR2		IN     DEFAULT
+PROCEDURE METADATA_TRANSFORM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				NUMBER			IN
+ OBJECT_TYPE			VARCHAR2		IN     DEFAULT
+FUNCTION OPEN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OPERATION			VARCHAR2		IN
+ JOB_MODE			VARCHAR2		IN
+ REMOTE_LINK			VARCHAR2		IN     DEFAULT
+ JOB_NAME			VARCHAR2		IN     DEFAULT
+ VERSION			VARCHAR2		IN     DEFAULT
+ COMPRESSION			NUMBER			IN     DEFAULT
+PROCEDURE SETUP_REMOTE_CONTEXT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ USER_NAME			VARCHAR2		IN
+ JOB_NAME			VARCHAR2		IN
+ VERSION			NUMBER			IN
+ STATUS_XML			VARCHAR2		IN
+ STATUS_XML_LEN 		NUMBER			IN
+ MORE				NUMBER			IN
+PROCEDURE SET_DEBUG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ON_OFF 			NUMBER			IN
+ IP_ADDR			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_DEBUG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DEBUG_FLAGS			BINARY_INTEGER		IN
+ VERSION_FLAG			BINARY_INTEGER		IN
+PROCEDURE SET_PARALLEL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ DEGREE 			NUMBER			IN
+PROCEDURE SET_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE SET_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				NUMBER			IN
+PROCEDURE SET_REMOTE_WORKER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKER_ID			NUMBER			IN
+PROCEDURE START_JOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ SKIP_CURRENT			NUMBER			IN     DEFAULT
+ ABORT_STEP			NUMBER			IN     DEFAULT
+ CLUSTER_OK			NUMBER			IN     DEFAULT
+ SERVICE_NAME			VARCHAR2		IN     DEFAULT
+PROCEDURE STOP_JOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ IMMEDIATE			NUMBER			IN     DEFAULT
+ KEEP_MASTER			NUMBER			IN     DEFAULT
+ DELAY				NUMBER			IN     DEFAULT
+PROCEDURE TEST_REMOTE_CONTEXT1010
+PROCEDURE TEST_REMOTE_CONTEXT1020
+PROCEDURE TEST_REMOTE_CONTEXT1120
+PROCEDURE TEST_REMOTE_CONTEXT1210
+PROCEDURE TRACE_ENTRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FACILITY			VARCHAR2		IN
+ MSG				VARCHAR2		IN
+PROCEDURE WAIT_FOR_JOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ JOB_STATE			VARCHAR2		OUT
+

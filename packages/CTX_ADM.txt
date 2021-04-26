@@ -1,0 +1,4 @@
+ERROR:
+ORA-04043: object CTX_ADM does not exist
+
+

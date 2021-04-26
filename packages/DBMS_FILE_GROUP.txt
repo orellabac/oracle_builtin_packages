@@ -1,0 +1,116 @@
+PROCEDURE ADD_FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE_GROUP_NAME		VARCHAR2		IN
+ FILE_NAME			VARCHAR2		IN
+ FILE_TYPE			VARCHAR2		IN     DEFAULT
+ FILE_DIRECTORY 		VARCHAR2		IN     DEFAULT
+ VERSION_NAME			VARCHAR2		IN     DEFAULT
+ COMMENTS			VARCHAR2		IN     DEFAULT
+PROCEDURE ALTER_FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE_GROUP_NAME		VARCHAR2		IN
+ FILE_NAME			VARCHAR2		IN
+ VERSION_NAME			VARCHAR2		IN     DEFAULT
+ NEW_FILE_NAME			VARCHAR2		IN     DEFAULT
+ NEW_FILE_DIRECTORY		VARCHAR2		IN     DEFAULT
+ NEW_FILE_TYPE			VARCHAR2		IN     DEFAULT
+ REMOVE_FILE_TYPE		VARCHAR2		IN     DEFAULT
+ NEW_COMMENTS			VARCHAR2		IN     DEFAULT
+ REMOVE_COMMENTS		VARCHAR2		IN     DEFAULT
+PROCEDURE ALTER_FILE_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE_GROUP_NAME		VARCHAR2		IN
+ KEEP_FILES			VARCHAR2		IN     DEFAULT
+ MIN_VERSIONS			NUMBER			IN     DEFAULT
+ MAX_VERSIONS			NUMBER			IN     DEFAULT
+ RETENTION_DAYS 		NUMBER			IN     DEFAULT
+ NEW_DEFAULT_DIRECTORY		VARCHAR2		IN     DEFAULT
+ REMOVE_DEFAULT_DIRECTORY	VARCHAR2		IN     DEFAULT
+ NEW_COMMENTS			VARCHAR2		IN     DEFAULT
+ REMOVE_COMMENTS		VARCHAR2		IN     DEFAULT
+PROCEDURE ALTER_VERSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE_GROUP_NAME		VARCHAR2		IN
+ VERSION_NAME			VARCHAR2		IN     DEFAULT
+ NEW_VERSION_NAME		VARCHAR2		IN     DEFAULT
+ REMOVE_VERSION_NAME		VARCHAR2		IN     DEFAULT
+ NEW_DEFAULT_DIRECTORY		VARCHAR2		IN     DEFAULT
+ REMOVE_DEFAULT_DIRECTORY	VARCHAR2		IN     DEFAULT
+ NEW_COMMENTS			VARCHAR2		IN     DEFAULT
+ REMOVE_COMMENTS		VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_FILE_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE_GROUP_NAME		VARCHAR2		IN
+ KEEP_FILES			VARCHAR2		IN     DEFAULT
+ MIN_VERSIONS			NUMBER			IN     DEFAULT
+ MAX_VERSIONS			NUMBER			IN     DEFAULT
+ RETENTION_DAYS 		NUMBER			IN     DEFAULT
+ DEFAULT_DIRECTORY		VARCHAR2		IN     DEFAULT
+ COMMENTS			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_VERSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE_GROUP_NAME		VARCHAR2		IN
+ VERSION_NAME			VARCHAR2		IN     DEFAULT
+ DEFAULT_DIRECTORY		VARCHAR2		IN     DEFAULT
+ COMMENTS			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATE_VERSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE_GROUP_NAME		VARCHAR2		IN
+ VERSION_NAME			VARCHAR2		IN     DEFAULT
+ DEFAULT_DIRECTORY		VARCHAR2		IN     DEFAULT
+ COMMENTS			VARCHAR2		IN     DEFAULT
+ VERSION_OUT			VARCHAR2		OUT
+PROCEDURE DROP_FILE_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE_GROUP_NAME		VARCHAR2		IN
+ KEEP_FILES			VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_VERSION
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE_GROUP_NAME		VARCHAR2		IN
+ VERSION_NAME			VARCHAR2		IN     DEFAULT
+ KEEP_FILES			VARCHAR2		IN     DEFAULT
+PROCEDURE GRANT_OBJECT_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_NAME			VARCHAR2		IN
+ PRIVILEGE			BINARY_INTEGER		IN
+ GRANTEE			VARCHAR2		IN
+ GRANT_OPTION			BOOLEAN 		IN     DEFAULT
+PROCEDURE GRANT_SYSTEM_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIVILEGE			BINARY_INTEGER		IN
+ GRANTEE			VARCHAR2		IN
+ GRANT_OPTION			BOOLEAN 		IN     DEFAULT
+PROCEDURE PURGE_FILE_GROUP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE_GROUP_NAME		VARCHAR2		IN
+PROCEDURE REMOVE_FILE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILE_GROUP_NAME		VARCHAR2		IN
+ FILE_NAME			VARCHAR2		IN
+ VERSION_NAME			VARCHAR2		IN     DEFAULT
+ KEEP_FILE			VARCHAR2		IN     DEFAULT
+PROCEDURE REVOKE_OBJECT_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_NAME			VARCHAR2		IN
+ PRIVILEGE			BINARY_INTEGER		IN
+ REVOKEE			VARCHAR2		IN
+PROCEDURE REVOKE_SYSTEM_PRIVILEGE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIVILEGE			BINARY_INTEGER		IN
+ REVOKEE			VARCHAR2		IN
+

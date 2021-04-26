@@ -1,0 +1,599 @@
+FUNCTION ADD_TRANSFORM RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ ENCODING			VARCHAR2		IN     DEFAULT
+ OBJECT_TYPE			VARCHAR2		IN     DEFAULT
+FUNCTION CHECK_MATCH_TEMPLATE RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POBJNO 			NUMBER			IN
+ SPCNT				NUMBER			IN
+FUNCTION CHECK_MATCH_TEMPLATE_LOB RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POBJNO 			NUMBER			IN
+ SPCNT				NUMBER			IN
+FUNCTION CHECK_MATCH_TEMPLATE_PAR RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POBJNO 			NUMBER			IN
+ SPCNT				NUMBER			IN
+PROCEDURE CHECK_TYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ TYPE_NAME			VARCHAR2		IN
+ VERSION			VARCHAR2		IN
+ HASHCODE			VARCHAR2		IN
+ TYPEID 			VARCHAR2		IN
+PROCEDURE CLOSE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+FUNCTION CONVERT RETURNS KU$_MULTI_DDLS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ DOCUMENT			XMLTYPE 		IN
+FUNCTION CONVERT RETURNS KU$_MULTI_DDLS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ DOCUMENT			CLOB			IN
+FUNCTION CONVERT RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ DOCUMENT			CLOB			IN
+ OFFSETS			TABLE OF TABLE OF	OUT
+PROCEDURE CONVERT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ DOCUMENT			XMLTYPE 		IN
+ RESULT 			CLOB			IN/OUT
+PROCEDURE CONVERT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ DOCUMENT			CLOB			IN
+ RESULT 			CLOB			IN/OUT
+FUNCTION CONVERT_TO_CANONICAL RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VERSION			VARCHAR2		IN
+FUNCTION FETCH_CLOB RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ CACHE_LOB			BOOLEAN 		IN     DEFAULT
+ LOB_DURATION			BINARY_INTEGER		IN     DEFAULT
+PROCEDURE FETCH_CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ XMLDOC 			CLOB			IN/OUT
+FUNCTION FETCH_DDL RETURNS KU$_DDLS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+FUNCTION FETCH_DDL_TEXT RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ PARTIAL			NUMBER			OUT
+FUNCTION FETCH_OBJNUMS RETURNS KU$_OBJNUMSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+FUNCTION FETCH_OBJNUMS RETURNS KU$_OBJNUMSET
+FUNCTION FETCH_OBJNUMS RETURNS KU$_OBJNUMSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_TYPE			VARCHAR2		IN
+FUNCTION FETCH_OBJNUMS_NAMES RETURNS KU$_OBJNUMNAMSET
+FUNCTION FETCH_SORTED_OBJNUMS RETURNS KU$_OBJNUMPAIRLIST
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+FUNCTION FETCH_VAT_OBJNUMS RETURNS KU$_OBJNUMSET
+FUNCTION FETCH_XML RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+PROCEDURE FETCH_XML_CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ DOC				CLOB			IN/OUT
+ PARSED_ITEMS			KU$_PARSED_ITEMS	IN/OUT
+ OBJECT_TYPE_PATH		VARCHAR2		OUT
+PROCEDURE FETCH_XML_CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ DOC				CLOB			IN/OUT
+ PARSED_ITEMS			KU$_PARSED_ITEMS	IN/OUT
+ OBJECT_TYPE_PATH		VARCHAR2		OUT
+ SEQNO				NUMBER			OUT
+ PROCOBJ_ERRORS 		KU$_VCNT		OUT
+PROCEDURE FREE_CONTEXT_ENTRY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IND				NUMBER			IN
+FUNCTION GET_ACTION_INSTANCE RETURNS KU$_PROCOBJ_LINES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PACKAGE			VARCHAR2		IN
+ PKG_SCHEMA			VARCHAR2		IN
+ FUNCTION			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN
+ NAMESPACE			NUMBER			IN
+ OBJTYPE			NUMBER			IN
+ PREPOST			NUMBER			IN
+ ISDBA				NUMBER			IN
+FUNCTION GET_ACTION_SCHEMA RETURNS KU$_PROCOBJ_LINES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PACKAGE			VARCHAR2		IN
+ PKG_SCHEMA			VARCHAR2		IN
+ FUNCTION			VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN
+ PREPOST			NUMBER			IN
+ ISDBA				NUMBER			IN
+FUNCTION GET_ACTION_SYS RETURNS KU$_PROCOBJ_LINES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PACKAGE			VARCHAR2		IN
+ PKG_SCHEMA			VARCHAR2		IN
+ FUNCTION			VARCHAR2		IN
+ PREPOST			NUMBER			IN
+FUNCTION GET_CANONICAL_VSN RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VERSION			VARCHAR2		IN
+FUNCTION GET_CHECK_CONSTRAINT_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ CONDITION			CLOB			IN
+ PARSED_CONDITION		BOOLEAN 		IN     DEFAULT
+FUNCTION GET_DDL RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN     DEFAULT
+ VERSION			VARCHAR2		IN     DEFAULT
+ MODEL				VARCHAR2		IN     DEFAULT
+ TRANSFORM			VARCHAR2		IN     DEFAULT
+FUNCTION GET_DEPENDENT_DDL RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ BASE_OBJECT_NAME		VARCHAR2		IN
+ BASE_OBJECT_SCHEMA		VARCHAR2		IN     DEFAULT
+ VERSION			VARCHAR2		IN     DEFAULT
+ MODEL				VARCHAR2		IN     DEFAULT
+ TRANSFORM			VARCHAR2		IN     DEFAULT
+ OBJECT_COUNT			NUMBER			IN     DEFAULT
+FUNCTION GET_DEPENDENT_SXML RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ BASE_OBJECT_NAME		VARCHAR2		IN
+ BASE_OBJECT_SCHEMA		VARCHAR2		IN     DEFAULT
+ VERSION			VARCHAR2		IN     DEFAULT
+ MODEL				VARCHAR2		IN     DEFAULT
+ TRANSFORM			VARCHAR2		IN     DEFAULT
+ OBJECT_COUNT			NUMBER			IN     DEFAULT
+FUNCTION GET_DEPENDENT_XML RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ BASE_OBJECT_NAME		VARCHAR2		IN
+ BASE_OBJECT_SCHEMA		VARCHAR2		IN     DEFAULT
+ VERSION			VARCHAR2		IN     DEFAULT
+ MODEL				VARCHAR2		IN     DEFAULT
+ TRANSFORM			VARCHAR2		IN     DEFAULT
+ OBJECT_COUNT			NUMBER			IN     DEFAULT
+FUNCTION GET_DOMIDX_METADATA RETURNS KU$_PROCOBJ_LINES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDEX_NAME			VARCHAR2		IN
+ INDEX_SCHEMA			VARCHAR2		IN
+ TYPE_NAME			VARCHAR2		IN
+ TYPE_SCHEMA			VARCHAR2		IN
+ TS_NUM 			NUMBER			IN
+ ITINTER_VERSION		NUMBER			IN
+ FLAGS				NUMBER			IN
+PROCEDURE GET_DPSTRM_MD
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ MDVERSION			VARCHAR2		IN     DEFAULT
+ DPAPIVERSION			NUMBER			IN     DEFAULT
+ DOC				CLOB			IN/OUT
+ NETWORK_LINK			VARCHAR2		IN     DEFAULT
+ FORCE_LOB_BE			BOOLEAN 		IN     DEFAULT
+ FORCE_NO_ENCRYPT		BOOLEAN 		IN     DEFAULT
+FUNCTION GET_EDITION RETURNS VARCHAR2
+FUNCTION GET_EDITION_ID RETURNS NUMBER
+FUNCTION GET_FK_CONSTRAINT_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+FUNCTION GET_GRANTED_DDL RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ GRANTEE			VARCHAR2		IN     DEFAULT
+ VERSION			VARCHAR2		IN     DEFAULT
+ MODEL				VARCHAR2		IN     DEFAULT
+ TRANSFORM			VARCHAR2		IN     DEFAULT
+ OBJECT_COUNT			NUMBER			IN     DEFAULT
+FUNCTION GET_GRANTED_XML RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ GRANTEE			VARCHAR2		IN     DEFAULT
+ VERSION			VARCHAR2		IN     DEFAULT
+ MODEL				VARCHAR2		IN     DEFAULT
+ TRANSFORM			VARCHAR2		IN     DEFAULT
+ OBJECT_COUNT			NUMBER			IN     DEFAULT
+FUNCTION GET_HASHCODE RETURNS RAW
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ TYPENAME			VARCHAR2		IN
+FUNCTION GET_INDEX_INTCOL RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJ_NUM			NUMBER			IN
+ INTCOL_NUM			NUMBER			IN
+FUNCTION GET_INDPART_TS RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJ_NUM			NUMBER			IN
+FUNCTION GET_JAVA_METADATA RETURNS KU$_JAVA_T
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JAVA_NAME			VARCHAR2		IN
+ JAVA_SCHEMA			VARCHAR2		IN
+ TYPE_NUM			NUMBER			IN
+FUNCTION GET_PARTN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PARTYPE			NUMBER			IN
+ BOBJ_NUM			NUMBER			IN
+ PART_NUM			NUMBER			IN
+FUNCTION GET_PLUGTS_BLK RETURNS KU$_PROCOBJ_LINES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ BLOCKID			NUMBER			IN
+FUNCTION GET_PREPOST_TABLE_ACT RETURNS KU$_TACTION_LIST_T
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PREPOST			NUMBER			IN
+ SCHEMA 			VARCHAR2		IN
+ TNAME				VARCHAR2		IN
+FUNCTION GET_PROCOBJ RETURNS KU$_PROCOBJ_LINES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PACKAGE			VARCHAR2		IN
+ PKG_SCHEMA			VARCHAR2		IN
+ FUNCTION			VARCHAR2		IN
+ OBJID				NUMBER			IN
+ ISDBA				BINARY_INTEGER		IN
+FUNCTION GET_PROCOBJ_GRANT RETURNS KU$_PROCOBJ_LINES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PACKAGE			VARCHAR2		IN
+ PKG_SCHEMA			VARCHAR2		IN
+ FUNCTION			VARCHAR2		IN
+ OBJID				NUMBER			IN
+ ISDBA				BINARY_INTEGER		IN
+FUNCTION GET_QUERY RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+FUNCTION GET_STAT_COLNAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OWNER_NAME			VARCHAR2		IN
+ TABLENAME			VARCHAR2		IN
+ DEFAULT_VAL			LONG			IN
+ ATTR_COLNAME			VARCHAR2		IN
+ NESTED_TABLE			NUMBER			IN
+PROCEDURE GET_STAT_INDNAME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_OWNER			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ COLNAMES			TABLE OF VARCHAR2(60)	IN
+ COL_COUNT			NUMBER			IN
+ IND_OWNER			VARCHAR2		OUT
+ IND_NAME			VARCHAR2		OUT
+FUNCTION GET_SXML RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN     DEFAULT
+ VERSION			VARCHAR2		IN     DEFAULT
+ MODEL				VARCHAR2		IN     DEFAULT
+ TRANSFORM			VARCHAR2		IN     DEFAULT
+FUNCTION GET_SXML_DDL RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN     DEFAULT
+ VERSION			VARCHAR2		IN     DEFAULT
+ MODEL				VARCHAR2		IN     DEFAULT
+ TRANSFORM			VARCHAR2		IN     DEFAULT
+FUNCTION GET_SYSPRIVS RETURNS KU$_PROCOBJ_LINES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PACKAGE			VARCHAR2		IN
+ PKG_SCHEMA			VARCHAR2		IN
+ FUNCTION			VARCHAR2		IN
+FUNCTION GET_VAT_TABLE_NAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ NETWORK_LINK			VARCHAR2		IN     DEFAULT
+FUNCTION GET_VERSION RETURNS VARCHAR2
+FUNCTION GET_XML RETURNS CLOB
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN     DEFAULT
+ VERSION			VARCHAR2		IN     DEFAULT
+ MODEL				VARCHAR2		IN     DEFAULT
+ TRANSFORM			VARCHAR2		IN     DEFAULT
+FUNCTION IN_TSNUM RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TS_SET 			NUMBER			IN
+ TS_NUM 			NUMBER			IN
+FUNCTION IN_TSNUM_2 RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TS_SET 			NUMBER			IN
+ OBJ_NUM			NUMBER			IN
+ TS_NUM 			NUMBER			IN
+ PROPERTY			NUMBER			IN
+FUNCTION IS_ATTR_VALID_ON_10 RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJ_NUM			NUMBER			IN
+ INTCOL_NUM			NUMBER			IN
+FUNCTION IS_XDB_TRANS RETURNS NUMBER
+PROCEDURE NETWORK_CALLOUTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+FUNCTION NETWORK_FETCH_CLOB RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ DO_XSL_PARSE			NUMBER			IN
+ PARTIAL			NUMBER			OUT
+ PARSE_DELIM			VARCHAR2		OUT
+ DO_CALLOUT			NUMBER			OUT
+ HAVE_ERRORS			NUMBER			OUT
+FUNCTION NETWORK_FETCH_ERRORS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ CNT				NUMBER			OUT
+ PARTIAL			NUMBER			OUT
+ SEQNO				NUMBER			OUT
+ PATH				VARCHAR2		OUT
+FUNCTION NETWORK_FETCH_PARSE RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ CNT				NUMBER			OUT
+ PARTIAL			NUMBER			OUT
+ SEQNO				NUMBER			OUT
+ PATH				VARCHAR2		OUT
+FUNCTION NETWORK_OPEN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ VERSION			VARCHAR2		IN     DEFAULT
+ MODEL				VARCHAR2		IN     DEFAULT
+ CLIENT_VERSION 		NUMBER			IN
+ PROTOCOL_VERSION		NUMBER			OUT
+PROCEDURE NET_SET_DEBUG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ON_OFF 			NUMBER			IN
+FUNCTION OKTOEXP_2NDARY_TABLE RETURNS BINARY_INTEGER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TAB_OBJ_NUM			NUMBER			IN
+FUNCTION OPEN RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ VERSION			VARCHAR2		IN     DEFAULT
+ MODEL				VARCHAR2		IN     DEFAULT
+ NETWORK_LINK			VARCHAR2		IN     DEFAULT
+FUNCTION OPENW RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ VERSION			VARCHAR2		IN     DEFAULT
+ MODEL				VARCHAR2		IN     DEFAULT
+FUNCTION OPEN_GET_FK_CONSTRAINT_NAME RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OBJECT_TYPE			VARCHAR2		IN
+ SCHEMA 			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ REF_SCHEMA			VARCHAR2		IN
+ REF_NAME			VARCHAR2		IN
+FUNCTION PARSE_CONDITION RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ TAB				VARCHAR2		IN
+ LENGTH 			NUMBER			IN
+ ROW				ROWID			IN
+FUNCTION PARSE_DEFAULT RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ TAB				VARCHAR2		IN
+ LENGTH 			NUMBER			IN
+ ROW				ROWID			IN
+FUNCTION PARSE_QUERY RETURNS XMLTYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ LENGTH 			NUMBER			IN
+ TAB				VARCHAR2		IN
+ COL				VARCHAR2		IN
+ ROW				ROWID			IN
+ READ_ONLY			NUMBER			IN     DEFAULT
+ CHECK_OPTION			NUMBER			IN     DEFAULT
+PROCEDURE PATCH_TYPEID
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ NAME				VARCHAR2		IN
+ TYPEID 			VARCHAR2		IN
+ HASHCODE			VARCHAR2		IN
+FUNCTION PUT RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ DOCUMENT			XMLTYPE 		IN
+ FLAGS				NUMBER			IN
+ RESULTS			KU$_SUBMITRESULTS	IN/OUT
+FUNCTION PUT RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ DOCUMENT			CLOB			IN
+ FLAGS				NUMBER			IN
+ RESULTS			KU$_SUBMITRESULTS	IN/OUT
+PROCEDURE PUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ DOCUMENT			CLOB			IN
+PROCEDURE SET_COUNT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ VALUE				NUMBER			IN
+ OBJECT_TYPE_PATH		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_DEBUG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ON_OFF 			BOOLEAN 		IN
+ ARG2				BOOLEAN 		IN     DEFAULT
+PROCEDURE SET_DEBUG
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DEBUG_FLAGS			BINARY_INTEGER		IN
+PROCEDURE SET_FILTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+ OBJECT_TYPE_PATH		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_FILTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				BOOLEAN 		IN     DEFAULT
+ OBJECT_TYPE_PATH		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_FILTER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				NUMBER			IN
+ OBJECT_TYPE_PATH		VARCHAR2		IN     DEFAULT
+PROCEDURE SET_FK_CONSTRAINT_COL_PAIR
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ SRC_COL			VARCHAR2		IN
+ TGT_COL			VARCHAR2		IN
+PROCEDURE SET_PARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				BOOLEAN 		IN     DEFAULT
+PROCEDURE SET_PARSE_ITEM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ OBJECT_TYPE			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_REMAP_PARAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRANSFORM_HANDLE		NUMBER			IN
+ NAME				VARCHAR2		IN
+ OLD_VALUE			VARCHAR2		IN
+ NEW_VALUE			VARCHAR2		IN
+ OBJECT_TYPE			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_TRANSFORM_PARAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRANSFORM_HANDLE		NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+ OBJECT_TYPE			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_TRANSFORM_PARAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRANSFORM_HANDLE		NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				BOOLEAN 		IN     DEFAULT
+ OBJECT_TYPE			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_TRANSFORM_PARAM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRANSFORM_HANDLE		NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				NUMBER			IN
+ OBJECT_TYPE			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_VAT_TABLE_NAME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SCHEMA 			VARCHAR2		IN
+ VNAME				VARCHAR2		IN
+ TNAME				VARCHAR2		IN
+ NETWORK_LINK			VARCHAR2		IN     DEFAULT
+PROCEDURE SET_XMLFORMAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HANDLE 			NUMBER			IN
+ NAME				VARCHAR2		IN
+ VALUE				BOOLEAN 		IN     DEFAULT
+PROCEDURE TRANSFORM_STRM
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ INDOC				CLOB			IN
+ OUTDOC 			CLOB			IN/OUT
+ MDVERSION			VARCHAR2		IN     DEFAULT
+

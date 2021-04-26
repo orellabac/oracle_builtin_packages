@@ -1,0 +1,28 @@
+PROCEDURE ABORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SESSIONID			NUMBER			IN
+FUNCTION GET_SESSION_TIMEOUT RETURNS NUMBER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SESSIONID			NUMBER			IN
+FUNCTION GET_TIMEOUT RETURNS NUMBER
+PROCEDURE SET_SESSION_TIMEOUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SESSIONID			NUMBER			IN
+ TIMEOUT			NUMBER			IN
+PROCEDURE SET_TIMEOUT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TIMEOUT			NUMBER			IN
+FUNCTION SPACE_ERROR_INFO RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ ERROR_TYPE			VARCHAR2		OUT
+ OBJECT_TYPE			VARCHAR2		OUT
+ OBJECT_OWNER			VARCHAR2		OUT
+ TABLE_SPACE_NAME		VARCHAR2		OUT
+ OBJECT_NAME			VARCHAR2		OUT
+ SUB_OBJECT_NAME		VARCHAR2		OUT
+

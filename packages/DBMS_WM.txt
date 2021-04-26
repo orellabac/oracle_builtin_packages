@@ -1,0 +1,638 @@
+PROCEDURE ADDASPARENTWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ PARENT_WORKSPACE		VARCHAR2		IN
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE ADDUSERDEFINEDHINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HINT_ID			NUMBER(38)		IN
+ TABLE_ID			VARCHAR2		IN     DEFAULT
+ HINT				VARCHAR2		IN     DEFAULT
+PROCEDURE ADD_TOPO_GEOMETRY_LAYER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+ TOPO_GEOMETRY_LAYER_TYPE	VARCHAR2		IN
+PROCEDURE ALTERSAVEPOINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ SP_NAME			VARCHAR2		IN
+ SP_DESCRIPTION 		VARCHAR2		IN
+PROCEDURE ALTERVERSIONEDTABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ ALTER_OPTION			VARCHAR2		IN
+ PARAMETER_OPTIONS		VARCHAR2		IN     DEFAULT
+ IGNORE_LAST_ERROR		BOOLEAN 		IN     DEFAULT
+PROCEDURE ALTERWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ WORKSPACE_DESCRIPTION		VARCHAR2		IN
+PROCEDURE BEGINBULKLOADING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ WORKSPACE			VARCHAR2		IN
+ VERSION			NUMBER(38)		IN     DEFAULT
+ CHECK_FOR_DUPLICATES		BOOLEAN 		IN     DEFAULT
+ IGNORE_LAST_ERROR		BOOLEAN 		IN     DEFAULT
+ SINGLE_TRANSACTION		BOOLEAN 		IN     DEFAULT
+ SAVEPOINT_NAME 		VARCHAR2		IN     DEFAULT
+PROCEDURE BEGINDDL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+PROCEDURE BEGINRESOLVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+PROCEDURE CHANGEWORKSPACETYPE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ WORKSPACE_TYPE 		VARCHAR2		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE COMMITBULKLOADING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ DISCARDS_TABLE 		VARCHAR2		IN
+ CHECK_FOR_DUPLICATES		BOOLEAN 		IN     DEFAULT
+ ENFORCEUCFLAG			BOOLEAN 		IN     DEFAULT
+ ENFORCERICFLAG 		BOOLEAN 		IN     DEFAULT
+ IGNORE_LAST_ERROR		BOOLEAN 		IN     DEFAULT
+ SINGLE_TRANSACTION		BOOLEAN 		IN     DEFAULT
+PROCEDURE COMMITDDL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ IGNORE_LAST_ERROR		BOOLEAN 		IN     DEFAULT
+ ENFORCE_UNIQUE_CONSTRAINTS	BOOLEAN 		IN     DEFAULT
+ ENFORCE_RICS			BOOLEAN 		IN     DEFAULT
+PROCEDURE COMMITRESOLVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+PROCEDURE COMPRESSWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ FIRSTSP			VARCHAR2		IN     DEFAULT
+ SECONDSP			VARCHAR2		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+ COMMIT_IN_BATCHES		BOOLEAN 		IN     DEFAULT
+ BATCH_SIZE			VARCHAR2		IN     DEFAULT
+ REMOVE_LATEST_DELETED_ROWS	BOOLEAN 		IN     DEFAULT
+PROCEDURE COMPRESSWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ COMPRESS_VIEW_WO_OVERWRITE	BOOLEAN 		IN
+ FIRSTSP			VARCHAR2		IN     DEFAULT
+ SECONDSP			VARCHAR2		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+ COMMIT_IN_BATCHES		BOOLEAN 		IN     DEFAULT
+ BATCH_SIZE			VARCHAR2		IN     DEFAULT
+ REMOVE_LATEST_DELETED_ROWS	BOOLEAN 		IN     DEFAULT
+PROCEDURE COMPRESSWORKSPACETREE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ COMPRESS_VIEW_WO_OVERWRITE	BOOLEAN 		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+ COMMIT_IN_BATCHES		BOOLEAN 		IN     DEFAULT
+ BATCH_SIZE			VARCHAR2		IN     DEFAULT
+ REMOVE_LATEST_DELETED_ROWS	BOOLEAN 		IN     DEFAULT
+PROCEDURE COPYFORUPDATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ WHERE_CLAUSE			VARCHAR2		IN     DEFAULT
+PROCEDURE CREATESAVEPOINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ SAVEPOINT_NAME 		VARCHAR2		IN
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE CREATEWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE CREATEWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ ISREFRESHED			BOOLEAN 		IN
+ DESCRIPTION			VARCHAR2		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE DELETESAVEPOINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ SAVEPOINT_NAME 		VARCHAR2		IN
+ COMPRESS_VIEW_WO_OVERWRITE	BOOLEAN 		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+ COMMIT_IN_BATCHES		BOOLEAN 		IN     DEFAULT
+ BATCH_SIZE			VARCHAR2		IN     DEFAULT
+PROCEDURE DELETE_TOPO_GEOMETRY_LAYER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TOPOLOGY			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ COLUMN_NAME			VARCHAR2		IN
+PROCEDURE DISABLEVERSIONING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ FORCE				BOOLEAN 		IN     DEFAULT
+ IGNORE_LAST_ERROR		BOOLEAN 		IN     DEFAULT
+ ISTOPOLOGY			BOOLEAN 		IN     DEFAULT
+ KEEPWMVALID			BOOLEAN 		IN     DEFAULT
+ UNDO_SPACE			VARCHAR2		IN     DEFAULT
+PROCEDURE DISABLEVERSIONING_REPLN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ FORCE				VARCHAR2		IN     DEFAULT
+ IGNORE_LAST_ERROR_V		VARCHAR2		IN     DEFAULT
+ ISLOCALSITE			VARCHAR2		IN
+ HASADMINROLE			BOOLEAN 		IN     DEFAULT
+ ISTOPOLOGY			BOOLEAN 		IN     DEFAULT
+ KEEPWMVALID			BOOLEAN 		IN     DEFAULT
+ UNDO_SPACE			VARCHAR2		IN     DEFAULT
+FUNCTION DML_ RETURNS BOOLEAN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DMLMODE			VARCHAR2		IN
+ COL				VARCHAR2		IN     DEFAULT
+PROCEDURE DROPREPLICATIONSUPPORT
+PROCEDURE ENABLEVERSIONING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ HIST				VARCHAR2		IN     DEFAULT
+ ISTOPOLOGY			BOOLEAN 		IN     DEFAULT
+ VALIDTIME			BOOLEAN 		IN     DEFAULT
+ UNDO_SPACE			VARCHAR2		IN     DEFAULT
+ VALIDTIMERANGE 		WM_PERIOD		IN     DEFAULT
+PROCEDURE ENABLEVERSIONING_REPLN
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ HIST				VARCHAR2		IN     DEFAULT
+ ISLOCALSITE			VARCHAR2		IN
+ HASADMINROLE			BOOLEAN 		IN     DEFAULT
+ ISTOPOLOGY			BOOLEAN 		IN     DEFAULT
+ VALIDTIME			BOOLEAN 		IN     DEFAULT
+ VALIDTIMERANGE 		VARCHAR2		IN     DEFAULT
+ UNDO_SPACE			VARCHAR2		IN     DEFAULT
+PROCEDURE EXPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ STAGING_TABLE			VARCHAR2		IN
+ WORKSPACE			VARCHAR2		IN
+ WHERE_CLAUSE			VARCHAR2		IN     DEFAULT
+ EXPORT_SCOPE			VARCHAR2		IN     DEFAULT
+ AFTER_SAVEPOINT_NAME		VARCHAR2		IN     DEFAULT
+ AS_OF_SAVEPOINT_NAME		VARCHAR2		IN     DEFAULT
+ AFTER_INSTANT			DATE			IN     DEFAULT
+ AS_OF_INSTANT			DATE			IN     DEFAULT
+ VERSIONED_DB			BOOLEAN 		IN     DEFAULT
+ OVERWRITE_EXISTING_DATA	BOOLEAN 		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE EXPORT_SCHEMAS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOB_NAME			VARCHAR2		IN
+ ALT_SCHEMA			VARCHAR2		IN     DEFAULT
+ IGNORE_LAST_ERROR		BOOLEAN 		IN     DEFAULT
+PROCEDURE FINDRICSET
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ RESULT_TABLE			VARCHAR2		IN     DEFAULT
+PROCEDURE FREEZEWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ SESSION_DURATION		BOOLEAN 		IN
+ FREEZEMODE			VARCHAR2		IN     DEFAULT
+ FREEZEWRITER			VARCHAR2		IN     DEFAULT
+ FORCE				BOOLEAN 		IN     DEFAULT
+PROCEDURE FREEZEWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ FREEZEMODE			VARCHAR2		IN     DEFAULT
+ FREEZEWRITER			VARCHAR2		IN     DEFAULT
+ FORCE				BOOLEAN 		IN     DEFAULT
+PROCEDURE GENERATEREPLICATIONSUPPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MASTERSITES			VARCHAR2		IN
+ GROUPNAME			VARCHAR2		IN
+ GROUPDESCRIPTION		VARCHAR2		IN     DEFAULT
+FUNCTION GETBULKLOADVERSION RETURNS NUMBER(38)
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ SAVEPOINT_VAR			VARCHAR2		IN     DEFAULT
+FUNCTION GETCONFLICTWORKSPACE RETURNS VARCHAR2
+FUNCTION GETDIFFVERSIONS RETURNS VARCHAR2
+FUNCTION GETLOCKMODE RETURNS VARCHAR2
+FUNCTION GETLTLOCKSTR RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CURLOCK			VARCHAR2		IN
+ CURNEXTVER			VARCHAR2		IN
+ STATE_NAME			VARCHAR2		IN
+ LOCK_MODE			VARCHAR2		IN
+ CURVERSION			NUMBER(38)		IN
+FUNCTION GETMULTIWORKSPACES RETURNS VARCHAR2
+FUNCTION GETOPCONTEXT RETURNS VARCHAR2
+PROCEDURE GETORIGINALDDL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_ID			VARCHAR2		IN
+ DDL_STMTS			KU$_DDLS		IN/OUT
+PROCEDURE GETORIGINALDDL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_ID			VARCHAR2		IN
+ DDL_CLOB			CLOB			IN/OUT
+FUNCTION GETPHYSICALTABLENAME RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_OWNER			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+FUNCTION GETPRIVS RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+PROCEDURE GETSESSIONINFO
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		OUT
+ CONTEXT			VARCHAR2		OUT
+ CONTEXT_TYPE			VARCHAR2		OUT
+FUNCTION GETSYSTEMPARAMETER RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+FUNCTION GETVALIDFROM RETURNS TIMESTAMP WITH TIME ZONE
+FUNCTION GETVALIDTILL RETURNS TIMESTAMP WITH TIME ZONE
+FUNCTION GETVERSION RETURNS VARCHAR2
+FUNCTION GETWMMETADATASPACE RETURNS NUMBER
+FUNCTION GETWORKSPACE RETURNS VARCHAR2
+PROCEDURE GOTODATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IN_DATE			DATE			IN
+PROCEDURE GOTODATE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IN_DATE			VARCHAR2		IN
+ FMT				VARCHAR2		IN     DEFAULT
+ NLSPARAM			VARCHAR2		IN     DEFAULT
+ TSWTZ				BOOLEAN 		IN     DEFAULT
+PROCEDURE GOTOSAVEPOINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ SAVEPOINT_NAME 		VARCHAR2		IN     DEFAULT
+PROCEDURE GOTOWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+PROCEDURE GRANTGRAPHPRIV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIV_TYPES			VARCHAR2		IN
+ LEAF_WORKSPACE 		VARCHAR2		IN
+ GRANTEE			VARCHAR2		IN
+ NODE_TYPES			VARCHAR2		IN     DEFAULT
+ GRANT_OPTION			VARCHAR2		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE GRANTPRIVSONPOLICY
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ POLICY_NAME			VARCHAR2		IN
+PROCEDURE GRANTPRIVSTOREPADMIN
+PROCEDURE GRANTSYSTEMPRIV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIV_TYPES			VARCHAR2		IN
+ GRANTEE			VARCHAR2		IN
+ GRANT_OPTION			VARCHAR2		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE GRANTWORKSPACEPRIV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIV_TYPES			VARCHAR2		IN
+ WORKSPACE			VARCHAR2		IN
+ GRANTEE			VARCHAR2		IN
+ GRANT_OPTION			VARCHAR2		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE IMPORT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ STAGING_TABLE			VARCHAR2		IN
+ TO_TABLE			VARCHAR2		IN
+ TO_WORKSPACE			VARCHAR2		IN
+ FROM_WORKSPACE 		VARCHAR2		IN     DEFAULT
+ WHERE_CLAUSE			VARCHAR2		IN     DEFAULT
+ IMPORT_SCOPE			VARCHAR2		IN     DEFAULT
+ ANCESTOR_SAVEPOINT_WORKSPACE	VARCHAR2		IN     DEFAULT
+ ANCESTOR_SAVEPOINT_NAME	VARCHAR2		IN     DEFAULT
+ APPLY_LOCKS			BOOLEAN 		IN     DEFAULT
+ ENFORCEUCFLAG			BOOLEAN 		IN     DEFAULT
+ ENFORCERICFLAG 		BOOLEAN 		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE IMPORT_SCHEMAS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ JOB_NAME			VARCHAR2		IN
+ ALT_SCHEMA			VARCHAR2		IN     DEFAULT
+ IGNORE_LAST_ERROR		BOOLEAN 		IN     DEFAULT
+FUNCTION ISWORKSPACEOCCUPIED RETURNS VARCHAR2
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+PROCEDURE LOCKROWS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ WHERE_CLAUSE			VARCHAR2		IN     DEFAULT
+ LOCK_MODE			VARCHAR2		IN     DEFAULT
+ XMIN				NUMBER			IN     DEFAULT
+ YMIN				NUMBER			IN     DEFAULT
+ XMAX				NUMBER			IN     DEFAULT
+ YMAX				NUMBER			IN     DEFAULT
+FUNCTION MAX_TIME RETURNS TIMESTAMP WITH TIME ZONE
+PROCEDURE MERGETABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ TABLE_ID			VARCHAR2		IN
+ WHERE_CLAUSE			VARCHAR2		IN     DEFAULT
+ CREATE_SAVEPOINT		BOOLEAN 		IN     DEFAULT
+ REMOVE_DATA			BOOLEAN 		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE MERGEWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ CREATE_SAVEPOINT		BOOLEAN 		IN     DEFAULT
+ REMOVE_WORKSPACE		BOOLEAN 		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+FUNCTION MIN_TIME RETURNS TIMESTAMP WITH TIME ZONE
+PROCEDURE MOVE_PROC
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ DEST_TABLESPACE		VARCHAR2		IN     DEFAULT
+PROCEDURE PURGETABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_ID			VARCHAR2		IN
+ ARCHIVE_TABLE			VARCHAR2		IN
+ WHERE_CLAUSE			VARCHAR2		IN
+ WORKSPACE			VARCHAR2		IN     DEFAULT
+ SAVEPOINT_NAME 		VARCHAR2		IN     DEFAULT
+ INSTANT			TIMESTAMP WITH TIME ZONE IN	DEFAULT
+ PURGEAFTER			BOOLEAN 		IN     DEFAULT
+PROCEDURE RECOVERALLMIGRATINGTABLES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IGNORE_LAST_ERROR		BOOLEAN 		IN     DEFAULT
+PROCEDURE RECOVERFROMDROPPEDUSER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ IGNORE_LAST_ERROR		BOOLEAN 		IN     DEFAULT
+PROCEDURE RECOVERMIGRATINGTABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ IGNORE_LAST_ERROR		BOOLEAN 		IN     DEFAULT
+PROCEDURE REFRESHTABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ TABLE_ID			VARCHAR2		IN
+ WHERE_CLAUSE			VARCHAR2		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE REFRESHWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+ COPY_DATA			BOOLEAN 		IN     DEFAULT
+PROCEDURE RELOCATEWRITERSITE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NEWWRITERSITE			VARCHAR2		IN
+ OLDWRITERSITEAVAILABLE 	BOOLEAN 		IN
+PROCEDURE REMOVEASPARENTWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MP_LEAF_WORKSPACE		VARCHAR2		IN
+ PARENT_WORKSPACE		VARCHAR2		IN
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE REMOVEUSERDEFINEDHINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HINT_ID			NUMBER(38)		IN
+ TABLE_ID			VARCHAR2		IN     DEFAULT
+PROCEDURE REMOVEWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE REMOVEWORKSPACETREE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE RENAMESAVEPOINT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE_NAME 		VARCHAR2		IN
+ SAVEPOINT_NAME 		VARCHAR2		IN
+ NEW_SAVEPOINT_NAME		VARCHAR2		IN
+PROCEDURE RENAMEWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE_NAME 		VARCHAR2		IN
+ NEW_WORKSPACE_NAME		VARCHAR2		IN
+PROCEDURE RESOLVECONFLICTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ WHERE_CLAUSE			VARCHAR2		IN
+ KEEP				VARCHAR2		IN
+ RESOLVE_BASE_NE		BOOLEAN 		IN     DEFAULT
+PROCEDURE REVOKEGRAPHPRIV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIV_TYPES			VARCHAR2		IN
+ LEAF_WORKSPACE 		VARCHAR2		IN
+ GRANTEE			VARCHAR2		IN
+ NODE_TYPES			VARCHAR2		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE REVOKESYSTEMPRIV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIV_TYPES			VARCHAR2		IN
+ GRANTEE			VARCHAR2		IN
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE REVOKEWORKSPACEPRIV
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ PRIV_TYPES			VARCHAR2		IN
+ WORKSPACE			VARCHAR2		IN
+ GRANTEE			VARCHAR2		IN
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE ROLLBACKBULKLOADING
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+ IGNORE_LAST_ERROR		BOOLEAN 		IN     DEFAULT
+PROCEDURE ROLLBACKDDL
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TABLE_NAME			VARCHAR2		IN
+PROCEDURE ROLLBACKRESOLVE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+PROCEDURE ROLLBACKTABLE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ TABLE_ID			VARCHAR2		IN
+ SP_NAME			VARCHAR2		IN     DEFAULT
+ WHERE_CLAUSE			VARCHAR2		IN     DEFAULT
+ REMOVE_LOCKS			BOOLEAN 		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE ROLLBACKTOSP
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ SAVEPOINT_NAME 		VARCHAR2		IN
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE ROLLBACKWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE SETCAPTUREEVENT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ EVENT_NAME			VARCHAR2		IN
+ CAPTURE			VARCHAR2		IN     DEFAULT
+PROCEDURE SETCOMPRESSWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ FIRSTSP			VARCHAR2		IN     DEFAULT
+ SECONDSP			VARCHAR2		IN     DEFAULT
+PROCEDURE SETCONFLICTWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+PROCEDURE SETDIFFVERSIONS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE1			VARCHAR2		IN
+ SAVEPOINT1			VARCHAR2		IN
+ WORKSPACE2			VARCHAR2		IN
+ SAVEPOINT2			VARCHAR2		IN
+ ONLYMODIFIED			BOOLEAN 		IN     DEFAULT
+PROCEDURE SETDIFFVERSIONS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE1			VARCHAR2		IN
+ WORKSPACE2			VARCHAR2		IN
+ ONLYMODIFIED			BOOLEAN 		IN     DEFAULT
+PROCEDURE SETLOCKINGOFF
+PROCEDURE SETLOCKINGON
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ LOCKMODE			VARCHAR2		IN
+PROCEDURE SETMULTIWORKSPACES
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACES			VARCHAR2		IN
+PROCEDURE SETSYSTEMPARAMETER
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+ VALUE				VARCHAR2		IN
+PROCEDURE SETTRIGGEREVENTS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ TRIGGERNAME			VARCHAR2		IN
+ TRIGGEREVENTS			VARCHAR2		IN
+PROCEDURE SETVALIDTIME
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ VALIDFROM			TIMESTAMP WITH TIME ZONE IN	DEFAULT
+ VALIDTILL			TIMESTAMP WITH TIME ZONE IN	DEFAULT
+PROCEDURE SETVALIDTIMEFILTEROFF
+PROCEDURE SETVALIDTIMEFILTERON
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ FILTERTIME			TIMESTAMP WITH TIME ZONE IN	DEFAULT
+PROCEDURE SETWMVALIDUPDATEMODEOFF
+PROCEDURE SETWMVALIDUPDATEMODEON
+PROCEDURE SETWOOVERWRITEOFF
+PROCEDURE SETWOOVERWRITEON
+PROCEDURE SETWORKSPACELOCKMODEOFF
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE SETWORKSPACELOCKMODEON
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ LOCKMODE			VARCHAR2		IN
+ OVERRIDE			BOOLEAN 		IN     DEFAULT
+ AUTO_COMMIT			BOOLEAN 		IN     DEFAULT
+PROCEDURE SYNCHRONIZESITE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NEWWRITERSITE			VARCHAR2		IN
+PROCEDURE UNFREEZEWORKSPACE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+PROCEDURE UNLOCKROWS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ WORKSPACE			VARCHAR2		IN
+ TABLE_NAME			VARCHAR2		IN
+ WHERE_CLAUSE			VARCHAR2		IN     DEFAULT
+ ALL_OR_USER			VARCHAR2		IN     DEFAULT
+ LOCK_MODE			VARCHAR2		IN     DEFAULT
+ XMIN				NUMBER			IN     DEFAULT
+ YMIN				NUMBER			IN     DEFAULT
+ XMAX				NUMBER			IN     DEFAULT
+ YMAX				NUMBER			IN     DEFAULT
+FUNCTION UNTIL_CHANGED RETURNS TIMESTAMP WITH TIME ZONE
+PROCEDURE USEDEFAULTVALUESFORNULLS
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ MODE_VAR			VARCHAR2		IN
+

@@ -1,0 +1,31 @@
+PROCEDURE CLEAR_USED
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ NAME				VARCHAR2		IN
+PROCEDURE CREATE_OUTLINE
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ HASH_VALUE			NUMBER			IN
+ CHILD_NUMBER			NUMBER			IN
+ CATEGORY			VARCHAR2		IN     DEFAULT
+PROCEDURE DROP_BY_CAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ CAT				VARCHAR2		IN
+PROCEDURE DROP_COLLISION
+FUNCTION DROP_COLLISION_EXPACT RETURNS VARCHAR2
+PROCEDURE DROP_EXTRAS
+FUNCTION DROP_EXTRAS_EXPACT RETURNS VARCHAR2
+PROCEDURE DROP_UNREFD_HINTS
+FUNCTION DROP_UNREFD_HINTS_EXPACT RETURNS VARCHAR2
+PROCEDURE DROP_UNUSED
+PROCEDURE EXACT_TEXT_SIGNATURES
+PROCEDURE REFRESH_OUTLINE_CACHE
+FUNCTION REFRESH_OUTLINE_CACHE_EXPACT RETURNS VARCHAR2
+PROCEDURE UPDATE_BY_CAT
+ Argument Name			Type			In/Out Default?
+ ------------------------------ ----------------------- ------ --------
+ OLDCAT 			VARCHAR2		IN     DEFAULT
+ NEWCAT 			VARCHAR2		IN     DEFAULT
+PROCEDURE UPDATE_SIGNATURES
+
