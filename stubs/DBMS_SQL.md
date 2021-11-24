@@ -1,3 +1,98 @@
+For the DBMS package, it makes more sense to migrate it as a JS Helpers.
+
+This helper should be then added at the top of your stored procedure
+
+
+Lets take this code in PL\SQL as an example
+
+
+```plsql
+CREATE OR REPLACE PROCEDURE demo(p_salary IN NUMBER) AS 
+   cursor_name INTEGER;
+   rows_processed INTEGER;
+
+BEGIN
+   cursor_name := dbms_sql.open_cursor;
+   DBMS_SQL.PARSE(cursor_name, 'DELETE FROM myemployees WHERE salary > :x',
+                  DBMS_SQL.NATIVE);
+   DBMS_SQL.BIND_VARIABLE(cursor_name, ':x', p_salary);
+   rows_processed := DBMS_SQL.EXECUTE(cursor_name);
+   DBMS_SQL.CLOSE_CURSOR(cursor_name);
+EXCEPTION
+WHEN OTHERS THEN
+   DBMS_SQL.CLOSE_CURSOR(cursor_name);
+END;
+
+```
+
+
+For
+
+```sql
+CREATE OR REPLACE PROCEDURE demo(p_salary NUMBER) RETURNS STRING
+LANGUAGE JAVASCRIPT AS
+$$
+var fixBind = x => x;
+class DBMS_SQL {
+  static NATIVE = -1;
+  static cursors = {};
+  
+  static OPEN_CURSOR() {
+    var index = Object.keys(DBMS_SQL.cursors).length;
+    DBMS_SQL.cursors[index] = {};
+    return index;
+  }
+  static CLOSE_CURSOR(cursor_name) {
+     DBMS_SQL.cursors[cursor_name]=null;
+  }
+  static PARSE(cursor_name, query, KIND) 
+  {
+    const regexp = new RegExp(':\w+','g');
+    var current = DBMS_SQL.cursors[cursor_name] = {query:query,bindings:[]};
+    var match;
+    while ((match = regexp.exec(query)) !== null) {
+      current.bindings.push({name:match[0],start:match.index, end:regexp.lastIndex});
+    }
+  }
+  static BIND_VARIABLE(cursor_name,variable_name,value) 
+  {
+    var current = DBMS_SQL.cursors[cursor_name];
+    var matching = current.bindings.filter( x=>x.name==variable_name);
+    for(var m of matching)
+    {
+        m.value = value;
+    }
+  }
+  static EXECUTE(cursor_name, affected=false) {
+    const regexp = new RegExp(':\w+','g');
+    var current = DBMS_SQL.cursors[cursor_name];
+    var bindings = current.bindings.map(x => ((typeof x.value == "function") && x.value()) || x.value ).map(fixBind);
+    current.rs = snowflake.execute({sqlText:current.query.replace(regexp,"?"), binds: bindings});
+    if (affected)
+       return current.rs.getNumRowsAffected();
+    else
+        return current.rs.getRowCount();
+  }
+}
+
+try {
+   var cursor_name = DBMS_SQL.OPEN_CURSOR();
+   DBMS_SQL.PARSE(cursor_name, 'DELETE FROM myemployees WHERE salary > :x',
+                  DBMS_SQL.NATIVE);
+   DBMS_SQL.BIND_VARIABLE(cursor_name, ':x', P_SALARY);
+   rows_processed = DBMS_SQL.EXECUTE(cursor_name);
+   DBMS_SQL.CLOSE_CURSOR(cursor_name);
+}
+catch(e) 
+{
+    DBMS_SQL.CLOSE_CURSOR(cursor_name);
+}
+$$;
+```
+
+In this sample we only mapped some methods, however the rest of the methods can be mapped accordingly
+
+```sql
 CREATE SCHEMA DBMS_SQL;
 
 CREATE OR REPLACE PROCEDURE DBMS_SQL.BIND_ARRAY(C NUMBER(38),NAME VARCHAR)
@@ -1630,4 +1725,4 @@ LANGUAGE JAVASCRIPT
 AS $$
 /** add some code here **/
 $$
-
+```
