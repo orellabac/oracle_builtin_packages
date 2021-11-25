@@ -93,6 +93,114 @@ $$;
 In this sample we only mapped some methods, however the rest of the methods can be mapped accordingly
 
 ```sql
+
+CREATE SCHEMA IF NOT EXISTS DBMS_SQL;
+CREATE OR REPLACE PROCEDURE DBMS_SQL.OPEN_CURSOR() RETURNS STRING LANGUAGE JAVASCRIPT AS
+$$
+function generateGuid() {
+  var result, i, j;
+  result = '';
+  for(j=0; j<32; j++) {
+    if( j == 8 || j == 12 || j == 16 || j == 20)
+      result = result + '-';
+    i = Math.floor(Math.random()*16).toString(16).toUpperCase();
+    result = result + i;
+  }
+  return result;
+}
+var cursorName = "cursor"+generateGuid();
+return cursorName;
+$$;
+
+CREATE OR REPLACE PROCEDURE DBMS_SQL.PARSE(cursor_name VARCHAR, query VARCHAR, KIND VARCHAR)  RETURNS STRING LANGUAGE JAVASCRIPT AS
+$$
+    var rs = snowflake.execute({sqlText:`select getvariable(?)`,binds:[CURSOR_NAME]});
+    if (rs.next()) {
+      var current = JSON.parse(rs.getColumnValue(1));
+      const regexp = new RegExp(':\\w+','g');
+      current = {query:QUERY,bindings:[]}
+      var match;
+      while ((match = regexp.exec(QUERY)) !== null) {
+        current.bindings.push({name:match[0],start:match.index, end:regexp.lastIndex});
+      }
+      snowflake.execute({sqlText:`select setvariable(?,?)`, binds:[CURSOR_NAME,JSON.stringify(current)]});
+      return "PARSE OK bindings" + QUERY + "--" + current.bindings.length;
+    }
+    return "NOT FOUND";
+$$;
+
+CREATE OR REPLACE PROCEDURE DBMS_SQL.BIND_VARIABLE(cursor_name VARCHAR,variable_name VARCHAR,value VARIANT) RETURNS STRING LANGUAGE JAVASCRIPT AS
+$$
+    var rs = snowflake.execute({sqlText:`select getvariable(?)`, binds:[CURSOR_NAME]});
+    if (rs.next()) {
+      var current = JSON.parse(rs.getColumnValue(1));
+      var matching = current.bindings.filter( x=>x.name==VARIABLE_NAME);
+      for(var m of matching)
+      {
+          m.value = VALUE;
+      }
+      snowflake.execute({sqlText:`select setvariable(?,?)`, binds:[CURSOR_NAME,JSON.stringify(current)]});
+    }
+$$;
+
+CREATE OR REPLACE PROCEDURE DBMS_SQL.EXECUTE(cursor_name VARCHAR, AFFECTED BOOLEAN) RETURNS STRING LANGUAGE JAVASCRIPT AS
+$$
+    var rs = snowflake.execute({sqlText:`select getvariable('${CURSOR_NAME}')`});
+    if (rs.next()) {
+        var current = JSON.parse(rs.getColumnValue(1));
+        const regexp = new RegExp(':\\w+','g');
+        var bindings = current.bindings.map(x => ((typeof x.value == "function") && x.value()) || x.value );
+        var rs = snowflake.execute({sqlText:current.query.replace(regexp,"?"), binds: bindings});
+        current.queryId=rs.getQueryId()
+        snowflake.execute({sqlText:`select setvariable(?,?)`, binds:[CURSOR_NAME,JSON.stringify(current)]});
+        if (AFFECTED)
+        {
+            return rs.getNumRowsAffected();
+        }
+        else 
+        {
+            return rs.getRowCount();
+        }
+    }
+$$;
+
+
+CREATE OR REPLACE PROCEDURE DBMS_SQL.CLOSE_CURSOR(cursor_name VARCHAR) RETURNS STRING LANGUAGE JAVASCRIPT AS
+$$
+    var rs = snowflake.execute({sqlText:`select setvariable('${CURSOR_NAME}',NULL)`});
+    return rs.next();
+$$;
+
+
+CREATE OR REPLACE PROCEDURE demo(p_salary FLOAT) RETURNS STRING LANGUAGE JAVASCRIPT AS
+$$
+   var cursor_name;
+   var rows_processed;
+   function EXEC (query,...p) { snowflake.execute({sqlText:query, binds: p}); }
+   function SELECT(query,...p) {
+       var rs = snowflake.execute({sqlText:query, binds: p});
+       if (rs.next())
+       {
+           var row = [];
+           for(var i=0;i<rs.getColumnCount();i++) row.push(rs.getColumnValue(i+1));
+           return row;
+       }
+   }
+   try {
+     [cursor_name] = SELECT(`call dbms_sql.open_cursor()`);
+     EXEC(`call DBMS_SQL.PARSE(?, 'DELETE FROM myemployees WHERE salary > :x','DBMS_SQL.NATIVE')`, cursor_name);
+     EXEC(`call DBMS_SQL.BIND_VARIABLE(?, ':x', ?)`,cursor_name,P_SALARY);
+     [rows_processed] = SELECT(`call DBMS_SQL.EXECUTE(?,false)`,cursor_name);
+     EXEC(`call DBMS_SQL.CLOSE_CURSOR(?)`,cursor_name);
+   }
+   catch(e) {
+     EXEC(`DBMS_SQL.CLOSE_CURSOR(?)`, cursor_name);
+   }
+$$;
+
+call demo(10);
+
+CREATE TABLE myemployees (salary NUMBER(38,0));
 CREATE SCHEMA DBMS_SQL;
 
 CREATE OR REPLACE PROCEDURE DBMS_SQL.BIND_ARRAY(C NUMBER(38),NAME VARCHAR)
